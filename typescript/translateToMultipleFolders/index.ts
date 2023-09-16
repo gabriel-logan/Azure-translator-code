@@ -47,7 +47,10 @@ interface TranslationType {
  *
 		If you need, copy this structure to get better then make your modification
  *
-		@description This function will return a folder called folder multiFolderGeneratedTranslations
+		@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
+		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
+		@IMPORTANT Saving always starts from the project root folder.
+		@description This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
  */
 export default function translateToMultipleFolders(
 	key: string,
@@ -56,13 +59,12 @@ export default function translateToMultipleFolders(
 	fromLang: string,
 	toLangs: string[],
 	jsonFile: TranslationType,
+	folderNamePath: string = 'multiFolderGeneratedTranslations', // Onde sera salvo os arquivos
 ) {
-	const folderName: string = 'multiFolderGeneratedTranslations'; // Onde sera salvo os arquivos
-
-	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
+	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
-		fs.mkdirSync(traducoesDir);
+		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
 	}
 
 	const { translation } = jsonFile;
@@ -100,12 +102,12 @@ export default function translateToMultipleFolders(
 				const response = await translateText(translation[key], fromLang, lang);
 				const translatedText = response.data[0].translations[0].text;
 				translations[key] = translatedText;
-				console.log(`Traduzindo ${translation[key]} para ${lang} \n\n`);
+				console.log(`Translating ${translation[key]} to ${lang} \n\n`);
 			} catch (error) {
 				if (error instanceof Error) {
-					console.error(`Erro ao traduzir "${key}" para ${lang}: ${error.message} \n`);
+					console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
 				} else {
-					console.error(`Algum erro aconteceu no erro (: \n`);
+					console.error(`An error occurred within the error (: \n`);
 				}
 			}
 		}
@@ -118,7 +120,7 @@ export default function translateToMultipleFolders(
 
 		const outputFileName = path.join(langDir, `${lang}.json`);
 		fs.writeFileSync(outputFileName, JSON.stringify({ translation: translations }, null, 4));
-		console.log(`Traduções para ${lang} salvas em ${outputFileName} \n\n`);
+		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
 	}
 
 	async function translateAndSaveAll() {
@@ -128,6 +130,6 @@ export default function translateToMultipleFolders(
 	}
 
 	translateAndSaveAll().catch((error) => {
-		console.error(`Erro ao traduzir e salvar textos: ${error.message} \n`);
+		console.error(`Error translating and saving texts: ${error.message} \n`);
 	});
 }

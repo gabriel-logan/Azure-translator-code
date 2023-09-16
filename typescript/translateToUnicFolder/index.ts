@@ -47,7 +47,10 @@ interface TranslationType {
  *
 		If you need, copy this structure to get better then make your modification
  *
-		@description This function will return a folder called folder unicFolderGeneratedTranslations
+		@param [folderNamePath='unicFolderGeneratedTranslations'] If it is undefined, it will be associated by default: unicFolderGeneratedTranslations
+		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
+		@IMPORTANT Saving always starts from the project root folder.
+		@description This function will return a folder called folder unicFolderGeneratedTranslations in root folder or YourChoice
  */
 export default function translateToUnicFolder(
 	key: string,
@@ -56,13 +59,12 @@ export default function translateToUnicFolder(
 	fromLang: string,
 	toLangs: string[],
 	jsonFile: TranslationType,
+	folderName: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
 ) {
-	const folderName: string = 'unicFolderGeneratedTranslations'; // Onde sera salvo os arquivos
-
 	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
 
 	if (!fs.existsSync(traducoesDir)) {
-		fs.mkdirSync(traducoesDir);
+		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
 	}
 
 	const { translation } = jsonFile;
@@ -102,12 +104,12 @@ export default function translateToUnicFolder(
 				const response = await translateText(translation[key], fromLang, lang);
 				const translatedText: string = response.data[0].translations[0].text;
 				translations[key] = translatedText;
-				console.log(`Traduzindo ${translation[key]} para ${lang} \n\n`);
+				console.log(`Translating ${translation[key]} to ${lang} \n\n`);
 			} catch (error) {
 				if (error instanceof Error) {
-					console.error(`Erro ao traduzir "${key}" para ${lang}: ${error.message} \n`);
+					console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
 				} else {
-					console.error(`Algum erro aconteceu no erro (: \n`);
+					console.error(`An error occurred within the error (: \n`);
 				}
 			}
 		}
@@ -126,11 +128,11 @@ export default function translateToUnicFolder(
 				outputFileName,
 				JSON.stringify({ translation: outputData[lang] as TranslationType }, null, 4),
 			);
-			console.log(`Traduções para ${lang} salvas em ${outputFileName} \n\n`);
+			console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
 		}
 	}
 
 	translateAndSaveAll().catch((error) => {
-		console.error(`Erro ao traduzir e salvar textos: ${error.message} \n`);
+		console.error(`Error translating and saving texts: ${error.message} \n`);
 	});
 }

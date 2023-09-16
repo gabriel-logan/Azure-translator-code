@@ -7,4 +7,6 @@ typescript/
 package-lock.json
 tsconfig.json
 private/
+jest.config.js
+tests/
 .npmignore

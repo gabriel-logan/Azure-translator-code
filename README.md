@@ -58,11 +58,13 @@ Now, you can use the library to translate the JSON file into multiple languages:
 
 ```javascript
 const { translateToMultipleFolders, translateToUnicFolder } = require('azure-translator-code');
-
-// or
-
+```
+or
+```javascript
 import { translateToMultipleFolders, translateToUnicFolder } from 'azure-translator-code';
+```
 
+```javascript
 const key = 'sds12312a213aaaa9b2d0c37eds37b'; // REPLACE WITH YOUR OWN KEY HERE
 const endpoint = 'https://api.cognitive.microsofttranslator.com/';
 const location = 'eastus';
@@ -80,8 +82,38 @@ const toLangs = [
   'zh',
   'pt-pt',
   'ar',
-  'tlh-Latn',
+  'tlh-Latn'
 ];
+
+const jsonFile = {
+  "translation": {
+    "welcome": "Welcome",
+    "hello": "Hello"
+  }
+};
+
+// Translation to multiple folders
+translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile);
+// This function will return a folder called multiFolderGeneratedTranslations
+
+
+
+// Translation to a single folder
+translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile);
+// This function will return a folder called unicFolderGeneratedTranslations
+```
+
+#### You can also choose the folder or folder name where you will save the files.
+##### Saving always starts from the project root folder.
+
+```javascript
+const { translateToMultipleFolders, translateToUnicFolder } = require('azure-translator-code');
+
+const key = 'sds12312a213aaaa9b2d0c37eds37b'; // REPLACE WITH YOUR OWN KEY HERE
+const endpoint = 'https://api.cognitive.microsofttranslator.com/';
+const location = 'eastus';
+const fromLang = 'en';
+const toLangs = ['pt', 'de'];
 
 const jsonFile = {
   "translation": {
@@ -90,15 +122,21 @@ const jsonFile = {
   }
 };
 
-// Translation to multiple folders
-translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile);
-// This function will return a folder called folder multiFolderGeneratedTranslations
+// IMPORTANT: If you use '../../' it will try to save to a location before the root folder
 
+// Translation to multiple folders
+translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder');
+// This function will return a folder called myFolder
 
 
 // Translation to a single folder
-translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile);
-// This function will return a folder called folder unicFolderGeneratedTranslations
+translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder/OtherFolder/etc');
+// This function will return a folder called ./myFolder/OtherFolder/etc
+
+
+// Translation to a single folder
+translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, './myFolder/OtherFolder/etc');
+// This function will return a folder called ./myFolder/OtherFolder/etc
 ```
 
 Make sure to replace the key and endpoint information with your own Azure access credentials. Ensure that the JSON file and settings are correctly defined according to your needs.
