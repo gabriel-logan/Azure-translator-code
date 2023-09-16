@@ -1,0 +1,14 @@
+{
+  "translation": {
+    "welcome": "Welcome",
+    "hello": "Hello",
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
+    "thank_you": "Thank you",
+    "please": "Please",
+    "yes": "Yes",
+    "no": "No",
+    "error_message": "An error occurred"
+  }
+}
