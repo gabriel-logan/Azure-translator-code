@@ -15,7 +15,11 @@
 		"url": "git+https://github.com/gabriel-logan/Azure-translator-code.git"
 	},
 	"keywords": [
-		"javascript"
+		"javascript",
+		"typescript",
+		"azure translator",
+		"translator",
+		"translator code"
 	],
 	"license": "MIT",
 	"bugs": {
