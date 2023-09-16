@@ -59,7 +59,7 @@ export default function translateToMultipleFolders(
 ) {
 	const folderName: string = 'multiFolderGeneratedTranslations'; // Onde sera salvo os arquivos
 
-	const traducoesDir: string = path.join(__dirname, '..', '..', folderName);
+	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
 
 	if (!fs.existsSync(traducoesDir)) {
 		fs.mkdirSync(traducoesDir);

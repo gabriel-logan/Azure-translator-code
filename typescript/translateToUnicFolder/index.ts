@@ -59,7 +59,7 @@ export default function translateToUnicFolder(
 ) {
 	const folderName: string = 'unicFolderGeneratedTranslations'; // Onde sera salvo os arquivos
 
-	const traducoesDir: string = path.join(__dirname, '..', '..', folderName);
+	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
 
 	if (!fs.existsSync(traducoesDir)) {
 		fs.mkdirSync(traducoesDir);
