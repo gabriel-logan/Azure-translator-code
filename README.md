@@ -12,6 +12,10 @@ The Azure Translator Code library is a powerful tool for translating JSON files 
 	</a>
 </p>
 
+NPM PAGE: https://www.npmjs.com/package/azure-translator-code
+
+GITHUB PAGE: https://github.com/gabriel-logan/Azure-translator-code
+
 ## Installation
 
 To get started, you can install the library via npm:

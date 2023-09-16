@@ -10,3 +10,4 @@ private/
 jest.config.js
 tests/
 .npmignore
+*.html
