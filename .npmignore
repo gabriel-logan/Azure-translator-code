@@ -1,0 +1,9 @@
+typescript/
+.vscode/
+.editorconfig
+.eslint.js
+.gitignore
+.prettierrc.js
+package-lock.json
+tsconfig.json
+.npmignore
