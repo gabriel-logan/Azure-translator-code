@@ -1,6 +1,6 @@
 {
 	"name": "azure-translator-code",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Azure Cognitive Services Translator Text API Code for Use with Common Languages",
 	"author": {
 		"name": "Gabriel Logan"
@@ -27,7 +27,8 @@
 	},
 	"homepage": "https://github.com/gabriel-logan/Azure-translator-code#readme",
 	"contributors": [
-		"Gabriel Logan"
+		"Gabriel Logan",
+		"Breno Andrade"
 	],
 	"dependencies": {
 		"axios": "^1.5.0",
