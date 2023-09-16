@@ -9,7 +9,7 @@ const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 function translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile) {
     const folderName = 'unicFolderGeneratedTranslations';
-    const traducoesDir = path_1.default.join(__dirname, '..', '..', folderName);
+    const traducoesDir = path_1.default.join(__dirname, '..', '..', '..', '..', folderName);
     if (!fs_1.default.existsSync(traducoesDir)) {
         fs_1.default.mkdirSync(traducoesDir);
     }
