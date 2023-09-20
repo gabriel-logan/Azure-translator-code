@@ -1,3 +1,4 @@
 import translateToMultipleFolders from './translateToMultipleFolders';
 import translateToUnicFolder from './translateToUnicFolder';
-export { translateToMultipleFolders, translateToUnicFolder };
+import updateTranslationsMulti from './updateTranslationMulti';
+export { translateToMultipleFolders, translateToUnicFolder, updateTranslationsMulti };

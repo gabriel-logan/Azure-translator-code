@@ -50,7 +50,7 @@ interface TranslationType {
 		@param [folderNamePath='unicFolderGeneratedTranslations'] If it is undefined, it will be associated by default: unicFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
 		@IMPORTANT Saving always starts from the project root folder.
-		@description This function will return a folder called folder unicFolderGeneratedTranslations in root folder or YourChoice
+		@return {void} This function will return a folder called folder unicFolderGeneratedTranslations in root folder or YourChoice
  */
 export default function translateToUnicFolder(
 	key: string,
@@ -60,7 +60,7 @@ export default function translateToUnicFolder(
 	toLangs: string[],
 	jsonFile: TranslationType,
 	folderName: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
-) {
+): void {
 	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
 
 	if (!fs.existsSync(traducoesDir)) {

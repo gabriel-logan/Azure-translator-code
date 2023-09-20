@@ -50,7 +50,7 @@ interface TranslationType {
 		@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
 		@IMPORTANT Saving always starts from the project root folder.
-		@description This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
+		@return {void} This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
  */
 export default function translateToMultipleFolders(
 	key: string,
@@ -60,7 +60,7 @@ export default function translateToMultipleFolders(
 	toLangs: string[],
 	jsonFile: TranslationType,
 	folderNamePath: string = 'multiFolderGeneratedTranslations', // Onde sera salvo os arquivos
-) {
+): void {
 	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {

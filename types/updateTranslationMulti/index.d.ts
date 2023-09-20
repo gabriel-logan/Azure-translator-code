@@ -41,10 +41,13 @@ interface TranslationType {
  *
         If you need, copy this structure to get better then make your modification
  *
-        @param [folderNamePath='unicFolderGeneratedTranslations'] If it is undefined, it will be associated by default: unicFolderGeneratedTranslations
+ * @description This function checks the json with the already existing translations and adds only the non-existing translations to the file, this serves to save data.
+ *Otherwise it works the same as the other 2 functions
+  *
+ * 	@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
         You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
         @IMPORTANT Saving always starts from the project root folder.
-        @return {void} This function will return a folder called folder unicFolderGeneratedTranslations in root folder or YourChoice
+        @return {void} This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
  */
-export default function translateToUnicFolder(key: string, endpoint: string, location: string, fromLang: string, toLangs: string[], jsonFile: TranslationType, folderName?: string): void;
+export default function updateTranslationsMulti(key: string, endpoint: string, location: string, fromLang: string, toLangs: string[], jsonFile: TranslationType, folderNamePath?: string): void;
 export {};

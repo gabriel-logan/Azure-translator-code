@@ -8,22 +8,52 @@ interface TranslationType {
 }
 
 /**
- * @param key
- * @param endpoint
- * @param location
- * @param fromLang
- * @param toLangs
+ * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
+ * @param endpoint The endpoint: 'https://api.cognitive.microsofttranslator.com/'
+ * @param location Ex. 'eastus'
+ * @param fromLang Ex. 'en'
+ * @param toLangs Ex. [
+												'pt',
+												'de',
+												'es',
+												'fr',
+												'it',
+												'ja',
+												'ko',
+												'nl',
+												'ru',
+												'zh',
+												'pt-pt',
+												'ar',
+												'tlh-Latn'
+											];
  * @param jsonFile
+ * It must follow the following structure:
+ *
+ * {
+			"translation": {
+				"welcome": "Welcome",
+				"hello": "Hello",
+				"good_morning": "Good morning",
+				"good_afternoon": "Good afternoon",
+				"good_evening": "Good evening",
+				"thank_you": "Thank you",
+				"please": "Please",
+				"yes": "Yes",
+				"no": "No",
+				"error_message": "An error occurred"
+			}
+		}
+ *
+		If you need, copy this structure to get better then make your modification
  *
  * @description This function checks the json with the already existing translations and adds only the non-existing translations to the file, this serves to save data.
  *Otherwise it works the same as the other 2 functions
- *
- * @IMPORTANT This function is still in the testing period and may not work.
- *
+  *
  * 	@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
 		@IMPORTANT Saving always starts from the project root folder.
-		@description This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
+		@return {void} This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
  */
 export default function updateTranslationsMulti(
 	key: string,
@@ -33,7 +63,7 @@ export default function updateTranslationsMulti(
 	toLangs: string[],
 	jsonFile: TranslationType,
 	folderNamePath: string = 'multiFolderGeneratedTranslations',
-) {
+): void {
 	const rootDir: string = path.join(__dirname, '..', '..', '..', '..');
 	const traducoesDir: string = path.join(rootDir, folderNamePath);
 

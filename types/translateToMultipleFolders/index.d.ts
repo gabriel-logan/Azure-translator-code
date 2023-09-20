@@ -1,5 +1,5 @@
 interface TranslationType {
-	translation: Record<string, string>;
+    translation: Record<string, string>;
 }
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
@@ -44,15 +44,7 @@ interface TranslationType {
         @param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
         You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
         @IMPORTANT Saving always starts from the project root folder.
-        @description This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
+        @return {void} This function will return a folder called folder multiFolderGeneratedTranslations in root folder or YourChoice
  */
-export default function translateToMultipleFolders(
-	key: string,
-	endpoint: string,
-	location: string,
-	fromLang: string,
-	toLangs: string[],
-	jsonFile: TranslationType,
-	folderNamePath?: string,
-): void;
+export default function translateToMultipleFolders(key: string, endpoint: string, location: string, fromLang: string, toLangs: string[], jsonFile: TranslationType, folderNamePath?: string): void;
 export {};
