@@ -1,4 +1,4 @@
-# azure-translator-code - Contribution Guide
+# Azure-translator-code - Contribution Guide
 
 The azure-translator-code is a powerful Multilanguage library for validating form fields in multiple languages. This guide describes the guidelines for contributing to the project efficiently and effectively.
 
@@ -12,7 +12,7 @@ The azure-translator-code is a powerful Multilanguage library for validating for
      ```
      git clone https://github.com/gabriel-logan/azure-translator-code.git
      ```
-     
+
 4. **Commit and Push**
    - Commit your changes and push them to the forked repository:
      ```
