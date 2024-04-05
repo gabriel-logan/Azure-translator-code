@@ -3,3 +3,4 @@ dist/
 tests/
 coverage/
 types/
+jest.config.js
