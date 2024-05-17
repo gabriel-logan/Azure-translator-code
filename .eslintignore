@@ -4,3 +4,4 @@ tests/
 coverage/
 types/
 jest.config.js
+docs/
