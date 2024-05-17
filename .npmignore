@@ -16,3 +16,4 @@ package-lock.json
 tsconfigcopy.json
 *.lock
 tsconfig.json
+tsconfig.types.json
