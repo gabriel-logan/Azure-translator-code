@@ -1,0 +1,4 @@
+{
+  "extends": ["universe/node", "next/core-web-vitals"],
+	"root": true
+}
