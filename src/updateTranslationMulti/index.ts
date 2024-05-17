@@ -48,8 +48,8 @@ interface TranslationType {
 		If you need, copy this structure to get better then make your modification
  *
  * @description This function checks the json with the already existing translations and adds only the non-existing translations to the file, this serves to save data.
- *Otherwise it works the same as the other 2 functions
-  *
+ * Otherwise it works the same as the other 2 functions
+ *
  * 	@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
 		@IMPORTANT Saving always starts from the project root folder.

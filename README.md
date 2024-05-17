@@ -6,12 +6,6 @@ The Azure Translator Code library is a powerful tool for translating JSON files 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm downloads](https://img.shields.io/npm/dm/azure-translator-code.svg?style=flat-square)](https://npm-stat.com/charts.html?package=azure-translator-code)
 
-<p align="center">
-	<a href="https://www.buymeacoffee.com/gabriellogan" target="_blank">
-		<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
-	</a>
-</p>
-
 NPM PAGE: https://www.npmjs.com/package/azure-translator-code
 
 GITHUB PAGE: https://github.com/gabriel-logan/Azure-translator-code
@@ -24,6 +18,13 @@ As devDependencies
 ```bash
 npm install -D azure-translator-code
 ```
+
+You also can use yarn
+
+```bash
+yarn add -D azure-translator-code
+```
+
 or
 
 As dependencies
@@ -100,11 +101,13 @@ const jsonFile = {
 translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile);
 // This function will return a folder called multiFolderGeneratedTranslations
 
-
-
 // Translation to a single folder
 translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile);
 // This function will return a folder called unicFolderGeneratedTranslations
+
+// Update translation from the multiple folders
+updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile);
+// This function will update the translations in the folder called multiFolderGeneratedTranslations
 ```
 
 #### You can also choose the folder or folder name where you will save the files.
@@ -132,15 +135,17 @@ const jsonFile = {
 translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder');
 // This function will return a folder called myFolder
 
-
 // Translation to a single folder
 translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder/OtherFolder/etc');
 // This function will return a folder called ./myFolder/OtherFolder/etc
 
-
 // Translation to a single folder
 translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, './myFolder/OtherFolder/etc');
 // This function will return a folder called ./myFolder/OtherFolder/etc
+
+// Update translation from the multiple folders
+updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder');
+// This function will update the translations in the folder called myFolder
 ```
 
 Make sure to replace the key and endpoint information with your own Azure access credentials. Ensure that the JSON file and settings are correctly defined according to your needs.
