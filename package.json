@@ -25,7 +25,9 @@
 		"translator",
 		"translator code",
 		"i18n json generator",
-		"i18n"
+		"i18n",
+		"translations",
+		"azure"
 	],
 	"license": "MIT",
 	"bugs": {

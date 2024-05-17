@@ -17,3 +17,4 @@ tsconfigcopy.json
 *.lock
 tsconfig.json
 tsconfig.types.json
+.prettierrc.js
