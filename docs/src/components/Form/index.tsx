@@ -180,6 +180,9 @@ export default function Form() {
 					name="jsonfile"
 					id="jsonfile"
 					value={jsonFileText}
+					placeholder={`{
+	"key": "value"
+}`}
 					maxLength={5000}
 					onChange={(event) => {
 						setJsonFileText(event.target.value);
