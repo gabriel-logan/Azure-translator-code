@@ -33,6 +33,10 @@ export const metadata: Metadata = {
 	manifest: "/manifest.webmanifest",
 
 	category: "translator",
+
+	verification: {
+		google: process.env.NEXT_PUBLIC_GOOGLE_SEARCH_CONSOLE_API_KEY,
+	},
 };
 
 export default function RootLayout({
