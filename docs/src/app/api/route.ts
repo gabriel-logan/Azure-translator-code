@@ -1,5 +1,5 @@
 import { translate } from "azure-translator-code";
-import { TranslationType } from "azure-translator-code/types/translate";
+import { TranslationType } from "azure-translator-code/types/types";
 import { type NextRequest, NextResponse } from "next/server";
 
 export function GET() {
