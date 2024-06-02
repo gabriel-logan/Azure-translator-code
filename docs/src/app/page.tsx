@@ -15,7 +15,9 @@ export default function Home() {
 				For now read the README.md
 			</Link>
 			<div className="mx-auto mt-5 w-full max-w-md rounded bg-white p-5 shadow">
-				<h2 className="mb-5 text-2xl font-bold">Test the translator</h2>
+				<h2 className="mb-5 text-2xl font-bold text-black">
+					Test the translator
+				</h2>
 				<div>
 					<Form />
 				</div>

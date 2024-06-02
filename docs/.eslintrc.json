@@ -1,4 +1,7 @@
 {
   "extends": ["universe/node", "next/core-web-vitals"],
-	"root": true
+	"root": true,
+	"rules": {
+		"no-console": "warn"
+	}
 }
