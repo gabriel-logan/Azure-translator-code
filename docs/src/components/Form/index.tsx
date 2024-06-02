@@ -1,13 +1,10 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 
 export default function Form() {
-	const [translationResult, setTranslationResult] = useState<string | null>(
-		null,
-	);
+	const [translationResult, setTranslationResult] = useState("");
 	const [jsonFileText, setJsonFileText] = useState("");
-	const [isPending, startTransition] = useTransition();
 	const [fromLang, setFromLang] = useState("en");
 	const [toLang, setToLang] = useState("pt");
 
@@ -24,25 +21,33 @@ export default function Form() {
 			return;
 		}
 
+		const bodyToSend = {
+			fromLang,
+			toLang,
+			jsonFileText,
+		};
+
 		try {
-			startTransition(async () => {
-				const bodyToSend = {
-					fromLang,
-					toLang,
-					jsonFileText,
-				};
-
-				const result = await fetch("/api", {
-					body: JSON.stringify(bodyToSend),
-					method: "POST",
-				});
-
-				const data = await result.json();
-
-				setTranslationResult(data.translatedValues);
+			const result = await fetch("/api", {
+				body: JSON.stringify(bodyToSend),
+				method: "POST",
 			});
+
+			const data: any = await result.json();
+
+			if (data.status === 400) {
+				setTranslationResult(data.message);
+				return;
+			}
+
+			if (data.status === 500) {
+				setTranslationResult(data.message);
+				return;
+			}
+
+			setTranslationResult(data.translatedValues);
 		} catch {
-			setTranslationResult("invalid json file");
+			setTranslationResult("An error occurred");
 		}
 	};
 
@@ -157,7 +162,6 @@ export default function Form() {
 				></textarea>
 				<button
 					type="submit"
-					disabled={isPending}
 					className="mt-5 rounded bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
 				>
 					Translate
@@ -166,7 +170,9 @@ export default function Form() {
 			<div className="mt-5 rounded border p-3">
 				<p className="font-medium text-gray-700">Result: </p>
 				<pre className="overflow-x-auto text-black">
-					{JSON.stringify(translationResult, null, 2)}
+					{translationResult === ""
+						? "No result yet"
+						: JSON.stringify(translationResult, null, 2)}
 				</pre>
 			</div>
 		</>

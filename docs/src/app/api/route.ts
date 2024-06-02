@@ -1,4 +1,5 @@
 import { translate } from "azure-translator-code";
+import { TranslationType } from "azure-translator-code/types/translate";
 import { type NextRequest, NextResponse } from "next/server";
 
 export function GET() {
@@ -30,27 +31,84 @@ export function HEAD() {
 	});
 }
 
+type RequestBody =
+	| {
+			fromLang: string;
+			toLang: string;
+			jsonFileText: string;
+	  }
+	| undefined;
+
 export async function POST(request: NextRequest) {
+	let data: RequestBody;
+
 	try {
-		const data = await request.json();
+		data = await request.json();
+	} catch {
+		return NextResponse.json(
+			{ status: 400, message: "Invalid or missing request body" },
+			{ status: 400 },
+		);
+	}
 
-		const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
-		const endpoint = process.env.AZURE_ENDPOINT || "";
-		const location = process.env.AZURE_LOCATION || "";
-		const fromLang = data.fromLang;
-		const toLang = data.toLang;
+	if (!data?.fromLang || !data.toLang) {
+		return NextResponse.json(
+			{ status: 400, message: "From lang and to Lang are required" },
+			{ status: 400 },
+		);
+	}
 
-		const translatedValues = await translate(
+	if (!data?.jsonFileText) {
+		return NextResponse.json(
+			{ status: 400, message: "Missing json file text" },
+			{ status: 400 },
+		);
+	}
+
+	const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
+	const endpoint = process.env.AZURE_ENDPOINT || "";
+	const location = process.env.AZURE_LOCATION || "";
+	const fromLang = data.fromLang;
+	const toLang = data.toLang;
+
+	let translatedValues: TranslationType;
+
+	let valuesToTranslate: unknown;
+
+	try {
+		valuesToTranslate =
+			typeof data.jsonFileText === "string"
+				? JSON.parse(data.jsonFileText)
+				: data.jsonFileText;
+	} catch {
+		return NextResponse.json(
+			{ status: 400, message: "Invalid json text passed" },
+			{ status: 400 },
+		);
+	}
+
+	try {
+		translatedValues = await translate(
 			key,
 			endpoint,
 			location,
 			fromLang,
 			toLang,
-			JSON.parse(data.jsonFileText),
+			valuesToTranslate as TranslationType,
 		);
-
-		return NextResponse.json({ translatedValues });
 	} catch {
-		return NextResponse.json({ error: "invalid json file" });
+		return NextResponse.json(
+			{ status: 500, message: "Translation failed" },
+			{ status: 500 },
+		);
 	}
+
+	return NextResponse.json(
+		{
+			translatedValues,
+		},
+		{
+			status: 200,
+		},
+	);
 }
