@@ -1,12 +1,11 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 
-interface TranslationType {
-	translation: Record<string, string>;
-}
-
+type TranslationType = {
+	[key: string]: string | TranslationType;
+};
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
  * @param endpoint The endpoint: 'https://api.cognitive.microsofttranslator.com/'
@@ -59,15 +58,13 @@ export default function translateToUnicFolder(
 	fromLang: string,
 	toLangs: string[],
 	jsonFile: TranslationType,
-	folderName: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
+	folderNamePath: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
 ): void {
-	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderName);
+	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
 		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
 	}
-
-	const { translation } = jsonFile;
 
 	function translateText(text: string, from: string, to: string) {
 		return axios({
@@ -94,42 +91,40 @@ export default function translateToUnicFolder(
 		});
 	}
 
-	const outputData: Record<string, object> = {};
+	async function translateAndSave(lang: string, obj: TranslationType) {
+		const translations: Record<string, unknown> = {};
 
-	async function translateAndSave(lang: string) {
-		const translations: Record<string, string> = {};
-
-		for (const key in translation) {
-			try {
-				const response = await translateText(translation[key], fromLang, lang);
-				const translatedText: string = response.data[0].translations[0].text;
-				translations[key] = translatedText;
-				console.log(`Translating ${translation[key]} to ${lang} \n\n`);
-			} catch (error) {
-				if (error instanceof Error) {
-					console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
-				} else {
-					console.error(`An error occurred within the error (: \n`);
+		for (const key in obj) {
+			if (typeof obj[key] === 'object' && obj[key] !== null) {
+				const nestedTranslations = await translateAndSave(lang, obj[key] as TranslationType);
+				translations[key] = nestedTranslations;
+			} else {
+				try {
+					const response = await translateText(obj[key] as string, fromLang, lang);
+					const translatedText = response.data[0].translations[0].text;
+					translations[key] = translatedText;
+					console.log(`Translating ${obj[key]} to ${lang} \n\n`);
+				} catch (error) {
+					if (error instanceof Error) {
+						console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
+					} else {
+						console.error(`An error occurred within the error (: \n`);
+					}
 				}
 			}
 		}
 
-		outputData[lang] = translations;
+		const outputFileName = path.join(traducoesDir, `${lang}.json`);
+		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
+		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
+
+		return translations;
 	}
 
 	async function translateAndSaveAll() {
-		const translationPromises = toLangs.map((lang) => translateAndSave(lang));
+		const translationPromises = toLangs.map((lang) => translateAndSave(lang, jsonFile));
 
 		await Promise.all(translationPromises);
-
-		for (const lang of toLangs) {
-			const outputFileName = path.join(traducoesDir, `${lang}.json`);
-			fs.writeFileSync(
-				outputFileName,
-				JSON.stringify({ translation: outputData[lang] as TranslationType }, null, 4),
-			);
-			console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
-		}
 	}
 
 	translateAndSaveAll().catch((error) => {

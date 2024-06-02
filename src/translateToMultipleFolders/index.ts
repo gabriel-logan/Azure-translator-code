@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 
-interface TranslationType {
-	translation: Record<string, string>;
-}
+type TranslationType = {
+	[key: string]: string | TranslationType;
+};
 
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
@@ -67,8 +67,6 @@ export default function translateToMultipleFolders(
 		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
 	}
 
-	const { translation } = jsonFile;
-
 	function translateText(text: string, from: string, to: string) {
 		return axios({
 			baseURL: endpoint,
@@ -94,20 +92,31 @@ export default function translateToMultipleFolders(
 		});
 	}
 
-	async function translateAndSave(lang: string) {
-		const translations: Record<string, string> = {};
+	async function translateAndSave(lang: string, obj: TranslationType, currentPath: string = '') {
+		const translations: Record<string, unknown> = {};
 
-		for (const key in translation) {
-			try {
-				const response = await translateText(translation[key], fromLang, lang);
-				const translatedText = response.data[0].translations[0].text;
-				translations[key] = translatedText;
-				console.log(`Translating ${translation[key]} to ${lang} \n\n`);
-			} catch (error) {
-				if (error instanceof Error) {
-					console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
-				} else {
-					console.error(`An error occurred within the error (: \n`);
+		for (const key in obj) {
+			const newPath = currentPath ? `${currentPath}.${key}` : key;
+
+			if (typeof obj[key] === 'object' && obj[key] !== null) {
+				const nestedTranslations = await translateAndSave(
+					lang,
+					obj[key] as TranslationType,
+					newPath,
+				);
+				translations[key] = nestedTranslations;
+			} else {
+				try {
+					const response = await translateText(obj[key] as string, fromLang, lang);
+					const translatedText = response.data[0].translations[0].text;
+					translations[key] = translatedText;
+					console.log(`Translating ${obj[key]} to ${lang} \n\n`);
+				} catch (error) {
+					if (error instanceof Error) {
+						console.error(`Error translating "${newPath}" to ${lang}: ${error.message} \n`);
+					} else {
+						console.error(`An error occurred within the error (: \n`);
+					}
 				}
 			}
 		}
@@ -119,12 +128,14 @@ export default function translateToMultipleFolders(
 		}
 
 		const outputFileName = path.join(langDir, `${lang}.json`);
-		fs.writeFileSync(outputFileName, JSON.stringify({ translation: translations }, null, 4));
+		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
 		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
+
+		return translations;
 	}
 
 	async function translateAndSaveAll() {
-		const translationPromises = toLangs.map((lang) => translateAndSave(lang));
+		const translationPromises = toLangs.map((lang) => translateAndSave(lang, jsonFile));
 
 		await Promise.all(translationPromises);
 	}
