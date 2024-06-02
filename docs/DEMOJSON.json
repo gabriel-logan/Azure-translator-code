@@ -1,0 +1,11 @@
+{
+	"teste1": "This is a test",
+	"teste2": {
+		"teste21": "This is another test",
+		"teste22": "Yet another test is here",
+		"teste3": {
+			"teste31": "Testing continues",
+			"teste32": "The testing never ends"
+		}
+	}
+}

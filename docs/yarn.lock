@@ -608,10 +608,10 @@ axobject-query@^3.2.1:
   dependencies:
     dequal "^2.0.3"
 
-azure-translator-code@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/azure-translator-code/-/azure-translator-code-1.1.1.tgz#d6db47dccd58dc90fe962109c06b70c7b52d9267"
-  integrity sha512-Bu8qqAhrtlfd/TF50LFynnjtUGXLOU03EgW9zg4Y8g3yv602v4ckESSAlfsrfKpxwCZTjLqpHrvnwwMdi0ourg==
+azure-translator-code@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/azure-translator-code/-/azure-translator-code-1.1.2.tgz#1655c60837c2d5365e605f8fb8752a88b2f6bba9"
+  integrity sha512-ARAd3fFsm7xn4gYBOYKDXCilyQRF1e3qzerro1FPRfJWRn28BGuq8OWtlr0vEJjc0HdOKdtCBF6j/DPkQ3vu6w==
   dependencies:
     axios "^1.5.0"
     uuid "^9.0.1"

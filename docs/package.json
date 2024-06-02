@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "azure-translator-code": "^1.1.1",
+    "azure-translator-code": "^1.1.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
