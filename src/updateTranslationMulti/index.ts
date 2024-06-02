@@ -1,11 +1,8 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import fs from 'fs';
-import path from 'path';
-
-export interface TranslationType {
-	translation: Record<string, string>;
-}
+import * as fs from 'fs';
+import * as path from 'path';
+import type { TranslationType } from '../types';
 
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
@@ -28,7 +25,7 @@ export interface TranslationType {
 												'tlh-Latn'
 											];
  * @param jsonFile
- * It must follow the following structure:
+ * It must be a valid JSON object:
  *
  * {
 			"translation": {
@@ -45,8 +42,6 @@ export interface TranslationType {
 			}
 		}
  *
-		If you need, copy this structure to get better then make your modification
- *
  * @description This function checks the json with the already existing translations and adds only the non-existing translations to the file, this serves to save data.
  * Otherwise it works the same as the other 2 functions
  *
@@ -62,16 +57,15 @@ export default function updateTranslationsMulti(
 	fromLang: string,
 	toLangs: string[],
 	jsonFile: TranslationType,
-	folderNamePath: string = 'multiFolderGeneratedTranslations',
+	folderNamePath: string = 'multiFolderGeneratedTranslations', // Onde sera salvo os arquivos
 ): void {
-	const rootDir: string = path.join(__dirname, '..', '..', '..', '..');
-	const traducoesDir: string = path.join(rootDir, folderNamePath);
+	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
 		fs.mkdirSync(traducoesDir, { recursive: true });
 	}
 
-	async function translateText(text: string, from: string, to: string) {
+	function translateText(text: string, from: string, to: string) {
 		return axios({
 			baseURL: endpoint,
 			url: '/translate',
@@ -96,48 +90,69 @@ export default function updateTranslationsMulti(
 		});
 	}
 
-	async function translateAndSave(lang: string) {
-		const langDir: string = path.join(traducoesDir, lang);
+	async function translateAndSave(
+		lang: string,
+		obj: TranslationType,
+		existingTranslations: TranslationType,
+		currentPath: string = '',
+	) {
+		const translations: Record<string, unknown> = existingTranslations;
 
-		if (!fs.existsSync(langDir)) {
-			fs.mkdirSync(langDir);
-		}
+		for (const key in obj) {
+			const newPath = currentPath ? `${currentPath}.${key}` : key;
 
-		const outputFileName: string = path.join(langDir, `${lang}.json`);
-		let translations: Record<string, string> = {};
-
-		if (fs.existsSync(outputFileName)) {
-			const existingData: TranslationType = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
-			translations = existingData.translation;
-		}
-
-		const newTranslations: Record<string, string> = {};
-
-		for (const key in jsonFile.translation) {
-			if (!translations[key]) {
-				try {
-					console.log('TO FAZENDO UMA REQUISICAO');
-					const response = await translateText(jsonFile.translation[key], fromLang, lang);
-					const translatedText: string = response.data[0].translations[0].text;
-					newTranslations[key] = translatedText;
-					console.log(`Translating "${jsonFile.translation[key]}" to ${lang} \n\n`);
-				} catch (error) {
-					if (error instanceof Error) {
-						console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
-					} else {
-						console.error(`An error occurred within the error (: \n`);
+			if (typeof obj[key] === 'object' && obj[key] !== null) {
+				const nestedTranslations = await translateAndSave(
+					lang,
+					obj[key] as TranslationType,
+					(existingTranslations[key] || {}) as TranslationType,
+					newPath,
+				);
+				translations[key] = nestedTranslations;
+			} else {
+				if (!translations[key]) {
+					try {
+						const response = await translateText(obj[key] as string, fromLang, lang);
+						const translatedText = response.data[0].translations[0].text;
+						translations[key] = translatedText;
+						console.log(`Translating ${obj[key]} to ${lang} \n\n`);
+					} catch (error) {
+						if (error instanceof Error) {
+							console.error(`Error translating "${newPath}" to ${lang}: ${error.message} \n`);
+						} else {
+							console.error(`An error occurred within the error (: \n`);
+						}
 					}
 				}
 			}
 		}
 
-		translations = { ...translations, ...newTranslations };
-		fs.writeFileSync(outputFileName, JSON.stringify({ translation: translations }, null, 4));
+		const langDir = path.join(traducoesDir, lang);
+
+		if (!fs.existsSync(langDir)) {
+			fs.mkdirSync(langDir);
+		}
+
+		const outputFileName = path.join(langDir, `${lang}.json`);
+		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
 		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
+
+		return translations;
 	}
 
 	async function translateAndSaveAll() {
-		const translationPromises: Promise<void>[] = toLangs.map((lang) => translateAndSave(lang));
+		const translationPromises = toLangs.map(async (lang) => {
+			const langDir = path.join(traducoesDir, lang);
+			const outputFileName = path.join(langDir, `${lang}.json`);
+
+			let existingTranslations: TranslationType = {};
+			if (fs.existsSync(outputFileName)) {
+				const rawData = fs.readFileSync(outputFileName, 'utf8');
+				existingTranslations = JSON.parse(rawData);
+			}
+
+			return translateAndSave(lang, jsonFile, existingTranslations);
+		});
 
 		await Promise.all(translationPromises);
 	}

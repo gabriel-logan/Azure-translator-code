@@ -42,12 +42,15 @@ import type { TranslationType } from '../types';
 			}
 		}
  *
-		@param [folderNamePath='unicFolderGeneratedTranslations'] If it is undefined, it will be associated by default: unicFolderGeneratedTranslations
+ * @description This function checks the json with the already existing translations and adds only the non-existing translations to the file, this serves to save data.
+ * Otherwise it works the same as the other 2 functions
+ *
+ * 	@param [folderNamePath='unicFolderGeneratedTranslations'] If it is undefined, it will be associated by default: unicFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
 		@IMPORTANT Saving always starts from the project root folder.
 		@return {void} This function will return a folder called folder unicFolderGeneratedTranslations in root folder or YourChoice
  */
-export default function translateToUnicFolder(
+export default function updateTranslationsUnic(
 	key: string,
 	endpoint: string,
 	location: string,
@@ -59,7 +62,7 @@ export default function translateToUnicFolder(
 	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
-		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
+		fs.mkdirSync(traducoesDir, { recursive: true });
 	}
 
 	function translateText(text: string, from: string, to: string) {
@@ -87,24 +90,34 @@ export default function translateToUnicFolder(
 		});
 	}
 
-	async function translateAndSave(lang: string, obj: TranslationType) {
-		const translations: Record<string, unknown> = {};
+	async function translateAndSave(
+		lang: string,
+		obj: TranslationType,
+		existingTranslations: TranslationType,
+	) {
+		const translations: Record<string, unknown> = existingTranslations;
 
 		for (const key in obj) {
 			if (typeof obj[key] === 'object' && obj[key] !== null) {
-				const nestedTranslations = await translateAndSave(lang, obj[key] as TranslationType);
+				const nestedTranslations = await translateAndSave(
+					lang,
+					obj[key] as TranslationType,
+					(existingTranslations[key] || {}) as TranslationType,
+				);
 				translations[key] = nestedTranslations;
 			} else {
-				try {
-					const response = await translateText(obj[key] as string, fromLang, lang);
-					const translatedText = response.data[0].translations[0].text;
-					translations[key] = translatedText;
-					console.log(`Translating ${obj[key]} to ${lang} \n\n`);
-				} catch (error) {
-					if (error instanceof Error) {
-						console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
-					} else {
-						console.error(`An error occurred within the error (: \n`);
+				if (!translations[key]) {
+					try {
+						const response = await translateText(obj[key] as string, fromLang, lang);
+						const translatedText = response.data[0].translations[0].text;
+						translations[key] = translatedText;
+						console.log(`Translating ${obj[key]} to ${lang} \n\n`);
+					} catch (error) {
+						if (error instanceof Error) {
+							console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
+						} else {
+							console.error(`An error occurred within the error (: \n`);
+						}
 					}
 				}
 			}
@@ -118,7 +131,17 @@ export default function translateToUnicFolder(
 	}
 
 	async function translateAndSaveAll() {
-		const translationPromises = toLangs.map((lang) => translateAndSave(lang, jsonFile));
+		const translationPromises = toLangs.map(async (lang) => {
+			const outputFileName = path.join(traducoesDir, `${lang}.json`);
+
+			let existingTranslations: TranslationType = {};
+			if (fs.existsSync(outputFileName)) {
+				const rawData = fs.readFileSync(outputFileName, 'utf8');
+				existingTranslations = JSON.parse(rawData);
+			}
+
+			return translateAndSave(lang, jsonFile, existingTranslations);
+		});
 
 		await Promise.all(translationPromises);
 	}

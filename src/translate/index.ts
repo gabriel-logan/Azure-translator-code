@@ -1,12 +1,6 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-
-/**
- * Represents the type of a translation object.
- */
-export type TranslationType = {
-	[key: string]: string | TranslationType;
-};
+import type { TranslationType } from '../types';
 
 async function translateText(
 	text: string,

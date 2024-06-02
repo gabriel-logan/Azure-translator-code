@@ -10,6 +10,8 @@ NPM PAGE: https://www.npmjs.com/package/azure-translator-code
 
 GITHUB PAGE: https://github.com/gabriel-logan/Azure-translator-code
 
+You con test the library in the following link: https://azuretranslatorcode.vercel.app
+
 ## Installation
 
 To get started, you can install the library via npm:
@@ -49,14 +51,15 @@ const jsonFile = require('./jsonFileToTranslate/en.json');
 
 // or
 
-// IMPORTANT
-// The file must follow this structure.
 const jsonFile = {
-  "translation": {
-    "welcome": "Welcome",
-    "hello": "Hello",
-  }
-};
+	"HomePage": {
+		"welcome": 'Welcome',
+		"hello": 'Hello',
+		"SubText": {
+			"subText": 'This is a subtext'
+		}
+	}
+}
 ```
 
 Now, you can use the library to translate the JSON file into multiple languages:
@@ -148,6 +151,38 @@ updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile, 'm
 // This function will update the translations in the folder called myFolder
 ```
 
+## Translate and Log the result
+
+You can also log the result of the translation in the console.
+
+```javascript
+const { translate } = require('azure-translator-code');
+
+const key = 'sds12312a213aaaa9b2d0c37eds37b'; // REPLACE WITH YOUR OWN KEY HERE
+const endpoint = 'https://api.cognitive.microsofttranslator.com/';
+const location = 'eastus';
+const fromLang = 'en';
+const toLang = 'pt';
+const jsonFile = {
+	HomePage: {
+		Welcome: "Welcome",
+		Hello: "Hello",
+	},
+};
+
+translate(key, endpoint, location, fromLang, toLang, jsonFile).then((result) => console.log(result));
+
+// Output
+/**
+ * {
+ *  "translation": {
+ * 		"Welcome": "Bem-vindo",
+ * 		"Hello": "Olá",
+ * 	}
+ * }
+ */
+
+```
 Make sure to replace the key and endpoint information with your own Azure access credentials. Ensure that the JSON file and settings are correctly defined according to your needs.
 
 Contributing

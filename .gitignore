@@ -1,6 +1,6 @@
 node_modules/
 private/
 dist/
-types/
+/types/
 tsconfigcopy.json
 geraTraducoes.js

@@ -18,3 +18,4 @@ tsconfigcopy.json
 tsconfig.json
 tsconfig.types.json
 .prettierrc.js
+dist/types/

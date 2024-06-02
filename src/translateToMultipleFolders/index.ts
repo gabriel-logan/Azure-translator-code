@@ -2,10 +2,7 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
-
-export type TranslationType = {
-	[key: string]: string | TranslationType;
-};
+import type { TranslationType } from '../types';
 
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
@@ -28,7 +25,7 @@ export type TranslationType = {
 												'tlh-Latn'
 											];
  * @param jsonFile
- * It must follow the following structure:
+ * It must be a valid JSON object:
  *
  * {
 			"translation": {
@@ -44,8 +41,6 @@ export type TranslationType = {
 				"error_message": "An error occurred"
 			}
 		}
- *
-		If you need, copy this structure to get better then make your modification
  *
 		@param [folderNamePath='multiFolderGeneratedTranslations'] If it is undefined, it will be associated by default: multiFolderGeneratedTranslations
 		You can use this like: 'myfoldername' or 'myfoldername/otherfolder' or './myfoldername/etcfolder'
