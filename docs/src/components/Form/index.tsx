@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { FaRegCopy } from "react-icons/fa6";
 
 export default function Form() {
 	const [translationResult, setTranslationResult] = useState("");
 	const [jsonFileText, setJsonFileText] = useState("");
 	const [fromLang, setFromLang] = useState("en");
 	const [toLang, setToLang] = useState("pt");
+
+	const [isPedding, startTransition] = useTransition();
+
+	const [isCopied, setIsCopied] = useState(false);
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -27,35 +32,37 @@ export default function Form() {
 			jsonFileText,
 		};
 
-		try {
-			const result = await fetch("/api", {
-				body: JSON.stringify(bodyToSend),
-				method: "POST",
-			});
+		startTransition(async () => {
+			try {
+				const result = await fetch("/api", {
+					body: JSON.stringify(bodyToSend),
+					method: "POST",
+				});
 
-			const data: any = await result.json();
+				const data: any = await result.json();
 
-			if (data.status === 400) {
-				setTranslationResult(data.message);
-				return;
+				if (data.status === 400) {
+					setTranslationResult(data.message);
+					return;
+				}
+
+				if (data.status === 500) {
+					setTranslationResult(data.message);
+					return;
+				}
+
+				setTranslationResult(data.translatedValues);
+			} catch {
+				setTranslationResult("An error occurred");
 			}
-
-			if (data.status === 500) {
-				setTranslationResult(data.message);
-				return;
-			}
-
-			setTranslationResult(data.translatedValues);
-		} catch {
-			setTranslationResult("An error occurred");
-		}
+		});
 	};
 
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
-				<div className="flex flex-col justify-between rounded bg-gray-800 p-5 text-white sm:flex-row">
-					<div>
+				<div className="flex flex-col rounded bg-gray-800 p-5 text-white sm:flex-row">
+					<div className="w-full sm:mr-9">
 						<label
 							htmlFor="fromLang"
 							className="block text-sm font-medium text-gray-400"
@@ -65,7 +72,7 @@ export default function Form() {
 						<select
 							name="fromLang"
 							id="fromLang"
-							className="cursor-pointer rounded bg-gray-700 p-2 text-white"
+							className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
 							value={fromLang}
 							onChange={(event) => {
 								setFromLang(event.target.value);
@@ -80,8 +87,8 @@ export default function Form() {
 							<option value="ja">Japanese</option>
 							<option value="ko">Korean</option>
 							<option value="ru">Russian</option>
-							<option value="zh-Hans">Chinese S</option>
-							<option value="zh-Hant">Chinese T</option>
+							<option value="zh-Hans">Chinese Simplified</option>
+							<option value="zh-Hant">Chinese Traditional</option>
 							<option value="ar">Arabic</option>
 							<option value="tr">Turkish</option>
 							<option value="vi">Vietnamese</option>
@@ -99,7 +106,7 @@ export default function Form() {
 							<option value="ms">Malay</option>
 						</select>
 					</div>
-					<div className="mt-5 sm:mt-0">
+					<div className="mb-4 mt-5 w-full sm:mb-0 sm:mt-0">
 						<label
 							htmlFor="toLang"
 							className="block text-sm font-medium text-gray-400"
@@ -109,7 +116,7 @@ export default function Form() {
 						<select
 							name="toLang"
 							id="toLang"
-							className="cursor-pointer rounded bg-gray-700 p-2 text-white"
+							className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
 							value={toLang}
 							onChange={(event) => {
 								setToLang(event.target.value);
@@ -124,8 +131,8 @@ export default function Form() {
 							<option value="ja">Japanese</option>
 							<option value="ko">Korean</option>
 							<option value="ru">Russian</option>
-							<option value="zh-Hans">Chinese S</option>
-							<option value="zh-Hant">Chinese T</option>
+							<option value="zh-Hans">Chinese Simplified</option>
+							<option value="zh-Hant">Chinese Traditional</option>
 							<option value="ar">Arabic</option>
 							<option value="tr">Turkish</option>
 							<option value="vi">Vietnamese</option>
@@ -146,7 +153,7 @@ export default function Form() {
 				</div>
 				<label
 					htmlFor="jsonfile"
-					className="mb-2 block text-sm font-medium text-gray-700"
+					className="mb-2 mt-1 block text-base font-medium text-gray-700"
 				>
 					Paste the json code here
 				</label>
@@ -162,18 +169,50 @@ export default function Form() {
 				></textarea>
 				<button
 					type="submit"
+					disabled={isPedding}
 					className="mt-5 rounded bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
 				>
 					Translate
 				</button>
 			</form>
 			<div className="mt-5 rounded border p-3">
+				<div
+					className="float-right flex flex-col items-end"
+					onClick={() => {
+						navigator.clipboard.writeText(
+							JSON.stringify(translationResult, null, 2),
+						);
+						setIsCopied(true);
+						setTimeout(() => {
+							setIsCopied(false);
+						}, 1000);
+					}}
+				>
+					<FaRegCopy
+						className="cursor-pointer text-black transition-colors duration-75 active:text-gray-300"
+						size={22}
+					/>
+					<span className="text-gray-500">{isCopied ? "Copied" : ""}</span>
+				</div>
 				<p className="font-medium text-gray-700">Result: </p>
-				<pre className="overflow-x-auto text-black">
-					{translationResult === ""
-						? "No result yet"
-						: JSON.stringify(translationResult, null, 2)}
-				</pre>
+
+				{isPedding ? (
+					<div className="animate-pulse overflow-x-auto rounded bg-gray-100 p-2">
+						<div className="mb-2 h-4 w-3/4 animate-pulse bg-gray-400"></div>
+						<div className="mb-2 ml-4 h-4 w-1/2 animate-pulse bg-gray-400"></div>
+						<div className="mb-2 ml-8 h-4 w-2/3 animate-pulse bg-gray-400"></div>
+						<div className="mb-2 ml-8 h-4 w-1/2 animate-pulse bg-gray-400"></div>
+						<div className="mb-2 ml-12 h-4 w-2/3 animate-pulse bg-gray-400"></div>
+						<div className="mb-2 ml-12 h-4 w-1/2 animate-pulse bg-gray-400"></div>
+						<div className="h-4 w-3/4 animate-pulse bg-gray-400"></div>
+					</div>
+				) : (
+					<pre className="overflow-x-auto text-black">
+						{translationResult === ""
+							? "No result yet"
+							: JSON.stringify(translationResult, null, 2)}
+					</pre>
+				)}
 			</div>
 		</>
 	);

@@ -81,6 +81,7 @@ export async function POST(request: NextRequest) {
 				? JSON.parse(data.jsonFileText)
 				: data.jsonFileText;
 	} catch {
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 		return NextResponse.json(
 			{ status: 400, message: "Invalid json text passed" },
 			{ status: 400 },

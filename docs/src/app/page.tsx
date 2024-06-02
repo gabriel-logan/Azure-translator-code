@@ -4,7 +4,7 @@ import Form from "@/components/Form";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-10">
+		<main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-2 sm:p-6 md:p-10">
 			<h1 className="mb-4 text-3xl font-bold text-gray-700">In comming ...</h1>
 			<Link
 				className="mb-10 text-blue-500 hover:underline"
