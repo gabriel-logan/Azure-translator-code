@@ -23,6 +23,20 @@ export default function NotFound() {
 					</Link>
 				</div>
 			</div>
+			<div className="mt-4">
+				<iframe
+					src="https://github.com/sponsors/gabriel-logan/card"
+					title="Sponsor gabriel-logan"
+					height="225"
+					width="600"
+					style={{
+						border: 0,
+						borderRadius: 4,
+						alignSelf: "center",
+						margin: "auto",
+					}}
+				></iframe>
+			</div>
 		</main>
 	);
 }

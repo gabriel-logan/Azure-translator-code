@@ -62,93 +62,97 @@ export default function Form() {
 		<>
 			<form onSubmit={handleSubmit}>
 				<div className="flex flex-col rounded bg-gray-800 p-5 text-white sm:flex-row">
-					<div className="w-full sm:mr-9">
-						<label
-							htmlFor="fromLang"
-							className="block text-sm font-medium text-gray-400"
-						>
-							From
-						</label>
-						<select
-							name="fromLang"
-							id="fromLang"
-							className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-							value={fromLang}
-							onChange={(event) => {
-								setFromLang(event.target.value);
-							}}
-						>
-							<option value="en">English</option>
-							<option value="pt">Portuguese</option>
-							<option value="es">Spanish</option>
-							<option value="fr">French</option>
-							<option value="de">German</option>
-							<option value="it">Italian</option>
-							<option value="ja">Japanese</option>
-							<option value="ko">Korean</option>
-							<option value="ru">Russian</option>
-							<option value="zh-Hans">Chinese Simplified</option>
-							<option value="zh-Hant">Chinese Traditional</option>
-							<option value="ar">Arabic</option>
-							<option value="tr">Turkish</option>
-							<option value="vi">Vietnamese</option>
-							<option value="th">Thai</option>
-							<option value="sv">Swedish</option>
-							<option value="pl">Polish</option>
-							<option value="nl">Dutch</option>
-							<option value="da">Danish</option>
-							<option value="fi">Finnish</option>
-							<option value="no">Norwegian</option>
-							<option value="cs">Czech</option>
-							<option value="hu">Hungarian</option>
-							<option value="el">Greek</option>
-							<option value="id">Indonesian</option>
-							<option value="ms">Malay</option>
-						</select>
+					<div className="w-full">
+						<div className="sm:ml-10">
+							<label
+								htmlFor="fromLang"
+								className="block text-sm font-medium text-gray-400"
+							>
+								From
+							</label>
+							<select
+								name="fromLang"
+								id="fromLang"
+								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
+								value={fromLang}
+								onChange={(event) => {
+									setFromLang(event.target.value);
+								}}
+							>
+								<option value="en">English</option>
+								<option value="pt">Portuguese</option>
+								<option value="es">Spanish</option>
+								<option value="fr">French</option>
+								<option value="de">German</option>
+								<option value="it">Italian</option>
+								<option value="ja">Japanese</option>
+								<option value="ko">Korean</option>
+								<option value="ru">Russian</option>
+								<option value="zh-Hans">Chinese Simplified</option>
+								<option value="zh-Hant">Chinese Traditional</option>
+								<option value="ar">Arabic</option>
+								<option value="tr">Turkish</option>
+								<option value="vi">Vietnamese</option>
+								<option value="th">Thai</option>
+								<option value="sv">Swedish</option>
+								<option value="pl">Polish</option>
+								<option value="nl">Dutch</option>
+								<option value="da">Danish</option>
+								<option value="fi">Finnish</option>
+								<option value="no">Norwegian</option>
+								<option value="cs">Czech</option>
+								<option value="hu">Hungarian</option>
+								<option value="el">Greek</option>
+								<option value="id">Indonesian</option>
+								<option value="ms">Malay</option>
+							</select>
+						</div>
 					</div>
 					<div className="mb-4 mt-5 w-full sm:mb-0 sm:mt-0">
-						<label
-							htmlFor="toLang"
-							className="block text-sm font-medium text-gray-400"
-						>
-							To
-						</label>
-						<select
-							name="toLang"
-							id="toLang"
-							className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-							value={toLang}
-							onChange={(event) => {
-								setToLang(event.target.value);
-							}}
-						>
-							<option value="pt">Portuguese</option>
-							<option value="en">English</option>
-							<option value="es">Spanish</option>
-							<option value="fr">French</option>
-							<option value="de">German</option>
-							<option value="it">Italian</option>
-							<option value="ja">Japanese</option>
-							<option value="ko">Korean</option>
-							<option value="ru">Russian</option>
-							<option value="zh-Hans">Chinese Simplified</option>
-							<option value="zh-Hant">Chinese Traditional</option>
-							<option value="ar">Arabic</option>
-							<option value="tr">Turkish</option>
-							<option value="vi">Vietnamese</option>
-							<option value="th">Thai</option>
-							<option value="sv">Swedish</option>
-							<option value="pl">Polish</option>
-							<option value="nl">Dutch</option>
-							<option value="da">Danish</option>
-							<option value="fi">Finnish</option>
-							<option value="no">Norwegian</option>
-							<option value="cs">Czech</option>
-							<option value="hu">Hungarian</option>
-							<option value="el">Greek</option>
-							<option value="id">Indonesian</option>
-							<option value="ms">Malay</option>
-						</select>
+						<div className="flex flex-col sm:mr-10 sm:items-end">
+							<label
+								htmlFor="toLang"
+								className="block text-sm font-medium text-gray-400"
+							>
+								To
+							</label>
+							<select
+								name="toLang"
+								id="toLang"
+								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
+								value={toLang}
+								onChange={(event) => {
+									setToLang(event.target.value);
+								}}
+							>
+								<option value="pt">Portuguese</option>
+								<option value="en">English</option>
+								<option value="es">Spanish</option>
+								<option value="fr">French</option>
+								<option value="de">German</option>
+								<option value="it">Italian</option>
+								<option value="ja">Japanese</option>
+								<option value="ko">Korean</option>
+								<option value="ru">Russian</option>
+								<option value="zh-Hans">Chinese Simplified</option>
+								<option value="zh-Hant">Chinese Traditional</option>
+								<option value="ar">Arabic</option>
+								<option value="tr">Turkish</option>
+								<option value="vi">Vietnamese</option>
+								<option value="th">Thai</option>
+								<option value="sv">Swedish</option>
+								<option value="pl">Polish</option>
+								<option value="nl">Dutch</option>
+								<option value="da">Danish</option>
+								<option value="fi">Finnish</option>
+								<option value="no">Norwegian</option>
+								<option value="cs">Czech</option>
+								<option value="hu">Hungarian</option>
+								<option value="el">Greek</option>
+								<option value="id">Indonesian</option>
+								<option value="ms">Malay</option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<label
