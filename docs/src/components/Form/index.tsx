@@ -21,6 +21,11 @@ export default function Form() {
 			return;
 		}
 
+		if (jsonFileText.length > 5000) {
+			alert("The json file must have a maximum of 5000 characters");
+			return;
+		}
+
 		if (fromLang === toLang) {
 			alert("The languages must be different");
 			return;
@@ -160,13 +165,22 @@ export default function Form() {
 					className="mb-2 mt-1 block text-base font-medium text-gray-700"
 				>
 					Paste the json code here
+					<p className="float-right text-black">
+						Len:{" "}
+						<span
+							className={`${jsonFileText.length === 5000 && "text-red-800"}`}
+						>
+							{jsonFileText.length === 5000 ? "Max" : jsonFileText.length}
+						</span>{" "}
+						/ 5000
+					</p>
 				</label>
 				<textarea
 					className="max-h-96 min-h-72 w-full rounded border p-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
 					name="jsonfile"
 					id="jsonfile"
 					value={jsonFileText}
-					maxLength={1000}
+					maxLength={5000}
 					onChange={(event) => {
 						setJsonFileText(event.target.value);
 					}}

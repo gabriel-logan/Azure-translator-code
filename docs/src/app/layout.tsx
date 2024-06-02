@@ -22,8 +22,9 @@ export const metadata: Metadata = {
 	creator: "Gabriel Logan",
 
 	openGraph: {
-		title: "Azure Translator Code",
-		description: "Translate your json file directly in the page",
+		title: "Easily Translate JSON Files with Azure",
+		description:
+			"Use Azure Translator Code to translate your JSON files directly on the page quickly and easily.",
 		url: process.env.NEXT_PUBLIC_WEBSITE_URL,
 		siteName: "Azure Translator Code",
 		type: "website",
