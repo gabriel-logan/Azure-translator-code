@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
 
-type TranslationType = {
+export type TranslationType = {
 	[key: string]: string | TranslationType;
 };
 

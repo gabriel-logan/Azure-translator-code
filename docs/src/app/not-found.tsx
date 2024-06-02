@@ -11,13 +11,13 @@ export default function NotFound() {
 				<div className="mt-5">
 					<Link
 						className="mx-2 inline-block rounded bg-blue-500 px-5 py-2 text-white transition-colors duration-300 hover:bg-blue-700"
-						href="https://gabriel-logan.github.io/Azure-translator-code/"
+						href="/"
 					>
 						Back
 					</Link>
 					<Link
 						className="mx-2 inline-block rounded bg-blue-500 px-5 py-2 text-white transition-colors duration-300 hover:bg-blue-700"
-						href="https://github.com/gabriel-logan/Azure-translator-code"
+						href="/"
 					>
 						Go to GitHub
 					</Link>

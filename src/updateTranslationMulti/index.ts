@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 
-interface TranslationType {
+export interface TranslationType {
 	translation: Record<string, string>;
 }
 
