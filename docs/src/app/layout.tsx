@@ -3,6 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,11 +50,15 @@ export default function RootLayout({
 			<body className={inter.className}>
 				{children}
 				<footer>
-					<p className="text-center text-gray-600">
+					<p className="p-1 text-center text-gray-600">
 						Created by{" "}
-						<a className="text-blue-500 hover:underline" href="#">
+						<Link
+							className="text-blue-500 hover:underline"
+							href="https://github.com/gabriel-logan"
+							target="_blank"
+						>
 							Gabriel Logan &copy; 2024
-						</a>
+						</Link>
 					</p>
 				</footer>
 				<Analytics />
