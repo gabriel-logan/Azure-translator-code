@@ -56,7 +56,7 @@ export default function translateToUnicFolder(
 	jsonFile: TranslationType,
 	folderNamePath: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
 ): void {
-	const traducoesDir: string = path.join(__dirname, '..', '..', '..', '..', folderNamePath);
+	const traducoesDir: string = path.join(process.cwd(), folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
 		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário

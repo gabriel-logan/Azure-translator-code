@@ -65,11 +65,11 @@ const jsonFile = {
 Now, you can use the library to translate the JSON file into multiple languages:
 
 ```javascript
-const { translateToMultipleFolders, translateToUnicFolder } = require('azure-translator-code');
+const { translateToMultipleFolders, translateToUnicFolder, updateTranslationsMulti, updateTranslationsUnic } = require('azure-translator-code');
 ```
 or
 ```javascript
-import { translateToMultipleFolders, translateToUnicFolder } from 'azure-translator-code';
+import { translateToMultipleFolders, translateToUnicFolder, updateTranslationsMulti, updateTranslationsUnic } from 'azure-translator-code';
 ```
 
 ```javascript
@@ -101,16 +101,20 @@ const jsonFile = {
 };
 
 // Translation to multiple folders
-translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile);
+translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile); // Replace all values ​​and keys
 // This function will return a folder called multiFolderGeneratedTranslations
 
 // Translation to a single folder
-translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile);
+translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile); // Replace all values ​​and keys
 // This function will return a folder called unicFolderGeneratedTranslations
 
 // Update translation from the multiple folders
-updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile);
+updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile); // Only new keys will be translated (Optimized)
 // This function will update the translations in the folder called multiFolderGeneratedTranslations
+
+// Update translation from the single folder
+updateTranslationsUnic(key, endpoint, location, fromLang, toLangs, jsonFile); // Only new keys will be translated (Optimized)
+// This function will update the translations in the folder called unicFolderGeneratedTranslations
 ```
 
 #### You can also choose the folder or folder name where you will save the files.
