@@ -1,71 +1,39 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import AceEditor from "react-ace";
+import { useFormState } from "react-dom";
 import { FaRegCopy } from "react-icons/fa6";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+import { makeTranslation } from "@/actions";
+
+import "ace-builds/src-noconflict/mode-json";
+import "ace-builds/src-noconflict/theme-tomorrow";
+
+const initialState = {
+	message: "No result yet",
+};
 
 export default function Form() {
-	const [translationResult, setTranslationResult] = useState("");
+	const [isCopied, setIsCopied] = useState(false);
+
 	const [jsonFileText, setJsonFileText] = useState("");
-	const [fromLang, setFromLang] = useState("en");
-	const [toLang, setToLang] = useState("pt");
 
 	const [isPedding, startTransition] = useTransition();
 
-	const [isCopied, setIsCopied] = useState(false);
-
-	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-
-		if (!jsonFileText) {
-			alert("The json file is empty");
-			return;
-		}
-
-		if (jsonFileText.length > 5000) {
-			alert("The json file must have a maximum of 5000 characters");
-			return;
-		}
-
-		if (fromLang === toLang) {
-			alert("The languages must be different");
-			return;
-		}
-
-		const bodyToSend = {
-			fromLang,
-			toLang,
-			jsonFileText,
-		};
-
-		startTransition(async () => {
-			try {
-				const result = await fetch("/api", {
-					body: JSON.stringify(bodyToSend),
-					method: "POST",
-				});
-
-				const data: any = await result.json();
-
-				if (data.status === 400) {
-					setTranslationResult(data.message);
-					return;
-				}
-
-				if (data.status === 500) {
-					setTranslationResult(data.message);
-					return;
-				}
-
-				setTranslationResult(data.translatedValues);
-			} catch {
-				setTranslationResult("An error occurred");
-			}
-		});
-	};
+	const [state, formAction] = useFormState(makeTranslation, initialState);
 
 	return (
 		<>
-			<form onSubmit={handleSubmit}>
+			<form
+				action={(formData: FormData) => {
+					startTransition(() => {
+						formAction(formData);
+					});
+				}}
+			>
 				<div className="flex flex-col rounded bg-gray-800 p-5 text-white sm:flex-row">
 					<div className="w-full">
 						<div className="sm:ml-10">
@@ -79,10 +47,6 @@ export default function Form() {
 								name="fromLang"
 								id="fromLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-								value={fromLang}
-								onChange={(event) => {
-									setFromLang(event.target.value);
-								}}
 							>
 								<option value="en">English</option>
 								<option value="pt">Portuguese</option>
@@ -125,10 +89,6 @@ export default function Form() {
 								name="toLang"
 								id="toLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-								value={toLang}
-								onChange={(event) => {
-									setToLang(event.target.value);
-								}}
 							>
 								<option value="pt">Portuguese</option>
 								<option value="en">English</option>
@@ -167,33 +127,58 @@ export default function Form() {
 					Paste the json code here
 					<p className="float-right text-black">
 						Len:{" "}
-						<span
-							className={`${jsonFileText.length === 5000 && "text-red-800"}`}
-						>
-							{jsonFileText.length === 5000 ? "Max" : jsonFileText.length}
+						<span className={`${jsonFileText.length > 5000 && "text-red-500"}`}>
+							{jsonFileText.length}
 						</span>{" "}
 						/ 5000
 					</p>
 				</label>
-				<textarea
-					className="max-h-96 min-h-72 w-full rounded border p-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
-					name="jsonfile"
-					id="jsonfile"
-					value={jsonFileText}
+
+				<AceEditor
 					placeholder={`{
-	"key": "value"
+  "key": "value"
 }`}
-					maxLength={5000}
-					onChange={(event) => {
-						setJsonFileText(event.target.value);
+					mode="json"
+					theme="tomorrow"
+					name="jsonfileAce"
+					fontSize={14}
+					lineHeight={19}
+					showPrintMargin={true}
+					showGutter={true}
+					width="100%"
+					highlightActiveLine={true}
+					value={jsonFileText}
+					onChange={(value) => {
+						setJsonFileText(value);
 					}}
-				></textarea>
+					editorProps={{ $blockScrolling: true }}
+					setOptions={{
+						enableBasicAutocompletion: true,
+						enableLiveAutocompletion: true,
+						enableSnippets: false,
+						showLineNumbers: true,
+						tabSize: 2,
+						useWorker: false,
+					}}
+				/>
+
+				<input
+					type="hidden"
+					name="jsonfile"
+					value={jsonFileText}
+					maxLength={5000}
+				/>
+
 				<button
 					type="submit"
 					disabled={isPedding}
-					className="mt-5 rounded bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
+					className="mt-5 w-28 rounded bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
 				>
-					Translate
+					{isPedding ? (
+						<div className="mx-auto h-5 w-5 animate-spin rounded-full border-b-2 border-white" />
+					) : (
+						"Translate"
+					)}
 				</button>
 			</form>
 			<div className="mt-5 rounded border p-3">
@@ -201,7 +186,9 @@ export default function Form() {
 					className="float-right flex flex-col items-end"
 					onClick={() => {
 						navigator.clipboard.writeText(
-							JSON.stringify(translationResult, null, 2),
+							typeof state.message === "string"
+								? state.message
+								: JSON.stringify(state.message, null, 2),
 						);
 						setIsCopied(true);
 						setTimeout(() => {
@@ -229,9 +216,13 @@ export default function Form() {
 					</div>
 				) : (
 					<pre className="overflow-x-auto text-black">
-						{translationResult === ""
-							? "No result yet"
-							: JSON.stringify(translationResult, null, 2)}
+						{typeof state.message === "string" ? (
+							state.message
+						) : (
+							<SyntaxHighlighter language="json" style={oneLight}>
+								{JSON.stringify(state.message, null, 2)}
+							</SyntaxHighlighter>
+						)}
 					</pre>
 				)}
 			</div>
