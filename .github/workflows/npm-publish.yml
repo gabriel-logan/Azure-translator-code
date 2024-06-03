@@ -19,6 +19,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
@@ -26,6 +27,9 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
+        env:
+          KEY: ${{secrets.KEY}}
+          LOCATION: ${{secrets.LOCATION}}
 
   publish-npm:
     needs: build
