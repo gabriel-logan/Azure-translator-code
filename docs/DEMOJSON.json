@@ -1,11 +1,29 @@
 {
-	"teste1": "This is a test",
-	"teste2": {
-		"teste21": "This is another test",
-		"teste22": "Yet another test is here",
-		"teste3": {
-			"teste31": "Testing continues",
-			"teste32": "The testing never ends"
+	"Welcome": "Welcome",
+	"HomePage": {
+		"Nested": {
+			"message": "Translate me",
+			"SubNested": {
+				"message": "Translate me too"
+			}
+		},
+		"WithBooleans": {
+			"true": true,
+			"false": false
+		},
+		"WithFakeBooleans": {
+			"true": "true",
+			"false": "false"
+		},
+		"WithArrays": {
+			"array": ["Translate me", "Translate me too"]
+		},
+		"WithNumbers": {
+			"number": 123
 		}
+	},
+	"WithNull1": null,
+	"WithNull2": {
+		"null": null
 	}
 }

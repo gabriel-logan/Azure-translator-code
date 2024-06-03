@@ -1,7 +1,7 @@
 "use server";
 
 import { translate } from "azure-translator-code";
-import { TranslationType } from "azure-translator-code/types/types";
+import { TranslationType } from "azure-translator-code/types/translate";
 
 const fakeNewPromise = new Promise<void>((resolve) => {
 	setTimeout(() => {

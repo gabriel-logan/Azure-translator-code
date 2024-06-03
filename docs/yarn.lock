@@ -771,10 +771,10 @@ axobject-query@^3.2.1:
   dependencies:
     dequal "^2.0.3"
 
-azure-translator-code@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/azure-translator-code/-/azure-translator-code-1.1.4.tgz#e9e965d8123739de1d80db5586248b2e657220be"
-  integrity sha512-0T2kYy1/Y/AV1uBSvjNEUAwqpYHQXLfyJXi6Mtu29pOQYfbc8FOKgS1aPqGt6cCfdvX5i0jm18Z/1ofCV87Wdg==
+azure-translator-code@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/azure-translator-code/-/azure-translator-code-1.1.5.tgz#51daf2ab0aa5c3495e15646dd019f45a12927ce7"
+  integrity sha512-M8UK3LwC27XwG5wQrr0pvQY8rmsCm2nRVLCCTQZd9vPzx3BRsYHBB8rH9hAIt5Jvkkc+T3a8UicsIFIeLDVINQ==
   dependencies:
     axios "^1.5.0"
     uuid "^9.0.1"
