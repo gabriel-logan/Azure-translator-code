@@ -1,6 +1,6 @@
 {
 	"name": "azure-translator-code",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"description": "Azure Cognitive Services Translator Text API Code for Use with Common Languages",
 	"author": {
 		"name": "Gabriel Logan"
@@ -8,7 +8,7 @@
 	"main": "./dist/index.js",
 	"types": "./types/index.d.ts",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --coverage",
 		"test:silent": "jest --watchAll --silent --noStackTrace",
 		"build:dist": "tsc",
 		"build:types": "tsc -p tsconfig.types.json",
@@ -48,6 +48,7 @@
 		"@types/uuid": "^9.0.4",
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@typescript-eslint/parser": "^6.7.0",
+		"dotenv": "^16.4.5",
 		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",

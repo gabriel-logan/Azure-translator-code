@@ -1,0 +1,28 @@
+{
+  "Welcome": "Bem-vindo",
+  "HomePage": {
+    "Nested": {
+      "message": "Traduza-me",
+      "SubNested": {
+        "message": "Traduza-me também"
+      }
+    },
+    "WithBooleans": {
+      "true": true,
+      "false": false
+    },
+    "WithFakeBooleans": {
+      "true": "verdadeiro",
+      "false": "falso"
+    },
+    "WithArrays": {
+      "array": ["Traduza-me", "Traduza-me também"]
+    },
+    "WithNumbers": {
+      "number": 123
+    },
+		"WithNull": {
+			"null": null
+		}
+  }
+}

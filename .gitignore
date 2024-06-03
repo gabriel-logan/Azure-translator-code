@@ -4,3 +4,5 @@ dist/
 /types/
 tsconfigcopy.json
 geraTraducoes.js
+coverage/
+.env

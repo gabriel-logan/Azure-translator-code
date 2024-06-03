@@ -1,6 +1,9 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import type { TranslationType } from '../types';
+
+export type TranslationType = {
+	[key: string]: string | boolean | null | number | TranslationType | TranslationType[];
+};
 
 async function translateText(
 	text: string,
@@ -55,10 +58,25 @@ export default async function translate(
 	const translatedJson: TranslationType = {};
 
 	for (const [jsonKey, jsonValue] of Object.entries(jsonFile)) {
-		if (typeof jsonValue === 'string') {
+		if (jsonValue === null) {
+			translatedJson[jsonKey] = null;
+		} else if (typeof jsonValue === 'string') {
 			const response = await translateText(jsonValue, fromLang, toLang, endpoint, key, location);
 			translatedJson[jsonKey] = response.data[0].translations[0].text;
-		} else {
+		} else if (typeof jsonValue === 'boolean' || typeof jsonValue === 'number') {
+			translatedJson[jsonKey] = jsonValue;
+		} else if (Array.isArray(jsonValue)) {
+			const translatedArray: TranslationType[] = [];
+			for (const item of jsonValue) {
+				if (typeof item === 'string') {
+					const response = await translateText(item, fromLang, toLang, endpoint, key, location);
+					translatedArray.push(response.data[0].translations[0].text);
+				} else {
+					translatedArray.push(item as TranslationType);
+				}
+			}
+			translatedJson[jsonKey] = translatedArray;
+		} else if (typeof jsonValue === 'object' && jsonValue !== null) {
 			translatedJson[jsonKey] = await translate(
 				key,
 				endpoint,
