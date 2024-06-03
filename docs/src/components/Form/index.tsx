@@ -11,6 +11,7 @@ import { makeTranslation } from "@/actions";
 
 import "ace-builds/src-noconflict/mode-json";
 import "ace-builds/src-noconflict/theme-tomorrow";
+import "ace-builds/src-noconflict/ext-language_tools";
 
 const initialState = {
 	message: "No result yet",
