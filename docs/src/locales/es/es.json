@@ -1,0 +1,84 @@
+{
+    "Hello World": "Hola mundo",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Cuerpo de solicitud no válido o faltante",
+            "Text must be less than 5000 characters": "El texto debe tener menos de 5000 caracteres",
+            "From lang and to Lang are required": "De lang y a Lang son necesarios",
+            "Missing json file text": "Falta el texto del archivo json",
+            "Invalid json text passed": "Se ha pasado texto json no válido"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Código de Azure Translator",
+        "Description": "Traduzca su archivo json directamente en la página",
+        "Classification": "Translator",
+        "OpenGraph": {
+            "Title": "Traduzca fácilmente archivos JSON con Azure",
+            "Description": "Use Azure Translator Code para traducir los archivos JSON directamente en la página de forma rápida y sencilla.",
+            "SiteName": "Código de Azure Translator"
+        },
+        "Category": "Herramientas",
+        "Created by": "Creado por"
+    },
+    "Manifest": {
+        "Name": "Código de Azure Translator",
+        "ShortName": "Azure Translator",
+        "Description": "Traduzca su archivo json directamente en la página",
+        "lang": "es",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Página no encontrada",
+        "Description": "La página que buscas no existe. 😩😩😩",
+        "Back": "Atrás",
+        "Go to GitHub": "Ir a GitHub"
+    },
+    "HomePage": {
+        "Title": "Código de Azure Translator",
+        "Read the": "Lea el",
+        "to know how to use the library in your JS/TS project": "para saber cómo usar la biblioteca en su proyecto JS/TS",
+        "Test the translator": "Pruebe el traductor"
+    },
+    "FormComponent": {
+        "From": "De",
+        "To": "Para",
+        "Translate": "Traducir",
+        "Langs": {
+            "Arabic": "Árabe",
+            "Chinese Simplified": "Chino simplificado",
+            "Chinese Traditional": "Chino tradicional",
+            "Czech": "Checo",
+            "Danish": "Danés",
+            "Dutch": "Holandés",
+            "English": "Inglés",
+            "Finnish": "Finlandés",
+            "French": "Francés",
+            "German": "Alemán",
+            "Greek": "Griego",
+            "Hebrew": "Hebreo",
+            "Hindi": "Hindi",
+            "Hungarian": "Húngaro",
+            "Indonesian": "Indonesio",
+            "Italian": "Italiano",
+            "Japanese": "Japonés",
+            "Korean": "Coreano",
+            "Norwegian": "Noruego",
+            "Polish": "Polaco",
+            "Portuguese": "Portugués",
+            "Romanian": "Rumano",
+            "Russian": "Ruso",
+            "Slovak": "Eslovaco",
+            "Spanish": "Español",
+            "Swedish": "Sueco",
+            "Thai": "Tailandés",
+            "Turkish": "Turco",
+            "Vietnamese": "Vietnamita",
+            "Malay": "Malayo"
+        },
+        "Paste the json code here": "Pegue el código json aquí",
+        "Len": "Len",
+        "No result yet": "Aún no hay resultado",
+        "Result: ": "Resultado: "
+    }
+}

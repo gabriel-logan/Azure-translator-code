@@ -1,0 +1,84 @@
+{
+    "Hello World": "Hallo mensen",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Ongeldige of ontbrekende aanvraagtekst",
+            "Text must be less than 5000 characters": "Tekst mag niet langer zijn dan 5000 tekens",
+            "From lang and to Lang are required": "Van lang en naar Lang zijn vereist",
+            "Missing json file text": "Ontbrekende tekst van het json-bestand",
+            "Invalid json text passed": "Ongeldige json-tekst doorgegeven"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator-code",
+        "Description": "Vertaal uw json-bestand rechtstreeks op de pagina",
+        "Classification": "Translator",
+        "OpenGraph": {
+            "Title": "JSON-bestanden eenvoudig vertalen met Azure",
+            "Description": "Gebruik Azure Translator Code om uw JSON-bestanden snel en eenvoudig rechtstreeks op de pagina te vertalen.",
+            "SiteName": "Azure Translator-code"
+        },
+        "Category": "Gereedschap",
+        "Created by": "Gemaakt door"
+    },
+    "Manifest": {
+        "Name": "Azure Translator-code",
+        "ShortName": "Azure Translator",
+        "Description": "Vertaal uw json-bestand rechtstreeks op de pagina",
+        "lang": "nl",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Pagina niet gevonden",
+        "Description": "De pagina die u zoekt bestaat niet. 😩😩😩",
+        "Back": "Terug",
+        "Go to GitHub": "Ga naar GitHub"
+    },
+    "HomePage": {
+        "Title": "Azure Translator-code",
+        "Read the": "Lees de",
+        "to know how to use the library in your JS/TS project": "om te weten hoe u de bibliotheek in uw JS/TS-project kunt gebruiken",
+        "Test the translator": "Test de vertaler"
+    },
+    "FormComponent": {
+        "From": "Van",
+        "To": "Aan",
+        "Translate": "Vertalen",
+        "Langs": {
+            "Arabic": "Arabisch",
+            "Chinese Simplified": "Vereenvoudigd Chinees",
+            "Chinese Traditional": "Traditioneel Chinees",
+            "Czech": "Tsjechisch",
+            "Danish": "Deens",
+            "Dutch": "Nederlands",
+            "English": "Engels",
+            "Finnish": "Fins",
+            "French": "Frans",
+            "German": "Duits",
+            "Greek": "Grieks",
+            "Hebrew": "Hebreeuws",
+            "Hindi": "Hindi",
+            "Hungarian": "Hongaars",
+            "Indonesian": "Indonesisch",
+            "Italian": "Italiaans",
+            "Japanese": "Japans",
+            "Korean": "Koreaans",
+            "Norwegian": "Noors",
+            "Polish": "Pools",
+            "Portuguese": "Portugees",
+            "Romanian": "Roemeens",
+            "Russian": "Russisch",
+            "Slovak": "Slowaaks",
+            "Spanish": "Spaans",
+            "Swedish": "Zweeds",
+            "Thai": "Thais",
+            "Turkish": "Turks",
+            "Vietnamese": "Vietnamees",
+            "Malay": "Maleis"
+        },
+        "Paste the json code here": "Plak hier de json-code",
+        "Len": "Len",
+        "No result yet": "Nog geen resultaat",
+        "Result: ": "Resultaat: "
+    }
+}

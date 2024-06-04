@@ -1,0 +1,84 @@
+{
+    "Hello World": "Helló világ",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Érvénytelen vagy hiányzó kérelem törzse",
+            "Text must be less than 5000 characters": "A szövegnek 5000 karakternél rövidebbnek kell lennie",
+            "From lang and to Lang are required": "A lang és a Lang szükséges",
+            "Missing json file text": "Hiányzó JSON-fájl szövege",
+            "Invalid json text passed": "Érvénytelen JSON-szöveg lett átadva"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator kód",
+        "Description": "A JSON-fájl fordítása közvetlenül az oldalon",
+        "Classification": "Fordító",
+        "OpenGraph": {
+            "Title": "JSON-fájlok egyszerű fordítása az Azure-ral",
+            "Description": "Az Azure Translator Code használatával gyorsan és egyszerűen lefordíthatja JSON-fájljait közvetlenül az oldalon.",
+            "SiteName": "Azure Translator kód"
+        },
+        "Category": "Eszközök",
+        "Created by": "Készítette"
+    },
+    "Manifest": {
+        "Name": "Azure Translator kód",
+        "ShortName": "Azure Translator",
+        "Description": "A JSON-fájl fordítása közvetlenül az oldalon",
+        "lang": "hu",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Az oldal nem található",
+        "Description": "A keresett oldal nem létezik. 😩😩😩",
+        "Back": "Hát",
+        "Go to GitHub": "Ugrás a GitHubra"
+    },
+    "HomePage": {
+        "Title": "Azure Translator kód",
+        "Read the": "Olvassa el a",
+        "to know how to use the library in your JS/TS project": "hogy megtudja, hogyan kell használni a könyvtárat a JS/TS projektben",
+        "Test the translator": "A fordító tesztelése"
+    },
+    "FormComponent": {
+        "From": "Tól",
+        "To": "Hoz",
+        "Translate": "Fordít",
+        "Langs": {
+            "Arabic": "Arab",
+            "Chinese Simplified": "Kínai (egyszerűsített)",
+            "Chinese Traditional": "Kínai (hagyományos)",
+            "Czech": "Cseh",
+            "Danish": "Dán",
+            "Dutch": "Holland",
+            "English": "Angol",
+            "Finnish": "Finn",
+            "French": "Francia",
+            "German": "Német",
+            "Greek": "Görög",
+            "Hebrew": "Héber",
+            "Hindi": "Hindi",
+            "Hungarian": "Magyar",
+            "Indonesian": "Indonéz",
+            "Italian": "Olasz",
+            "Japanese": "Japán",
+            "Korean": "Koreai",
+            "Norwegian": "Norvég",
+            "Polish": "Lengyel",
+            "Portuguese": "Portugál",
+            "Romanian": "Román",
+            "Russian": "Orosz",
+            "Slovak": "Szlovák",
+            "Spanish": "Spanyol",
+            "Swedish": "Svéd",
+            "Thai": "Thai",
+            "Turkish": "Török",
+            "Vietnamese": "Vietnami",
+            "Malay": "Maláj"
+        },
+        "Paste the json code here": "Illessze be ide a JSON-kódot",
+        "Len": "Len",
+        "No result yet": "Még nincs eredmény",
+        "Result: ": "Eredmény: "
+    }
+}

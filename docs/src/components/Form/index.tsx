@@ -8,16 +8,19 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { makeTranslation } from "@/actions";
+import { useScopedI18n } from "@/locales/client";
 
 import "ace-builds/src-noconflict/mode-json";
 import "ace-builds/src-noconflict/theme-tomorrow";
 import "ace-builds/src-noconflict/ext-language_tools";
 
-const initialState = {
-	message: "No result yet",
-};
-
 export default function Form() {
+	const scopedT = useScopedI18n("FormComponent");
+
+	const initialState = {
+		message: scopedT("No result yet"),
+	};
+
 	const [isCopied, setIsCopied] = useState(false);
 
 	const [jsonFileText, setJsonFileText] = useState("");
@@ -42,39 +45,43 @@ export default function Form() {
 								htmlFor="fromLang"
 								className="block text-sm font-medium text-gray-400"
 							>
-								From
+								{scopedT("From")}
 							</label>
 							<select
 								name="fromLang"
 								id="fromLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
 							>
-								<option value="en">English</option>
-								<option value="pt">Portuguese</option>
-								<option value="es">Spanish</option>
-								<option value="fr">French</option>
-								<option value="de">German</option>
-								<option value="it">Italian</option>
-								<option value="ja">Japanese</option>
-								<option value="ko">Korean</option>
-								<option value="ru">Russian</option>
-								<option value="zh-Hans">Chinese Simplified</option>
-								<option value="zh-Hant">Chinese Traditional</option>
-								<option value="ar">Arabic</option>
-								<option value="tr">Turkish</option>
-								<option value="vi">Vietnamese</option>
-								<option value="th">Thai</option>
-								<option value="sv">Swedish</option>
-								<option value="pl">Polish</option>
-								<option value="nl">Dutch</option>
-								<option value="da">Danish</option>
-								<option value="fi">Finnish</option>
-								<option value="no">Norwegian</option>
-								<option value="cs">Czech</option>
-								<option value="hu">Hungarian</option>
-								<option value="el">Greek</option>
-								<option value="id">Indonesian</option>
-								<option value="ms">Malay</option>
+								<option value="en">{scopedT("Langs.English")}</option>
+								<option value="pt">{scopedT("Langs.Portuguese")}</option>
+								<option value="es">{scopedT("Langs.Spanish")}</option>
+								<option value="fr">{scopedT("Langs.French")}</option>
+								<option value="de">{scopedT("Langs.German")}</option>
+								<option value="it">{scopedT("Langs.Italian")}</option>
+								<option value="ja">{scopedT("Langs.Japanese")}</option>
+								<option value="ko">{scopedT("Langs.Korean")}</option>
+								<option value="ru">{scopedT("Langs.Russian")}</option>
+								<option value="zh-Hans">
+									{scopedT("Langs.Chinese Simplified")}
+								</option>
+								<option value="zh-Hant">
+									{scopedT("Langs.Chinese Traditional")}
+								</option>
+								<option value="ar">{scopedT("Langs.Arabic")}</option>
+								<option value="tr">{scopedT("Langs.Turkish")}</option>
+								<option value="vi">{scopedT("Langs.Vietnamese")}</option>
+								<option value="th">{scopedT("Langs.Thai")}</option>
+								<option value="sv">{scopedT("Langs.Swedish")}</option>
+								<option value="pl">{scopedT("Langs.Polish")}</option>
+								<option value="nl">{scopedT("Langs.Dutch")}</option>
+								<option value="da">{scopedT("Langs.Danish")}</option>
+								<option value="fi">{scopedT("Langs.Finnish")}</option>
+								<option value="no">{scopedT("Langs.Norwegian")}</option>
+								<option value="cs">{scopedT("Langs.Czech")}</option>
+								<option value="hu">{scopedT("Langs.Hungarian")}</option>
+								<option value="el">{scopedT("Langs.Greek")}</option>
+								<option value="id">{scopedT("Langs.Indonesian")}</option>
+								<option value="ms">{scopedT("Langs.Malay")}</option>
 							</select>
 						</div>
 					</div>
@@ -84,39 +91,43 @@ export default function Form() {
 								htmlFor="toLang"
 								className="block text-sm font-medium text-gray-400"
 							>
-								To
+								{scopedT("To")}
 							</label>
 							<select
 								name="toLang"
 								id="toLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
 							>
-								<option value="pt">Portuguese</option>
-								<option value="en">English</option>
-								<option value="es">Spanish</option>
-								<option value="fr">French</option>
-								<option value="de">German</option>
-								<option value="it">Italian</option>
-								<option value="ja">Japanese</option>
-								<option value="ko">Korean</option>
-								<option value="ru">Russian</option>
-								<option value="zh-Hans">Chinese Simplified</option>
-								<option value="zh-Hant">Chinese Traditional</option>
-								<option value="ar">Arabic</option>
-								<option value="tr">Turkish</option>
-								<option value="vi">Vietnamese</option>
-								<option value="th">Thai</option>
-								<option value="sv">Swedish</option>
-								<option value="pl">Polish</option>
-								<option value="nl">Dutch</option>
-								<option value="da">Danish</option>
-								<option value="fi">Finnish</option>
-								<option value="no">Norwegian</option>
-								<option value="cs">Czech</option>
-								<option value="hu">Hungarian</option>
-								<option value="el">Greek</option>
-								<option value="id">Indonesian</option>
-								<option value="ms">Malay</option>
+								<option value="pt">{scopedT("Langs.Portuguese")}</option>
+								<option value="en">{scopedT("Langs.English")}</option>
+								<option value="es">{scopedT("Langs.Spanish")}</option>
+								<option value="fr">{scopedT("Langs.French")}</option>
+								<option value="de">{scopedT("Langs.German")}</option>
+								<option value="it">{scopedT("Langs.Italian")}</option>
+								<option value="ja">{scopedT("Langs.Japanese")}</option>
+								<option value="ko">{scopedT("Langs.Korean")}</option>
+								<option value="ru">{scopedT("Langs.Russian")}</option>
+								<option value="zh-Hans">
+									{scopedT("Langs.Chinese Simplified")}
+								</option>
+								<option value="zh-Hant">
+									{scopedT("Langs.Chinese Traditional")}
+								</option>
+								<option value="ar">{scopedT("Langs.Arabic")}</option>
+								<option value="tr">{scopedT("Langs.Turkish")}</option>
+								<option value="vi">{scopedT("Langs.Vietnamese")}</option>
+								<option value="th">{scopedT("Langs.Thai")}</option>
+								<option value="sv">{scopedT("Langs.Swedish")}</option>
+								<option value="pl">{scopedT("Langs.Polish")}</option>
+								<option value="nl">{scopedT("Langs.Dutch")}</option>
+								<option value="da">{scopedT("Langs.Danish")}</option>
+								<option value="fi">{scopedT("Langs.Finnish")}</option>
+								<option value="no">{scopedT("Langs.Norwegian")}</option>
+								<option value="cs">{scopedT("Langs.Czech")}</option>
+								<option value="hu">{scopedT("Langs.Hungarian")}</option>
+								<option value="el">{scopedT("Langs.Greek")}</option>
+								<option value="id">{scopedT("Langs.Indonesian")}</option>
+								<option value="ms">{scopedT("Langs.Malay")}</option>
 							</select>
 						</div>
 					</div>
@@ -125,9 +136,9 @@ export default function Form() {
 					htmlFor="jsonfile"
 					className="mb-2 mt-1 block text-base font-medium text-gray-700"
 				>
-					Paste the json code here
+					{scopedT("Paste the json code here")}
 					<p className="float-right text-black">
-						Len:{" "}
+						{scopedT("Len")}:{" "}
 						<span className={`${jsonFileText.length > 5000 && "text-red-500"}`}>
 							{jsonFileText.length}
 						</span>{" "}
@@ -203,7 +214,7 @@ export default function Form() {
 					/>
 					<span className="text-gray-500">{isCopied ? "Copied" : ""}</span>
 				</div>
-				<p className="font-medium text-gray-700">Result: </p>
+				<p className="font-medium text-gray-700">{scopedT("Result: ")}</p>
 
 				{isPedding ? (
 					<div className="animate-pulse overflow-x-auto rounded bg-gray-100 p-2">

@@ -3,6 +3,8 @@
 import { translate } from "azure-translator-code";
 import { TranslationType } from "azure-translator-code/types/translate";
 
+import { getScopedI18n } from "@/locales/server";
+
 const fakeNewPromise = new Promise<void>((resolve) => {
 	setTimeout(() => {
 		resolve();
@@ -10,6 +12,8 @@ const fakeNewPromise = new Promise<void>((resolve) => {
 });
 
 export async function makeTranslation(prevState: any, formData: FormData) {
+	const scopedT = await getScopedI18n("Actions");
+
 	const data = {
 		fromLang: formData.get("fromLang"),
 		toLang: formData.get("toLang"),
@@ -19,28 +23,30 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 	if (!data) {
 		await fakeNewPromise;
 		return {
-			message: "Invalid or missing request body",
+			message: scopedT("MakeTranslations.Invalid or missing request body"),
 		};
 	}
 
 	if ((data.jsonFileText as string).length > 4999) {
 		await fakeNewPromise;
 		return {
-			message: "Text must be less than 5000 characters",
+			message: scopedT(
+				"MakeTranslations.Text must be less than 5000 characters",
+			),
 		};
 	}
 
 	if (!data?.fromLang || !data.toLang) {
 		await fakeNewPromise;
 		return {
-			message: "From lang and to Lang are required",
+			message: scopedT("MakeTranslations.From lang and to Lang are required"),
 		};
 	}
 
 	if (!data?.jsonFileText) {
 		await fakeNewPromise;
 		return {
-			message: "Missing json file text",
+			message: scopedT("MakeTranslations.Missing json file text"),
 		};
 	}
 
@@ -66,7 +72,7 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 	} catch {
 		await fakeNewPromise;
 		return {
-			message: "Invalid json text passed",
+			message: scopedT("MakeTranslations.Invalid json text passed"),
 		};
 	}
 

@@ -1,0 +1,84 @@
+{
+    "Hello World": "Helo dunia",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Badan permintaan yang tidak sah atau hilang",
+            "Text must be less than 5000 characters": "Teks mestilah kurang daripada 5000 aksara",
+            "From lang and to Lang are required": "Dari lang dan ke Lang diperlukan",
+            "Missing json file text": "Teks fail json yang hilang",
+            "Invalid json text passed": "Teks json tidak sah diluluskan"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator Code",
+        "Description": "Terjemahkan fail json anda terus dalam halaman",
+        "Classification": "Penterjemah",
+        "OpenGraph": {
+            "Title": "Terjemahkan Fail JSON dengan mudah dengan Azure",
+            "Description": "Gunakan Azure Translator Code untuk menterjemahkan fail JSON anda terus pada halaman dengan cepat dan mudah.",
+            "SiteName": "Azure Translator Code"
+        },
+        "Category": "Alat",
+        "Created by": "Dicipta oleh"
+    },
+    "Manifest": {
+        "Name": "Azure Translator Code",
+        "ShortName": "Azure Translator",
+        "Description": "Terjemahkan fail json anda terus dalam halaman",
+        "lang": "ms",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Halaman tidak dijumpai",
+        "Description": "Halaman yang anda cari tidak wujud. 😩😩😩",
+        "Back": "Kembali",
+        "Go to GitHub": "Pergi ke GitHub"
+    },
+    "HomePage": {
+        "Title": "Azure Translator Code",
+        "Read the": "Baca",
+        "to know how to use the library in your JS/TS project": "untuk mengetahui cara menggunakan pustaka dalam projek JS/TS anda",
+        "Test the translator": "Uji penterjemah"
+    },
+    "FormComponent": {
+        "From": "Dari",
+        "To": "Untuk",
+        "Translate": "Terjemah",
+        "Langs": {
+            "Arabic": "Bahasa Arab",
+            "Chinese Simplified": "Bahasa Cina Ringkas",
+            "Chinese Traditional": "Bahasa Cina Tradisional",
+            "Czech": "Bahasa Czech",
+            "Danish": "Bahasa Denmark",
+            "Dutch": "Bahasa Belanda",
+            "English": "Bahasa Inggeris",
+            "Finnish": "Bahasa Finland",
+            "French": "Bahasa Perancis",
+            "German": "Bahasa Jerman",
+            "Greek": "Bahasa Yunani",
+            "Hebrew": "Bahasa Ibrani",
+            "Hindi": "Bahasa Hindi",
+            "Hungarian": "Bahasa Hungary",
+            "Indonesian": "Bahasa Indonesia",
+            "Italian": "Bahasa Itali",
+            "Japanese": "Bahasa Jepun",
+            "Korean": "Bahasa Korea",
+            "Norwegian": "Bahasa Norway",
+            "Polish": "Bahasa Poland",
+            "Portuguese": "Bahasa Portugal",
+            "Romanian": "Bahasa Romania",
+            "Russian": "Bahasa Rusia",
+            "Slovak": "Bahasa Slovak",
+            "Spanish": "Bahasa Sepanyol",
+            "Swedish": "Bahasa Sweden",
+            "Thai": "Bahasa Thai",
+            "Turkish": "Bahasa Turki",
+            "Vietnamese": "Bahasa Vietnam",
+            "Malay": "Bahasa Melayu"
+        },
+        "Paste the json code here": "Tampal kod json di sini",
+        "Len": "Len",
+        "No result yet": "Tiada keputusan lagi",
+        "Result: ": "Keputusan: "
+    }
+}

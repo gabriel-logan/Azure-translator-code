@@ -1,15 +1,17 @@
 import Link from "next/link";
 
 import Form from "@/components/Form";
+import { getScopedI18n } from "@/locales/server";
 
-export default function Home() {
+export default async function Home() {
+	const scopedT = await getScopedI18n("HomePage");
 	return (
 		<main className="flex min-h-screen flex-col items-center bg-gray-100 p-2 sm:p-6 md:p-10">
 			<h1 className="mb-4 text-3xl font-bold text-gray-700">
-				Azure translator code
+				{scopedT("Title")}
 			</h1>
 			<p className="mb-4 text-center text-gray-600">
-				Read the{" "}
+				{scopedT("Read the")}{" "}
 				<Link
 					className="mb-10 text-blue-500 hover:underline"
 					href={
@@ -19,7 +21,7 @@ export default function Home() {
 				>
 					README.md{" "}
 				</Link>
-				to know how to use the library in your JS/TS project{" "}
+				{scopedT("to know how to use the library in your JS/TS project")}{" "}
 			</p>
 			<p>
 				<iframe
@@ -32,7 +34,7 @@ export default function Home() {
 			</p>
 			<div className="mx-auto mt-5 w-full max-w-2xl rounded bg-white p-5 shadow">
 				<h2 className="mb-5 text-2xl font-bold text-black">
-					Test the translator
+					{scopedT("Test the translator")}
 				</h2>
 				<div>
 					<Form />

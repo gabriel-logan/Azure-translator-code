@@ -1,0 +1,84 @@
+{
+    "Hello World": "Chào thế giới",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Nội dung yêu cầu không hợp lệ hoặc thiếu",
+            "Text must be less than 5000 characters": "Văn bản phải nhỏ hơn 5000 ký tự",
+            "From lang and to Lang are required": "Từ lang và đến Lang là bắt buộc",
+            "Missing json file text": "Thiếu văn bản tệp json",
+            "Invalid json text passed": "Văn bản json không hợp lệ được thông qua"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator Code",
+        "Description": "Dịch tệp json của bạn trực tiếp trong trang",
+        "Classification": "Thông dịch viên",
+        "OpenGraph": {
+            "Title": "Dễ dàng dịch các tệp JSON với Azure",
+            "Description": "Sử dụng Mã Azure Translator để dịch các tệp JSON của bạn trực tiếp trên trang một cách nhanh chóng và dễ dàng.",
+            "SiteName": "Azure Translator Code"
+        },
+        "Category": "Công cụ",
+        "Created by": "Tạo bởi"
+    },
+    "Manifest": {
+        "Name": "Azure Translator Code",
+        "ShortName": "Azure Translator",
+        "Description": "Dịch tệp json của bạn trực tiếp trong trang",
+        "lang": "vi",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Không tìm thấy trang",
+        "Description": "Trang bạn đang tìm kiếm không tồn tại. 😩😩😩",
+        "Back": "Lưng",
+        "Go to GitHub": "Truy cập GitHub"
+    },
+    "HomePage": {
+        "Title": "Azure Translator Code",
+        "Read the": "Đọc",
+        "to know how to use the library in your JS/TS project": "để biết cách sử dụng thư viện trong dự án JS / TS của bạn",
+        "Test the translator": "Kiểm tra người dịch"
+    },
+    "FormComponent": {
+        "From": "Từ",
+        "To": "Đến",
+        "Translate": "Dịch",
+        "Langs": {
+            "Arabic": "Tiếng A-rập",
+            "Chinese Simplified": "Tiếng Trung giản thể",
+            "Chinese Traditional": "Trung Quốc truyền thống",
+            "Czech": "Séc",
+            "Danish": "Tiếng Đan-mạch",
+            "Dutch": "Tiếng Hà-Lan",
+            "English": "Tiếng Anh",
+            "Finnish": "Tiếng Phần-lan",
+            "French": "Pháp",
+            "German": "Tiếng Đức",
+            "Greek": "Tiếng Hy Lạp",
+            "Hebrew": "Tiếng Do Thái",
+            "Hindi": "Tiếng Hin-đi",
+            "Hungarian": "Tiếng Hung-ga-ri",
+            "Indonesian": "Tiếng In-đô-nê-xi-a",
+            "Italian": "Tiếng Ý",
+            "Japanese": "Tiếng Nhật",
+            "Korean": "Tiếng Triều Tiên",
+            "Norwegian": "Tiếng Na Uy",
+            "Polish": "Tiếng Ba-lan",
+            "Portuguese": "Tiếng Bồ Đào Nha",
+            "Romanian": "Tiếng Ru-ma-ni",
+            "Russian": "Tiếng Nga",
+            "Slovak": "Slovak",
+            "Spanish": "Tiếng Tây Ban Nha",
+            "Swedish": "Thuỵ Điển",
+            "Thai": "Thái",
+            "Turkish": "Tiếng Thổ Nhĩ Kỳ",
+            "Vietnamese": "Tiếng Việt",
+            "Malay": "Tiếng Mã lai"
+        },
+        "Paste the json code here": "Dán mã json vào đây",
+        "Len": "Len",
+        "No result yet": "Chưa có kết quả",
+        "Result: ": "Kết quả: "
+    }
+}

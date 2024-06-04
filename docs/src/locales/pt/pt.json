@@ -1,0 +1,94 @@
+{
+	"Hello World": "Olá Mundo",
+
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Corpo da solicitação inválido ou ausente",
+			"Text must be less than 5000 characters": "O texto deve ter menos de 5000 caracteres",
+			"From lang and to Lang are required": "Os idiomas de origem e destino são necessários",
+			"Missing json file text": "Faltando texto do arquivo json",
+			"Invalid json text passed": "Texto json inválido passado"
+		}
+	},
+
+	"HomeLayout": {
+		"Title": "Código do Tradutor Azure",
+		"Description": "Traduza seu arquivo json diretamente na página",
+		"Classification": "Tradutor",
+
+		"OpenGraph": {
+			"Title": "Traduza Arquivos JSON com Facilidade usando Azure",
+			"Description": "Use o Código do Tradutor Azure para traduzir seus arquivos JSON diretamente na página de forma rápida e fácil.",
+			"SiteName": "Código do Tradutor Azure"
+		},
+
+		"Category": "Ferramentas",
+
+		"Created by": "Criado por"
+	},
+
+
+	"Manifest": {
+		"Name": "Azure Translator Code",
+		"ShortName": "Azure Translator",
+		"Description": "Traduza seu arquivo json diretamente na página",
+		"lang": "pt",
+		"Dir": "ltr"
+	},
+
+	"NotFoundPage": {
+		"Title": "404 - Página não encontrada",
+		"Description": "A página que você está procurando não existe. 😩😩😩",
+		"Back": "Voltar",
+		"Go to GitHub": "Ir para o GitHub"
+	},
+
+	"HomePage": {
+		"Title": "Código do Tradutor Azure",
+		"Read the": "Leia o",
+		"to know how to use the library in your JS/TS project": "para saber como usar a biblioteca em seu projeto JS/TS",
+		"Test the translator": "Teste o tradutor"
+	},
+
+	"FormComponent": {
+		"From": "De",
+		"To": "Para",
+		"Translate": "Traduzir",
+		"Langs": {
+			"Arabic": "Árabe",
+			"Chinese Simplified": "Chinês Simplificado",
+			"Chinese Traditional": "Chinês Tradicional",
+			"Czech": "Tcheco",
+			"Danish": "Dinamarquês",
+			"Dutch": "Holandês",
+			"English": "Inglês",
+			"Finnish": "Finlandês",
+			"French": "Francês",
+			"German": "Alemão",
+			"Greek": "Grego",
+			"Hebrew": "Hebraico",
+			"Hindi": "Hindi",
+			"Hungarian": "Húngaro",
+			"Indonesian": "Indonésio",
+			"Italian": "Italiano",
+			"Japanese": "Japonês",
+			"Korean": "Coreano",
+			"Norwegian": "Norueguês",
+			"Polish": "Polonês",
+			"Portuguese": "Português",
+			"Romanian": "Romeno",
+			"Russian": "Russo",
+			"Slovak": "Eslovaco",
+			"Spanish": "Espanhol",
+			"Swedish": "Sueco",
+			"Thai": "Tailandês",
+			"Turkish": "Turco",
+			"Vietnamese": "Vietnamita",
+			"Malay": "Malaio"
+		},
+		"Paste the json code here": "Cole o código json aqui",
+		"Len": "Caract",
+		"No result yet": "Nenhum resultado ainda",
+		"Result: ": "Resultado: "
+	}
+}

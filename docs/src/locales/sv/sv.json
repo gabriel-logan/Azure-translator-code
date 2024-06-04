@@ -1,0 +1,84 @@
+{
+    "Hello World": "Hej världen",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Ogiltig eller saknad begärandetext",
+            "Text must be less than 5000 characters": "Texten måste vara mindre än 5000 tecken",
+            "From lang and to Lang are required": "Från lang och till lang krävs",
+            "Missing json file text": "Texten i json-filen saknas",
+            "Invalid json text passed": "Ogiltig json-text har skickats"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Kod för Azure Translator",
+        "Description": "Översätt din json-fil direkt på sidan",
+        "Classification": "Översättare",
+        "OpenGraph": {
+            "Title": "Översätt enkelt JSON-filer med Azure",
+            "Description": "Använd Azure Translator Code för att snabbt och enkelt översätta dina JSON-filer direkt på sidan.",
+            "SiteName": "Kod för Azure Translator"
+        },
+        "Category": "Arbetsredskap",
+        "Created by": "Skapad av"
+    },
+    "Manifest": {
+        "Name": "Kod för Azure Translator",
+        "ShortName": "Azure Translator",
+        "Description": "Översätt din json-fil direkt på sidan",
+        "lang": "sv",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Sidan hittades inte",
+        "Description": "Sidan du letar efter finns inte. 😩😩😩",
+        "Back": "Tillbaka",
+        "Go to GitHub": "Gå till GitHub"
+    },
+    "HomePage": {
+        "Title": "Kod för Azure Translator",
+        "Read the": "Läs",
+        "to know how to use the library in your JS/TS project": "för att veta hur du använder biblioteket i ditt JS/TS-projekt",
+        "Test the translator": "Testa översättaren"
+    },
+    "FormComponent": {
+        "From": "Från",
+        "To": "Till",
+        "Translate": "Översätta",
+        "Langs": {
+            "Arabic": "Arabiska",
+            "Chinese Simplified": "Kinesiska, förenklad",
+            "Chinese Traditional": "Kinesiska, traditionell",
+            "Czech": "Tjeckiska",
+            "Danish": "Danska",
+            "Dutch": "Nederländska",
+            "English": "Engelska",
+            "Finnish": "Finska",
+            "French": "Franska",
+            "German": "Tyska",
+            "Greek": "Grekiska",
+            "Hebrew": "Hebreiska",
+            "Hindi": "Hindi",
+            "Hungarian": "Ungerska",
+            "Indonesian": "Indonesiska",
+            "Italian": "Italienska",
+            "Japanese": "Japanska",
+            "Korean": "Koreanska",
+            "Norwegian": "Norska",
+            "Polish": "Polska",
+            "Portuguese": "Portugisiska",
+            "Romanian": "Rumänska",
+            "Russian": "Ryska",
+            "Slovak": "Slovakiska",
+            "Spanish": "Spanska",
+            "Swedish": "Svenska",
+            "Thai": "Thai",
+            "Turkish": "Turkiska",
+            "Vietnamese": "Vietnamesiska",
+            "Malay": "Malajiska"
+        },
+        "Paste the json code here": "Klistra in json-koden här",
+        "Len": "Len",
+        "No result yet": "Inget resultat ännu",
+        "Result: ": "Resultat: "
+    }
+}

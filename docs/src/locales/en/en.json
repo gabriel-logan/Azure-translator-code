@@ -1,0 +1,91 @@
+{
+	"Hello World": "Hello World",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Invalid or missing request body",
+			"Text must be less than 5000 characters": "Text must be less than 5000 characters",
+			"From lang and to Lang are required": "From lang and to Lang are required",
+			"Missing json file text": "Missing json file text",
+			"Invalid json text passed": "Invalid json text passed"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure Translator Code",
+		"Description": "Translate your json file directly in the page",
+		"Classification": "Translator",
+
+		"OpenGraph": {
+			"Title": "Easily Translate JSON Files with Azure",
+			"Description": "Use Azure Translator Code to translate your JSON files directly on the page quickly and easily.",
+			"SiteName": "Azure Translator Code"
+		},
+
+		"Category": "Tools",
+
+		"Created by": "Created by"
+	},
+
+	"Manifest": {
+		"Name": "Azure Translator Code",
+		"ShortName": "Azure Translator",
+		"Description": "Translate your json file directly in the page",
+		"lang": "en",
+		"Dir": "ltr"
+	},
+
+	"NotFoundPage": {
+		"Title": "404 - Page not found",
+		"Description": "The page you are looking for does not exist. 😩😩😩",
+		"Back": "Back",
+		"Go to GitHub": "Go to GitHub"
+	},
+
+	"HomePage": {
+		"Title": "Azure Translator Code",
+		"Read the": "Read the",
+		"to know how to use the library in your JS/TS project": "to know how to use the library in your JS/TS project",
+		"Test the translator": "Test the translator"
+	},
+
+	"FormComponent": {
+		"From": "From",
+		"To": "To",
+		"Translate": "Translate",
+		"Langs": {
+			"Arabic": "Arabic",
+			"Chinese Simplified": "Chinese Simplified",
+			"Chinese Traditional": "Chinese Traditional",
+			"Czech": "Czech",
+			"Danish": "Danish",
+			"Dutch": "Dutch",
+			"English": "English",
+			"Finnish": "Finnish",
+			"French": "French",
+			"German": "German",
+			"Greek": "Greek",
+			"Hebrew": "Hebrew",
+			"Hindi": "Hindi",
+			"Hungarian": "Hungarian",
+			"Indonesian": "Indonesian",
+			"Italian": "Italian",
+			"Japanese": "Japanese",
+			"Korean": "Korean",
+			"Norwegian": "Norwegian",
+			"Polish": "Polish",
+			"Portuguese": "Portuguese",
+			"Romanian": "Romanian",
+			"Russian": "Russian",
+			"Slovak": "Slovak",
+			"Spanish": "Spanish",
+			"Swedish": "Swedish",
+			"Thai": "Thai",
+			"Turkish": "Turkish",
+			"Vietnamese": "Vietnamese",
+			"Malay": "Malay"
+		},
+		"Paste the json code here": "Paste the json code here",
+		"Len": "Len",
+		"No result yet": "No result yet",
+		"Result: ": "Result: "
+	}
+}

@@ -1,0 +1,84 @@
+{
+    "Hello World": "Moi maailma",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Virheellinen tai puuttuva pyyntöelin",
+            "Text must be less than 5000 characters": "Tekstin on oltava alle 5000 merkkiä pitkä",
+            "From lang and to Lang are required": "Langista ja Langiin tarvitaan",
+            "Missing json file text": "JSON-tiedoston teksti puuttuu",
+            "Invalid json text passed": "Virheellinen json-teksti välitetty"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator Code",
+        "Description": "Käännä json-tiedosto suoraan sivulla",
+        "Classification": "Kääntäjä",
+        "OpenGraph": {
+            "Title": "Käännä JSON-tiedostot helposti Azuren avulla",
+            "Description": "Azure Translator Coden avulla voit kääntää JSON-tiedostosi suoraan sivulle nopeasti ja helposti.",
+            "SiteName": "Azure Translator Code"
+        },
+        "Category": "Välineet",
+        "Created by": "Luonut"
+    },
+    "Manifest": {
+        "Name": "Azure Translator Code",
+        "ShortName": "Azure Translator",
+        "Description": "Käännä json-tiedosto suoraan sivulla",
+        "lang": "fi",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Sivua ei löydy",
+        "Description": "Etsimääsi sivua ei ole olemassa. 😩😩😩",
+        "Back": "Selkä",
+        "Go to GitHub": "Siirry GitHubiin"
+    },
+    "HomePage": {
+        "Title": "Azure Translator Code",
+        "Read the": "Lue",
+        "to know how to use the library in your JS/TS project": "tietää, miten kirjastoa käytetään JS / TS-projektissasi",
+        "Test the translator": "Kääntäjän testaaminen"
+    },
+    "FormComponent": {
+        "From": "Alkaen",
+        "To": "Jotta",
+        "Translate": "Kääntää",
+        "Langs": {
+            "Arabic": "Arabia",
+            "Chinese Simplified": "Yksinkertaistettu kiina",
+            "Chinese Traditional": "Perinteinen kiina",
+            "Czech": "Tšekki",
+            "Danish": "Tanska",
+            "Dutch": "Hollanti",
+            "English": "Englanti",
+            "Finnish": "Suomi",
+            "French": "Ranska",
+            "German": "Saksa",
+            "Greek": "Kreikka",
+            "Hebrew": "Heprea",
+            "Hindi": "Hindi",
+            "Hungarian": "Unkari",
+            "Indonesian": "Indonesia",
+            "Italian": "Italia",
+            "Japanese": "Japani",
+            "Korean": "Korea",
+            "Norwegian": "Norja",
+            "Polish": "Puola",
+            "Portuguese": "Portugali",
+            "Romanian": "Romania",
+            "Russian": "Venäjä",
+            "Slovak": "Slovakki",
+            "Spanish": "Espanja",
+            "Swedish": "Ruotsi",
+            "Thai": "Thai",
+            "Turkish": "Turkki",
+            "Vietnamese": "Vietnam",
+            "Malay": "Malaiji"
+        },
+        "Paste the json code here": "Liitä json-koodi tähän",
+        "Len": "Len",
+        "No result yet": "Ei vielä tulosta",
+        "Result: ": "Tulos: "
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "Hello World": "Hallo verden",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Ugyldig eller manglende forespørselsorgan",
+            "Text must be less than 5000 characters": "Teksten må være mindre enn 5000 tegn",
+            "From lang and to Lang are required": "Fra lang og til Lang kreves",
+            "Missing json file text": "Manglende json-filtekst",
+            "Invalid json text passed": "Ugyldig json-tekst sendt"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure Translator-kode",
+        "Description": "Oversett json-filen direkte på siden",
+        "Classification": "Oversetter",
+        "OpenGraph": {
+            "Title": "Oversett JSON-filer enkelt med Azure",
+            "Description": "Bruk Azure Translator Code til å oversette JSON-filene dine direkte på siden raskt og enkelt.",
+            "SiteName": "Azure Translator-kode"
+        },
+        "Category": "Redskapene",
+        "Created by": "Opprettet av"
+    },
+    "Manifest": {
+        "Name": "Azure Translator-kode",
+        "ShortName": "Azure Translator",
+        "Description": "Oversett json-filen direkte på siden",
+        "lang": "no",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Finner ikke siden",
+        "Description": "Siden du leter etter eksisterer ikke. 😩😩😩",
+        "Back": "Tilbake",
+        "Go to GitHub": "Gå til GitHub"
+    },
+    "HomePage": {
+        "Title": "Azure Translator-kode",
+        "Read the": "Les hele artikkelen",
+        "to know how to use the library in your JS/TS project": "å vite hvordan du bruker biblioteket i ditt JS/TS-prosjekt",
+        "Test the translator": "Test oversetteren"
+    },
+    "FormComponent": {
+        "From": "Fra",
+        "To": "Til",
+        "Translate": "Oversette",
+        "Langs": {
+            "Arabic": "Arabisk",
+            "Chinese Simplified": "Kinesisk (forenklet)",
+            "Chinese Traditional": "Kinesisk, tradisjonell",
+            "Czech": "Tsjekkisk",
+            "Danish": "Dansk",
+            "Dutch": "Nederlandsk",
+            "English": "Engelsk",
+            "Finnish": "Finsk",
+            "French": "Fransk",
+            "German": "Tysk",
+            "Greek": "Gresk",
+            "Hebrew": "Hebraisk",
+            "Hindi": "Hindi",
+            "Hungarian": "Ungarsk",
+            "Indonesian": "Indonesisk",
+            "Italian": "Italiensk",
+            "Japanese": "Japansk",
+            "Korean": "Koreansk",
+            "Norwegian": "Norsk",
+            "Polish": "Polsk",
+            "Portuguese": "Portugisisk",
+            "Romanian": "Rumensk",
+            "Russian": "Russisk",
+            "Slovak": "Slovakisk",
+            "Spanish": "Spansk",
+            "Swedish": "Svensk",
+            "Thai": "Thai",
+            "Turkish": "Tyrkisk",
+            "Vietnamese": "Vietnamesisk",
+            "Malay": "Malayisk"
+        },
+        "Paste the json code here": "Lim inn json-koden her",
+        "Len": "Len",
+        "No result yet": "Ingen resultat ennå",
+        "Result: ": "Resultat: "
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "Hello World": "Γεια σου κόσμε",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Μη έγκυρο σώμα αίτησης ή σώμα αίτησης που λείπει",
+            "Text must be less than 5000 characters": "Το κείμενο πρέπει να είναι μικρότερο από 5000 χαρακτήρες",
+            "From lang and to Lang are required": "Από lang και σε Lang απαιτούνται",
+            "Missing json file text": "Λείπει κείμενο αρχείου json",
+            "Invalid json text passed": "Πέρασε μη έγκυρο κείμενο json"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Κώδικας μεταφραστή Azure",
+        "Description": "Μεταφράστε το αρχείο json απευθείας στη σελίδα",
+        "Classification": "Μεταφραστής",
+        "OpenGraph": {
+            "Title": "Μεταφράστε εύκολα αρχεία JSON με το Azure",
+            "Description": "Χρησιμοποιήστε τον κώδικα μεταφραστή Azure για να μεταφράσετε τα αρχεία JSON απευθείας στη σελίδα γρήγορα και εύκολα.",
+            "SiteName": "Κώδικας μεταφραστή Azure"
+        },
+        "Category": "Εργαλεία",
+        "Created by": "Δημιουργήθηκε από"
+    },
+    "Manifest": {
+        "Name": "Κώδικας μεταφραστή Azure",
+        "ShortName": "Azure Translator",
+        "Description": "Μεταφράστε το αρχείο json απευθείας στη σελίδα",
+        "lang": "el",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Η σελίδα δεν βρέθηκε",
+        "Description": "Η σελίδα που ψάχνετε δεν υπάρχει. 😩😩😩",
+        "Back": "Πλάτη",
+        "Go to GitHub": "Μεταβείτε στο GitHub"
+    },
+    "HomePage": {
+        "Title": "Κώδικας μεταφραστή Azure",
+        "Read the": "Διαβάστε το",
+        "to know how to use the library in your JS/TS project": "για να μάθετε πώς να χρησιμοποιείτε τη βιβλιοθήκη στο έργο JS/TS",
+        "Test the translator": "Δοκιμάστε τον μεταφραστή"
+    },
+    "FormComponent": {
+        "From": "Από",
+        "To": "Προς",
+        "Translate": "Μεταφράζω",
+        "Langs": {
+            "Arabic": "Αραβικά",
+            "Chinese Simplified": "Απλοποιημένα κινεζικά",
+            "Chinese Traditional": "Παραδοσιακά κινεζικά",
+            "Czech": "Τσεχικά",
+            "Danish": "Δανικά",
+            "Dutch": "Ολλανδικά",
+            "English": "Αγγλικά",
+            "Finnish": "Φινλανδικά",
+            "French": "Γαλλικά",
+            "German": "Γερμανικά",
+            "Greek": "Ελληνικά",
+            "Hebrew": "Εβραϊκά",
+            "Hindi": "Χίντι",
+            "Hungarian": "Ουγγρικά",
+            "Indonesian": "Ινδονησιακά",
+            "Italian": "Ιταλικά",
+            "Japanese": "Ιαπωνικά",
+            "Korean": "Κορεατικά",
+            "Norwegian": "Νορβηγικά",
+            "Polish": "Πολωνικά",
+            "Portuguese": "Πορτογαλικά",
+            "Romanian": "Ρουμανικά",
+            "Russian": "Ρωσικά",
+            "Slovak": "Σλοβακικά",
+            "Spanish": "Ισπανικά",
+            "Swedish": "Σουηδικά",
+            "Thai": "Ταϊλανδικά",
+            "Turkish": "Τουρκικά",
+            "Vietnamese": "Βιετναμικά",
+            "Malay": "Μαλαϊκά"
+        },
+        "Paste the json code here": "Επικολλήστε τον κώδικα json εδώ",
+        "Len": "Λεν",
+        "No result yet": "Κανένα αποτέλεσμα ακόμα",
+        "Result: ": "Αποτέλεσμα: "
+    }
+}
