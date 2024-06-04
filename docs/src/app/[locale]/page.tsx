@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import Form from "@/components/Form";
@@ -7,6 +8,15 @@ export default async function Home() {
 	const scopedT = await getScopedI18n("HomePage");
 	return (
 		<main className="flex min-h-screen flex-col items-center bg-gray-100 p-2 sm:p-6 md:p-10">
+			<div className="mb-2">
+				<Image
+					src={"/logo.png"}
+					alt="logo"
+					width={64}
+					height={64}
+					className="rounded-full"
+				/>
+			</div>
 			<h1 className="mb-4 text-3xl font-bold text-gray-700">
 				{scopedT("Title")}
 			</h1>

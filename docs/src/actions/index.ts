@@ -5,11 +5,8 @@ import { TranslationType } from "azure-translator-code/types/translate";
 
 import { getScopedI18n } from "@/locales/server";
 
-const fakeNewPromise = new Promise<void>((resolve) => {
-	setTimeout(() => {
-		resolve();
-	}, 400);
-});
+// Cache to store translations
+const translationCache: { [key: string]: TranslationType } = {};
 
 export async function makeTranslation(prevState: any, formData: FormData) {
 	const scopedT = await getScopedI18n("Actions");
@@ -20,15 +17,23 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 		jsonFileText: formData.get("jsonfile"),
 	};
 
+	// Cache key
+	const cacheKey = `${data.fromLang}-${data.toLang}-${data.jsonFileText}`;
+
+	// Check if the translation is in the cache
+	if (translationCache[cacheKey]) {
+		return {
+			message: translationCache[cacheKey],
+		};
+	}
+
 	if (!data) {
-		await fakeNewPromise;
 		return {
 			message: scopedT("MakeTranslations.Invalid or missing request body"),
 		};
 	}
 
 	if ((data.jsonFileText as string).length > 4999) {
-		await fakeNewPromise;
 		return {
 			message: scopedT(
 				"MakeTranslations.Text must be less than 5000 characters",
@@ -37,14 +42,12 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 	}
 
 	if (!data?.fromLang || !data.toLang) {
-		await fakeNewPromise;
 		return {
 			message: scopedT("MakeTranslations.From lang and to Lang are required"),
 		};
 	}
 
 	if (!data?.jsonFileText) {
-		await fakeNewPromise;
 		return {
 			message: scopedT("MakeTranslations.Missing json file text"),
 		};
@@ -70,11 +73,13 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 			JSON.parse(valuesToTranslate as string) as TranslationType,
 		);
 	} catch {
-		await fakeNewPromise;
 		return {
 			message: scopedT("MakeTranslations.Invalid json text passed"),
 		};
 	}
+
+	// Save the translation in the cache
+	translationCache[cacheKey] = translatedValues;
 
 	return {
 		message: translatedValues,

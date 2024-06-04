@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 		title: scopedT("Title"),
 		description: scopedT("Description"),
-		authors: { name: "Gabriel Logan" },
+		authors: { name: "Gabriel Logan", url: "https://github.com/gabriel-logan" },
 		classification: scopedT("Classification"),
 		generator: "Next.js",
 		publisher: "Gabriel Logan",
