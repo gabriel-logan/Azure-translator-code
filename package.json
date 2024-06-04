@@ -9,6 +9,7 @@
 	"types": "./types/index.d.ts",
 	"scripts": {
 		"test": "jest --coverage",
+		"test:file": "jest tests/translate",
 		"test:silent": "jest --watchAll --silent --noStackTrace",
 		"build:dist": "tsc",
 		"build:types": "tsc -p tsconfig.types.json",

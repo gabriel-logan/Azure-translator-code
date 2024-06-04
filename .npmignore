@@ -22,3 +22,6 @@ dist/types/
 JSONEXAMPLETEST.json
 JSONEXAMPLETESTRESULT.json
 .env-example
+coverage/
+multiFolderGeneratedTranslations/
+unicFolderGeneratedTranslations/

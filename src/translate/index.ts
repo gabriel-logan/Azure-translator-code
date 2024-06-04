@@ -1,11 +1,8 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import { TranslationType } from '../types';
 
-export type TranslationType = {
-	[key: string]: string | boolean | null | number | TranslationType | TranslationType[];
-};
-
-async function translateText(
+export async function translateText(
 	text: string,
 	from: string,
 	to: string,

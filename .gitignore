@@ -6,3 +6,5 @@ tsconfigcopy.json
 geraTraducoes.js
 coverage/
 .env
+multiFolderGeneratedTranslations/
+unicFolderGeneratedTranslations/

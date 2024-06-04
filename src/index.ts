@@ -2,7 +2,7 @@ import translateToMultipleFolders from './translateToMultipleFolders';
 import translateToUnicFolder from './translateToUnicFolder';
 import updateTranslationsMulti from './updateTranslationMulti';
 import updateTranslationsUnic from './updateTranslationUnic';
-import translate from './translate';
+import translate, { translateText } from './translate';
 
 export {
 	translateToMultipleFolders,
@@ -10,4 +10,5 @@ export {
 	updateTranslationsMulti,
 	updateTranslationsUnic,
 	translate,
+	translateText,
 };

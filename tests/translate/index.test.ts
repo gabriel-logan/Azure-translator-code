@@ -1,5 +1,4 @@
-import axios from 'axios';
-import translate from '../../src/translate';
+import translate, { translateText } from '../../src/translate';
 import { TranslationType } from '../../src/types';
 import dotenv from 'dotenv';
 
@@ -12,6 +11,12 @@ describe('translate', () => {
 
 	const fromLang = 'en';
 	const toLang = 'pt';
+
+	it('should translate a string from one language to another', async () => {
+		const result = await translateText("Welcome", fromLang, toLang, endpoint, key, location);
+
+		expect(result.data[0].translations[0].text).toEqual("Bem-vindo")
+	});
 
 	it('should translate a JSON object from one language to another', async () => {
 		const jsonFile = {
