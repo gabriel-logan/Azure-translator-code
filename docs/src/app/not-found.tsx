@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import { getScopedI18n } from "@/locales/server";
 
+export const dynamic = "force-dynamic";
+
 export default async function NotFound() {
 	const scopedT = await getScopedI18n("NotFoundPage");
 	return (

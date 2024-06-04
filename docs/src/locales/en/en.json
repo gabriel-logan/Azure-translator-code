@@ -25,14 +25,6 @@
 		"Created by": "Created by"
 	},
 
-	"Manifest": {
-		"Name": "Azure Translator Code",
-		"ShortName": "Azure Translator",
-		"Description": "Translate your json file directly in the page",
-		"lang": "en",
-		"Dir": "ltr"
-	},
-
 	"NotFoundPage": {
 		"Title": "404 - Page not found",
 		"Description": "The page you are looking for does not exist. 😩😩😩",

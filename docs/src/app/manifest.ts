@@ -1,18 +1,15 @@
 import { MetadataRoute } from "next";
 
-import { getScopedI18n } from "@/locales/server";
-
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
-	const t = await getScopedI18n("Manifest");
 	return {
-		name: t("Name"),
-		short_name: t("ShortName"),
-		description: t("Description"),
+		name: "Azure Translator Code",
+		short_name: "Azure Translator",
+		description: "Translate your json file directly in the page",
 		start_url: "/",
 		display: "standalone",
 		background_color: "white",
-		lang: t("lang"),
-		dir: t("Dir") as "ltr" | "rtl",
+		lang: "en",
+		dir: "ltr",
 		categories: ["utilities", "translator", "code"],
 	};
 }
