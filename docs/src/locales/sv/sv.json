@@ -79,6 +79,7 @@
         "Paste the json code here": "Klistra in json-koden här",
         "Len": "Len",
         "No result yet": "Inget resultat ännu",
-        "Result: ": "Resultat: "
+        "Result: ": "Resultat: ",
+        "Copied": "Kopieras"
     }
 }

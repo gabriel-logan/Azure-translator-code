@@ -79,6 +79,7 @@
         "Paste the json code here": "Wklej tutaj kod json",
         "Len": "Len",
         "No result yet": "Brak rezultatu",
-        "Result: ": "Wynik: "
+        "Result: ": "Wynik: ",
+        "Copied": "Kopiowane"
     }
 }

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
+import getTextDirection from "@/components/getTextDirection";
 import { I18nProviderClient } from "@/locales/client";
 import { getScopedI18n } from "@/locales/server";
 import { Locale } from "@/types/locales";
@@ -86,7 +87,7 @@ export default async function RootLayout({
 }: RootLayoutProps) {
 	const scopedT = await getScopedI18n("HomeLayout");
 	return (
-		<html lang={locale}>
+		<html lang={locale} dir={getTextDirection(locale)}>
 			<body className={inter.className}>
 				<I18nProviderClient locale={locale}>
 					{children}

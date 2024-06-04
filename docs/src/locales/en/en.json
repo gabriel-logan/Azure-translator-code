@@ -78,6 +78,7 @@
 		"Paste the json code here": "Paste the json code here",
 		"Len": "Len",
 		"No result yet": "No result yet",
-		"Result: ": "Result: "
+		"Result: ": "Result: ",
+		"Copied": "Copied"
 	}
 }

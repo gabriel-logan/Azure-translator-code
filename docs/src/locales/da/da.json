@@ -79,6 +79,7 @@
         "Paste the json code here": "Indsæt json-koden her",
         "Len": "Len",
         "No result yet": "Intet resultat endnu",
-        "Result: ": "Resultat: "
+        "Result: ": "Resultat: ",
+        "Copied": "Kopieres"
     }
 }

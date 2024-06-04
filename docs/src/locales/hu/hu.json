@@ -79,6 +79,7 @@
         "Paste the json code here": "Illessze be ide a JSON-kódot",
         "Len": "Len",
         "No result yet": "Még nincs eredmény",
-        "Result: ": "Eredmény: "
+        "Result: ": "Eredmény: ",
+        "Copied": "Másolt"
     }
 }

@@ -79,6 +79,7 @@
         "Paste the json code here": "Sem vložte kód json",
         "Len": "Len",
         "No result yet": "Zatím žádný výsledek",
-        "Result: ": "Výsledek: "
+        "Result: ": "Výsledek: ",
+        "Copied": "Zkopírovaný"
     }
 }

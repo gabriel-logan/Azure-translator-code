@@ -79,6 +79,7 @@
         "Paste the json code here": "将 json 代码粘贴到此处",
         "Len": "莱恩",
         "No result yet": "暂无结果",
-        "Result: ": "结果："
+        "Result: ": "结果：",
+        "Copied": "复制"
     }
 }

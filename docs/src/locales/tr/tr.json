@@ -79,6 +79,7 @@
         "Paste the json code here": "json kodunu buraya yapıştırın",
         "Len": "Len",
         "No result yet": "Henüz sonuç yok",
-        "Result: ": "Sonuç: "
+        "Result: ": "Sonuç: ",
+        "Copied": "Kopya -lanan"
     }
 }

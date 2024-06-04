@@ -79,6 +79,7 @@
         "Paste the json code here": "ここにjsonコードを貼り付けます",
         "Len": "レン",
         "No result yet": "まだ結果が出ていません",
-        "Result: ": "結果："
+        "Result: ": "結果：",
+        "Copied": "コピー"
     }
 }

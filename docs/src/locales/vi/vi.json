@@ -79,6 +79,7 @@
         "Paste the json code here": "Dán mã json vào đây",
         "Len": "Len",
         "No result yet": "Chưa có kết quả",
-        "Result: ": "Kết quả: "
+        "Result: ": "Kết quả: ",
+        "Copied": "Sao chép"
     }
 }

@@ -79,6 +79,7 @@
         "Paste the json code here": "วางโค้ด json ที่นี่",
         "Len": "เลน",
         "No result yet": "ยังไม่มีผลลัพธ์",
-        "Result: ": "ผล: "
+        "Result: ": "ผล: ",
+        "Copied": "คัด ลอก"
     }
 }

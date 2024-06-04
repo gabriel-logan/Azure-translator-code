@@ -79,6 +79,7 @@
         "Paste the json code here": "الصق رمز json هنا",
         "Len": "ليون",
         "No result yet": "لا توجد نتيجة حتى الآن",
-        "Result: ": "نتيجة: "
+        "Result: ": "نتيجة: ",
+        "Copied": "نسخ"
     }
 }

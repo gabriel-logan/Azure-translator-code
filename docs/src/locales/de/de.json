@@ -1,84 +1,85 @@
 {
-  "Hello World": "Hallo Welt",
-  "Actions": {
-    "MakeTranslations": {
-      "Invalid or missing request body": "Ungültiger oder fehlender Anforderungstext",
-      "Text must be less than 5000 characters": "Der Text muss weniger als 5000 Zeichen lang sein",
-      "From lang and to Lang are required": "Von lang und bis Lang sind erforderlich",
-      "Missing json file text": "Fehlender JSON-Dateitext",
-      "Invalid json text passed": "Ungültiger JSON-Text übergeben"
+    "Hello World": "Hallo Welt",
+    "Actions": {
+        "MakeTranslations": {
+            "Invalid or missing request body": "Ungültiger oder fehlender Anforderungstext",
+            "Text must be less than 5000 characters": "Der Text muss weniger als 5000 Zeichen lang sein",
+            "From lang and to Lang are required": "Von lang und bis Lang sind erforderlich",
+            "Missing json file text": "Fehlender JSON-Dateitext",
+            "Invalid json text passed": "Ungültiger JSON-Text übergeben"
+        }
+    },
+    "HomeLayout": {
+        "Title": "Azure-Übersetzercode",
+        "Description": "Übersetzen Sie Ihre JSON-Datei direkt auf der Seite",
+        "Classification": "Translator",
+        "OpenGraph": {
+            "Title": "Einfaches Übersetzen von JSON-Dateien mit Azure",
+            "Description": "Verwenden Sie Azure Translator Code, um Ihre JSON-Dateien schnell und einfach direkt auf der Seite zu übersetzen.",
+            "SiteName": "Azure-Übersetzercode"
+        },
+        "Category": "Werkzeuge",
+        "Created by": "Erstellt von"
+    },
+    "Manifest": {
+        "Name": "Azure-Übersetzercode",
+        "ShortName": "Azure-Übersetzer",
+        "Description": "Übersetzen Sie Ihre JSON-Datei direkt auf der Seite",
+        "lang": "de",
+        "Dir": "ltr"
+    },
+    "NotFoundPage": {
+        "Title": "404 - Seite nicht gefunden",
+        "Description": "Die gesuchte Seite existiert nicht. 😩😩😩",
+        "Back": "Zurück",
+        "Go to GitHub": "Gehen Sie zu GitHub"
+    },
+    "HomePage": {
+        "Title": "Azure-Übersetzercode",
+        "Read the": "Lesen Sie die",
+        "to know how to use the library in your JS/TS project": "um zu wissen, wie Sie die Bibliothek in Ihrem JS/TS-Projekt verwenden können",
+        "Test the translator": "Testen Sie den Übersetzer"
+    },
+    "FormComponent": {
+        "From": "Von",
+        "To": "An",
+        "Translate": "Übersetzen",
+        "Langs": {
+            "Arabic": "Arabisch",
+            "Chinese Simplified": "Chinesisch (Vereinfacht)",
+            "Chinese Traditional": "Chinesisch (Traditionell)",
+            "Czech": "Tschechisch",
+            "Danish": "Dänisch",
+            "Dutch": "Holländisch",
+            "English": "Englisch",
+            "Finnish": "Finnisch",
+            "French": "Französisch",
+            "German": "Deutsch",
+            "Greek": "Griechisch",
+            "Hebrew": "Hebräisch",
+            "Hindi": "Hindi",
+            "Hungarian": "Ungarisch",
+            "Indonesian": "Indonesisch",
+            "Italian": "Italienisch",
+            "Japanese": "Japanisch",
+            "Korean": "Koreanisch",
+            "Norwegian": "Norwegisch",
+            "Polish": "Polnisch",
+            "Portuguese": "Portugiesisch",
+            "Romanian": "Rumänisch",
+            "Russian": "Russisch",
+            "Slovak": "Slowakisch",
+            "Spanish": "Spanisch",
+            "Swedish": "Schwedisch",
+            "Thai": "Thailändisch",
+            "Turkish": "Türkisch",
+            "Vietnamese": "Vietnamesisch",
+            "Malay": "Malaiisch"
+        },
+        "Paste the json code here": "Fügen Sie den JSON-Code hier ein",
+        "Len": "Len",
+        "No result yet": "Noch kein Ergebnis",
+        "Result: ": "Ergebnis: ",
+        "Copied": "Kopiert"
     }
-  },
-  "HomeLayout": {
-    "Title": "Azure-Übersetzercode",
-    "Description": "Übersetzen Sie Ihre JSON-Datei direkt auf der Seite",
-    "Classification": "Translator",
-    "OpenGraph": {
-      "Title": "Einfaches Übersetzen von JSON-Dateien mit Azure",
-      "Description": "Verwenden Sie Azure Translator Code, um Ihre JSON-Dateien schnell und einfach direkt auf der Seite zu übersetzen.",
-      "SiteName": "Azure-Übersetzercode"
-    },
-    "Category": "Werkzeuge",
-    "Created by": "Erstellt von"
-  },
-  "Manifest": {
-    "Name": "Azure-Übersetzercode",
-    "ShortName": "Azure-Übersetzer",
-    "Description": "Übersetzen Sie Ihre JSON-Datei direkt auf der Seite",
-    "lang": "de",
-    "Dir": "ltr"
-  },
-  "NotFoundPage": {
-    "Title": "404 - Seite nicht gefunden",
-    "Description": "Die gesuchte Seite existiert nicht. 😩😩😩",
-    "Back": "Zurück",
-    "Go to GitHub": "Gehen Sie zu GitHub"
-  },
-  "HomePage": {
-    "Title": "Azure-Übersetzercode",
-    "Read the": "Lesen Sie die",
-    "to know how to use the library in your JS/TS project": "um zu wissen, wie Sie die Bibliothek in Ihrem JS/TS-Projekt verwenden können",
-    "Test the translator": "Testen Sie den Übersetzer"
-  },
-  "FormComponent": {
-    "From": "Von",
-    "To": "An",
-    "Translate": "Übersetzen",
-    "Langs": {
-      "Arabic": "Arabisch",
-      "Chinese Simplified": "Chinesisch (Vereinfacht)",
-      "Chinese Traditional": "Chinesisch (Traditionell)",
-      "Czech": "Tschechisch",
-      "Danish": "Dänisch",
-      "Dutch": "Holländisch",
-      "English": "Englisch",
-      "Finnish": "Finnisch",
-      "French": "Französisch",
-      "German": "Deutsch",
-      "Greek": "Griechisch",
-      "Hebrew": "Hebräisch",
-      "Hindi": "Hindi",
-      "Hungarian": "Ungarisch",
-      "Indonesian": "Indonesisch",
-      "Italian": "Italienisch",
-      "Japanese": "Japanisch",
-      "Korean": "Koreanisch",
-      "Norwegian": "Norwegisch",
-      "Polish": "Polnisch",
-      "Portuguese": "Portugiesisch",
-      "Romanian": "Rumänisch",
-      "Russian": "Russisch",
-      "Slovak": "Slowakisch",
-      "Spanish": "Spanisch",
-      "Swedish": "Schwedisch",
-      "Thai": "Thailändisch",
-      "Turkish": "Türkisch",
-      "Vietnamese": "Vietnamesisch",
-      "Malay": "Malaiisch"
-    },
-    "Paste the json code here": "Fügen Sie den JSON-Code hier ein",
-    "Len": "Len",
-    "No result yet": "Noch kein Ergebnis",
-    "Result: ": "Ergebnis: "
-  }
 }

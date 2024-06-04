@@ -79,6 +79,7 @@
         "Paste the json code here": "Tempel kode json di sini",
         "Len": "Len",
         "No result yet": "Belum ada hasil",
-        "Result: ": "Hasil: "
+        "Result: ": "Hasil: ",
+        "Copied": "Disalin"
     }
 }

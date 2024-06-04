@@ -79,6 +79,7 @@
         "Paste the json code here": "여기에 json 코드를 붙여넣습니다.",
         "Len": "렌",
         "No result yet": "아직 결과가 없습니다.",
-        "Result: ": "결과: "
+        "Result: ": "결과: ",
+        "Copied": "복사"
     }
 }

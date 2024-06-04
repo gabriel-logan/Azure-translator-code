@@ -79,6 +79,7 @@
         "Paste the json code here": "Вставьте json-код сюда",
         "Len": "Лен",
         "No result yet": "Результата пока нет",
-        "Result: ": "Результат: "
+        "Result: ": "Результат: ",
+        "Copied": "Скопированы"
     }
 }

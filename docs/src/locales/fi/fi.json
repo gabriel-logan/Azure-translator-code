@@ -79,6 +79,7 @@
         "Paste the json code here": "Liitä json-koodi tähän",
         "Len": "Len",
         "No result yet": "Ei vielä tulosta",
-        "Result: ": "Tulos: "
+        "Result: ": "Tulos: ",
+        "Copied": "Kopioida"
     }
 }

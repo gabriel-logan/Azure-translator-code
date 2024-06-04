@@ -195,7 +195,7 @@ export default function Form() {
 			</form>
 			<div className="mt-5 rounded border p-3">
 				<div
-					className="float-right flex flex-col items-end"
+					className={`flex flex-col items-end ltr:float-right`}
 					onClick={() => {
 						navigator.clipboard.writeText(
 							typeof state.message === "string"
@@ -212,7 +212,9 @@ export default function Form() {
 						className="cursor-pointer text-black transition-colors duration-75 active:text-gray-300"
 						size={22}
 					/>
-					<span className="text-gray-500">{isCopied ? "Copied" : ""}</span>
+					<span className="text-gray-500">
+						{isCopied ? scopedT("Copied") : ""}
+					</span>
 				</div>
 				<p className="font-medium text-gray-700">{scopedT("Result: ")}</p>
 
