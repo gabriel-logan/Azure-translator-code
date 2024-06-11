@@ -6,9 +6,9 @@ import { makeTranslation } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
 
 import ButtonCopy from "./ButtonCopy";
-import ButtonSubmit from "./ButtonSubmit";
 import ResultDiv from "./ResultDiv";
 import Textarea from "./Textarea";
+import ButtonSubmit from "../ButtonSubmit";
 
 export default function FormTransUnicJson() {
 	const scopedT = useScopedI18n("FormComponent");
