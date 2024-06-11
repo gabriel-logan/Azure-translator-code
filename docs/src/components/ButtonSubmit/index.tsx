@@ -2,8 +2,11 @@
 
 import { useFormStatus } from "react-dom";
 
+import { useScopedI18n } from "@/locales/client";
+
 export default function ButtonSubmit() {
 	const { pending } = useFormStatus();
+	const scopedT = useScopedI18n("FormComponent");
 
 	return (
 		<button
@@ -14,7 +17,7 @@ export default function ButtonSubmit() {
 			{pending ? (
 				<div className="mx-auto h-5 w-5 animate-spin rounded-full border-b-2 border-white" />
 			) : (
-				"Translate"
+				scopedT("Translate")
 			)}
 		</button>
 	);
