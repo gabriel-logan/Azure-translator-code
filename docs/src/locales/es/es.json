@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "De lang y a Lang son necesarios",
             "Missing json file text": "Falta el texto del archivo json",
             "Invalid json text passed": "Se ha pasado texto json no válido"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "No hay texto que traducir",
+            "No languages selected": "No hay idiomas seleccionados",
+            "Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtelo de nuevo.",
+            "Text must be less than 5000 characters": "El texto debe tener menos de 5000 caracteres"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Código de Azure Translator",
         "Read the": "Lea el",
         "to know how to use the library in your JS/TS project": "para saber cómo usar la biblioteca en su proyecto JS/TS",
-        "Test the translator": "Pruebe el traductor"
+        "Test the translator": "Pruebe el traductor",
+        "Back": "Atrás",
+        "Test Multingual": "Prueba Multingual"
     },
     "FormComponent": {
         "From": "De",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Aún no hay resultado",
         "Result: ": "Resultado: ",
-        "Copied": "Copiado"
+        "Copied": "Copiado",
+        "Text to Translate": "Texto a traducir",
+        "Select the languages you want to translate the text to:": "Seleccione los idiomas a los que desea traducir el texto:",
+        "Translations:": "Traducciones:"
     }
 }

@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Από lang και σε Lang απαιτούνται",
             "Missing json file text": "Λείπει κείμενο αρχείου json",
             "Invalid json text passed": "Πέρασε μη έγκυρο κείμενο json"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Δεν υπάρχει κείμενο για μετάφραση",
+            "No languages selected": "Δεν έχουν επιλεγεί γλώσσες",
+            "Error while translating the text. Please try again.": "Σφάλμα κατά τη μετάφραση του κειμένου. Παρακαλώ προσπαθήστε ξανά.",
+            "Text must be less than 5000 characters": "Το κείμενο πρέπει να είναι μικρότερο από 5000 χαρακτήρες"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Κώδικας μεταφραστή Azure",
         "Read the": "Διαβάστε το",
         "to know how to use the library in your JS/TS project": "για να μάθετε πώς να χρησιμοποιείτε τη βιβλιοθήκη στο έργο JS/TS",
-        "Test the translator": "Δοκιμάστε τον μεταφραστή"
+        "Test the translator": "Δοκιμάστε τον μεταφραστή",
+        "Back": "Πλάτη",
+        "Test Multingual": "Δοκιμή Multingual"
     },
     "FormComponent": {
         "From": "Από",
@@ -80,6 +88,9 @@
         "Len": "Λεν",
         "No result yet": "Κανένα αποτέλεσμα ακόμα",
         "Result: ": "Αποτέλεσμα: ",
-        "Copied": "Αντιγραφεί"
+        "Copied": "Αντιγραφεί",
+        "Text to Translate": "Κείμενο προς μετάφραση",
+        "Select the languages you want to translate the text to:": "Επιλέξτε τις γλώσσες στις οποίες θέλετε να μεταφράσετε το κείμενο:",
+        "Translations:": "Μεταφράσεις:"
     }
 }

@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Dari lang dan ke Lang diperlukan",
             "Missing json file text": "Teks fail json yang hilang",
             "Invalid json text passed": "Teks json tidak sah diluluskan"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Tiada teks untuk diterjemahkan",
+            "No languages selected": "Tiada bahasa dipilih",
+            "Error while translating the text. Please try again.": "Ralat semasa menterjemah teks. Sila cuba lagi.",
+            "Text must be less than 5000 characters": "Teks mestilah kurang daripada 5000 aksara"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator Code",
         "Read the": "Baca",
         "to know how to use the library in your JS/TS project": "untuk mengetahui cara menggunakan pustaka dalam projek JS/TS anda",
-        "Test the translator": "Uji penterjemah"
+        "Test the translator": "Uji penterjemah",
+        "Back": "Kembali",
+        "Test Multingual": "Ujian Multingual"
     },
     "FormComponent": {
         "From": "Dari",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Tiada keputusan lagi",
         "Result: ": "Keputusan: ",
-        "Copied": "Disalin"
+        "Copied": "Disalin",
+        "Text to Translate": "Teks untuk Diterjemah",
+        "Select the languages you want to translate the text to:": "Pilih bahasa yang anda ingin terjemahkan teks kepada:",
+        "Translations:": "Penterjemahan:"
     }
 }

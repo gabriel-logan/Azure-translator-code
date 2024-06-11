@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "จาก lang และ ถึง lang จะต้อง",
             "Missing json file text": "ข้อความไฟล์ json หายไป",
             "Invalid json text passed": "ข้อความ json ไม่ถูกต้องผ่าน"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "ไม่มีข้อความที่จะแปล",
+            "No languages selected": "ไม่ได้เลือกภาษา",
+            "Error while translating the text. Please try again.": "เกิดข้อผิดพลาดขณะแปลข้อความ โปรดลองอีกครั้ง",
+            "Text must be less than 5000 characters": "ข้อความต้องมีอักขระน้อยกว่า 5000 ตัว"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "รหัสนักแปล Azure",
         "Read the": "อ่าน",
         "to know how to use the library in your JS/TS project": "เพื่อทราบวิธีใช้ไลบรารีในโครงการ JS/TS ของคุณ",
-        "Test the translator": "ทดสอบนักแปล"
+        "Test the translator": "ทดสอบนักแปล",
+        "Back": "ย้อนกลับ",
+        "Test Multingual": "ทดสอบ Multingual"
     },
     "FormComponent": {
         "From": "จาก",
@@ -80,6 +88,9 @@
         "Len": "เลน",
         "No result yet": "ยังไม่มีผลลัพธ์",
         "Result: ": "ผล: ",
-        "Copied": "คัด ลอก"
+        "Copied": "คัด ลอก",
+        "Text to Translate": "ข้อความที่จะแปล",
+        "Select the languages you want to translate the text to:": "เลือกภาษาที่คุณต้องการแปลข้อความเป็น:",
+        "Translations:": "แปล:"
     }
 }

@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Fra lang og til Lang kreves",
             "Missing json file text": "Manglende json-filtekst",
             "Invalid json text passed": "Ugyldig json-tekst sendt"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Ingen tekst å oversette",
+            "No languages selected": "Ingen språk valgt",
+            "Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv på nytt.",
+            "Text must be less than 5000 characters": "Teksten må være mindre enn 5000 tegn"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator-kode",
         "Read the": "Les hele artikkelen",
         "to know how to use the library in your JS/TS project": "å vite hvordan du bruker biblioteket i ditt JS/TS-prosjekt",
-        "Test the translator": "Test oversetteren"
+        "Test the translator": "Test oversetteren",
+        "Back": "Tilbake",
+        "Test Multingual": "Test Multingual"
     },
     "FormComponent": {
         "From": "Fra",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Ingen resultat ennå",
         "Result: ": "Resultat: ",
-        "Copied": "Kopiert"
+        "Copied": "Kopiert",
+        "Text to Translate": "Tekst som skal oversettes",
+        "Select the languages you want to translate the text to:": "Velg språkene du vil oversette teksten til:",
+        "Translations:": "Oversettelser:"
     }
 }

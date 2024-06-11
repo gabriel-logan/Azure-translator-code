@@ -12,7 +12,7 @@ export default async function Home() {
 					className="absolute right-5 text-black hover:text-blue-500 hover:underline"
 					href="/multi"
 				>
-					Test Multingual
+					{scopedT("Test Multingual")}
 				</Link>
 				<h2 className="mb-5 text-2xl font-bold text-black">
 					{scopedT("Test the translator")}

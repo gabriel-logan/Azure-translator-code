@@ -7,6 +7,12 @@
 			"From lang and to Lang are required": "From lang and to Lang are required",
 			"Missing json file text": "Missing json file text",
 			"Invalid json text passed": "Invalid json text passed"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "No text to translate",
+			"No languages selected": "No languages selected",
+			"Error while translating the text. Please try again.": "Error while translating the text. Please try again.",
+			"Text must be less than 5000 characters": "Text must be less than 5000 characters"
 		}
 	},
 	"HomeLayout": {
@@ -36,7 +42,9 @@
 		"Title": "Azure Translator Code",
 		"Read the": "Read the",
 		"to know how to use the library in your JS/TS project": "to know how to use the library in your JS/TS project",
-		"Test the translator": "Test the translator"
+		"Test the translator": "Test the translator",
+		"Back": "Back",
+		"Test Multingual": "Test Multingual"
 	},
 
 	"FormComponent": {
@@ -79,6 +87,9 @@
 		"Len": "Len",
 		"No result yet": "No result yet",
 		"Result: ": "Result: ",
-		"Copied": "Copied"
+		"Copied": "Copied",
+		"Text to Translate": "Text to Translate",
+		"Select the languages you want to translate the text to:": "Select the languages you want to translate the text to:",
+		"Translations:": "Translations:"
 	}
 }

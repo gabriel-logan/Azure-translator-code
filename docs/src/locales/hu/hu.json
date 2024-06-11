@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "A lang és a Lang szükséges",
             "Missing json file text": "Hiányzó JSON-fájl szövege",
             "Invalid json text passed": "Érvénytelen JSON-szöveg lett átadva"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Nincs lefordítandó szöveg",
+            "No languages selected": "Nincs kiválasztott nyelv",
+            "Error while translating the text. Please try again.": "Hiba történt a szöveg fordítása közben. Kérjük, próbálja újra.",
+            "Text must be less than 5000 characters": "A szövegnek 5000 karakternél rövidebbnek kell lennie"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator kód",
         "Read the": "Olvassa el a",
         "to know how to use the library in your JS/TS project": "hogy megtudja, hogyan kell használni a könyvtárat a JS/TS projektben",
-        "Test the translator": "A fordító tesztelése"
+        "Test the translator": "A fordító tesztelése",
+        "Back": "Hát",
+        "Test Multingual": "Multingual teszt"
     },
     "FormComponent": {
         "From": "Tól",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Még nincs eredmény",
         "Result: ": "Eredmény: ",
-        "Copied": "Másolt"
+        "Copied": "Másolt",
+        "Text to Translate": "Lefordítandó szöveg",
+        "Select the languages you want to translate the text to:": "Válassza ki azokat a nyelveket, amelyekre le szeretné fordítani a szöveget:",
+        "Translations:": "Fordítások:"
     }
 }

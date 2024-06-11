@@ -1,50 +1,56 @@
 "use client";
 
+import { useState } from "react";
 import { useFormState } from "react-dom";
 
 import { makeTranslationMultilang } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
+import { Locale } from "@/types/locales";
 
 import ButtonSubmit from "../ButtonSubmit";
 
-export default function FormTransMultiText() {
-	const initialState = {
-		message: "",
+export default function FormTransMultiText({ locale }: Locale) {
+	const scopedT = useScopedI18n("FormComponent");
+
+	const initialState: {
+		message: string | unknown;
+	} = {
+		message: scopedT("No result yet"),
 	};
 	const [response, action] = useFormState(
 		makeTranslationMultilang,
 		initialState,
 	);
 
-	const scopedT = useScopedI18n("FormComponent");
+	const [textToTranslate, setTextToTranslate] = useState("");
 
 	const languages = [
-		{ id: "en", name: "English" },
-		{ id: "pt", name: "Portuguese" },
-		{ id: "es", name: "Spanish" },
-		{ id: "fr", name: "French" },
-		{ id: "de", name: "German" },
-		{ id: "it", name: "Italian" },
-		{ id: "ja", name: "Japanese" },
-		{ id: "ko", name: "Korean" },
-		{ id: "ru", name: "Russian" },
-		{ id: "zh-Hans", name: "Chinese Simplified" },
-		{ id: "zh-Hant", name: "Chinese Traditional" },
-		{ id: "ar", name: "Arabic" },
-		{ id: "tr", name: "Turkish" },
-		{ id: "vi", name: "Vietnamese" },
-		{ id: "th", name: "Thai" },
-		{ id: "sv", name: "Swedish" },
-		{ id: "pl", name: "Polish" },
-		{ id: "nl", name: "Dutch" },
-		{ id: "da", name: "Danish" },
-		{ id: "fi", name: "Finnish" },
-		{ id: "no", name: "Norwegian" },
-		{ id: "cs", name: "Czech" },
-		{ id: "hu", name: "Hungarian" },
-		{ id: "el", name: "Greek" },
-		{ id: "id", name: "Indonesian" },
-		{ id: "ms", name: "Malay" },
+		{ id: "en", name: scopedT("Langs.English") },
+		{ id: "pt", name: scopedT("Langs.Portuguese") },
+		{ id: "es", name: scopedT("Langs.Spanish") },
+		{ id: "fr", name: scopedT("Langs.French") },
+		{ id: "de", name: scopedT("Langs.German") },
+		{ id: "it", name: scopedT("Langs.Italian") },
+		{ id: "ja", name: scopedT("Langs.Japanese") },
+		{ id: "ko", name: scopedT("Langs.Korean") },
+		{ id: "ru", name: scopedT("Langs.Russian") },
+		{ id: "zh-Hans", name: scopedT("Langs.Chinese Simplified") },
+		{ id: "zh-Hant", name: scopedT("Langs.Chinese Traditional") },
+		{ id: "ar", name: scopedT("Langs.Arabic") },
+		{ id: "tr", name: scopedT("Langs.Turkish") },
+		{ id: "vi", name: scopedT("Langs.Vietnamese") },
+		{ id: "th", name: scopedT("Langs.Thai") },
+		{ id: "sv", name: scopedT("Langs.Swedish") },
+		{ id: "pl", name: scopedT("Langs.Polish") },
+		{ id: "nl", name: scopedT("Langs.Dutch") },
+		{ id: "da", name: scopedT("Langs.Danish") },
+		{ id: "fi", name: scopedT("Langs.Finnish") },
+		{ id: "no", name: scopedT("Langs.Norwegian") },
+		{ id: "cs", name: scopedT("Langs.Czech") },
+		{ id: "hu", name: scopedT("Langs.Hungarian") },
+		{ id: "el", name: scopedT("Langs.Greek") },
+		{ id: "id", name: scopedT("Langs.Indonesian") },
+		{ id: "ms", name: scopedT("Langs.Malay") },
 	];
 
 	return (
@@ -61,57 +67,48 @@ export default function FormTransMultiText() {
 						name="fromLang"
 						id="fromLang"
 						className="w-full cursor-pointer rounded bg-gray-700 p-3 text-white"
+						defaultValue={locale}
 					>
-						<option value="en">{scopedT("Langs.English")}</option>
-						<option value="pt">{scopedT("Langs.Portuguese")}</option>
-						<option value="es">{scopedT("Langs.Spanish")}</option>
-						<option value="fr">{scopedT("Langs.French")}</option>
-						<option value="de">{scopedT("Langs.German")}</option>
-						<option value="it">{scopedT("Langs.Italian")}</option>
-						<option value="ja">{scopedT("Langs.Japanese")}</option>
-						<option value="ko">{scopedT("Langs.Korean")}</option>
-						<option value="ru">{scopedT("Langs.Russian")}</option>
-						<option value="zh-Hans">
-							{scopedT("Langs.Chinese Simplified")}
-						</option>
-						<option value="zh-Hant">
-							{scopedT("Langs.Chinese Traditional")}
-						</option>
-						<option value="ar">{scopedT("Langs.Arabic")}</option>
-						<option value="tr">{scopedT("Langs.Turkish")}</option>
-						<option value="vi">{scopedT("Langs.Vietnamese")}</option>
-						<option value="th">{scopedT("Langs.Thai")}</option>
-						<option value="sv">{scopedT("Langs.Swedish")}</option>
-						<option value="pl">{scopedT("Langs.Polish")}</option>
-						<option value="nl">{scopedT("Langs.Dutch")}</option>
-						<option value="da">{scopedT("Langs.Danish")}</option>
-						<option value="fi">{scopedT("Langs.Finnish")}</option>
-						<option value="no">{scopedT("Langs.Norwegian")}</option>
-						<option value="cs">{scopedT("Langs.Czech")}</option>
-						<option value="hu">{scopedT("Langs.Hungarian")}</option>
-						<option value="el">{scopedT("Langs.Greek")}</option>
-						<option value="id">{scopedT("Langs.Indonesian")}</option>
-						<option value="ms">{scopedT("Langs.Malay")}</option>
+						{languages.map((lang, index) => {
+							return (
+								<option key={index} value={lang.id}>
+									{lang.name}
+								</option>
+							);
+						})}
 					</select>
 				</div>
 				<label
 					htmlFor="toTranslate"
-					className="mb-2 mt-2 block font-medium text-gray-700"
+					className="mb-2 mt-4 block font-medium text-gray-700"
 				>
-					Text to Translate
+					{scopedT("Text to Translate")}
 				</label>
 				<input
 					type="text"
 					id="toTranslate"
 					name="toTranslate"
+					value={textToTranslate}
+					onChange={(e) => {
+						setTextToTranslate(e.target.value);
+					}}
 					className="w-full rounded border border-gray-300 p-3 text-black"
 				/>
+				<p className="float-right text-black">
+					{scopedT("Len")}:{" "}
+					<span
+						className={`${textToTranslate.length > 4999 && "text-red-500"}`}
+					>
+						{textToTranslate.length}
+					</span>{" "}
+					/ 5000
+				</p>
 			</div>
 
 			<ButtonSubmit />
 
 			<p className="mt-4 text-base text-black sm:text-lg">
-				Select the languages you want to translate the text to:
+				{scopedT("Select the languages you want to translate the text to:")}
 			</p>
 
 			<div className="mt-6 grid grid-cols-2 gap-4">
@@ -121,6 +118,7 @@ export default function FormTransMultiText() {
 							type="checkbox"
 							name={lang.id}
 							id={lang.id}
+							maxLength={10}
 							className="mr-2"
 						/>
 						<label
@@ -133,7 +131,9 @@ export default function FormTransMultiText() {
 				))}
 			</div>
 			<div className="mt-3 rounded-lg bg-white p-6 shadow">
-				<h3 className="mb-4 text-xl font-bold text-black">Translations: </h3>
+				<h3 className="mb-4 text-xl font-bold text-black">
+					{scopedT("Translations:")}{" "}
+				</h3>
 				{Array.isArray(response.message) ? (
 					<>
 						{response.message.map((msg: any, index: any) => {
@@ -148,7 +148,11 @@ export default function FormTransMultiText() {
 						})}
 					</>
 				) : (
-					<p className="text-lg text-black">{response.message}</p>
+					<p className="text-lg text-black">
+						{typeof response.message === "string"
+							? response.message
+							: scopedT("No result yet")}
+					</p>
 				)}
 			</div>
 		</form>

@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Từ lang và đến Lang là bắt buộc",
             "Missing json file text": "Thiếu văn bản tệp json",
             "Invalid json text passed": "Văn bản json không hợp lệ được thông qua"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Không có văn bản để dịch",
+            "No languages selected": "Không có ngôn ngữ nào được chọn",
+            "Error while translating the text. Please try again.": "Lỗi trong khi dịch văn bản. Vui lòng thử lại.",
+            "Text must be less than 5000 characters": "Văn bản phải nhỏ hơn 5000 ký tự"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator Code",
         "Read the": "Đọc",
         "to know how to use the library in your JS/TS project": "để biết cách sử dụng thư viện trong dự án JS / TS của bạn",
-        "Test the translator": "Kiểm tra người dịch"
+        "Test the translator": "Kiểm tra người dịch",
+        "Back": "Lưng",
+        "Test Multingual": "Kiểm tra đa ngôn ngữ"
     },
     "FormComponent": {
         "From": "Từ",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Chưa có kết quả",
         "Result: ": "Kết quả: ",
-        "Copied": "Sao chép"
+        "Copied": "Sao chép",
+        "Text to Translate": "Văn bản cần dịch",
+        "Select the languages you want to translate the text to:": "Chọn ngôn ngữ bạn muốn dịch văn bản sang:",
+        "Translations:": "Bản dịch:"
     }
 }

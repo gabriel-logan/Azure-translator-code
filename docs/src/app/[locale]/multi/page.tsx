@@ -2,8 +2,11 @@ import Link from "next/link";
 
 import FormTransMultiText from "@/components/FormTransMultiText";
 import { getScopedI18n } from "@/locales/server";
+import { LocaleParams } from "@/types/params";
 
-export default async function MultiLangPage() {
+export default async function MultiLangPage({
+	params: { locale },
+}: LocaleParams) {
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
@@ -13,13 +16,13 @@ export default async function MultiLangPage() {
 					className="absolute right-5 text-black hover:text-blue-500 hover:underline"
 					href="/"
 				>
-					Back
+					{scopedT("Back")}
 				</Link>
 				<h2 className="mb-5 text-2xl font-bold text-black">
 					{scopedT("Test the translator")}
 				</h2>
 				<div>
-					<FormTransMultiText />
+					<FormTransMultiText locale={locale} />
 				</div>
 			</div>
 		</main>

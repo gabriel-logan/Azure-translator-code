@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Från lang och till lang krävs",
             "Missing json file text": "Texten i json-filen saknas",
             "Invalid json text passed": "Ogiltig json-text har skickats"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Ingen text att översätta",
+            "No languages selected": "Inga språk valda",
+            "Error while translating the text. Please try again.": "Fel vid översättning av texten. Försök igen.",
+            "Text must be less than 5000 characters": "Texten måste vara mindre än 5000 tecken"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Kod för Azure Translator",
         "Read the": "Läs",
         "to know how to use the library in your JS/TS project": "för att veta hur du använder biblioteket i ditt JS/TS-projekt",
-        "Test the translator": "Testa översättaren"
+        "Test the translator": "Testa översättaren",
+        "Back": "Tillbaka",
+        "Test Multingual": "Testa flerspråkighet"
     },
     "FormComponent": {
         "From": "Från",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Inget resultat ännu",
         "Result: ": "Resultat: ",
-        "Copied": "Kopieras"
+        "Copied": "Kopieras",
+        "Text to Translate": "Text som ska översättas",
+        "Select the languages you want to translate the text to:": "Välj de språk du vill översätta texten till:",
+        "Translations:": "Översättningar:"
     }
 }

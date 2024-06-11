@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "من لانغ وإلى لانغ مطلوبة",
             "Missing json file text": "نص ملف json مفقود",
             "Invalid json text passed": "تم تمرير نص json غير صالح"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "لا يوجد نص للترجمة",
+            "No languages selected": "لم يتم تحديد لغات",
+            "Error while translating the text. Please try again.": "خطأ أثناء ترجمة النص. يرجى المحاولة مرة أخرى.",
+            "Text must be less than 5000 characters": "يجب أن يكون النص أقل من 5000 حرف"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "كود مترجم Azure",
         "Read the": "اقرأ",
         "to know how to use the library in your JS/TS project": "لمعرفة كيفية استخدام المكتبة في مشروع JS / TS الخاص بك",
-        "Test the translator": "اختبر المترجم"
+        "Test the translator": "اختبر المترجم",
+        "Back": "ظهر",
+        "Test Multingual": "اختبار متعدد الأضلاع"
     },
     "FormComponent": {
         "From": "من",
@@ -80,6 +88,9 @@
         "Len": "ليون",
         "No result yet": "لا توجد نتيجة حتى الآن",
         "Result: ": "نتيجة: ",
-        "Copied": "نسخ"
+        "Copied": "نسخ",
+        "Text to Translate": "النص المراد ترجمته",
+        "Select the languages you want to translate the text to:": "حدد اللغات التي تريد ترجمة النص إليها:",
+        "Translations:": "تراجم:"
     }
 }

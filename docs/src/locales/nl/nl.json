@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Van lang en naar Lang zijn vereist",
             "Missing json file text": "Ontbrekende tekst van het json-bestand",
             "Invalid json text passed": "Ongeldige json-tekst doorgegeven"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Geen tekst om te vertalen",
+            "No languages selected": "Geen talen geselecteerd",
+            "Error while translating the text. Please try again.": "Fout bij het vertalen van de tekst. Probeer het opnieuw.",
+            "Text must be less than 5000 characters": "Tekst mag niet langer zijn dan 5000 tekens"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator-code",
         "Read the": "Lees de",
         "to know how to use the library in your JS/TS project": "om te weten hoe u de bibliotheek in uw JS/TS-project kunt gebruiken",
-        "Test the translator": "Test de vertaler"
+        "Test the translator": "Test de vertaler",
+        "Back": "Terug",
+        "Test Multingual": "Test meertalig"
     },
     "FormComponent": {
         "From": "Van",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Nog geen resultaat",
         "Result: ": "Resultaat: ",
-        "Copied": "Gekopieerd"
+        "Copied": "Gekopieerd",
+        "Text to Translate": "Tekst om te vertalen",
+        "Select the languages you want to translate the text to:": "Selecteer de talen waarnaar u de tekst wilt vertalen:",
+        "Translations:": "Translations:"
     }
 }

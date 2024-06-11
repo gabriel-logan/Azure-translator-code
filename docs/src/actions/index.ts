@@ -92,6 +92,8 @@ export async function makeTranslationMultilang(
 	prevState: any,
 	formData: FormData,
 ) {
+	const scopedT = await getScopedI18n("Actions");
+
 	const key = process.env.AZURE_API_KEY || "";
 	const endpoint = process.env.AZURE_ENDPOINT || "";
 	const location = process.env.AZURE_LOCATION || "";
@@ -100,7 +102,15 @@ export async function makeTranslationMultilang(
 
 	if (!toTranslate) {
 		return {
-			message: "No text to translate",
+			message: scopedT("makeTranslationMultilang.No text to translate"),
+		};
+	}
+
+	if (toTranslate.length > 5000) {
+		return {
+			message: scopedT(
+				"makeTranslationMultilang.Text must be less than 5000 characters",
+			),
 		};
 	}
 
@@ -138,7 +148,7 @@ export async function makeTranslationMultilang(
 
 	if (!toLangs.length) {
 		return {
-			message: "No languages selected",
+			message: scopedT("makeTranslationMultilang.No languages selected"),
 		};
 	}
 
@@ -147,22 +157,32 @@ export async function makeTranslationMultilang(
 		url += `&to=${lang}`;
 	}
 
-	const pega = await fetch(endpoint + url, {
-		method: "POST",
-		headers: {
-			"Ocp-Apim-Subscription-Key": key,
-			"Ocp-Apim-Subscription-Region": location,
-			"Content-type": "application/json",
-			"X-ClientTraceId": uuidv4().toString(),
-		},
-		body: JSON.stringify([
-			{
-				text: toTranslate,
-			},
-		]),
-	});
+	let data: any;
 
-	const data = await pega.json();
+	try {
+		const pega = await fetch(endpoint + url, {
+			method: "POST",
+			headers: {
+				"Ocp-Apim-Subscription-Key": key,
+				"Ocp-Apim-Subscription-Region": location,
+				"Content-type": "application/json",
+				"X-ClientTraceId": uuidv4().toString(),
+			},
+			body: JSON.stringify([
+				{
+					text: toTranslate,
+				},
+			]),
+		});
+
+		data = await pega.json();
+	} catch {
+		return {
+			message: scopedT(
+				"makeTranslationMultilang.Error while translating the text. Please try again.",
+			),
+		};
+	}
 
 	return {
 		message: data[0].translations,

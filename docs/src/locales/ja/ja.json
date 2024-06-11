@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "From lang と to lang は必須です",
             "Missing json file text": "json ファイルのテキストがありません",
             "Invalid json text passed": "無効な json テキストが渡されました"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "翻訳するテキストがありません",
+            "No languages selected": "言語が選択されていません",
+            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
+            "Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator コード",
         "Read the": "読む",
         "to know how to use the library in your JS/TS project": "JS/TS プロジェクトでライブラリを使用する方法を知るには",
-        "Test the translator": "トランスレーターをテストする"
+        "Test the translator": "トランスレーターをテストする",
+        "Back": "戻る",
+        "Test Multingual": "多言語テスト"
     },
     "FormComponent": {
         "From": "差出人",
@@ -80,6 +88,9 @@
         "Len": "レン",
         "No result yet": "まだ結果が出ていません",
         "Result: ": "結果：",
-        "Copied": "コピー"
+        "Copied": "コピー",
+        "Text to Translate": "翻訳するテキスト",
+        "Select the languages you want to translate the text to:": "テキストを翻訳する言語を選択します。",
+        "Translations:": "翻訳："
     }
 }

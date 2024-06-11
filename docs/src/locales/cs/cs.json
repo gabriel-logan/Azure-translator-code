@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Z lang a do Lang jsou vyžadovány",
             "Missing json file text": "Chybějící text souboru JSON",
             "Invalid json text passed": "Předán neplatný text JSON."
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Žádný text k překladu",
+            "No languages selected": "Nebyly vybrány žádné jazyky",
+            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
+            "Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Kód služby Azure Translator",
         "Read the": "Přečtěte si",
         "to know how to use the library in your JS/TS project": "abyste věděli, jak používat knihovnu ve vašem projektu JS/TS",
-        "Test the translator": "Otestujte překladač"
+        "Test the translator": "Otestujte překladač",
+        "Back": "Hřbet",
+        "Test Multingual": "Testovací multingual"
     },
     "FormComponent": {
         "From": "Od",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Zatím žádný výsledek",
         "Result: ": "Výsledek: ",
-        "Copied": "Zkopírovaný"
+        "Copied": "Zkopírovaný",
+        "Text to Translate": "Text k překladu",
+        "Select the languages you want to translate the text to:": "Vyberte jazyky, do kterých chcete text přeložit:",
+        "Translations:": "Překlady:"
     }
 }

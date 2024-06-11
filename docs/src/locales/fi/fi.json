@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "Langista ja Langiin tarvitaan",
             "Missing json file text": "JSON-tiedoston teksti puuttuu",
             "Invalid json text passed": "Virheellinen json-teksti välitetty"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Ei käännettävää tekstiä",
+            "No languages selected": "Kieliä ei ole valittu",
+            "Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen.",
+            "Text must be less than 5000 characters": "Tekstin on oltava alle 5000 merkkiä pitkä"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Azure Translator Code",
         "Read the": "Lue",
         "to know how to use the library in your JS/TS project": "tietää, miten kirjastoa käytetään JS / TS-projektissasi",
-        "Test the translator": "Kääntäjän testaaminen"
+        "Test the translator": "Kääntäjän testaaminen",
+        "Back": "Selkä",
+        "Test Multingual": "Testaa Multingual"
     },
     "FormComponent": {
         "From": "Alkaen",
@@ -80,6 +88,9 @@
         "Len": "Len",
         "No result yet": "Ei vielä tulosta",
         "Result: ": "Tulos: ",
-        "Copied": "Kopioida"
+        "Copied": "Kopioida",
+        "Text to Translate": "Käännettävä teksti",
+        "Select the languages you want to translate the text to:": "Valitse kielet, joille haluat kääntää tekstin:",
+        "Translations:": "Käännökset:"
     }
 }

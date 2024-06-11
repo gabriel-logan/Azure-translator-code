@@ -7,6 +7,12 @@
             "From lang and to Lang are required": "From lang и to Lang являются обязательными",
             "Missing json file text": "Отсутствует текст json-файла",
             "Invalid json text passed": "Передан недопустимый текст json"
+        },
+        "makeTranslationMultilang": {
+            "No text to translate": "Нет текста для перевода",
+            "No languages selected": "Языки не выбраны",
+            "Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку.",
+            "Text must be less than 5000 characters": "Текст должен быть не более 5000 символов"
         }
     },
     "HomeLayout": {
@@ -38,7 +44,9 @@
         "Title": "Код переводчика Azure",
         "Read the": "Прочтите",
         "to know how to use the library in your JS/TS project": "знать, как использовать библиотеку в вашем JS/TS проекте",
-        "Test the translator": "Протестировать переводчика"
+        "Test the translator": "Протестировать переводчика",
+        "Back": "Назад",
+        "Test Multingual": "Тест Multingual"
     },
     "FormComponent": {
         "From": "От",
@@ -80,6 +88,9 @@
         "Len": "Лен",
         "No result yet": "Результата пока нет",
         "Result: ": "Результат: ",
-        "Copied": "Скопированы"
+        "Copied": "Скопированы",
+        "Text to Translate": "Текст для перевода",
+        "Select the languages you want to translate the text to:": "Выберите языки, на которые вы хотите перевести текст:",
+        "Translations:": "Переводы:"
     }
 }
