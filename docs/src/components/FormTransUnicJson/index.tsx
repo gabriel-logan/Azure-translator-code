@@ -10,7 +10,7 @@ import ButtonSubmit from "./ButtonSubmit";
 import ResultDiv from "./ResultDiv";
 import Textarea from "./Textarea";
 
-export default function Form() {
+export default function FormTransUnicJson() {
 	const scopedT = useScopedI18n("FormComponent");
 
 	const initialState: {

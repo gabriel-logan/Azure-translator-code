@@ -85,3 +85,8 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 		message: translatedValues,
 	};
 }
+
+export async function makeTranslationMultilang(
+	prevState: any,
+	formData: FormData,
+) {}

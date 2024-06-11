@@ -1,8 +1,9 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import getTextDirection from "@/components/getTextDirection";
 import { I18nProviderClient } from "@/locales/client";
 import { getScopedI18n } from "@/locales/server";
@@ -85,24 +86,13 @@ export default async function RootLayout({
 	children,
 	params: { locale },
 }: RootLayoutProps) {
-	const scopedT = await getScopedI18n("HomeLayout");
 	return (
 		<html lang={locale} dir={getTextDirection(locale)}>
 			<body className={inter.className}>
 				<I18nProviderClient locale={locale}>
+					<Header />
 					{children}
-					<footer>
-						<p className="p-1 text-center text-gray-600">
-							{scopedT("Created by")}{" "}
-							<Link
-								className="text-blue-500 hover:underline"
-								href="https://github.com/gabriel-logan"
-								target="_blank"
-							>
-								Gabriel Logan &copy; 2024
-							</Link>
-						</p>
-					</footer>
+					<Footer />
 				</I18nProviderClient>
 				<Analytics />
 			</body>
