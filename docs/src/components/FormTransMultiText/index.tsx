@@ -7,6 +7,7 @@ import { makeTranslationMultilang } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
 import { Locale } from "@/types/locales";
 
+import { ButtonCopyUnicText } from "../ButtonCopy";
 import ButtonSubmit from "../ButtonSubmit";
 
 export default function FormTransMultiText({ locale }: Locale) {
@@ -130,7 +131,7 @@ export default function FormTransMultiText({ locale }: Locale) {
 					</div>
 				))}
 			</div>
-			<div className="mt-3 rounded-lg bg-white p-6 shadow">
+			<div className="mt-3 rounded-lg bg-white p-3 shadow">
 				<h3 className="mb-4 text-xl font-bold text-black">
 					{scopedT("Translations:")}{" "}
 				</h3>
@@ -139,9 +140,15 @@ export default function FormTransMultiText({ locale }: Locale) {
 						{response.message.map((msg: any, index: any) => {
 							const language = languages.find((lang) => lang.id === msg.to);
 							return (
-								<div key={index} className="mb-2">
+								<div key={index} className="relative mb-3 rounded border p-1">
 									<p className="text-lg text-black">
-										{language ? language.name : msg.to}: {msg.text}
+										<span className="font-bold">
+											{language ? language.name : msg.to}
+										</span>
+										: <span className="break-words">{msg.text}</span>
+										<div className="absolute right-1 top-1">
+											<ButtonCopyUnicText text={msg.text} />
+										</div>
 									</p>
 								</div>
 							);

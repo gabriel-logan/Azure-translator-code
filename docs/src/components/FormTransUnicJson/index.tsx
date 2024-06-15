@@ -5,9 +5,9 @@ import { useFormState } from "react-dom";
 import { makeTranslation } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
 
-import ButtonCopy from "./ButtonCopy";
 import ResultDiv from "./ResultDiv";
 import Textarea from "./Textarea";
+import ButtonCopy from "../ButtonCopy";
 import ButtonSubmit from "../ButtonSubmit";
 
 export default function FormTransUnicJson() {

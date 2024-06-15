@@ -41,3 +41,32 @@ export default function ButtonCopy({
 		</>
 	);
 }
+
+export function ButtonCopyUnicText({ text }: { text: string }) {
+	const scopedT = useScopedI18n("FormComponent");
+
+	const [isCopied, setIsCopied] = useState(false);
+
+	return (
+		<>
+			<div
+				className="flex items-center justify-center"
+				onClick={() => {
+					navigator.clipboard.writeText(text);
+					setIsCopied(true);
+					setTimeout(() => {
+						setIsCopied(false);
+					}, 1000);
+				}}
+			>
+				<FaRegCopy
+					className="cursor-pointer text-black transition-colors duration-75 active:text-gray-300"
+					size={18}
+				/>
+				<span className="text-gray-500">
+					{isCopied ? scopedT("Copied") : ""}
+				</span>
+			</div>
+		</>
+	);
+}
