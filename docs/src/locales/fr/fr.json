@@ -8,7 +8,8 @@
             "Missing json file text": "Texte de fichier json manquant",
             "Invalid json text passed": "Texte JSON non valide transmis",
             "Translation": "Traduction",
-            "Error while translating the text. Please try again.": "Erreur lors de la traduction du texte. Veuillez réessayer."
+            "Error while translating the text. Please try again.": "Erreur lors de la traduction du texte. Veuillez réessayer.",
+            "Text must be less than 1000 characters": "Le texte doit comporter moins de 1000 caractères"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Pas de texte à traduire",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "pour savoir comment utiliser la librairie dans votre projet JS/TS",
         "Test the translator": "Tester le traducteur",
         "Back": "Précédent",
-        "Test Multingual": "Tester plusieurs"
+        "Test Multingual": "Tester plusieurs",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "De",

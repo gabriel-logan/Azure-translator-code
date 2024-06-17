@@ -8,7 +8,8 @@
             "Missing json file text": "json 파일 텍스트 누락",
             "Invalid json text passed": "잘못된 json 텍스트가 전달되었습니다.",
             "Translation": "번역",
-            "Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오."
+            "Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
+            "Text must be less than 1000 characters": "텍스트는 1000자 미만이어야 합니다."
         },
         "makeTranslationMultilang": {
             "No text to translate": "번역할 텍스트가 없습니다.",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "JS / TS 프로젝트에서 라이브러리를 사용하는 방법을 알기 위해",
         "Test the translator": "번역기 테스트",
         "Back": "뒤로",
-        "Test Multingual": "다국어 테스트"
+        "Test Multingual": "다국어 테스트",
+        "Live translator": "Live 번역기",
+        "Live Translator": "Live 번역기"
     },
     "FormComponent": {
         "From": "보낸 사람",

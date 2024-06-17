@@ -8,7 +8,8 @@
             "Missing json file text": "ข้อความไฟล์ json หายไป",
             "Invalid json text passed": "ข้อความ json ไม่ถูกต้องผ่าน",
             "Translation": "การแปล",
-            "Error while translating the text. Please try again.": "เกิดข้อผิดพลาดขณะแปลข้อความ โปรดลองอีกครั้ง"
+            "Error while translating the text. Please try again.": "เกิดข้อผิดพลาดขณะแปลข้อความ โปรดลองอีกครั้ง",
+            "Text must be less than 1000 characters": "ข้อความต้องมีอักขระน้อยกว่า 1000 ตัว"
         },
         "makeTranslationMultilang": {
             "No text to translate": "ไม่มีข้อความที่จะแปล",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "เพื่อทราบวิธีใช้ไลบรารีในโครงการ JS/TS ของคุณ",
         "Test the translator": "ทดสอบนักแปล",
         "Back": "ย้อนกลับ",
-        "Test Multingual": "ทดสอบ Multingual"
+        "Test Multingual": "ทดสอบ Multingual",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "จาก",

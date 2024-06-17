@@ -8,7 +8,8 @@
             "Missing json file text": "نص ملف json مفقود",
             "Invalid json text passed": "تم تمرير نص json غير صالح",
             "Translation": "ترجمة",
-            "Error while translating the text. Please try again.": "خطأ أثناء ترجمة النص. يرجى المحاولة مرة أخرى."
+            "Error while translating the text. Please try again.": "خطأ أثناء ترجمة النص. يرجى المحاولة مرة أخرى.",
+            "Text must be less than 1000 characters": "يجب أن يكون النص أقل من 1000 حرف"
         },
         "makeTranslationMultilang": {
             "No text to translate": "لا يوجد نص للترجمة",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "لمعرفة كيفية استخدام المكتبة في مشروع JS / TS الخاص بك",
         "Test the translator": "اختبر المترجم",
         "Back": "ظهر",
-        "Test Multingual": "اختبار متعدد الأضلاع"
+        "Test Multingual": "اختبار متعدد الأضلاع",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "من",

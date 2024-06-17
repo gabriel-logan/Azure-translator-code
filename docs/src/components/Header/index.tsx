@@ -42,6 +42,20 @@ export default async function Header() {
 					style={{ border: 0, borderRadius: 6 }}
 				/>
 			</p>
+			<div className="mt-4 flex w-60 flex-col items-center justify-center gap-2">
+				<Link
+					className="text-black hover:text-blue-500 hover:underline"
+					href="/multi"
+				>
+					{scopedT("Test Multingual")}
+				</Link>
+				<Link
+					className="text-black hover:text-blue-500 hover:underline"
+					href="/live"
+				>
+					{scopedT("Live Translator")}
+				</Link>
+			</div>
 		</header>
 	);
 }

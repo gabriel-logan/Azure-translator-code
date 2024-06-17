@@ -8,7 +8,8 @@
             "Missing json file text": "Отсутствует текст json-файла",
             "Invalid json text passed": "Передан недопустимый текст json",
             "Translation": "Перевод",
-            "Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку."
+            "Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку.",
+            "Text must be less than 1000 characters": "Текст должен быть не более 1000 символов"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Нет текста для перевода",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "знать, как использовать библиотеку в вашем JS/TS проекте",
         "Test the translator": "Протестировать переводчика",
         "Back": "Назад",
-        "Test Multingual": "Тест Multingual"
+        "Test Multingual": "Тест Multingual",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "От",

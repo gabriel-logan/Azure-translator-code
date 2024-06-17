@@ -8,7 +8,8 @@
             "Missing json file text": "Thiếu văn bản tệp json",
             "Invalid json text passed": "Văn bản json không hợp lệ được thông qua",
             "Translation": "Dịch",
-            "Error while translating the text. Please try again.": "Lỗi trong khi dịch văn bản. Vui lòng thử lại."
+            "Error while translating the text. Please try again.": "Lỗi trong khi dịch văn bản. Vui lòng thử lại.",
+            "Text must be less than 1000 characters": "Văn bản phải nhỏ hơn 1000 ký tự"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Không có văn bản để dịch",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "để biết cách sử dụng thư viện trong dự án JS / TS của bạn",
         "Test the translator": "Kiểm tra người dịch",
         "Back": "Lưng",
-        "Test Multingual": "Kiểm tra đa ngôn ngữ"
+        "Test Multingual": "Kiểm tra đa ngôn ngữ",
+        "Live translator": "Phiên dịch trực tiếp",
+        "Live Translator": "Phiên dịch trực tiếp"
     },
     "FormComponent": {
         "From": "Từ",

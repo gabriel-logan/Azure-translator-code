@@ -8,7 +8,8 @@
             "Missing json file text": "JSON-tiedoston teksti puuttuu",
             "Invalid json text passed": "Virheellinen json-teksti välitetty",
             "Translation": "Käännös",
-            "Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen."
+            "Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen.",
+            "Text must be less than 1000 characters": "Tekstin on oltava alle 1000 merkkiä pitkä"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Ei käännettävää tekstiä",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "tietää, miten kirjastoa käytetään JS / TS-projektissasi",
         "Test the translator": "Kääntäjän testaaminen",
         "Back": "Selkä",
-        "Test Multingual": "Testaa Multingual"
+        "Test Multingual": "Testaa Multingual",
+        "Live translator": "Live-kääntäjä",
+        "Live Translator": "Live-kääntäjä"
     },
     "FormComponent": {
         "From": "Alkaen",

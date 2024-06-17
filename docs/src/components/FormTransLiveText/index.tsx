@@ -56,7 +56,7 @@ export default function FormTransLiveText({ locale }: Locale) {
 	return (
 		<form
 			action={action}
-			className="h-106 sm:max-w-1152px mx-auto flex w-full flex-col rounded border shadow sm:h-80 sm:flex-row sm:gap-1"
+			className="mx-auto flex h-106 w-full flex-col rounded border shadow sm:h-80 sm:max-w-1152px sm:flex-row sm:gap-1"
 		>
 			<div className="relative mb-3 h-1/2 border sm:mb-0 sm:h-full sm:w-1/2">
 				<select
@@ -108,6 +108,11 @@ export default function FormTransLiveText({ locale }: Locale) {
 					id="toLang"
 					className="h-1/4 w-full cursor-pointer bg-gray-700 p-3 text-white sm:h-1/5"
 					defaultValue={locale === "en" ? "pt" : locale}
+					onChange={(e) => {
+						e.preventDefault();
+						const form = e.currentTarget.form;
+						form?.requestSubmit();
+					}}
 				>
 					{languages.map((lang, index) => {
 						return (

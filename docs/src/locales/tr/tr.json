@@ -8,7 +8,8 @@
             "Missing json file text": "Eksik json dosyası metni",
             "Invalid json text passed": "Geçersiz json metni geçirildi",
             "Translation": "Çeviri",
-            "Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin."
+            "Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin.",
+            "Text must be less than 1000 characters": "Metin 1000 karakterden az olmalıdır"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Çevrilecek metin yok",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "JS/TS projenizde kütüphaneyi nasıl kullanacağınızı bilmek",
         "Test the translator": "Çevirmeni test edin",
         "Back": "Geri",
-        "Test Multingual": "Çok Dilli Test"
+        "Test Multingual": "Çok Dilli Test",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "Kaynak",

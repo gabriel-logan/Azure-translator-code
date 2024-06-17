@@ -8,7 +8,8 @@
             "Missing json file text": "Teks fail json yang hilang",
             "Invalid json text passed": "Teks json tidak sah diluluskan",
             "Translation": "Penterjemahan",
-            "Error while translating the text. Please try again.": "Ralat semasa menterjemah teks. Sila cuba lagi."
+            "Error while translating the text. Please try again.": "Ralat semasa menterjemah teks. Sila cuba lagi.",
+            "Text must be less than 1000 characters": "Teks mestilah kurang daripada 1000 aksara"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Tiada teks untuk diterjemahkan",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "untuk mengetahui cara menggunakan pustaka dalam projek JS/TS anda",
         "Test the translator": "Uji penterjemah",
         "Back": "Kembali",
-        "Test Multingual": "Ujian Multingual"
+        "Test Multingual": "Ujian Multingual",
+        "Live translator": "Penterjemah langsung",
+        "Live Translator": "Penterjemah Langsung"
     },
     "FormComponent": {
         "From": "Dari",

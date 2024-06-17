@@ -8,7 +8,8 @@
             "Missing json file text": "Λείπει κείμενο αρχείου json",
             "Invalid json text passed": "Πέρασε μη έγκυρο κείμενο json",
             "Translation": "Μετάφραση",
-            "Error while translating the text. Please try again.": "Σφάλμα κατά τη μετάφραση του κειμένου. Παρακαλώ προσπαθήστε ξανά."
+            "Error while translating the text. Please try again.": "Σφάλμα κατά τη μετάφραση του κειμένου. Παρακαλώ προσπαθήστε ξανά.",
+            "Text must be less than 1000 characters": "Το κείμενο πρέπει να είναι μικρότερο από 1000 χαρακτήρες"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Δεν υπάρχει κείμενο για μετάφραση",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "για να μάθετε πώς να χρησιμοποιείτε τη βιβλιοθήκη στο έργο JS/TS",
         "Test the translator": "Δοκιμάστε τον μεταφραστή",
         "Back": "Πλάτη",
-        "Test Multingual": "Δοκιμή Multingual"
+        "Test Multingual": "Δοκιμή Multingual",
+        "Live translator": "Ζωντανός μεταφραστής",
+        "Live Translator": "Ζωντανός μεταφραστής"
     },
     "FormComponent": {
         "From": "Από",

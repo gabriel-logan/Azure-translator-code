@@ -8,7 +8,8 @@
             "Missing json file text": "json ファイルのテキストがありません",
             "Invalid json text passed": "無効な json テキストが渡されました",
             "Translation": "翻訳",
-            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。"
+            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
+            "Text must be less than 1000 characters": "テキストは 1000 文字未満にする必要があります"
         },
         "makeTranslationMultilang": {
             "No text to translate": "翻訳するテキストがありません",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "JS/TS プロジェクトでライブラリを使用する方法を知るには",
         "Test the translator": "トランスレーターをテストする",
         "Back": "戻る",
-        "Test Multingual": "多言語テスト"
+        "Test Multingual": "多言語テスト",
+        "Live translator": "Live Translator",
+        "Live Translator": "Live Translator"
     },
     "FormComponent": {
         "From": "差出人",

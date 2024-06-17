@@ -216,6 +216,14 @@ export async function makeLiveTranslation(prevState: any, formData: FormData) {
 		};
 	}
 
+	if (typeof data.text === "string" && data.text.length > 1000) {
+		return {
+			message: scopedT(
+				"MakeTranslations.Text must be less than 1000 characters",
+			),
+		};
+	}
+
 	const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
 	const endpoint = process.env.AZURE_ENDPOINT || "";
 	const location = process.env.AZURE_LOCATION || "";

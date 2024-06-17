@@ -8,7 +8,8 @@
             "Missing json file text": "Hiányzó JSON-fájl szövege",
             "Invalid json text passed": "Érvénytelen JSON-szöveg lett átadva",
             "Translation": "Fordítás",
-            "Error while translating the text. Please try again.": "Hiba történt a szöveg fordítása közben. Kérjük, próbálja újra."
+            "Error while translating the text. Please try again.": "Hiba történt a szöveg fordítása közben. Kérjük, próbálja újra.",
+            "Text must be less than 1000 characters": "A szövegnek 1000 karakternél rövidebbnek kell lennie"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Nincs lefordítandó szöveg",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "hogy megtudja, hogyan kell használni a könyvtárat a JS/TS projektben",
         "Test the translator": "A fordító tesztelése",
         "Back": "Hát",
-        "Test Multingual": "Multingual teszt"
+        "Test Multingual": "Multingual teszt",
+        "Live translator": "Élő fordító",
+        "Live Translator": "Élő fordító"
     },
     "FormComponent": {
         "From": "Tól",

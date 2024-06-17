@@ -8,7 +8,8 @@
             "Missing json file text": "缺少 json 文件文本",
             "Invalid json text passed": "传递的 json 文本无效",
             "Translation": "译本",
-            "Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。"
+            "Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。",
+            "Text must be less than 1000 characters": "文本必须少于 1000 个字符"
         },
         "makeTranslationMultilang": {
             "No text to translate": "没有要翻译的文本",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "了解如何在 JS/TS 项目中使用该库",
         "Test the translator": "测试翻译器",
         "Back": "返回",
-        "Test Multingual": "测试多语"
+        "Test Multingual": "测试多语",
+        "Live translator": "在线翻译",
+        "Live Translator": "在线翻译"
     },
     "FormComponent": {
         "From": "从",

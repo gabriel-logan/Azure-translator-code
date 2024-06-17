@@ -8,7 +8,8 @@
             "Missing json file text": "Manglende json-filtekst",
             "Invalid json text passed": "Ugyldig json-tekst sendt",
             "Translation": "Oversettelse",
-            "Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv på nytt."
+            "Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv på nytt.",
+            "Text must be less than 1000 characters": "Teksten må bestå av mindre enn 1000 tegn"
         },
         "makeTranslationMultilang": {
             "No text to translate": "Ingen tekst å oversette",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "å vite hvordan du bruker biblioteket i ditt JS/TS-prosjekt",
         "Test the translator": "Test oversetteren",
         "Back": "Tilbake",
-        "Test Multingual": "Test Multingual"
+        "Test Multingual": "Test Multingual",
+        "Live translator": "Live oversetter",
+        "Live Translator": "Live oversetter"
     },
     "FormComponent": {
         "From": "Fra",

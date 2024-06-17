@@ -8,7 +8,8 @@
             "Missing json file text": "Chybějící text souboru JSON",
             "Invalid json text passed": "Předán neplatný text JSON.",
             "Translation": "Překlad",
-            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu."
+            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
+            "Text must be less than 1000 characters": "Text musí být kratší než 1000 znaků."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Žádný text k překladu",
@@ -48,7 +49,9 @@
         "to know how to use the library in your JS/TS project": "abyste věděli, jak používat knihovnu ve vašem projektu JS/TS",
         "Test the translator": "Otestujte překladač",
         "Back": "Hřbet",
-        "Test Multingual": "Testovací multingual"
+        "Test Multingual": "Testovací multingual",
+        "Live translator": "Živý překladač",
+        "Live Translator": "Živý překladač"
     },
     "FormComponent": {
         "From": "Od",
