@@ -6,7 +6,9 @@
 			"Text must be less than 5000 characters": "Text must be less than 5000 characters",
 			"From lang and to Lang are required": "From lang and to Lang are required",
 			"Missing json file text": "Missing json file text",
-			"Invalid json text passed": "Invalid json text passed"
+			"Invalid json text passed": "Invalid json text passed",
+			"Translation": "Translation",
+			"Error while translating the text. Please try again.": "Error while translating the text. Please try again."
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "No text to translate",
@@ -90,6 +92,9 @@
 		"Copied": "Copied",
 		"Text to Translate": "Text to Translate",
 		"Select the languages you want to translate the text to:": "Select the languages you want to translate the text to:",
-		"Translations:": "Translations:"
+		"Translations:": "Translations:",
+		"Translation": "Translation",
+		"Translating": "Translating",
+		"Translating...": "Translating..."
 	}
 }

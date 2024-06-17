@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Texten måste vara mindre än 5000 tecken",
             "From lang and to Lang are required": "Från lang och till lang krävs",
             "Missing json file text": "Texten i json-filen saknas",
-            "Invalid json text passed": "Ogiltig json-text har skickats"
+            "Invalid json text passed": "Ogiltig json-text har skickats",
+            "Translation": "Översättning",
+            "Error while translating the text. Please try again.": "Fel vid översättning av texten. Försök igen."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Ingen text att översätta",
@@ -91,6 +93,9 @@
         "Copied": "Kopieras",
         "Text to Translate": "Text som ska översättas",
         "Select the languages you want to translate the text to:": "Välj de språk du vill översätta texten till:",
-        "Translations:": "Översättningar:"
+        "Translations:": "Översättningar:",
+        "Translation": "Översättning",
+        "Translating": "Översätta",
+        "Translating...": "Översätta..."
     }
 }

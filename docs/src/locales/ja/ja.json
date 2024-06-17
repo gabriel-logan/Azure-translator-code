@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります",
             "From lang and to Lang are required": "From lang と to lang は必須です",
             "Missing json file text": "json ファイルのテキストがありません",
-            "Invalid json text passed": "無効な json テキストが渡されました"
+            "Invalid json text passed": "無効な json テキストが渡されました",
+            "Translation": "翻訳",
+            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。"
         },
         "makeTranslationMultilang": {
             "No text to translate": "翻訳するテキストがありません",
@@ -91,6 +93,9 @@
         "Copied": "コピー",
         "Text to Translate": "翻訳するテキスト",
         "Select the languages you want to translate the text to:": "テキストを翻訳する言語を選択します。",
-        "Translations:": "翻訳："
+        "Translations:": "翻訳：",
+        "Translation": "翻訳",
+        "Translating": "翻訳しています",
+        "Translating...": "翻訳しています。。。"
     }
 }

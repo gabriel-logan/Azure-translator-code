@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Το κείμενο πρέπει να είναι μικρότερο από 5000 χαρακτήρες",
             "From lang and to Lang are required": "Από lang και σε Lang απαιτούνται",
             "Missing json file text": "Λείπει κείμενο αρχείου json",
-            "Invalid json text passed": "Πέρασε μη έγκυρο κείμενο json"
+            "Invalid json text passed": "Πέρασε μη έγκυρο κείμενο json",
+            "Translation": "Μετάφραση",
+            "Error while translating the text. Please try again.": "Σφάλμα κατά τη μετάφραση του κειμένου. Παρακαλώ προσπαθήστε ξανά."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Δεν υπάρχει κείμενο για μετάφραση",
@@ -91,6 +93,9 @@
         "Copied": "Αντιγραφεί",
         "Text to Translate": "Κείμενο προς μετάφραση",
         "Select the languages you want to translate the text to:": "Επιλέξτε τις γλώσσες στις οποίες θέλετε να μεταφράσετε το κείμενο:",
-        "Translations:": "Μεταφράσεις:"
+        "Translations:": "Μεταφράσεις:",
+        "Translation": "Μετάφραση",
+        "Translating": "Μετάφραση",
+        "Translating...": "Μετάφραση..."
     }
 }

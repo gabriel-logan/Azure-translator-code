@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "ข้อความต้องมีอักขระน้อยกว่า 5000 ตัว",
             "From lang and to Lang are required": "จาก lang และ ถึง lang จะต้อง",
             "Missing json file text": "ข้อความไฟล์ json หายไป",
-            "Invalid json text passed": "ข้อความ json ไม่ถูกต้องผ่าน"
+            "Invalid json text passed": "ข้อความ json ไม่ถูกต้องผ่าน",
+            "Translation": "การแปล",
+            "Error while translating the text. Please try again.": "เกิดข้อผิดพลาดขณะแปลข้อความ โปรดลองอีกครั้ง"
         },
         "makeTranslationMultilang": {
             "No text to translate": "ไม่มีข้อความที่จะแปล",
@@ -91,6 +93,9 @@
         "Copied": "คัด ลอก",
         "Text to Translate": "ข้อความที่จะแปล",
         "Select the languages you want to translate the text to:": "เลือกภาษาที่คุณต้องการแปลข้อความเป็น:",
-        "Translations:": "แปล:"
+        "Translations:": "แปล:",
+        "Translation": "การแปล",
+        "Translating": "กำลังแปล",
+        "Translating...": "กำลังแปล   "
     }
 }

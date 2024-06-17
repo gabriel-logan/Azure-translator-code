@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Teks harus kurang dari 5000 karakter",
             "From lang and to Lang are required": "Dari lang dan ke Lang diperlukan",
             "Missing json file text": "Teks file json tidak ada",
-            "Invalid json text passed": "Teks json tidak valid diteruskan"
+            "Invalid json text passed": "Teks json tidak valid diteruskan",
+            "Translation": "Terjemahan",
+            "Error while translating the text. Please try again.": "Kesalahan saat menerjemahkan teks. Silakan coba lagi."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Tidak ada teks untuk diterjemahkan",
@@ -91,6 +93,9 @@
         "Copied": "Disalin",
         "Text to Translate": "Teks untuk Diterjemahkan",
         "Select the languages you want to translate the text to:": "Pilih bahasa tujuan terjemahan teks:",
-        "Translations:": "Terjemahan:"
+        "Translations:": "Terjemahan:",
+        "Translation": "Terjemahan",
+        "Translating": "Menerjemahkan",
+        "Translating...": "Menerjemahkan..."
     }
 }

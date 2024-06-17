@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "يجب أن يكون النص أقل من 5000 حرف",
             "From lang and to Lang are required": "من لانغ وإلى لانغ مطلوبة",
             "Missing json file text": "نص ملف json مفقود",
-            "Invalid json text passed": "تم تمرير نص json غير صالح"
+            "Invalid json text passed": "تم تمرير نص json غير صالح",
+            "Translation": "ترجمة",
+            "Error while translating the text. Please try again.": "خطأ أثناء ترجمة النص. يرجى المحاولة مرة أخرى."
         },
         "makeTranslationMultilang": {
             "No text to translate": "لا يوجد نص للترجمة",
@@ -91,6 +93,9 @@
         "Copied": "نسخ",
         "Text to Translate": "النص المراد ترجمته",
         "Select the languages you want to translate the text to:": "حدد اللغات التي تريد ترجمة النص إليها:",
-        "Translations:": "تراجم:"
+        "Translations:": "تراجم:",
+        "Translation": "ترجمة",
+        "Translating": "تتم الآن الترجمة",
+        "Translating...": "تتم الآن الترجمة..."
     }
 }

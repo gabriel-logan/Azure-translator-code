@@ -1,7 +1,7 @@
 "use server";
 
 import { translate } from "azure-translator-code";
-import { TranslationType } from "azure-translator-code/types/translate";
+import { TranslationType } from "azure-translator-code/types/types";
 import { v4 as uuidv4 } from "uuid";
 
 import { getScopedI18n } from "@/locales/server";
@@ -187,4 +187,75 @@ export async function makeTranslationMultilang(
 	return {
 		message: data[0].translations,
 	};
+}
+
+export async function makeLiveTranslation(prevState: any, formData: FormData) {
+	const scopedT = await getScopedI18n("Actions");
+
+	const data = {
+		fromLang: formData.get("fromLang"),
+		toLang: formData.get("toLang"),
+		text: formData.get("textToTranslate"),
+	};
+
+	if (!data) {
+		return {
+			message: scopedT("MakeTranslations.Invalid or missing request body"),
+		};
+	}
+
+	if (!data?.fromLang || !data.toLang) {
+		return {
+			message: scopedT("MakeTranslations.From lang and to Lang are required"),
+		};
+	}
+
+	if (!data?.text) {
+		return {
+			message: scopedT("MakeTranslations.Translation"),
+		};
+	}
+
+	const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
+	const endpoint = process.env.AZURE_ENDPOINT || "";
+	const location = process.env.AZURE_LOCATION || "";
+	const fromLang = data.fromLang;
+	const toLang = data.toLang;
+	const text = data.text;
+
+	let translatedText: string;
+
+	try {
+		const pega = await fetch(
+			`${endpoint}/translate?api-version=3.0&from=${fromLang}&to=${toLang}`,
+			{
+				method: "POST",
+				headers: {
+					"Ocp-Apim-Subscription-Key": key,
+					"Ocp-Apim-Subscription-Region": location,
+					"Content-type": "application/json",
+					"X-ClientTraceId": uuidv4().toString(),
+				},
+				body: JSON.stringify([
+					{
+						text,
+					},
+				]),
+			},
+		);
+
+		const data = await pega.json();
+
+		translatedText = data[0].translations[0].text;
+
+		return {
+			message: translatedText,
+		};
+	} catch {
+		return {
+			message: scopedT(
+				"MakeTranslations.Error while translating the text. Please try again.",
+			),
+		};
+	}
 }

@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "文本必须少于 5000 个字符",
             "From lang and to Lang are required": "From lang 和 to lang 是必需的",
             "Missing json file text": "缺少 json 文件文本",
-            "Invalid json text passed": "传递的 json 文本无效"
+            "Invalid json text passed": "传递的 json 文本无效",
+            "Translation": "译本",
+            "Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。"
         },
         "makeTranslationMultilang": {
             "No text to translate": "没有要翻译的文本",
@@ -91,6 +93,9 @@
         "Copied": "复制",
         "Text to Translate": "要翻译的文本",
         "Select the languages you want to translate the text to:": "选择要将文本翻译为的语言：",
-        "Translations:": "翻译："
+        "Translations:": "翻译：",
+        "Translation": "译本",
+        "Translating": "正在翻译",
+        "Translating...": "正在翻译。。。"
     }
 }

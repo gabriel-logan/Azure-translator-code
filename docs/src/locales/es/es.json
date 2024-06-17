@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "El texto debe tener menos de 5000 caracteres",
             "From lang and to Lang are required": "De lang y a Lang son necesarios",
             "Missing json file text": "Falta el texto del archivo json",
-            "Invalid json text passed": "Se ha pasado texto json no válido"
+            "Invalid json text passed": "Se ha pasado texto json no válido",
+            "Translation": "Traducción",
+            "Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtelo de nuevo."
         },
         "makeTranslationMultilang": {
             "No text to translate": "No hay texto que traducir",
@@ -91,6 +93,9 @@
         "Copied": "Copiado",
         "Text to Translate": "Texto a traducir",
         "Select the languages you want to translate the text to:": "Seleccione los idiomas a los que desea traducir el texto:",
-        "Translations:": "Traducciones:"
+        "Translations:": "Traducciones:",
+        "Translation": "Traducción",
+        "Translating": "Traducción en curso",
+        "Translating...": "Traducción en curso..."
     }
 }

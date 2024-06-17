@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Tekst mag niet langer zijn dan 5000 tekens",
             "From lang and to Lang are required": "Van lang en naar Lang zijn vereist",
             "Missing json file text": "Ontbrekende tekst van het json-bestand",
-            "Invalid json text passed": "Ongeldige json-tekst doorgegeven"
+            "Invalid json text passed": "Ongeldige json-tekst doorgegeven",
+            "Translation": "Vertaling",
+            "Error while translating the text. Please try again.": "Fout bij het vertalen van de tekst. Probeer het opnieuw."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Geen tekst om te vertalen",
@@ -91,6 +93,9 @@
         "Copied": "Gekopieerd",
         "Text to Translate": "Tekst om te vertalen",
         "Select the languages you want to translate the text to:": "Selecteer de talen waarnaar u de tekst wilt vertalen:",
-        "Translations:": "Translations:"
+        "Translations:": "Translations:",
+        "Translation": "Vertaling",
+        "Translating": "Vertalen",
+        "Translating...": "Vertalen..."
     }
 }

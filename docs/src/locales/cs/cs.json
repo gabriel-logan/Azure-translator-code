@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků",
             "From lang and to Lang are required": "Z lang a do Lang jsou vyžadovány",
             "Missing json file text": "Chybějící text souboru JSON",
-            "Invalid json text passed": "Předán neplatný text JSON."
+            "Invalid json text passed": "Předán neplatný text JSON.",
+            "Translation": "Překlad",
+            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Žádný text k překladu",
@@ -91,6 +93,9 @@
         "Copied": "Zkopírovaný",
         "Text to Translate": "Text k překladu",
         "Select the languages you want to translate the text to:": "Vyberte jazyky, do kterých chcete text přeložit:",
-        "Translations:": "Překlady:"
+        "Translations:": "Překlady:",
+        "Translation": "Překlad",
+        "Translating": "Překládání",
+        "Translating...": "Překládání..."
     }
 }

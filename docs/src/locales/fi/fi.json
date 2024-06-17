@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Tekstin on oltava alle 5000 merkkiä pitkä",
             "From lang and to Lang are required": "Langista ja Langiin tarvitaan",
             "Missing json file text": "JSON-tiedoston teksti puuttuu",
-            "Invalid json text passed": "Virheellinen json-teksti välitetty"
+            "Invalid json text passed": "Virheellinen json-teksti välitetty",
+            "Translation": "Käännös",
+            "Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Ei käännettävää tekstiä",
@@ -91,6 +93,9 @@
         "Copied": "Kopioida",
         "Text to Translate": "Käännettävä teksti",
         "Select the languages you want to translate the text to:": "Valitse kielet, joille haluat kääntää tekstin:",
-        "Translations:": "Käännökset:"
+        "Translations:": "Käännökset:",
+        "Translation": "Käännös",
+        "Translating": "Kääntäminen",
+        "Translating...": "Kääntäminen..."
     }
 }

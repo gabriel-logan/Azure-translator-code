@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Текст должен быть не более 5000 символов",
             "From lang and to Lang are required": "From lang и to Lang являются обязательными",
             "Missing json file text": "Отсутствует текст json-файла",
-            "Invalid json text passed": "Передан недопустимый текст json"
+            "Invalid json text passed": "Передан недопустимый текст json",
+            "Translation": "Перевод",
+            "Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Нет текста для перевода",
@@ -91,6 +93,9 @@
         "Copied": "Скопированы",
         "Text to Translate": "Текст для перевода",
         "Select the languages you want to translate the text to:": "Выберите языки, на которые вы хотите перевести текст:",
-        "Translations:": "Переводы:"
+        "Translations:": "Переводы:",
+        "Translation": "Перевод",
+        "Translating": "Выполняется перевод",
+        "Translating...": "Выполняется перевод..."
     }
 }

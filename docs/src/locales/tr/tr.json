@@ -6,7 +6,9 @@
             "Text must be less than 5000 characters": "Metin 5000 karakterden az olmalıdır",
             "From lang and to Lang are required": "Lang'dan ve Lang'a gereklidir",
             "Missing json file text": "Eksik json dosyası metni",
-            "Invalid json text passed": "Geçersiz json metni geçirildi"
+            "Invalid json text passed": "Geçersiz json metni geçirildi",
+            "Translation": "Çeviri",
+            "Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin."
         },
         "makeTranslationMultilang": {
             "No text to translate": "Çevrilecek metin yok",
@@ -91,6 +93,9 @@
         "Copied": "Kopya -lanan",
         "Text to Translate": "Çevrilecek Metin",
         "Select the languages you want to translate the text to:": "Metni çevirmek istediğiniz dilleri seçin:",
-        "Translations:": "Çeviri -leri:"
+        "Translations:": "Çeviri -leri:",
+        "Translation": "Çeviri",
+        "Translating": "Çevriliyor",
+        "Translating...": "Çevriliyor..."
     }
 }
