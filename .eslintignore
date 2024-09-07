@@ -1,7 +1,0 @@
-node_modules/
-dist/
-tests/
-coverage/
-types/
-jest.config.js
-docs/

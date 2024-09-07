@@ -1,163 +1,347 @@
-import translate, { translateText } from '../../src/translate';
-import { TranslationType } from '../../src/types';
-import dotenv from 'dotenv';
+import axios from "axios";
+import dotenv from "dotenv";
+
+import translate, { translateText } from "../../src/translate";
+import type { TranslationType } from "../../src/types";
 
 dotenv.config();
 
-describe('translate', () => {
+describe("translate", () => {
 	const key = process.env.KEY as string;
-	const endpoint = 'https://api.cognitive.microsofttranslator.com/';
+	const endpoint = "https://api.cognitive.microsofttranslator.com/";
 	const location = process.env.LOCATION as string;
 
-	const fromLang = 'en';
-	const toLang = 'pt';
+	const fromLang = "en";
+	const toLang = "pt";
 
-	it('should translate a string from one language to another', async () => {
-		const result = await translateText("Welcome", fromLang, toLang, endpoint, key, location);
-
-		expect(result.data[0].translations[0].text).toEqual("Bem-vindo")
+	beforeEach(() => {
+		jest.clearAllMocks();
 	});
 
-	it('should translate a JSON object from one language to another', async () => {
-		const jsonFile = {
-			"Welcome": "Welcome"
-		};
+	afterEach(() => {
+		jest.restoreAllMocks();
+	});
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+	describe("translateText", () => {
+		test("conexion with the API", async () => {
+			const spyOnAxios = jest.spyOn(axios, "post");
 
-		expect(result).toEqual({
-			"Welcome": "Bem-vindo"
+			const result = await translateText(
+				"Welcome",
+				fromLang,
+				toLang,
+				endpoint,
+				key,
+				location,
+			);
+
+			expect(spyOnAxios).toHaveBeenCalled();
+
+			expect(result.data[0].translations[0].text).toEqual("Bem-vindo");
 		});
 	});
 
-	it('should translate a JSON object from one language to another with nested objects', async () => {
+	it("should translate a JSON object from one language to another with welcome msg", async () => {
+		jest.spyOn(axios, "post").mockResolvedValue({
+			data: [
+				{
+					translations: [
+						{
+							text: "Bem-vindo",
+						},
+					],
+				},
+			],
+		});
+
 		const jsonFile = {
-			"HomePage": {
+			Welcome: "Welcome",
+		};
+
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
+
+		expect(result).toEqual({
+			Welcome: "Bem-vindo",
+		});
+	});
+
+	it("should translate a JSON object from one language to another with nested objects", async () => {
+		const spyOnAxios = jest
+			.spyOn(axios, "post")
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "Traduza-me",
+								},
+							],
+						},
+					],
+				}),
+			)
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "Traduza-me também",
+								},
+							],
+						},
+					],
+				}),
+			);
+
+		const jsonFile = {
+			HomePage: {
 				Nested: {
-					"message": "Translate me",
+					message: "Translate me",
 					SubNested: {
-						"message": "Translate me too"
-					}
+						message: "Translate me too",
+					},
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
+
+		expect(spyOnAxios).toHaveBeenCalledTimes(2);
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				Nested: {
-					"message": "Traduza-me",
+					message: "Traduza-me",
 					SubNested: {
-						"message": "Traduza-me também"
-					}
+						message: "Traduza-me também",
+					},
 				},
-			}
+			},
 		});
 	});
 
-	it('should translate a JSON object from one language to another with booleans', async () => {
+	it("should translate a JSON object from one language to another with booleans", async () => {
+		const spyOnAxios = jest.spyOn(axios, "post");
+
 		const jsonFile = {
-			"HomePage": {
+			HomePage: {
 				WithBooleans: {
-					"true": true as unknown as string,
-					"false": false as unknown as string
+					true: true as unknown as string,
+					false: false as unknown as string,
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
+
+		expect(spyOnAxios).not.toHaveBeenCalled();
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				WithBooleans: {
-					"true": true,
-					"false": false
+					true: true,
+					false: false,
 				},
-			}
+			},
 		});
 	});
 
-	it('should translate a JSON object from one language to another with fake booleans', async () => {
+	it("should translate a JSON object from one language to another with fake booleans", async () => {
+		jest
+			.spyOn(axios, "post")
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "verdadeiro",
+								},
+							],
+						},
+					],
+				}),
+			)
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "falso",
+								},
+							],
+						},
+					],
+				}),
+			);
+
 		const jsonFile = {
-			"HomePage": {
+			HomePage: {
 				WithFakeBooleans: {
-					"true": "true",
-					"false": "false"
+					true: "true",
+					false: "false",
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				WithFakeBooleans: {
-					"true": "verdadeiro",
-					"false": "falso"
+					true: "verdadeiro",
+					false: "falso",
 				},
-			}
+			},
 		});
 	});
 
-	it('should translate a JSON object from one language to another with arrays', async () => {
+	it("should translate a JSON object from one language to another with arrays", async () => {
+		jest
+			.spyOn(axios, "post")
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "Traduza-me",
+								},
+							],
+						},
+					],
+				}),
+			)
+			.mockImplementationOnce(() =>
+				Promise.resolve({
+					data: [
+						{
+							translations: [
+								{
+									text: "Traduza-me também",
+								},
+							],
+						},
+					],
+				}),
+			);
+
 		const jsonFile = {
-			"HomePage": {
+			HomePage: {
 				WithArrays: {
-					"array": ["Translate me", "Translate me too"]
+					array: ["Translate me", "Translate me too"],
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				WithArrays: {
-					"array": ["Traduza-me", "Traduza-me também"]
+					array: ["Traduza-me", "Traduza-me também"],
 				},
-			}
+			},
 		});
 	});
 
-	it('should translate a JSON object from one language to another with numbers', async () => {
+	it("should translate a JSON object from one language to another with numbers", async () => {
+		const spyOnAxios = jest.spyOn(axios, "post");
+
 		const jsonFile = {
-			"HomePage": {
+			HomePage: {
 				WithNumbers: {
-					"number": 123
+					number: 123,
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
+
+		expect(spyOnAxios).not.toHaveBeenCalled();
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				WithNumbers: {
-					"number": 123
+					number: 123,
 				},
-			}
+			},
 		});
 	});
 
-	it('should translate a JSON object from one language to another with null', async () => {
+	it("should translate a JSON object from one language to another with null", async () => {
+		const spyOnAxios = jest.spyOn(axios, "post");
+
 		const jsonFile = {
-			"HomePage": {
+			HomePage: {
 				WithNull: {
-					"null": null
+					null: null,
 				},
-			}
+			},
 		};
 
-		const result = await translate(key, endpoint, location, fromLang, toLang, jsonFile as unknown as TranslationType);
+		const result = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			toLang,
+			jsonFile as unknown as TranslationType,
+		);
+
+		expect(spyOnAxios).not.toHaveBeenCalled();
 
 		expect(result).toEqual({
-			"HomePage": {
+			HomePage: {
 				WithNull: {
-					"null": null
+					null: null,
 				},
-			}
+			},
 		});
 	});
 });
-

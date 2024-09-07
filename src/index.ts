@@ -1,8 +1,8 @@
-import translateToMultipleFolders from './translateToMultipleFolders';
-import translateToUnicFolder from './translateToUnicFolder';
-import updateTranslationsMulti from './updateTranslationMulti';
-import updateTranslationsUnic from './updateTranslationUnic';
-import translate, { translateText } from './translate';
+import translate, { translateText } from "./translate";
+import translateToMultipleFolders from "./translateToMultipleFolders";
+import translateToUnicFolder from "./translateToUnicFolder";
+import updateTranslationsMulti from "./updateTranslationMulti";
+import updateTranslationsUnic from "./updateTranslationUnic";
 
 export {
 	translateToMultipleFolders,

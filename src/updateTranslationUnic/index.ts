@@ -1,8 +1,9 @@
-import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
-import * as fs from 'fs';
-import * as path from 'path';
-import type { TranslationType } from '../types';
+import axios from "axios";
+import * as fs from "fs";
+import * as path from "path";
+import { v4 as uuidv4 } from "uuid";
+
+import type { TranslationType } from "../types";
 
 /**
  * @param key Your key from azure translator, something like: 'sds12312a213aaaa9b2d0c37eds37b'
@@ -57,7 +58,7 @@ export default function updateTranslationsUnic(
 	fromLang: string,
 	toLangs: string[],
 	jsonFile: TranslationType,
-	folderNamePath: string = 'unicFolderGeneratedTranslations', // Onde sera salvo os arquivos
+	folderNamePath: string = "unicFolderGeneratedTranslations", // Onde sera salvo os arquivos
 ): void {
 	const traducoesDir: string = path.join(process.cwd(), folderNamePath);
 
@@ -68,25 +69,25 @@ export default function updateTranslationsUnic(
 	function translateText(text: string, from: string, to: string) {
 		return axios({
 			baseURL: endpoint,
-			url: '/translate',
-			method: 'post',
+			url: "/translate",
+			method: "post",
 			headers: {
-				'Ocp-Apim-Subscription-Key': key,
-				'Ocp-Apim-Subscription-Region': location,
-				'Content-type': 'application/json',
-				'X-ClientTraceId': uuidv4().toString(),
+				"Ocp-Apim-Subscription-Key": key,
+				"Ocp-Apim-Subscription-Region": location,
+				"Content-type": "application/json",
+				"X-ClientTraceId": uuidv4().toString(),
 			},
 			params: {
-				'api-version': '3.0',
-				from: from,
-				to: to,
+				"api-version": "3.0",
+				from,
+				to,
 			},
 			data: [
 				{
-					text: text,
+					text,
 				},
 			],
-			responseType: 'json',
+			responseType: "json",
 		});
 	}
 
@@ -98,7 +99,7 @@ export default function updateTranslationsUnic(
 		const translations: Record<string, unknown> = existingTranslations;
 
 		for (const key in obj) {
-			if (typeof obj[key] === 'object' && obj[key] !== null) {
+			if (typeof obj[key] === "object" && obj[key] !== null) {
 				const nestedTranslations = await translateAndSave(
 					lang,
 					obj[key] as TranslationType,
@@ -108,13 +109,19 @@ export default function updateTranslationsUnic(
 			} else {
 				if (!translations[key]) {
 					try {
-						const response = await translateText(obj[key] as string, fromLang, lang);
+						const response = await translateText(
+							obj[key] as string,
+							fromLang,
+							lang,
+						);
 						const translatedText = response.data[0].translations[0].text;
 						translations[key] = translatedText;
 						console.log(`Translating ${obj[key]} to ${lang} \n\n`);
 					} catch (error) {
 						if (error instanceof Error) {
-							console.error(`Error translating "${key}" to ${lang}: ${error.message} \n`);
+							console.error(
+								`Error translating "${key}" to ${lang}: ${error.message} \n`,
+							);
 						} else {
 							console.error(`An error occurred within the error (: \n`);
 						}
@@ -136,7 +143,7 @@ export default function updateTranslationsUnic(
 
 			let existingTranslations: TranslationType = {};
 			if (fs.existsSync(outputFileName)) {
-				const rawData = fs.readFileSync(outputFileName, 'utf8');
+				const rawData = fs.readFileSync(outputFileName, "utf8");
 				existingTranslations = JSON.parse(rawData);
 			}
 

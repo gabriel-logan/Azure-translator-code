@@ -1,6 +1,18 @@
-import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
-import { TranslationType } from '../types';
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+
+import type { TranslationType } from "../types";
+
+interface Translation {
+	text: TranslationType;
+	to: TranslationType;
+}
+
+interface TranslationResponse {
+	translations: Translation[];
+}
+
+type TranslateResponseData = TranslationResponse[];
 
 export async function translateText(
 	text: string,
@@ -10,28 +22,32 @@ export async function translateText(
 	key: string,
 	location: string,
 ) {
-	return axios({
-		baseURL: endpoint,
-		url: '/translate',
-		method: 'post',
-		headers: {
-			'Ocp-Apim-Subscription-Key': key,
-			'Ocp-Apim-Subscription-Region': location,
-			'Content-type': 'application/json',
-			'X-ClientTraceId': uuidv4().toString(),
-		},
-		params: {
-			'api-version': '3.0',
-			from: from,
-			to: to,
-		},
-		data: [
+	const filteredEndpoint = endpoint.replace(/\/$/, "");
+
+	const response = await axios.post<TranslateResponseData>(
+		`${filteredEndpoint}/translate`,
+		[
 			{
-				text: text,
+				text,
 			},
 		],
-		responseType: 'json',
-	});
+		{
+			headers: {
+				"Ocp-Apim-Subscription-Key": key,
+				"Ocp-Apim-Subscription-Region": location,
+				"Content-type": "application/json",
+				"X-ClientTraceId": uuidv4().toString(),
+			},
+			params: {
+				"api-version": "3.0",
+				from,
+				to,
+			},
+			responseType: "json",
+		},
+	);
+
+	return response;
 }
 
 /**
@@ -57,23 +73,40 @@ export default async function translate(
 	for (const [jsonKey, jsonValue] of Object.entries(jsonFile)) {
 		if (jsonValue === null) {
 			translatedJson[jsonKey] = null;
-		} else if (typeof jsonValue === 'string') {
-			const response = await translateText(jsonValue, fromLang, toLang, endpoint, key, location);
+		} else if (typeof jsonValue === "string") {
+			const response = await translateText(
+				jsonValue,
+				fromLang,
+				toLang,
+				endpoint,
+				key,
+				location,
+			);
 			translatedJson[jsonKey] = response.data[0].translations[0].text;
-		} else if (typeof jsonValue === 'boolean' || typeof jsonValue === 'number') {
+		} else if (
+			typeof jsonValue === "boolean" ||
+			typeof jsonValue === "number"
+		) {
 			translatedJson[jsonKey] = jsonValue;
 		} else if (Array.isArray(jsonValue)) {
 			const translatedArray: TranslationType[] = [];
 			for (const item of jsonValue) {
-				if (typeof item === 'string') {
-					const response = await translateText(item, fromLang, toLang, endpoint, key, location);
+				if (typeof item === "string") {
+					const response = await translateText(
+						item,
+						fromLang,
+						toLang,
+						endpoint,
+						key,
+						location,
+					);
 					translatedArray.push(response.data[0].translations[0].text);
 				} else {
 					translatedArray.push(item as TranslationType);
 				}
 			}
 			translatedJson[jsonKey] = translatedArray;
-		} else if (typeof jsonValue === 'object' && jsonValue !== null) {
+		} else if (typeof jsonValue === "object" && jsonValue !== null) {
 			translatedJson[jsonKey] = await translate(
 				key,
 				endpoint,

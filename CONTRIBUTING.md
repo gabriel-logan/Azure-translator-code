@@ -5,15 +5,18 @@ The azure-translator-code is a powerful Multilanguage library for validating for
 ## How to Contribute
 
 1. **Fork the Repository**
+
    - Fork the azure-translator-code repository to your GitHub account.
 
 2. **Clone the Repository**
+
    - Clone the forked repository to your local environment:
      ```
      git clone https://github.com/gabriel-logan/azure-translator-code.git
      ```
 
-4. **Commit and Push**
+3. **Commit and Push**
+
    - Commit your changes and push them to the forked repository:
      ```
      git add .
@@ -21,7 +24,7 @@ The azure-translator-code is a powerful Multilanguage library for validating for
      git push origin my-feature
      ```
 
-5. **Open a Pull Request (PR)**
+4. **Open a Pull Request (PR)**
    - Go to the forked repository on GitHub and open a PR to the main branch of the project.
 
 ## Contribution Guidelines
