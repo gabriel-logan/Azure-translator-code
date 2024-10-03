@@ -44,6 +44,7 @@
 		"@types/jest": "^29.5.12",
 		"@types/node": "^22.5.4",
 		"@types/uuid": "^10.0.0",
+		"axios": "^1.7.7",
 		"azure-translator-code": "^1.1.6",
 		"dotenv": "^16.4.5",
 		"eslint": "^8",
@@ -52,7 +53,8 @@
 		"prettier": "^3.3.3",
 		"ts-jest": "^29.2.5",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.5.4"
+		"typescript": "^5.5.4",
+		"uuid": "^10.0.0"
 	},
 	"peerDependencies": {
 		"axios": "*",
