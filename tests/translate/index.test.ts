@@ -12,7 +12,7 @@ describe("translate", () => {
 	const location = process.env.LOCATION as string;
 
 	const fromLang = "en";
-	const toLang = "pt";
+	const toLangs = ["pt"];
 
 	beforeEach(() => {
 		jest.clearAllMocks();
@@ -29,7 +29,7 @@ describe("translate", () => {
 			const result = await translateText(
 				"Welcome",
 				fromLang,
-				toLang,
+				toLangs,
 				endpoint,
 				key,
 				location,
@@ -63,7 +63,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -118,7 +118,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -153,7 +153,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -213,7 +213,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -270,7 +270,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -299,7 +299,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 
@@ -330,7 +330,7 @@ describe("translate", () => {
 			endpoint,
 			location,
 			fromLang,
-			toLang,
+			toLangs,
 			jsonFile as unknown as TranslationType,
 		);
 

@@ -4,6 +4,8 @@ module.exports = {
 	ignorePatterns: [
 		".eslintrc.js",
 		"jest.config.js",
+		"dist",
+		"/types/"
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {

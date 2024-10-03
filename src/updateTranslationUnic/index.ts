@@ -1,8 +1,8 @@
-import axios from "axios";
 import * as fs from "fs";
 import * as path from "path";
-import { v4 as uuidv4 } from "uuid";
 
+import translate from "../translate";
+import translateToUnicFolder from "../translateToUnicFolder";
 import type { TranslationType } from "../types";
 
 /**
@@ -66,72 +66,33 @@ export default function updateTranslationsUnic(
 		fs.mkdirSync(traducoesDir, { recursive: true });
 	}
 
-	function translateText(text: string, from: string, to: string) {
-		return axios({
-			baseURL: endpoint,
-			url: "/translate",
-			method: "post",
-			headers: {
-				"Ocp-Apim-Subscription-Key": key,
-				"Ocp-Apim-Subscription-Region": location,
-				"Content-type": "application/json",
-				"X-ClientTraceId": uuidv4().toString(),
-			},
-			params: {
-				"api-version": "3.0",
-				from,
-				to,
-			},
-			data: [
-				{
-					text,
-				},
-			],
-			responseType: "json",
-		});
-	}
+	async function translateAndUpdate(lang: string, obj: TranslationType) {
+		const outputFileName = path.join(traducoesDir, `${lang}.json`);
 
-	async function translateAndSave(
-		lang: string,
-		obj: TranslationType,
-		existingTranslations: TranslationType,
-	) {
-		const translations: Record<string, unknown> = existingTranslations;
+		let existingTranslations: TranslationType = {};
 
-		for (const key in obj) {
-			if (typeof obj[key] === "object" && obj[key] !== null) {
-				const nestedTranslations = await translateAndSave(
-					lang,
-					obj[key] as TranslationType,
-					(existingTranslations[key] || {}) as TranslationType,
-				);
-				translations[key] = nestedTranslations;
-			} else {
-				if (!translations[key]) {
-					try {
-						const response = await translateText(
-							obj[key] as string,
-							fromLang,
-							lang,
-						);
-						const translatedText = response.data[0].translations[0].text;
-						translations[key] = translatedText;
-						console.log(`Translating ${obj[key]} to ${lang} \n\n`);
-					} catch (error) {
-						if (error instanceof Error) {
-							console.error(
-								`Error translating "${key}" to ${lang}: ${error.message} \n`,
-							);
-						} else {
-							console.error(`An error occurred within the error (: \n`);
-						}
-					}
-				}
-			}
+		if (fs.existsSync(outputFileName)) {
+			const rawData = fs.readFileSync(outputFileName, "utf8");
+			existingTranslations = JSON.parse(rawData);
 		}
 
-		const outputFileName = path.join(traducoesDir, `${lang}.json`);
-		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
+		const translations = await translate(
+			key,
+			endpoint,
+			location,
+			fromLang,
+			[lang],
+			obj,
+		);
+
+		const updatedTranslations = { ...existingTranslations, ...translations };
+
+		fs.writeFileSync(
+			outputFileName,
+			JSON.stringify(updatedTranslations, null, 4),
+		);
+
+		// eslint-disable-next-line no-console
 		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);
 
 		return translations;
@@ -141,19 +102,39 @@ export default function updateTranslationsUnic(
 		const translationPromises = toLangs.map(async (lang) => {
 			const outputFileName = path.join(traducoesDir, `${lang}.json`);
 
-			let existingTranslations: TranslationType = {};
+			const missingTranslation: TranslationType = {};
+
 			if (fs.existsSync(outputFileName)) {
 				const rawData = fs.readFileSync(outputFileName, "utf8");
-				existingTranslations = JSON.parse(rawData);
+
+				for (const [key, value] of Object.entries(jsonFile)) {
+					if (!rawData.includes(key)) {
+						missingTranslation[key] = value;
+					}
+				}
+			} else {
+				return await translateToUnicFolder(
+					key,
+					endpoint,
+					location,
+					fromLang,
+					[lang],
+					jsonFile,
+					folderNamePath,
+				);
 			}
 
-			return translateAndSave(lang, jsonFile, existingTranslations);
+			return await translateAndUpdate(lang, missingTranslation);
 		});
 
 		await Promise.all(translationPromises);
+
+		// eslint-disable-next-line no-console
+		console.log("All translations updated successfully!");
 	}
 
 	translateAndSaveAll().catch((error) => {
+		// eslint-disable-next-line no-console
 		console.error(`Error translating and saving texts: ${error.message} \n`);
 	});
 }
