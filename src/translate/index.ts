@@ -102,7 +102,7 @@ export default async function translate(
 					);
 					translatedArray.push(response.data[0].translations[0].text);
 				} else {
-					translatedArray.push(item as TranslationType);
+					translatedArray.push(item);
 				}
 			}
 			translatedJson[jsonKey] = translatedArray;

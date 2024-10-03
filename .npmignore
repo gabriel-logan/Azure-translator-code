@@ -25,3 +25,5 @@ JSONEXAMPLETESTRESULT.json
 coverage/
 multiFolderGeneratedTranslations/
 unicFolderGeneratedTranslations/
+.yarn/
+.yarnrc.*
