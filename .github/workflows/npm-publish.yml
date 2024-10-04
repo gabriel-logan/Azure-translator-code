@@ -25,6 +25,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+      - run: rm -rf node_modules
       - run: yarn install
       - run: yarn test
         env:
@@ -40,6 +41,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - run: rm -rf node_modules
       - run: yarn install
       - run: yarn build
       - run: npm publish
