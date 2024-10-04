@@ -45,12 +45,12 @@ jobs:
       - name: Check if dist and types directories exist
         run: |
           if [ ! -d "dist" ]; then
-        echo "Error: dist directory does not exist."
-        exit 1
+            echo "Error: dist directory does not exist."
+            exit 1
           fi
           if [ ! -d "types" ]; then
-        echo "Error: types directory does not exist."
-        exit 1
+            echo "Error: types directory does not exist."
+            exit 1
           fi
       - run: npm publish
         env:
