@@ -18,7 +18,6 @@ tsconfigcopy.json
 tsconfig.json
 tsconfig.types.json
 .prettierrc.js
-/dist/types/
 JSONEXAMPLETEST.json
 JSONEXAMPLETESTRESULT.json
 .env-example
@@ -27,3 +26,5 @@ multiFolderGeneratedTranslations/
 unicFolderGeneratedTranslations/
 .yarn/
 .yarnrc.*
+.env
+.env.*
