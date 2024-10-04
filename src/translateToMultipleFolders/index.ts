@@ -59,14 +59,14 @@ export default function translateToMultipleFolders(
 	const traducoesDir: string = path.join(process.cwd(), folderNamePath);
 
 	if (!fs.existsSync(traducoesDir)) {
-		fs.mkdirSync(traducoesDir, { recursive: true }); // Use { recursive: true } para criar pastas recursivamente, se necessário
+		fs.mkdirSync(traducoesDir, { recursive: true });
 	}
 
 	async function translateAndSave(lang: string) {
 		const langDir = path.join(traducoesDir, lang);
 
 		if (!fs.existsSync(langDir)) {
-			fs.mkdirSync(langDir);
+			fs.mkdirSync(langDir, { recursive: true });
 		}
 
 		const translations = await translate(
@@ -80,7 +80,9 @@ export default function translateToMultipleFolders(
 
 		const outputFileName = path.join(langDir, `${lang}.json`);
 
-		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
+		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4), {
+			encoding: "utf8",
+		});
 
 		// eslint-disable-next-line no-console
 		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);

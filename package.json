@@ -16,6 +16,7 @@
 	"scripts": {
 		"test": "jest --verbose",
 		"test:coverage": "jest --coverage",
+		"test:watch": "jest --watch",
 		"test:file": "jest tests/translate",
 		"test:silent": "jest --watchAll --silent --noStackTrace",
 		"build:dist": "tsc",

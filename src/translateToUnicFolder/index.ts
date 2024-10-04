@@ -74,7 +74,9 @@ export default function translateToUnicFolder(
 
 		const outputFileName = path.join(traducoesDir, `${lang}.json`);
 
-		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4));
+		fs.writeFileSync(outputFileName, JSON.stringify(translations, null, 4), {
+			encoding: "utf8",
+		});
 
 		// eslint-disable-next-line no-console
 		console.log(`Translations for ${lang} saved in ${outputFileName} \n\n`);

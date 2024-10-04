@@ -1,9 +1,9 @@
 import axios from "axios";
 import { existsSync, readFileSync, rmSync } from "fs";
 
-import { translateToMultipleFolders, type TranslationType } from "../../src";
+import { translateToUnicFolder, type TranslationType } from "../../src";
 
-describe("translateToMultipleFolders", () => {
+describe("translateToUnicFolder", () => {
 	let key: string;
 	let endpoint: string;
 	let location: string;
@@ -17,14 +17,16 @@ describe("translateToMultipleFolders", () => {
 		location = "eastus";
 		fromLang = "en";
 		toLangs = ["pt"];
-		folderName = "physicalTest/create/multiFolderGeneratedTranslations";
+		folderName = "physicalTest/create/unicFolderGeneratedTranslations";
+	});
 
+	beforeEach(() => {
 		if (existsSync(folderName)) {
 			rmSync(folderName, { recursive: true });
 		}
 	});
 
-	it("should translate to multiple folders", async () => {
+	it("should translate to unique folder", async () => {
 		jest.spyOn(axios, "post").mockResolvedValue({
 			data: [
 				{
@@ -41,7 +43,7 @@ describe("translateToMultipleFolders", () => {
 			Welcome: "Welcome",
 		};
 
-		await translateToMultipleFolders(
+		await translateToUnicFolder(
 			key,
 			endpoint,
 			location,
@@ -54,7 +56,7 @@ describe("translateToMultipleFolders", () => {
 		// Add a delay to ensure the file is created
 		await new Promise((resolve) => setTimeout(resolve, 250));
 
-		const result = readFileSync(folderName + "/pt/pt.json", "utf8");
+		const result = readFileSync(folderName + "/pt.json", "utf8");
 		const parsedResult = JSON.parse(result);
 
 		expect(parsedResult).toEqual({
