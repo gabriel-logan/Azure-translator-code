@@ -1,4 +1,3 @@
-import CircularJSON from "circular-json";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -136,8 +135,6 @@ export default function updateTranslationsUnic(
 
 	translateAndSaveAll().catch((error) => {
 		// eslint-disable-next-line no-console
-		console.error(
-			`Error translating and saving texts: ${CircularJSON.stringify(error)} \n`,
-		);
+		console.error(`Error translating and saving texts: ${error.message} \n`);
 	});
 }

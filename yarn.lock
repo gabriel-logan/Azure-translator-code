@@ -962,13 +962,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/circular-json@npm:^0":
-  version: 0.4.0
-  resolution: "@types/circular-json@npm:0.4.0"
-  checksum: 10c0/92011c06ab76785041a6fc4efb7a8522b0a86d5e8a792874a8853a59b04f147969f613d6f50ab393f68cb47baa925daed64c15312fe95211eae0c4fa99a13a2e
-  languageName: node
-  linkType: hard
-
 "@types/graceful-fs@npm:^4.1.3":
   version: 4.1.9
   resolution: "@types/graceful-fs@npm:4.1.9"
@@ -1487,13 +1480,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "azure-translator-code@workspace:."
   dependencies:
-    "@types/circular-json": "npm:^0"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^22.5.4"
     "@types/uuid": "npm:^10.0.0"
     axios: "npm:^1.7.7"
     azure-translator-code: "npm:^1.1.6"
-    circular-json: "npm:^0.5.9"
     dotenv: "npm:^16.4.5"
     eslint: "npm:^8"
     eslint-config-universe: "npm:^13.0.0"
@@ -1505,7 +1496,6 @@ __metadata:
     uuid: "npm:^10.0.0"
   peerDependencies:
     axios: "*"
-    circular-json: ^0.5.9
     uuid: "*"
   languageName: unknown
   linkType: soft
@@ -1763,13 +1753,6 @@ __metadata:
   version: 3.9.0
   resolution: "ci-info@npm:3.9.0"
   checksum: 10c0/6f0109e36e111684291d46123d491bc4e7b7a1934c3a20dea28cba89f1d4a03acd892f5f6a81ed3855c38647e285a150e3c9ba062e38943bef57fee6c1554c3a
-  languageName: node
-  linkType: hard
-
-"circular-json@npm:^0.5.9":
-  version: 0.5.9
-  resolution: "circular-json@npm:0.5.9"
-  checksum: 10c0/6e495de324ef5fef91d66b88a9ac2c20f25a983dd28215b790f87e1a92a03b7cdc0a30ee2a68b49e109ce53a97f088d7c1efc9da89974b8246d8615005ef8b33
   languageName: node
   linkType: hard
 
