@@ -41,11 +41,13 @@
 		"Breno Andrade"
 	],
 	"devDependencies": {
+		"@types/circular-json": "^0",
 		"@types/jest": "^29.5.12",
 		"@types/node": "^22.5.4",
 		"@types/uuid": "^10.0.0",
 		"axios": "^1.7.7",
 		"azure-translator-code": "^1.1.6",
+		"circular-json": "^0.5.9",
 		"dotenv": "^16.4.5",
 		"eslint": "^8",
 		"eslint-config-universe": "^13.0.0",
@@ -58,7 +60,8 @@
 	},
 	"peerDependencies": {
 		"axios": "*",
-		"uuid": "*"
+		"uuid": "*",
+		"circular-json": "^0.5.9"
 	},
 	"packageManager": "yarn@4.5.0"
 }
