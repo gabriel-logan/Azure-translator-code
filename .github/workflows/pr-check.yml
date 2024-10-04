@@ -1,0 +1,35 @@
+name: PR Check
+
+on:
+  # Runs on pushes targeting the default branch
+  pull_request:
+    branches: ['main']
+  push:
+    branches: ['main']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn build
+      - name: Check if dist and types directories exist
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "Error: dist directory does not exist."
+            exit 1
+          fi
+          if [ ! -d "types" ]; then
+            echo "Error: types directory does not exist."
+            exit 1
+          fi
+      - name: Run tests
+        run: yarn test
