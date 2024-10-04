@@ -18,7 +18,7 @@ tsconfigcopy.json
 tsconfig.json
 tsconfig.types.json
 .prettierrc.js
-dist/types/
+/dist/types/
 JSONEXAMPLETEST.json
 JSONEXAMPLETESTRESULT.json
 .env-example
