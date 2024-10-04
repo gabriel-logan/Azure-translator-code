@@ -1,6 +1,6 @@
 {
 	"name": "azure-translator-code",
-	"version": "1.1.15",
+	"version": "1.1.16",
 	"description": "Azure Cognitive Services Translator Text API Code for Use with Common Languages",
 	"author": {
 		"name": "Gabriel Logan"
@@ -49,8 +49,7 @@
 	"devDependencies": {
 		"@types/jest": "^29.5.12",
 		"@types/node": "^22.5.4",
-		"@types/uuid": "^10.0.0",
-		"axios": "^1.7.7",
+		"@types/uuid": "^10",
 		"azure-translator-code": "^1.1.6",
 		"dotenv": "^16.4.5",
 		"eslint": "^8",
@@ -59,12 +58,11 @@
 		"prettier": "^3.3.3",
 		"ts-jest": "^29.2.5",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.5.4",
+		"typescript": "^5.5.4"
+	},
+	"packageManager": "yarn@4.5.0",
+	"dependencies": {
+		"axios": "^1.7.7",
 		"uuid": "^10.0.0"
-	},
-	"peerDependencies": {
-		"axios": "*",
-		"uuid": "*"
-	},
-	"packageManager": "yarn@4.5.0"
+	}
 }

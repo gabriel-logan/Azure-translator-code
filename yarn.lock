@@ -1029,7 +1029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:^10.0.0":
+"@types/uuid@npm:^10":
   version: 10.0.0
   resolution: "@types/uuid@npm:10.0.0"
   checksum: 10c0/9a1404bf287164481cb9b97f6bb638f78f955be57c40c6513b7655160beb29df6f84c915aaf4089a1559c216557dc4d2f79b48d978742d3ae10b937420ddac60
@@ -1482,7 +1482,7 @@ __metadata:
   dependencies:
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^22.5.4"
-    "@types/uuid": "npm:^10.0.0"
+    "@types/uuid": "npm:^10"
     axios: "npm:^1.7.7"
     azure-translator-code: "npm:^1.1.6"
     dotenv: "npm:^16.4.5"
@@ -1494,9 +1494,6 @@ __metadata:
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.5.4"
     uuid: "npm:^10.0.0"
-  peerDependencies:
-    axios: "*"
-    uuid: "*"
   languageName: unknown
   linkType: soft
 
