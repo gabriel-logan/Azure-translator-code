@@ -26,7 +26,11 @@ Install the library using npm or yarn:
 
 ```bash
 npm install -D azure-translator-code
-# or
+```
+
+or
+
+```bash
 yarn add -D azure-translator-code
 ```
 
@@ -34,7 +38,11 @@ yarn add -D azure-translator-code
 
 ```bash
 npm install azure-translator-code
-# or
+```
+
+or
+
+```bash
 yarn add azure-translator-code
 ```
 
@@ -47,18 +55,18 @@ You can import the JSON file you want to translate in two ways:
 ### Importing a JSON File
 
 ```javascript
-const jsonFile = require('./jsonFileToTranslate/en.json');
+const jsonFile = require("./jsonFileToTranslate/en.json");
 
 // or
 
 const jsonFile = {
-  "HomePage": {
-    "welcome": "Welcome",
-    "hello": "Hello",
-    "SubText": {
-      "subText": "This is a subtext"
-    }
-  }
+	HomePage: {
+		welcome: "Welcome",
+		hello: "Hello",
+		SubText: {
+			subText: "This is a subtext",
+		},
+	},
 };
 ```
 
@@ -69,25 +77,55 @@ After importing the JSON file, you can use the library to translate it:
 #### Importing the Functions
 
 ```javascript
-const { translateToMultipleFolders, translateToUnicFolder, updateTranslationsMulti, updateTranslationsUnic } = require('azure-translator-code');
+const {
+	translate,
+	translateText,
+	translateToMultipleFolders,
+	translateToUnicFolder,
+	updateTranslationsMulti,
+	updateTranslationsUnic,
+} = require("azure-translator-code");
 // or
-import { translateToMultipleFolders, translateToUnicFolder, updateTranslationsMulti, updateTranslationsUnic } from 'azure-translator-code';
+import {
+	translate,
+	translateText,
+	translateToMultipleFolders,
+	translateToUnicFolder,
+	updateTranslationsMulti,
+	updateTranslationsUnic,
+} from "azure-translator-code";
+
+import type { TranslationType } from "azure-translator-code";
 ```
 
 Define your Azure API details and languages:
 
 ```javascript
-const key = 'YOUR_AZURE_KEY'; // Replace with your Azure API key
-const endpoint = 'https://api.cognitive.microsofttranslator.com/';
-const location = 'eastus';
-const fromLang = 'en';
-const toLangs = ['pt', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'nl', 'ru', 'zh', 'pt-pt', 'ar', 'tlh-Latn'];
+const key = "YOUR_AZURE_KEY"; // Replace with your Azure API key
+const endpoint = "https://api.cognitive.microsofttranslator.com/";
+const location = "eastus";
+const fromLang = "en";
+const toLangs = [
+	"pt",
+	"de",
+	"es",
+	"fr",
+	"it",
+	"ja",
+	"ko",
+	"nl",
+	"ru",
+	"zh",
+	"pt-pt",
+	"ar",
+	"tlh-Latn",
+];
 
 const jsonFile = {
-  "translation": {
-    "welcome": "Welcome",
-    "hello": "Hello"
-  }
+	translation: {
+		welcome: "Welcome",
+		hello: "Hello",
+	},
 };
 
 // Translate to multiple folders
@@ -112,24 +150,40 @@ updateTranslationsUnic(key, endpoint, location, fromLang, toLangs, jsonFile);
 You can specify the folder name or location where translations will be saved. Saving always starts from the project root folder.
 
 ```javascript
-const key = 'YOUR_AZURE_KEY';
-const endpoint = 'https://api.cognitive.microsofttranslator.com/';
-const location = 'eastus';
-const fromLang = 'en';
-const toLangs = ['pt', 'de'];
+const key = "YOUR_AZURE_KEY";
+const endpoint = "https://api.cognitive.microsofttranslator.com/";
+const location = "eastus";
+const fromLang = "en";
+const toLangs = ["pt", "de"];
 
 const jsonFile = {
-  "translation": {
-    "welcome": "Welcome",
-    "hello": "Hello"
-  }
+	translation: {
+		welcome: "Welcome",
+		hello: "Hello",
+	},
 };
 
 // Save translations in custom folder
-translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile, 'myFolder');
+translateToMultipleFolders(
+	key,
+	endpoint,
+	location,
+	fromLang,
+	toLangs,
+	jsonFile,
+	"myFolder",
+);
 // This will create a folder called myFolder
 
-translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, './myFolder/OtherFolder/etc');
+translateToUnicFolder(
+	key,
+	endpoint,
+	location,
+	fromLang,
+	toLangs,
+	jsonFile,
+	"./myFolder/OtherFolder/etc",
+);
 // This will create a folder at ./myFolder/OtherFolder/etc
 ```
 
@@ -140,31 +194,43 @@ translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile, './m
 You can also log the translation results to the console for verification.
 
 ```javascript
-const { translate } = require('azure-translator-code');
+const { translate, translateText } = require("azure-translator-code");
 
-const key = 'YOUR_AZURE_KEY'; 
-const endpoint = 'https://api.cognitive.microsofttranslator.com/';
-const location = 'eastus';
-const fromLang = 'en';
-const toLang = 'pt';
+const key = "YOUR_AZURE_KEY"; 
+const endpoint = "https://api.cognitive.microsofttranslator.com/";
+const location = "eastus";
+const fromLang = "en";
+const toLangs = ["pt"];
 const jsonFile = {
-  HomePage: {
-    Welcome: "Welcome",
-    Hello: "Hello"
-  }
+	HomePage: {
+		Welcome: "Welcome",
+		Hello: "Hello",
+	},
 };
 
-translate(key, endpoint, location, fromLang, toLang, jsonFile).then((result) => console.log(result));
+translate(key, endpoint, location, fromLang, toLangs, jsonFile).then((res) => {
+	console.log(res);
+});
 
 // Output
 /**
- * {
- *   "translation": {
- *     "Welcome": "Bem-vindo",
- *     "Hello": "Olá"
- *   }
- * }
+{
+	HomePage: {
+		Welcome: "Bem-vindo",
+		Hello: "Olá",
+	},
+};
  */
+
+// or
+
+translateText("Hello World!", fromLang, toLangs, endpoint, key, location).then(
+	(res) => {
+		console.log(res.data[0].translations);
+	},
+);
+
+// Output -> [{ text: "Olá, mundo!", to: "pt" }]
 ```
 
 Make sure to replace the `key`, `location` and `endpoint` with your actual Azure access credentials.
