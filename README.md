@@ -185,6 +185,8 @@ translateToUnicFolder(
 	"./myFolder/OtherFolder/etc",
 );
 // This will create a folder at ./myFolder/OtherFolder/etc
+
+// If you just want to update the file for new keys, use the update functions to avoid unnecessary requests.
 ```
 
 ---
