@@ -1,6 +1,6 @@
 {
 	"name": "azure-translator-code",
-	"version": "1.1.13",
+	"version": "1.1.14",
 	"description": "Azure Cognitive Services Translator Text API Code for Use with Common Languages",
 	"author": {
 		"name": "Gabriel Logan"
@@ -9,7 +9,9 @@
 	"types": "./types/index.d.ts",
 	"files": [
 		"dist",
-		"types"
+		"types",
+		"!dist/tests",
+		"!types/tests"
 	],
 	"scripts": {
 		"test": "jest --verbose",
