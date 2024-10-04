@@ -5,7 +5,8 @@ module.exports = {
 		".eslintrc.js",
 		"jest.config.js",
 		"dist",
-		"/types/"
+		"/types/",
+		"geraTraducoes.js"
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
