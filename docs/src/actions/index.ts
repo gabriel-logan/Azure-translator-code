@@ -1,7 +1,6 @@
 "use server";
 
-import { translate } from "azure-translator-code";
-import { TranslationType } from "azure-translator-code/types/types";
+import { translate, TranslationType } from "azure-translator-code";
 import { v4 as uuidv4 } from "uuid";
 
 import { getScopedI18n } from "@/locales/server";
@@ -58,21 +57,23 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 	const key = process.env.AZURE_API_KEY ?? ""; // REPLACE WITH YOUR OWN KEY HERE
 	const endpoint = process.env.AZURE_ENDPOINT ?? "";
 	const location = process.env.AZURE_LOCATION ?? "";
-	const fromLang = data.fromLang;
-	const toLang = data.toLang;
+	const fromLang = data.fromLang as string;
+	const toLang = data.toLang as string;
 
 	let translatedValues: TranslationType;
 
 	const valuesToTranslate = data.jsonFileText;
+
+	const toLangs = [toLang];
 
 	try {
 		translatedValues = await translate(
 			key,
 			endpoint,
 			location,
-			fromLang as string,
-			toLang as string,
-			JSON.parse(valuesToTranslate as string) as TranslationType,
+			fromLang,
+			toLangs,
+			JSON.parse(valuesToTranslate as string),
 		);
 	} catch {
 		return {
