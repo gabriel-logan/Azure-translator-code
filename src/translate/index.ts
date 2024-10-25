@@ -71,7 +71,7 @@ export async function translateText(
  * @param endpoint - The Azure Translator endpoint URL.
  * @param location - The Azure Translator subscription region.
  * @param fromLang - The language code of the source language.
- * @param toLang - The languages code of the target languages.
+ * @param toLangs - The languages code of the target languages.
  * @param jsonFile - The JSON object to be translated.
  * @returns A Promise that resolves to the translated JSON object.
  *
