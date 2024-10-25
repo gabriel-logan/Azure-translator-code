@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const scopedT = await getScopedI18n("HomeLayout");
 	return {
 		metadataBase: new URL(
-			process.env.NEXT_PUBLIC_WEBSITE_URL ||
+			process.env.NEXT_PUBLIC_WEBSITE_URL ??
 				"https://azuretranslatorcode.vercel.app",
 		),
 

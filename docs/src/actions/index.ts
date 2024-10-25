@@ -55,9 +55,9 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 		};
 	}
 
-	const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
-	const endpoint = process.env.AZURE_ENDPOINT || "";
-	const location = process.env.AZURE_LOCATION || "";
+	const key = process.env.AZURE_API_KEY ?? ""; // REPLACE WITH YOUR OWN KEY HERE
+	const endpoint = process.env.AZURE_ENDPOINT ?? "";
+	const location = process.env.AZURE_LOCATION ?? "";
 	const fromLang = data.fromLang;
 	const toLang = data.toLang;
 
@@ -94,9 +94,9 @@ export async function makeTranslationMultilang(
 ) {
 	const scopedT = await getScopedI18n("Actions");
 
-	const key = process.env.AZURE_API_KEY || "";
-	const endpoint = process.env.AZURE_ENDPOINT || "";
-	const location = process.env.AZURE_LOCATION || "";
+	const key = process.env.AZURE_API_KEY ?? "";
+	const endpoint = process.env.AZURE_ENDPOINT ?? "";
+	const location = process.env.AZURE_LOCATION ?? "";
 
 	const toTranslate = formData.get("toTranslate") as string;
 
@@ -224,9 +224,9 @@ export async function makeLiveTranslation(prevState: any, formData: FormData) {
 		};
 	}
 
-	const key = process.env.AZURE_API_KEY || ""; // REPLACE WITH YOUR OWN KEY HERE
-	const endpoint = process.env.AZURE_ENDPOINT || "";
-	const location = process.env.AZURE_LOCATION || "";
+	const key = process.env.AZURE_API_KEY ?? ""; // REPLACE WITH YOUR OWN KEY HERE
+	const endpoint = process.env.AZURE_ENDPOINT ?? "";
+	const location = process.env.AZURE_LOCATION ?? "";
 	const fromLang = data.fromLang;
 	const toLang = data.toLang;
 	const text = data.text;
@@ -235,7 +235,7 @@ export async function makeLiveTranslation(prevState: any, formData: FormData) {
 
 	try {
 		const pega = await fetch(
-			`${endpoint}/translate?api-version=3.0&from=${fromLang}&to=${toLang}`,
+			`${endpoint}/translate?api-version=3.0&from=${String(fromLang)}&to=${String(toLang)}`,
 			{
 				method: "POST",
 				headers: {

@@ -8,11 +8,11 @@ import { useScopedI18n } from "@/locales/client";
 
 export default function ResultDiv({
 	state,
-}: {
+}: Readonly<{
 	state: {
-		message: string | unknown;
+		message: unknown;
 	};
-}) {
+}>) {
 	const scopedT = useScopedI18n("FormComponent");
 
 	const { pending } = useFormStatus();

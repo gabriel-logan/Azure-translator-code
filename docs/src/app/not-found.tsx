@@ -7,7 +7,8 @@ export const dynamic = "force-dynamic";
 export default async function NotFound() {
 	const scopedT = await getScopedI18n("NotFoundPage");
 	return (
-		<html>
+		// eslint-disable-next-line prettier/prettier
+		<html> {/* nosonar */}
 			<body>
 				<main className="min-h-screen">
 					<div className="mx-auto mt-32 max-w-md rounded bg-white p-5 text-center shadow-md">

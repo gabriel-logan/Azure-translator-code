@@ -10,11 +10,11 @@ import { Locale } from "@/types/locales";
 import { ButtonCopyUnicText } from "../ButtonCopy";
 import ButtonSubmit from "../ButtonSubmit";
 
-export default function FormTransMultiText({ locale }: Locale) {
+export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 	const scopedT = useScopedI18n("FormComponent");
 
 	const initialState: {
-		message: string | unknown;
+		message: unknown;
 	} = {
 		message: scopedT("No result yet"),
 	};
@@ -70,9 +70,9 @@ export default function FormTransMultiText({ locale }: Locale) {
 						className="w-full cursor-pointer rounded bg-gray-700 p-3 text-white"
 						defaultValue={locale}
 					>
-						{languages.map((lang, index) => {
+						{languages.map((lang) => {
 							return (
-								<option key={index} value={lang.id}>
+								<option key={lang.id} value={lang.id}>
 									{lang.name}
 								</option>
 							);
@@ -140,7 +140,10 @@ export default function FormTransMultiText({ locale }: Locale) {
 						{response.message.map((msg: any, index: any) => {
 							const language = languages.find((lang) => lang.id === msg.to);
 							return (
-								<div key={index} className="relative mb-3 rounded border p-1">
+								<div
+									key={language?.id ?? index}
+									className="relative mb-3 rounded border p-1"
+								>
 									<p className="text-lg text-black">
 										<span className="font-bold">
 											{language ? language.name : msg.to}

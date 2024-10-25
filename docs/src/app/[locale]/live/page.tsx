@@ -6,7 +6,7 @@ import { LocaleParams } from "@/types/params";
 
 export default async function LiveTranslator({
 	params: { locale },
-}: LocaleParams) {
+}: Readonly<LocaleParams>) {
 	const scopedT = await getScopedI18n("HomePage");
 	return (
 		<main className="flex min-h-screen flex-col bg-gray-100 p-2 sm:p-6 md:p-10">

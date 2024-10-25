@@ -9,7 +9,7 @@ import { Locale } from "@/types/locales";
 
 import InputResult from "./InputResult";
 
-export default function FormTransLiveText({ locale }: Locale) {
+export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 	const scopedT = useScopedI18n("FormComponent");
 
 	const [textToTranslate, setTextToTranslate] = useState("");
@@ -18,7 +18,7 @@ export default function FormTransLiveText({ locale }: Locale) {
 	const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
 	const initialState: {
-		message: string | unknown;
+		message: unknown;
 	} = {
 		message: scopedT("Translation"),
 	};
@@ -65,9 +65,9 @@ export default function FormTransLiveText({ locale }: Locale) {
 					className="h-1/4 w-full cursor-pointer bg-gray-700 p-3 text-white sm:h-1/5"
 					defaultValue={locale}
 				>
-					{languages.map((lang, index) => {
+					{languages.map((lang) => {
 						return (
-							<option key={index} value={lang.id}>
+							<option key={lang.id} value={lang.id}>
 								{lang.name}
 							</option>
 						);
@@ -76,6 +76,7 @@ export default function FormTransLiveText({ locale }: Locale) {
 				<textarea
 					className="h-85% w-full resize-none p-2 text-black outline-none sm:h-4/5"
 					value={textToTranslate}
+					placeholder="Type here..."
 					name="textToTranslate"
 					onChange={(e) => {
 						setTyping(true);
@@ -116,7 +117,7 @@ export default function FormTransLiveText({ locale }: Locale) {
 				>
 					{languages.map((lang, index) => {
 						return (
-							<option key={index} value={lang.id}>
+							<option key={lang.id} value={lang.id}>
 								{lang.name}
 							</option>
 						);

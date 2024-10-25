@@ -9,10 +9,10 @@ import { useScopedI18n } from "@/locales/client";
 export default function InputResult({
 	typing,
 	response,
-}: {
+}: Readonly<{
 	typing: boolean;
-	response: { message: string | unknown };
-}) {
+	response: { message: unknown };
+}>) {
 	const scopedT = useScopedI18n("FormComponent");
 	const [isCopied, setIsCopied] = useState(false);
 
@@ -32,7 +32,7 @@ export default function InputResult({
 				style={{ maxHeight: "80%", minHeight: "80%" }}
 			/>
 			{!typing && !pending && (
-				<div
+				<button
 					className="absolute bottom-2 right-3 text-black"
 					onClick={() => {
 						navigator.clipboard.writeText(response.message as string);
@@ -49,7 +49,7 @@ export default function InputResult({
 					<span className="text-gray-500">
 						{isCopied ? scopedT("Copied") : ""}
 					</span>
-				</div>
+				</button>
 			)}
 		</>
 	);
