@@ -14,7 +14,7 @@ export default function FormTransUnicJson() {
 	const scopedT = useScopedI18n("FormComponent");
 
 	const initialState: {
-		message: string | unknown;
+		message: unknown;
 	} = {
 		message: scopedT("No result yet"),
 	};
@@ -22,8 +22,8 @@ export default function FormTransUnicJson() {
 	const [state, formAction] = useFormState(makeTranslation, initialState);
 
 	return (
-		<>
-			<form action={formAction}>
+		<div className="flex flex-col justify-between lg:flex-row">
+			<form className="w-full lg:w-[48%]" action={formAction}>
 				<div className="flex flex-col rounded bg-gray-800 p-5 text-white sm:flex-row">
 					<div className="w-full">
 						<div className="sm:ml-10">
@@ -122,12 +122,12 @@ export default function FormTransUnicJson() {
 				<Textarea />
 
 				<ButtonSubmit />
-				<div className="mt-5 rounded border p-3">
-					<ButtonCopy state={state} />
-
-					<ResultDiv state={state} />
-				</div>
 			</form>
-		</>
+			<div className="mt-5 w-full rounded border p-3 lg:mt-0 lg:w-[46%]">
+				<ButtonCopy state={state} />
+
+				<ResultDiv state={state} />
+			</div>
+		</div>
 	);
 }

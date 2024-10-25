@@ -112,7 +112,7 @@ export default function FormTransMultiText({ locale }: Locale) {
 				{scopedT("Select the languages you want to translate the text to:")}
 			</p>
 
-			<div className="mt-6 grid grid-cols-2 gap-4">
+			<div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-4 lg:grid-cols-4 xl:lg:grid-cols-5 xl:mt-2">
 				{languages.map((lang) => (
 					<div key={lang.id} className="flex cursor-pointer items-center">
 						<input

@@ -17,7 +17,7 @@ export default async function Header() {
 					className="rounded-full"
 				/>
 			</div>
-			<h1 className="mb-4 text-3xl font-bold text-gray-700">
+			<h1 className="mb-4 text-center text-3xl font-bold text-gray-700">
 				{scopedT("Title")}
 			</h1>
 			<p className="mb-4 text-center text-gray-600">
@@ -33,7 +33,7 @@ export default async function Header() {
 				</Link>
 				{scopedT("to know how to use the library in your JS/TS project")}{" "}
 			</p>
-			<p>
+			<p className="text-center">
 				<iframe
 					src="https://github.com/sponsors/gabriel-logan/button"
 					title="Sponsor gabriel-logan"
