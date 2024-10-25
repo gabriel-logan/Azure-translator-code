@@ -89,6 +89,7 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 					type="text"
 					id="toTranslate"
 					name="toTranslate"
+					placeholder="Type the text you want to translate"
 					value={textToTranslate}
 					onChange={(e) => {
 						setTextToTranslate(e.target.value);
