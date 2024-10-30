@@ -39,10 +39,10 @@ export default function Textarea() {
 				name="jsonfileAce"
 				fontSize={14}
 				lineHeight={19}
-				showPrintMargin={true}
-				showGutter={true}
+				showPrintMargin
+				showGutter
 				width="100%"
-				highlightActiveLine={true}
+				highlightActiveLine
 				value={jsonFileText}
 				onChange={(value) => {
 					setJsonFileText(value);

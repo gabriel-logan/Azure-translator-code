@@ -23,13 +23,13 @@ export default function ResultDiv({
 
 			{pending ? (
 				<div className="animate-pulse overflow-x-auto rounded bg-gray-100 p-2">
-					<div className="mb-2 h-4 w-3/4 animate-pulse bg-gray-400"></div>
-					<div className="mb-2 ml-4 h-4 w-1/2 animate-pulse bg-gray-400"></div>
-					<div className="mb-2 ml-8 h-4 w-2/3 animate-pulse bg-gray-400"></div>
-					<div className="mb-2 ml-8 h-4 w-1/2 animate-pulse bg-gray-400"></div>
-					<div className="mb-2 ml-12 h-4 w-2/3 animate-pulse bg-gray-400"></div>
-					<div className="mb-2 ml-12 h-4 w-1/2 animate-pulse bg-gray-400"></div>
-					<div className="h-4 w-3/4 animate-pulse bg-gray-400"></div>
+					<div className="mb-2 h-4 w-3/4 animate-pulse bg-gray-400" />
+					<div className="mb-2 ml-4 h-4 w-1/2 animate-pulse bg-gray-400" />
+					<div className="mb-2 ml-8 h-4 w-2/3 animate-pulse bg-gray-400" />
+					<div className="mb-2 ml-8 h-4 w-1/2 animate-pulse bg-gray-400" />
+					<div className="mb-2 ml-12 h-4 w-2/3 animate-pulse bg-gray-400" />
+					<div className="mb-2 ml-12 h-4 w-1/2 animate-pulse bg-gray-400" />
+					<div className="h-4 w-3/4 animate-pulse bg-gray-400" />
 				</div>
 			) : (
 				<pre className="overflow-x-auto text-black">

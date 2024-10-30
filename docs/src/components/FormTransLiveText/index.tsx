@@ -5,7 +5,8 @@ import { useFormState } from "react-dom";
 
 import { makeLiveTranslation } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
-import { Locale } from "@/types/locales";
+import type { Locale } from "@/types/locales";
+import type { LanguagesCode } from "@/types/translations";
 
 import InputResult from "./InputResult";
 
@@ -25,7 +26,10 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 
 	const [response, action] = useFormState(makeLiveTranslation, initialState);
 
-	const languages = [
+	const languages: {
+		id: LanguagesCode;
+		name: string;
+	}[] = [
 		{ id: "en", name: scopedT("Langs.English") },
 		{ id: "pt", name: scopedT("Langs.Portuguese") },
 		{ id: "es", name: scopedT("Langs.Spanish") },

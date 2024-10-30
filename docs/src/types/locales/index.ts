@@ -1,4 +1,4 @@
-export type Langs =
+export type LocalesCodes =
 	| "en"
 	| "pt"
 	| "es"
@@ -26,5 +26,5 @@ export type Langs =
 	| "ms";
 
 export interface Locale {
-	locale: Readonly<Langs>;
+	locale: Readonly<LocalesCodes>;
 }

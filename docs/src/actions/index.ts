@@ -1,13 +1,13 @@
 "use server";
 
-import { translate, TranslationType } from "azure-translator-code";
-import { v4 as uuidv4 } from "uuid";
-
+import localesCodes from "@/lib/localesCode";
+import translate from "@/lib/translate";
+import { translateText } from "@/lib/translateText";
 import { getScopedI18n } from "@/locales/server";
-import { Langs } from "@/types/locales";
 
-// Cache to store translations
-const translationCache: { [key: string]: TranslationType } = {};
+const key = process.env.AZURE_API_KEY ?? "";
+const endpoint = process.env.AZURE_ENDPOINT ?? "";
+const location = process.env.AZURE_LOCATION ?? "";
 
 export async function makeTranslation(prevState: any, formData: FormData) {
 	const scopedT = await getScopedI18n("Actions");
@@ -17,16 +17,6 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 		toLang: formData.get("toLang"),
 		jsonFileText: formData.get("jsonfile"),
 	};
-
-	// Cache key
-	const cacheKey = `${data.fromLang}-${data.toLang}-${data.jsonFileText}`;
-
-	// Check if the translation is in the cache
-	if (translationCache[cacheKey]) {
-		return {
-			message: translationCache[cacheKey],
-		};
-	}
 
 	if (!data) {
 		return {
@@ -54,20 +44,13 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 		};
 	}
 
-	const key = process.env.AZURE_API_KEY ?? ""; // REPLACE WITH YOUR OWN KEY HERE
-	const endpoint = process.env.AZURE_ENDPOINT ?? "";
-	const location = process.env.AZURE_LOCATION ?? "";
 	const fromLang = data.fromLang as string;
 	const toLang = data.toLang as string;
-
-	let translatedValues: TranslationType;
-
+	const toLangs = [toLang];
 	const valuesToTranslate = data.jsonFileText;
 
-	const toLangs = [toLang];
-
 	try {
-		translatedValues = await translate(
+		const translatedValues = await translate(
 			key,
 			endpoint,
 			location,
@@ -75,18 +58,15 @@ export async function makeTranslation(prevState: any, formData: FormData) {
 			toLangs,
 			JSON.parse(valuesToTranslate as string),
 		);
+
+		return {
+			message: translatedValues,
+		};
 	} catch {
 		return {
 			message: scopedT("MakeTranslations.Invalid json text passed"),
 		};
 	}
-
-	// Save the translation in the cache
-	translationCache[cacheKey] = translatedValues;
-
-	return {
-		message: translatedValues,
-	};
 }
 
 export async function makeTranslationMultilang(
@@ -94,10 +74,6 @@ export async function makeTranslationMultilang(
 	formData: FormData,
 ) {
 	const scopedT = await getScopedI18n("Actions");
-
-	const key = process.env.AZURE_API_KEY ?? "";
-	const endpoint = process.env.AZURE_ENDPOINT ?? "";
-	const location = process.env.AZURE_LOCATION ?? "";
 
 	const toTranslate = formData.get("toTranslate") as string;
 
@@ -116,36 +92,7 @@ export async function makeTranslationMultilang(
 	}
 
 	const fromLang = formData.get("fromLang") as string;
-
-	const languageCodes: Langs[] = [
-		"en",
-		"pt",
-		"es",
-		"de",
-		"fr",
-		"it",
-		"ja",
-		"ko",
-		"ru",
-		"zh",
-		"ar",
-		"tr",
-		"vi",
-		"th",
-		"sv",
-		"pl",
-		"nl",
-		"da",
-		"fi",
-		"no",
-		"cs",
-		"hu",
-		"el",
-		"id",
-		"ms",
-	];
-
-	const toLangs = languageCodes.filter((code) => formData.get(code) === "on");
+	const toLangs = localesCodes.filter((code) => formData.get(code) === "on");
 
 	if (!toLangs.length) {
 		return {
@@ -153,30 +100,19 @@ export async function makeTranslationMultilang(
 		};
 	}
 
-	let url = `/translate?api-version=3.0&from=${fromLang ?? "en"}`;
-	for (const lang of toLangs) {
-		url += `&to=${lang}`;
-	}
-
-	let data: any;
-
 	try {
-		const pega = await fetch(endpoint + url, {
-			method: "POST",
-			headers: {
-				"Ocp-Apim-Subscription-Key": key,
-				"Ocp-Apim-Subscription-Region": location,
-				"Content-type": "application/json",
-				"X-ClientTraceId": uuidv4().toString(),
-			},
-			body: JSON.stringify([
-				{
-					text: toTranslate,
-				},
-			]),
-		});
+		const data = await translateText(
+			toTranslate,
+			fromLang,
+			toLangs,
+			endpoint,
+			key,
+			location,
+		);
 
-		data = await pega.json();
+		return {
+			message: data[0].translations,
+		};
 	} catch {
 		return {
 			message: scopedT(
@@ -184,10 +120,6 @@ export async function makeTranslationMultilang(
 			),
 		};
 	}
-
-	return {
-		message: data[0].translations,
-	};
 }
 
 export async function makeLiveTranslation(prevState: any, formData: FormData) {
@@ -225,37 +157,21 @@ export async function makeLiveTranslation(prevState: any, formData: FormData) {
 		};
 	}
 
-	const key = process.env.AZURE_API_KEY ?? ""; // REPLACE WITH YOUR OWN KEY HERE
-	const endpoint = process.env.AZURE_ENDPOINT ?? "";
-	const location = process.env.AZURE_LOCATION ?? "";
-	const fromLang = data.fromLang;
-	const toLang = data.toLang;
-	const text = data.text;
-
-	let translatedText: string;
+	const fromLang = data.fromLang as string;
+	const toLang = data.toLang as string;
+	const text = data.text as string;
 
 	try {
-		const pega = await fetch(
-			`${endpoint}/translate?api-version=3.0&from=${String(fromLang)}&to=${String(toLang)}`,
-			{
-				method: "POST",
-				headers: {
-					"Ocp-Apim-Subscription-Key": key,
-					"Ocp-Apim-Subscription-Region": location,
-					"Content-type": "application/json",
-					"X-ClientTraceId": uuidv4().toString(),
-				},
-				body: JSON.stringify([
-					{
-						text,
-					},
-				]),
-			},
+		const data = await translateText(
+			text,
+			fromLang,
+			[toLang],
+			endpoint,
+			key,
+			location,
 		);
 
-		const data = await pega.json();
-
-		translatedText = data[0].translations[0].text;
+		const translatedText = data[0].translations[0].text;
 
 		return {
 			message: translatedText,

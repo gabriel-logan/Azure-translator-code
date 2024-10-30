@@ -5,7 +5,8 @@ import { useFormState } from "react-dom";
 
 import { makeTranslationMultilang } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
-import { Locale } from "@/types/locales";
+import type { Locale } from "@/types/locales";
+import type { LanguagesCode } from "@/types/translations";
 
 import { ButtonCopyUnicText } from "../ButtonCopy";
 import ButtonSubmit from "../ButtonSubmit";
@@ -25,7 +26,10 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 
 	const [textToTranslate, setTextToTranslate] = useState("");
 
-	const languages = [
+	const languages: {
+		id: LanguagesCode;
+		name: string;
+	}[] = [
 		{ id: "en", name: scopedT("Langs.English") },
 		{ id: "pt", name: scopedT("Langs.Portuguese") },
 		{ id: "es", name: scopedT("Langs.Spanish") },

@@ -10,7 +10,7 @@ export default async function Header() {
 		<header className="flex flex-col items-center bg-gray-100 p-2 sm:p-6 md:p-10">
 			<div className="mb-2">
 				<Image
-					src={"/logo.png"}
+					src="/logo.png"
 					alt="logo"
 					width={64}
 					height={64}
@@ -24,9 +24,7 @@ export default async function Header() {
 				{scopedT("Read the")}{" "}
 				<Link
 					className="mb-10 text-blue-500 hover:underline"
-					href={
-						"https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
-					}
+					href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
 					target="_blank"
 				>
 					README.md{" "}

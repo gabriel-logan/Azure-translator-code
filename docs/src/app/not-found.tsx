@@ -41,7 +41,7 @@ export default async function NotFound() {
 								alignSelf: "center",
 								margin: "auto",
 							}}
-						></iframe>
+						/>
 					</div>
 				</main>
 			</body>
