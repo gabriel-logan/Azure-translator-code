@@ -1109,13 +1109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-translator-code@npm:^1.1.17":
-  version: 1.1.17
-  resolution: "azure-translator-code@npm:1.1.17"
+"azure-translator-code@npm:^1.1.18":
+  version: 1.1.18
+  resolution: "azure-translator-code@npm:1.1.18"
   dependencies:
     axios: "npm:^1.7.7"
     uuid: "npm:^10.0.0"
-  checksum: 10c0/231036038b9109f506f2ef45ae937965cc71992a27c483373e8801522de082ba2e526fdc821792f09868cd92e79dfd52de1d9f24b89d5d022ba0f27dbd15b372
+  checksum: 10c0/f12a1b9b84ef9c1cc5648266a2c218d572a3b058552713c04f3b1e2a632e6f33c86f4108a98ddc73f37d64ec8c91f937ce22d5c5484e760a3c3feafa6a498cd3
   languageName: node
   linkType: hard
 
@@ -1131,7 +1131,7 @@ __metadata:
     "@vercel/analytics": "npm:^1.3.1"
     ace-builds: "npm:^1.34.2"
     axios: "npm:^1.7.7"
-    azure-translator-code: "npm:^1.1.17"
+    azure-translator-code: "npm:^1.1.18"
     eslint: "npm:^8.57.0"
     eslint-config-next: "npm:14.2.3"
     eslint-config-universe: "npm:^12.1.0"

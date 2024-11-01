@@ -56,6 +56,7 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 		{ id: "el", name: scopedT("Langs.Greek") },
 		{ id: "id", name: scopedT("Langs.Indonesian") },
 		{ id: "ms", name: scopedT("Langs.Malay") },
+		{ id: "tlh-Latn", name: scopedT("Langs.Klingon") },
 	];
 	return (
 		<form

@@ -68,6 +68,7 @@ export default function FormTransUnicJson() {
 								<option value="el">{scopedT("Langs.Greek")}</option>
 								<option value="id">{scopedT("Langs.Indonesian")}</option>
 								<option value="ms">{scopedT("Langs.Malay")}</option>
+								<option value="tlh-Latn">{scopedT("Langs.Klingon")}</option>
 							</select>
 						</div>
 					</div>
@@ -114,6 +115,7 @@ export default function FormTransUnicJson() {
 								<option value="el">{scopedT("Langs.Greek")}</option>
 								<option value="id">{scopedT("Langs.Indonesian")}</option>
 								<option value="ms">{scopedT("Langs.Malay")}</option>
+								<option value="tlh-Latn">{scopedT("Langs.Klingon")}</option>
 							</select>
 						</div>
 					</div>

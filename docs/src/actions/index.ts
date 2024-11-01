@@ -2,7 +2,6 @@
 
 import { translate, translateText } from "azure-translator-code";
 
-import localesCodes from "@/lib/localesCode";
 import { getScopedI18n } from "@/locales/server";
 
 const key = process.env.AZURE_API_KEY ?? "";
@@ -92,7 +91,13 @@ export async function makeTranslationMultilang(
 	}
 
 	const fromLang = formData.get("fromLang") as string;
-	const toLangs = localesCodes.filter((code) => formData.get(code) === "on");
+	const toLangs: string[] = [];
+
+	formData.forEach((value, key) => {
+		if (value === "on" && key !== "fromLang" && key !== "toTranslate") {
+			toLangs.push(key);
+		}
+	});
 
 	if (!toLangs.length) {
 		return {

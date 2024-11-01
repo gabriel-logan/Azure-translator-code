@@ -24,4 +24,5 @@ export type LanguagesCode =
 	| "hu"
 	| "el"
 	| "id"
-	| "ms";
+	| "ms"
+	| "tlh-Latn";
