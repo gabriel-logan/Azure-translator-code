@@ -1,8 +1,8 @@
 "use server";
 
+import { translate, translateText } from "azure-translator-code";
+
 import localesCodes from "@/lib/localesCode";
-import translate from "@/lib/translate";
-import { translateText } from "@/lib/translateText";
 import { getScopedI18n } from "@/locales/server";
 
 const key = process.env.AZURE_API_KEY ?? "";
