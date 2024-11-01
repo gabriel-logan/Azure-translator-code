@@ -1,6 +1,7 @@
 import axios from "axios";
 
-import translate, { translateText } from "../../src/translate";
+import translate from "../../src/translate";
+import translateText from "../../src/translate/translateText";
 import type { TranslationType } from "../../src/types";
 
 describe("translate", () => {
@@ -44,7 +45,7 @@ describe("translate", () => {
 
 			expect(spyOnAxios).toHaveBeenCalled();
 
-			expect(result.data[0].translations[0].text).toEqual("Bem-vindo");
+			expect(result[0].translations[0].text).toEqual("Bem-vindo");
 		});
 	});
 

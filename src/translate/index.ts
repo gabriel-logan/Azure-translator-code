@@ -1,69 +1,5 @@
-import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
-
 import type { JSONValue, TranslationType } from "../types";
-
-interface Translation {
-	text: TranslationType;
-	to: TranslationType;
-}
-
-interface TranslationResponse {
-	translations: Translation[];
-}
-
-type TranslateResponseData = TranslationResponse[];
-
-/**
- *
- * @param text
- * @param from
- * @param to
- * @param endpoint
- * @param key
- * @param location
- * @returns A Promise that resolves to the translated text.
- * @example
- * from: "en"
- * to: ["es", "fr"]
- *
- * translateText("Hello", "en", ["es", "fr"], "https://api.cognitive.microsofttranslator.com", "key", "location")
- *
- * Returns: [ { text: 'Hola', to: 'es' }, { text: 'Bonjour', to: 'fr' } ]
- */
-export async function translateText(
-	text: string,
-	from: string,
-	to: string[],
-	endpoint: string,
-	key: string,
-	location: string,
-) {
-	const filteredEndpoint = endpoint.replace(/\/$/, "");
-
-	const toDestructured = to.map((lang) => `to=${lang}`).join("&");
-
-	const url = `${filteredEndpoint}/translate?api-version=3.0&from=${from}&${toDestructured}`;
-
-	const response = await axios.post<TranslateResponseData>(
-		url,
-		[
-			{
-				text,
-			},
-		],
-		{
-			headers: {
-				"Ocp-Apim-Subscription-Key": key,
-				"Ocp-Apim-Subscription-Region": location,
-				"Content-type": "application/json",
-				"X-ClientTraceId": uuidv4().toString(),
-			},
-		},
-	);
-
-	return response;
-}
+import translateText from "./translateText";
 
 /**
  * Translates a JSON object from one language to another using the Azure Translator service.
@@ -177,7 +113,7 @@ async function translateString(
 		location,
 	);
 
-	const translations = response.data[0].translations;
+	const translations = response[0].translations;
 
 	const translatedValues = translations.map((translation) => {
 		return translation.text;

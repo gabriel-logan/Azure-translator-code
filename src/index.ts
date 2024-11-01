@@ -1,4 +1,5 @@
-import translate, { translateText } from "./translate";
+import translate from "./translate";
+import translateText from "./translate/translateText";
 import translateToMultipleFolders from "./translateToMultipleFolders";
 import translateToUnicFolder from "./translateToUnicFolder";
 import updateTranslationsMulti from "./updateTranslationMulti";
