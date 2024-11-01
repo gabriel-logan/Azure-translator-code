@@ -228,7 +228,7 @@ translate(key, endpoint, location, fromLang, toLangs, jsonFile).then((res) => {
 
 translateText("Hello World!", fromLang, toLangs, endpoint, key, location).then(
 	(res) => {
-		console.log(res.data[0].translations);
+		console.log(res[0].translations);
 	},
 );
 
