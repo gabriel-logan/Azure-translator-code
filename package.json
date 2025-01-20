@@ -1,6 +1,6 @@
 {
 	"name": "azure-translator-code",
-	"version": "1.1.18",
+	"version": "2.0.0",
 	"description": "Azure Cognitive Services Translator Text API Code for Use with Common Languages",
 	"author": {
 		"name": "Gabriel Logan"
