@@ -1,4 +1,3 @@
-import axios from "axios";
 import { existsSync, readFileSync, rmSync } from "fs";
 
 import { translateToUnicFolder, type TranslationType } from "../../src";
@@ -27,8 +26,8 @@ describe("translateToUnicFolder", () => {
 	});
 
 	it("should translate to unique folder", async () => {
-		jest.spyOn(axios, "post").mockResolvedValue({
-			data: [
+		jest.spyOn(global, "fetch").mockResolvedValue({
+			json: async () => [
 				{
 					translations: [
 						{
@@ -37,7 +36,7 @@ describe("translateToUnicFolder", () => {
 					],
 				},
 			],
-		});
+		} as Response);
 
 		const jsonFile = {
 			Welcome: "Welcome",

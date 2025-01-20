@@ -1,4 +1,3 @@
-import axios from "axios";
 import { existsSync, readFileSync, rmSync } from "fs";
 
 import { translateToMultipleFolders, type TranslationType } from "../../src";
@@ -25,8 +24,8 @@ describe("translateToMultipleFolders", () => {
 	});
 
 	it("should translate to multiple folders", async () => {
-		jest.spyOn(axios, "post").mockResolvedValue({
-			data: [
+		jest.spyOn(global, "fetch").mockResolvedValue({
+			json: async () => [
 				{
 					translations: [
 						{
@@ -35,7 +34,7 @@ describe("translateToMultipleFolders", () => {
 					],
 				},
 			],
-		});
+		} as Response);
 
 		const jsonFile = {
 			Welcome: "Welcome",

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import translate from "../../src/translate";
 import translateText from "../../src/translate/translateText";
 import type { TranslationType } from "../../src/types";
@@ -22,8 +20,8 @@ describe("translate", () => {
 
 	describe("translateText", () => {
 		it("should return the translated text", async () => {
-			const spyOnAxios = jest.spyOn(axios, "post").mockResolvedValue({
-				data: [
+			const spyOnFetch = jest.spyOn(global, "fetch").mockResolvedValue({
+				json: async () => [
 					{
 						translations: [
 							{
@@ -32,7 +30,7 @@ describe("translate", () => {
 						],
 					},
 				],
-			});
+			} as Response);
 
 			const result = await translateText(
 				"Welcome",
@@ -43,7 +41,7 @@ describe("translate", () => {
 				location,
 			);
 
-			expect(spyOnAxios).toHaveBeenCalled();
+			expect(spyOnFetch).toHaveBeenCalled();
 
 			expect(result[0].translations[0].text).toEqual("Bem-vindo");
 		});
@@ -52,8 +50,8 @@ describe("translate", () => {
 	describe("translate", () => {
 		describe("translateValue", () => {
 			it("should throw an error if invalid JSON object is passed", async () => {
-				jest.spyOn(axios, "post").mockResolvedValue({
-					data: [
+				jest.spyOn(global, "fetch").mockResolvedValue({
+					json: async () => [
 						{
 							translations: [
 								{
@@ -62,7 +60,7 @@ describe("translate", () => {
 							],
 						},
 					],
-				});
+				} as Response);
 
 				const jsonFile = {
 					Welcome: "Welcome",
@@ -83,8 +81,8 @@ describe("translate", () => {
 
 			describe("translateString", () => {
 				it("should translate a JSON object from one language to another with welcome msg", async () => {
-					jest.spyOn(axios, "post").mockResolvedValue({
-						data: [
+					jest.spyOn(global, "fetch").mockResolvedValue({
+						json: async () => [
 							{
 								translations: [
 									{
@@ -93,7 +91,7 @@ describe("translate", () => {
 								],
 							},
 						],
-					});
+					} as Response);
 
 					const jsonFile = {
 						Welcome: "Welcome",
@@ -114,8 +112,8 @@ describe("translate", () => {
 				});
 
 				it("should return an array with multiple translations", async () => {
-					jest.spyOn(axios, "post").mockResolvedValue({
-						data: [
+					jest.spyOn(global, "fetch").mockResolvedValue({
+						json: async () => [
 							{
 								translations: [
 									{
@@ -127,7 +125,7 @@ describe("translate", () => {
 								],
 							},
 						],
-					});
+					} as Response);
 
 					const jsonFile = {
 						Welcome: "Welcome",
@@ -150,10 +148,10 @@ describe("translate", () => {
 			describe("translateArray", () => {
 				it("should translate a JSON object from one language to another with arrays", async () => {
 					jest
-						.spyOn(axios, "post")
+						.spyOn(global, "fetch")
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -162,11 +160,11 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						)
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -175,7 +173,7 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						);
 
 					const jsonFile = {
@@ -206,10 +204,10 @@ describe("translate", () => {
 
 				it("should translate a JSON object with arrays and if elements are not strings", async () => {
 					jest
-						.spyOn(axios, "post")
+						.spyOn(global, "fetch")
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -218,11 +216,11 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						)
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -231,7 +229,7 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						);
 
 					const jsonFile = {
@@ -262,11 +260,11 @@ describe("translate", () => {
 			});
 			describe("translateObject", () => {
 				it("should translate a JSON object from one language to another with nested objects", async () => {
-					const spyOnAxios = jest
-						.spyOn(axios, "post")
+					const spyOnFetch = jest
+						.spyOn(global, "fetch")
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -275,11 +273,11 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						)
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -288,7 +286,7 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						);
 
 					const jsonFile = {
@@ -311,7 +309,7 @@ describe("translate", () => {
 						jsonFile as unknown as TranslationType,
 					);
 
-					expect(spyOnAxios).toHaveBeenCalledTimes(2);
+					expect(spyOnFetch).toHaveBeenCalledTimes(2);
 
 					expect(result).toEqual({
 						HomePage: {
@@ -327,10 +325,10 @@ describe("translate", () => {
 
 				it("should translate a JSON object from one language to another with fake booleans", async () => {
 					jest
-						.spyOn(axios, "post")
+						.spyOn(global, "fetch")
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -339,11 +337,11 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						)
 						.mockImplementationOnce(() =>
 							Promise.resolve({
-								data: [
+								json: async () => [
 									{
 										translations: [
 											{
@@ -352,7 +350,7 @@ describe("translate", () => {
 										],
 									},
 								],
-							}),
+							} as Response),
 						);
 
 					const jsonFile = {
@@ -386,7 +384,7 @@ describe("translate", () => {
 
 			describe("translateBool or numbers", () => {
 				it("should translate a JSON object from one language to another with booleans", async () => {
-					const spyOnAxios = jest.spyOn(axios, "post");
+					const spyOnFetch = jest.spyOn(global, "fetch");
 
 					const jsonFile = {
 						HomePage: {
@@ -406,7 +404,7 @@ describe("translate", () => {
 						jsonFile as unknown as TranslationType,
 					);
 
-					expect(spyOnAxios).not.toHaveBeenCalled();
+					expect(spyOnFetch).not.toHaveBeenCalled();
 
 					expect(result).toEqual({
 						HomePage: {
@@ -419,7 +417,7 @@ describe("translate", () => {
 				});
 
 				it("should translate a JSON object from one language to another with numbers", async () => {
-					const spyOnAxios = jest.spyOn(axios, "post");
+					const spyOnFetch = jest.spyOn(global, "fetch");
 
 					const jsonFile = {
 						HomePage: {
@@ -438,7 +436,7 @@ describe("translate", () => {
 						jsonFile as unknown as TranslationType,
 					);
 
-					expect(spyOnAxios).not.toHaveBeenCalled();
+					expect(spyOnFetch).not.toHaveBeenCalled();
 
 					expect(result).toEqual({
 						HomePage: {
@@ -452,7 +450,7 @@ describe("translate", () => {
 
 			describe("translateNull", () => {
 				it("should translate a JSON object from one language to another with null", async () => {
-					const spyOnAxios = jest.spyOn(axios, "post");
+					const spyOnFetch = jest.spyOn(global, "fetch");
 
 					const jsonFile = {
 						HomePage: {
@@ -471,7 +469,7 @@ describe("translate", () => {
 						jsonFile as unknown as TranslationType,
 					);
 
-					expect(spyOnAxios).not.toHaveBeenCalled();
+					expect(spyOnFetch).not.toHaveBeenCalled();
 
 					expect(result).toEqual({
 						HomePage: {

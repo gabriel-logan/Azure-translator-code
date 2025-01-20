@@ -8,6 +8,8 @@
 
 **Azure Translator Code** is a powerful library for translating JSON files into multiple languages using the Azure Cognitive Translator service. This library supports translating JSON files located in multiple folders or within a single folder, depending on your needs.
 
+**Supports:** Node.js 18.x and above
+
 ---
 
 ### Important Links

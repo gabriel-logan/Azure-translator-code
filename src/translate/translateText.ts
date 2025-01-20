@@ -1,4 +1,3 @@
-import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
 import type { TranslationType } from "../types";
@@ -58,21 +57,11 @@ export default async function translateText(
 		"X-ClientTraceId": uuidv4(),
 	};
 
-	const payload = [{ text }];
+	const response = await fetch(url, {
+		method: "POST",
+		headers,
+		body: JSON.stringify([{ text }]),
+	});
 
-	if (typeof window !== "undefined" && typeof window.fetch === "function") {
-		const response = await fetch(url, {
-			method: "POST",
-			headers,
-			body: JSON.stringify(payload),
-		});
-
-		return await response.json();
-	} else {
-		const response = await axios.post<TranslateResponseData>(url, payload, {
-			headers,
-		});
-
-		return response.data;
-	}
+	return await response.json();
 }

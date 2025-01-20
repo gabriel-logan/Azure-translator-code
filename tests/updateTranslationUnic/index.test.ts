@@ -1,4 +1,3 @@
-import axios from "axios";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
 import { v4 as uuidv4 } from "uuid";
 
@@ -42,8 +41,8 @@ describe("updateTranslationsUnic", () => {
 	});
 
 	beforeEach(() => {
-		jest.spyOn(axios, "post").mockResolvedValue({
-			data: [
+		jest.spyOn(global, "fetch").mockResolvedValue({
+			json: async () => [
 				{
 					translations: [
 						{
@@ -52,7 +51,7 @@ describe("updateTranslationsUnic", () => {
 					],
 				},
 			],
-		});
+		} as Response);
 
 		key = uuidv4(); // Gera uma chave única para cada teste
 		jsonFile = {
@@ -61,8 +60,8 @@ describe("updateTranslationsUnic", () => {
 	});
 
 	it("should translate to unique folder", async () => {
-		jest.spyOn(axios, "post").mockResolvedValue({
-			data: [
+		jest.spyOn(global, "fetch").mockResolvedValue({
+			json: async () => [
 				{
 					translations: [
 						{
@@ -71,7 +70,8 @@ describe("updateTranslationsUnic", () => {
 					],
 				},
 			],
-		});
+		} as Response);
+
 		// Add a delay to ensure the file is created
 		await new Promise((resolve) => setTimeout(resolve, 150));
 
