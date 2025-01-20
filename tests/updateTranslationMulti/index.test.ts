@@ -1,5 +1,4 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
-import { v4 as uuidv4 } from "uuid";
 
 import { updateTranslationsMulti, type TranslationType } from "../../src";
 
@@ -53,7 +52,6 @@ describe("updateTranslationsMulti", () => {
 			],
 		} as Response);
 
-		key = uuidv4(); // Gera uma chave única para cada teste
 		jsonFile = {
 			[key]: "Welcome",
 		};

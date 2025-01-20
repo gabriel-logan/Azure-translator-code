@@ -1,5 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
-
+import randomString from "../randomString";
 import type { TranslationType } from "../types";
 
 interface Translation {
@@ -54,7 +53,7 @@ export default async function translateText(
 		"Ocp-Apim-Subscription-Key": key,
 		"Ocp-Apim-Subscription-Region": location,
 		"Content-type": "application/json",
-		"X-ClientTraceId": uuidv4(),
+		"X-ClientTraceId": randomString(),
 	};
 
 	const response = await fetch(url, {
