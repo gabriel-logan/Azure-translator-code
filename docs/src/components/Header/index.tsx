@@ -43,6 +43,12 @@ export default async function Header() {
 			<div className="mt-4 flex w-60 flex-col items-center justify-center gap-2">
 				<Link
 					className="text-black hover:text-blue-500 hover:underline"
+					href="/"
+				>
+					{scopedT("Title")}
+				</Link>
+				<Link
+					className="text-black hover:text-blue-500 hover:underline"
 					href="/multi"
 				>
 					{scopedT("Test Multingual")}
@@ -52,6 +58,12 @@ export default async function Header() {
 					href="/live"
 				>
 					{scopedT("Live Translator")}
+				</Link>
+				<Link
+					className="text-black hover:text-blue-500 hover:underline"
+					href="/mykey"
+				>
+					{scopedT("Test Your Own Key")}
 				</Link>
 			</div>
 		</header>

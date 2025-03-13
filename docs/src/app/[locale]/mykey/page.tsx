@@ -1,4 +1,5 @@
 import { translateText } from "azure-translator-code";
+import Link from "next/link";
 
 import MyKeyForm from "./Form";
 
@@ -58,6 +59,16 @@ export default async function MyKeyPage() {
 					store your secret key, endpoint, location, or any other information
 					you enter here. This is a test page to check if your key is working
 					correctly.
+				</p>
+				<p className="mb-6 text-center text-lg text-gray-600">
+					Check the source code:{" "}
+					<Link
+						href="https://github.com/gabriel-logan/Azure-translator-code/tree/main/docs/src/app/%5Blocale%5D/mykey"
+						className="text-blue-500"
+						target="_blank"
+					>
+						Source
+					</Link>
 				</p>
 				<MyKeyForm translateLocal={translateLocal} />
 			</div>
