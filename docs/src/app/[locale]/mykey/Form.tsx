@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const initialState = {
 	message: "",
@@ -16,11 +18,13 @@ export default function MyKeyForm({
 		message: string;
 	}>;
 }>) {
+	const [showSecret, setShowSecret] = useState(true);
+
 	const [state, formAction] = useFormState(translateLocal, initialState);
 
 	return (
 		<form action={formAction} method="post" className="space-y-5">
-			<div>
+			<div className="relative">
 				<label
 					htmlFor="ownkey"
 					className="mb-1 block text-sm font-medium text-gray-700"
@@ -28,7 +32,7 @@ export default function MyKeyForm({
 					Secret Key
 				</label>
 				<input
-					type="password"
+					type={showSecret ? "password" : "text"}
 					name="ownkey"
 					id="ownkey"
 					className="w-full rounded-md border border-gray-300 p-3 text-gray-700 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
@@ -36,6 +40,17 @@ export default function MyKeyForm({
 					autoComplete="off"
 					autoSave="off"
 				/>
+				<button
+					type="button"
+					className="absolute right-3 top-9 cursor-pointer"
+					onClick={() => setShowSecret(!showSecret)}
+				>
+					{showSecret ? (
+						<FaEyeSlash color="black" size={24} />
+					) : (
+						<FaEye color="black" size={24} />
+					)}
+				</button>
 			</div>
 			<div>
 				<label
