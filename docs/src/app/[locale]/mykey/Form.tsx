@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const initialState = {
 	message: "",
+	error: null,
 };
 
 export default function MyKeyForm({
@@ -16,14 +17,18 @@ export default function MyKeyForm({
 		formData: FormData,
 	) => Promise<{
 		message: string;
+		error: string | null;
 	}>;
 }>) {
 	const [showSecret, setShowSecret] = useState(true);
 
 	const [state, formAction] = useFormState(translateLocal, initialState);
 
+	// eslint-disable-next-line no-console
+	console.log(state);
+
 	return (
-		<form action={formAction} method="post" className="space-y-5">
+		<form action={formAction} method="POST" className="space-y-5">
 			<div className="relative">
 				<label
 					htmlFor="ownkey"

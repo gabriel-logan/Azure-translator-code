@@ -1,7 +1,18 @@
-import { translateText } from "azure-translator-code";
+import { translateText, TranslationType } from "azure-translator-code";
 import Link from "next/link";
 
 import MyKeyForm from "./Form";
+
+interface Translation {
+	text: TranslationType;
+	to: TranslationType;
+}
+
+interface TranslationResponse {
+	translations: Translation[];
+}
+
+type TranslateResponseData = TranslationResponse[];
 
 export default async function MyKeyPage() {
 	async function translateLocal(prevState: any, formData: FormData) {
@@ -26,24 +37,34 @@ export default async function MyKeyPage() {
 			) {
 				return {
 					message: "Please fill in all fields",
+					error: null,
 				};
 			}
 
-			const response = await translateText(
+			const response = (await translateText(
 				data.text,
 				data.fromLang,
 				[data.toLang],
 				data.endpoint,
 				data.secretKey,
 				data.location,
-			);
+			)) as TranslateResponseData | { error: string };
+
+			if ("error" in response) {
+				return {
+					message: "An error occurred",
+					error: response.error,
+				};
+			}
 
 			return {
 				message: response[0].translations[0].text as unknown as string,
+				error: null,
 			};
-		} catch {
+		} catch (error) {
 			return {
 				message: "An error occurred, check your secret key and try again",
+				error: JSON.stringify(error),
 			};
 		}
 	}
