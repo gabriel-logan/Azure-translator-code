@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.masked {
+  -webkit-text-security: disc;
+  text-security: disc;
+}

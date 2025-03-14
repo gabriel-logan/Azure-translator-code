@@ -37,10 +37,10 @@ export default function MyKeyForm({
 					Secret Key
 				</label>
 				<input
-					type={showSecret ? "password" : "text"}
+					type="text"
 					name="ownkey"
 					id="ownkey"
-					className="w-full rounded-md border border-gray-300 p-3 text-gray-700 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
+					className={`w-full rounded-md border border-gray-300 p-3 text-gray-700 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200 ${showSecret ? "masked" : ""}`}
 					placeholder="Enter your secret key"
 					autoComplete="off"
 					autoSave="off"
