@@ -13,7 +13,7 @@
     "ace-builds": "^1.34.2",
     "axios": "^1.8.3",
     "azure-translator-code": "^2.0.1",
-    "next": "14.2.21",
+    "next": "14.2.30",
     "next-international": "^1.2.4",
     "react": "^18",
     "react-ace": "^11.0.1",
