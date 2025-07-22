@@ -10,15 +10,15 @@ export default async function MultiLangPage({
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<main className="flex min-h-screen flex-col items-center bg-gray-100 p-2 sm:p-6 md:p-10">
-			<div className="relative mx-auto mt-5 w-full max-w-7xl rounded bg-white p-5 shadow">
+		<main className="mx-auto w-full max-w-6xl px-4 py-12">
+			<div className="relative rounded-xl bg-white p-6 shadow-md sm:p-10">
 				<Link
-					className="absolute right-5 text-black hover:text-blue-500 hover:underline"
 					href="/"
+					className="absolute right-6 top-6 text-sm text-blue-600 hover:underline"
 				>
 					{scopedT("Back")}
 				</Link>
-				<h2 className="mb-5 text-2xl font-bold text-black">
+				<h2 className="mb-6 text-center text-2xl font-bold text-gray-800">
 					{scopedT("Test the translator")}
 				</h2>
 				<FormTransMultiText locale={locale} />

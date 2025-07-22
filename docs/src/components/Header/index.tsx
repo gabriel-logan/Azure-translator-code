@@ -7,7 +7,7 @@ export default async function Header() {
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<header className="mb-6 w-full bg-white shadow-sm">
+		<header className="w-full bg-white shadow-sm">
 			<div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-6 sm:flex-row sm:justify-between sm:py-8">
 				<div className="flex flex-col items-center sm:flex-row sm:gap-4">
 					<Image

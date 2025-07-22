@@ -8,15 +8,20 @@ export default async function LiveTranslator({
 	params: { locale },
 }: Readonly<LocaleParams>) {
 	const scopedT = await getScopedI18n("HomePage");
+
 	return (
-		<main className="flex min-h-screen flex-col bg-gray-100 p-2 sm:p-6 md:p-10">
-			<div className="">
+		<main className="mx-auto min-h-screen w-full max-w-6xl px-4 py-12">
+			<div className="rounded-xl bg-white p-6 shadow-md sm:p-10">
+				<h2 className="mb-6 text-center text-2xl font-bold text-gray-800">
+					{scopedT("Live Translator")}
+				</h2>
 				<FormTransLiveText locale={locale} />
-			</div>
-			<div className="mt-4 flex justify-center">
-				<Link className="text-blue-500 hover:underline" href="/">
-					{scopedT("Back")}
-				</Link>
+
+				<div className="mt-6 text-center">
+					<Link href="/" className="text-blue-600 hover:underline">
+						{scopedT("Back")}
+					</Link>
+				</div>
 			</div>
 		</main>
 	);
