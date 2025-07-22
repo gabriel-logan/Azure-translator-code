@@ -60,7 +60,7 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 	];
 
 	return (
-		<form action={action} className="w-full rounded bg-white p-6 shadow-md">
+		<form action={action} className="w-full rounded bg-white p-4 shadow-md">
 			<div className="mb-4">
 				<div>
 					<label

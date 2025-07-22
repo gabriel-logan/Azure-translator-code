@@ -61,7 +61,7 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 	return (
 		<form
 			action={action}
-			className="mx-auto flex w-full max-w-6xl flex-col gap-4 rounded-xl border bg-white p-4 shadow-md sm:p-6 md:flex-row"
+			className="mx-auto flex w-full max-w-7xl flex-col gap-4 rounded-xl border bg-white p-4 shadow-md sm:p-6 md:flex-row"
 		>
 			<div className="flex w-full flex-col md:w-1/2">
 				<select

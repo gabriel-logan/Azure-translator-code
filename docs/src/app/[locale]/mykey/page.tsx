@@ -71,7 +71,7 @@ export default async function MyKeyPage() {
 	}
 
 	return (
-		<main className="mx-auto w-full max-w-4xl px-4 py-12">
+		<main className="mx-auto w-full max-w-7xl px-4 py-12">
 			<div className="rounded-xl bg-white p-6 shadow-lg sm:p-10">
 				<h1 className="mb-4 text-center text-3xl font-bold text-gray-800">
 					Test Your Azure Translator Key

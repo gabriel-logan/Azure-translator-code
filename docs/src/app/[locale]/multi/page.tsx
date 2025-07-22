@@ -10,7 +10,7 @@ export default async function MultiLangPage({
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<main className="mx-auto w-full max-w-6xl px-4 py-12">
+		<main className="mx-auto w-full max-w-7xl py-12">
 			<div className="relative rounded-xl bg-white p-6 shadow-md sm:p-10">
 				<Link
 					href="/"
