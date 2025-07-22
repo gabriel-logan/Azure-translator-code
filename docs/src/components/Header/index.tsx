@@ -6,39 +6,48 @@ import { getScopedI18n } from "@/locales/server";
 export default async function Header() {
 	const scopedT = await getScopedI18n("HomePage");
 
+	const navItems = [
+		{ href: "/", label: scopedT("Title") },
+		{ href: "/multi", label: scopedT("Test Multingual") },
+		{ href: "/live", label: scopedT("Live Translator") },
+		{ href: "/mykey", label: scopedT("Test Your Own Key") },
+	];
+
 	return (
-		<header className="mb-4 w-full bg-white shadow-sm">
-			<div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-6 sm:flex-row sm:justify-between sm:py-8">
-				<div className="flex flex-col items-center sm:flex-row sm:gap-4">
-					<Image
-						src="/logo.png"
-						alt="Logo"
-						width={64}
-						height={64}
-						className="rounded-full border border-gray-200 shadow-md"
-					/>
-					<h1 className="mt-4 text-2xl font-bold text-gray-800 sm:mt-0 sm:text-3xl">
-						{scopedT("Title")}
-					</h1>
+		<header className="w-full bg-white shadow-sm">
+			<div className="mx-auto max-w-6xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:py-8">
+				<div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+					<Link href="/" className="flex items-center gap-3">
+						<Image
+							src="/logo.png"
+							alt="Gabriel Logan Translator Logo"
+							width={56}
+							height={56}
+							className="rounded-full border border-gray-200 shadow"
+						/>
+						<h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">
+							{scopedT("Title")}
+						</h1>
+					</Link>
 				</div>
 
-				<nav className="mt-6 flex flex-col items-center gap-2 sm:mt-0 sm:flex-row sm:gap-6">
-					<Link href="/" className="text-gray-700 hover:text-blue-600">
-						{scopedT("Title")}
-					</Link>
-					<Link href="/multi" className="text-gray-700 hover:text-blue-600">
-						{scopedT("Test Multingual")}
-					</Link>
-					<Link href="/live" className="text-gray-700 hover:text-blue-600">
-						{scopedT("Live Translator")}
-					</Link>
-					<Link href="/mykey" className="text-gray-700 hover:text-blue-600">
-						{scopedT("Test Your Own Key")}
-					</Link>
+				<nav
+					aria-label="Main navigation"
+					className="mt-6 flex flex-col items-center gap-3 sm:mt-0 sm:flex-row sm:gap-6"
+				>
+					{navItems.map(({ href, label }) => (
+						<Link
+							key={href}
+							href={href}
+							className="text-gray-700 transition-colors hover:text-blue-600"
+						>
+							{label}
+						</Link>
+					))}
 				</nav>
 			</div>
 
-			<div className="mx-auto max-w-4xl px-4 text-center">
+			<div className="mx-auto max-w-4xl px-4 pb-6 text-center">
 				<p className="text-sm text-gray-600 sm:text-base">
 					{scopedT("Read the")}{" "}
 					<Link
@@ -50,7 +59,6 @@ export default async function Header() {
 					</Link>{" "}
 					{scopedT("to know how to use the library in your JS/TS project")}
 				</p>
-
 				<div className="mt-4 flex justify-center">
 					<iframe
 						src="https://github.com/sponsors/gabriel-logan/button"
