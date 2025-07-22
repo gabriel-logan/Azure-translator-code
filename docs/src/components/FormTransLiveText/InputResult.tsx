@@ -15,42 +15,35 @@ export default function InputResult({
 }>) {
 	const scopedT = useScopedI18n("FormComponent");
 	const [isCopied, setIsCopied] = useState(false);
-
 	const { pending } = useFormStatus();
 
+	const isTranslating = typing || pending;
+	const result = response.message as string;
+
+	const handleCopy = () => {
+		navigator.clipboard.writeText(result);
+		setIsCopied(true);
+		setTimeout(() => setIsCopied(false), 1000);
+	};
+
 	return (
-		<>
+		<div className="relative h-full w-full">
 			<textarea
-				className="h-85% w-full resize-none bg-white p-2 text-black sm:h-4/5"
-				placeholder="Translation"
+				className="h-full w-full resize-none rounded-md bg-gray-50 p-3 text-sm text-gray-800 outline-none"
+				placeholder={scopedT("Translation")}
 				disabled
-				value={
-					typing || pending
-						? scopedT("Translating...")
-						: (response.message as string)
-				}
-				style={{ maxHeight: "80%", minHeight: "80%" }}
+				value={isTranslating ? scopedT("Translating...") : result}
 			/>
-			{!typing && !pending && (
+			{!isTranslating && result?.length > 0 && (
 				<button
-					className="absolute bottom-2 right-3 text-black"
-					onClick={() => {
-						navigator.clipboard.writeText(response.message as string);
-						setIsCopied(true);
-						setTimeout(() => {
-							setIsCopied(false);
-						}, 1000);
-					}}
+					type="button"
+					onClick={handleCopy}
+					className="absolute bottom-3 right-3 flex items-center gap-1 text-xs text-gray-600 hover:text-black"
 				>
-					<FaRegCopy
-						className="cursor-pointer text-black transition-colors duration-75 active:text-gray-300"
-						size={18}
-					/>
-					<span className="text-gray-500">
-						{isCopied ? scopedT("Copied") : ""}
-					</span>
+					<FaRegCopy size={16} />
+					{isCopied ? scopedT("Copied") : ""}
 				</button>
 			)}
-		</>
+		</div>
 	);
 }

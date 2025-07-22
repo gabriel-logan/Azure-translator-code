@@ -61,27 +61,25 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 	return (
 		<form
 			action={action}
-			className="mx-auto flex h-106 w-full flex-col rounded border shadow sm:h-80 sm:max-w-1152px sm:flex-row sm:gap-1"
+			className="mx-auto flex w-full max-w-6xl flex-col gap-4 rounded-xl border bg-white p-4 shadow-md sm:p-6 md:flex-row"
 		>
-			<div className="relative mb-3 h-1/2 border sm:mb-0 sm:h-full sm:w-1/2">
+			<div className="flex w-full flex-col md:w-1/2">
 				<select
 					name="fromLang"
-					id="fromLang"
-					className="h-1/4 w-full cursor-pointer bg-gray-700 p-3 text-white sm:h-1/5"
+					className="mb-2 h-12 w-full rounded-md bg-gray-800 px-3 text-sm text-white"
 					defaultValue={locale}
 				>
-					{languages.map((lang) => {
-						return (
-							<option key={lang.id} value={lang.id}>
-								{lang.name}
-							</option>
-						);
-					})}
+					{languages.map((lang) => (
+						<option key={lang.id} value={lang.id}>
+							{lang.name}
+						</option>
+					))}
 				</select>
+
 				<textarea
-					className="h-85% w-full resize-none p-2 text-black outline-none sm:h-4/5"
-					value={textToTranslate}
+					className="h-[250px] w-full resize-none rounded-md border px-3 py-2 text-sm text-gray-800 focus:outline-none"
 					placeholder="Type here..."
+					value={textToTranslate}
 					name="textToTranslate"
 					onChange={(e) => {
 						setTyping(true);
@@ -96,23 +94,19 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 						);
 					}}
 					maxLength={1000}
-					style={{ maxHeight: "80%", minHeight: "80%" }}
-					onBlur={() => {
-						setTyping(false);
-					}}
 				/>
-				<p className="absolute bottom-2 right-3 text-black">
-					<span className={`${textToTranslate.length > 999 && "text-red-500"}`}>
+				<p className="mt-1 text-right text-xs text-gray-500">
+					<span className={textToTranslate.length > 999 ? "text-red-500" : ""}>
 						{textToTranslate.length}
 					</span>{" "}
 					/ 1000
 				</p>
 			</div>
-			<div className="relative h-1/2 border sm:h-full sm:w-1/2">
+
+			<div className="flex w-full flex-col md:w-1/2">
 				<select
 					name="toLang"
-					id="toLang"
-					className="h-1/4 w-full cursor-pointer bg-gray-700 p-3 text-white sm:h-1/5"
+					className="mb-2 h-12 w-full rounded-md bg-gray-800 px-3 text-sm text-white"
 					defaultValue={locale === "en" ? "pt" : locale}
 					onChange={(e) => {
 						e.preventDefault();
@@ -120,15 +114,16 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 						form?.requestSubmit();
 					}}
 				>
-					{languages.map((lang, index) => {
-						return (
-							<option key={lang.id} value={lang.id}>
-								{lang.name}
-							</option>
-						);
-					})}
+					{languages.map((lang) => (
+						<option key={lang.id} value={lang.id}>
+							{lang.name}
+						</option>
+					))}
 				</select>
-				<InputResult typing={typing} response={response} />
+
+				<div className="h-[250px] w-full overflow-y-auto rounded-md border bg-gray-50 px-3 py-2 text-sm text-gray-800">
+					<InputResult typing={typing} response={response} />
+				</div>
 			</div>
 		</form>
 	);
