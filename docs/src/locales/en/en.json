@@ -31,7 +31,15 @@
 
 		"Category": "Tools",
 
-		"Created by": "Created by"
+		"Created by": "Created by",
+
+		"All rights reserved": "All rights reserved",
+
+		"Footer": {
+			"Description": "Open-source project powered by Azure Translator",
+			"Back to top": "Back to top",
+			"Built with": "Built with Next.js, TailwindCSS and ❤️"
+		}
 	},
 
 	"NotFoundPage": {
