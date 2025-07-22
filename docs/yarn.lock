@@ -1146,7 +1146,7 @@ __metadata:
     eslint-config-next: "npm:14.2.3"
     eslint-config-universe: "npm:^12.1.0"
     file-loader: "npm:^6.2.0"
-    next: "npm:14.2.30"
+    next: "npm:^14"
     next-international: "npm:^1.2.4"
     postcss: "npm:^8"
     prettier: "npm:^3.2.5"
@@ -3711,7 +3711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.2.30":
+"next@npm:^14":
   version: 14.2.30
   resolution: "next@npm:14.2.30"
   dependencies:
