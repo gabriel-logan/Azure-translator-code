@@ -60,7 +60,9 @@
 		"Test the translator": "Teste o tradutor",
 		"Back": "Voltar",
 		"Test Multingual": "Teste Multingual",
-		"Live Translator": "Tradutor ao vivo"
+		"Live Translator": "Tradutor ao vivo",
+		"Test Your Own Key": "Teste sua própria chave",
+		"Home": "Início"
 	},
 
 	"FormComponent": {

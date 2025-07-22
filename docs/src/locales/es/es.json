@@ -51,7 +51,9 @@
         "Back": "Atrás",
         "Test Multingual": "Prueba Multingual",
         "Live translator": "Live Translator",
-        "Live Translator": "Live Translator"
+        "Live Translator": "Live Translator",
+        "Test Your Own Key": "Pruebe su propia clave",
+        "Home": "Inicio"
     },
     "FormComponent": {
         "From": "De",

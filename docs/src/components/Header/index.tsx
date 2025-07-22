@@ -7,7 +7,7 @@ export default async function Header() {
 	const scopedT = await getScopedI18n("HomePage");
 
 	const navItems = [
-		{ href: "/", label: scopedT("Title") },
+		{ href: "/", label: scopedT("Home") },
 		{ href: "/multi", label: scopedT("Test Multingual") },
 		{ href: "/live", label: scopedT("Live Translator") },
 		{ href: "/mykey", label: scopedT("Test Your Own Key") },
