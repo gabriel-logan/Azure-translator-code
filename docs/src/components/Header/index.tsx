@@ -15,9 +15,12 @@ export default async function Header() {
 
 	return (
 		<header className="w-full bg-white shadow-sm">
-			<div className="mx-auto max-w-6xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:py-8">
+			<div className="mx-auto max-w-7xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:py-8">
 				<div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
-					<Link href="/" className="flex items-center gap-3">
+					<Link
+						href="/"
+						className="flex flex-col items-center gap-3 sm:flex-row"
+					>
 						<Image
 							src="/logo.png"
 							alt="Gabriel Logan Translator Logo"
@@ -25,7 +28,7 @@ export default async function Header() {
 							height={56}
 							className="rounded-full border border-gray-200 shadow"
 						/>
-						<h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">
+						<h1 className="text-center text-2xl font-bold text-gray-800 sm:text-3xl">
 							{scopedT("Title")}
 						</h1>
 					</Link>
