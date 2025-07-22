@@ -11,7 +11,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "ace-builds": "^1.34.2",
-    "axios": "^1.8.3",
+    "axios": "^1.10.0",
     "azure-translator-code": "^2.0.1",
     "next": "^14",
     "next-international": "^1.2.4",
