@@ -17,6 +17,7 @@ type TranslateResponseData = TranslationResponse[];
 export default async function MyKeyPage() {
 	async function translateLocal(prevState: any, formData: FormData) {
 		"use server";
+
 		const data = {
 			secretKey: formData.get("ownkey") as string,
 			endpoint: formData.get("ownendpoint") as string,
@@ -68,29 +69,28 @@ export default async function MyKeyPage() {
 			};
 		}
 	}
+
 	return (
-		<main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200 p-4 sm:p-8">
-			<div className="relative mx-auto mt-5 w-full max-w-3xl rounded-lg bg-white p-8 shadow-lg">
-				<h1 className="mb-6 text-center text-3xl font-extrabold text-gray-800">
-					Test your Secret Key
+		<main className="mx-auto w-full max-w-4xl px-4 py-12">
+			<div className="rounded-xl bg-white p-6 shadow-lg sm:p-10">
+				<h1 className="mb-4 text-center text-3xl font-bold text-gray-800">
+					Test Your Azure Translator Key
 				</h1>
-				<p className="mb-6 text-center text-lg text-gray-600">
-					Enter your secret key, endpoint, location, text to translate, and
-					translation languages to test your key. !!! IMPORTANT !!! We do not
-					store your secret key, endpoint, location, or any other information
-					you enter here. This is a test page to check if your key is working
-					correctly.
+				<p className="mb-4 text-center text-gray-600">
+					Enter your Azure credentials and translation text below. This is a
+					test environment — we do <strong>not</strong> store any of your data.
 				</p>
-				<p className="mb-6 text-center text-lg text-gray-600">
-					Check the source code:{" "}
+				<p className="mb-6 text-center text-sm text-gray-500">
+					View the source on{" "}
 					<Link
 						href="https://github.com/gabriel-logan/Azure-translator-code/tree/main/docs/src/app/%5Blocale%5D/mykey"
-						className="text-blue-500"
 						target="_blank"
+						className="text-blue-600 hover:underline"
 					>
-						Source
+						GitHub
 					</Link>
 				</p>
+
 				<MyKeyForm translateLocal={translateLocal} />
 			</div>
 		</main>
