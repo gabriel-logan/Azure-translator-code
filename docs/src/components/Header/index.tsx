@@ -14,12 +14,12 @@ export default async function Header() {
 	];
 
 	return (
-		<header className="w-full bg-white shadow-sm">
+		<header className="mb-4 w-full bg-gradient-to-r from-blue-50 via-white to-purple-50 shadow-md">
 			<div className="mx-auto max-w-7xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:py-8">
 				<div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
 					<Link
 						href="/"
-						className="flex flex-col items-center gap-3 sm:flex-row"
+						className="mb-2 flex flex-col items-center gap-3 sm:flex-row"
 					>
 						<Image
 							src="/logo.png"
@@ -36,13 +36,13 @@ export default async function Header() {
 
 				<nav
 					aria-label="Main navigation"
-					className="mt-6 flex flex-col items-center gap-3 sm:mt-0 sm:flex-row sm:gap-6"
+					className="mt-6 flex flex-col items-center gap-3 sm:mt-0 sm:flex-row sm:gap-4"
 				>
 					{navItems.map(({ href, label }) => (
 						<Link
 							key={href}
 							href={href}
-							className="text-gray-700 transition-colors hover:text-blue-600"
+							className="rounded-lg bg-white/70 px-4 py-2 text-center font-medium text-gray-800 shadow-sm transition-colors hover:bg-blue-500 hover:text-white"
 						>
 							{label}
 						</Link>
@@ -56,7 +56,7 @@ export default async function Header() {
 					<Link
 						href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
 						target="_blank"
-						className="text-blue-500 hover:underline"
+						className="font-medium text-blue-600 hover:underline"
 					>
 						README.md
 					</Link>{" "}

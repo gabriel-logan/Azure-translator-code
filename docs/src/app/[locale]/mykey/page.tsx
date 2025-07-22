@@ -71,7 +71,7 @@ export default async function MyKeyPage() {
 	}
 
 	return (
-		<main className="mx-auto w-full max-w-7xl px-4 py-12">
+		<main className="mx-auto w-full max-w-7xl bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 py-12">
 			<div className="rounded-xl bg-white p-6 shadow-lg sm:p-10">
 				<h1 className="mb-4 text-center text-3xl font-bold text-gray-800">
 					Test Your Azure Translator Key
@@ -85,7 +85,7 @@ export default async function MyKeyPage() {
 					<Link
 						href="https://github.com/gabriel-logan/Azure-translator-code/tree/main/docs/src/app/%5Blocale%5D/mykey"
 						target="_blank"
-						className="text-blue-600 hover:underline"
+						className="font-medium text-blue-600 hover:underline"
 					>
 						GitHub
 					</Link>
