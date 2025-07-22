@@ -6,17 +6,19 @@ export default async function Footer() {
 	const scopedT = await getScopedI18n("HomeLayout");
 
 	return (
-		<footer>
-			<p className="p-1 text-center text-gray-600">
-				{scopedT("Created by")}{" "}
-				<Link
-					className="text-blue-500 hover:underline"
-					href="https://github.com/gabriel-logan"
-					target="_blank"
-				>
-					Gabriel Logan &copy; 2024
-				</Link>
-			</p>
+		<footer className="mt-12 w-full bg-gray-100 py-6">
+			<div className="mx-auto max-w-4xl px-4 text-center text-sm text-gray-600">
+				<p>
+					{scopedT("Created by")}{" "}
+					<Link
+						href="https://github.com/gabriel-logan"
+						target="_blank"
+						className="font-medium text-blue-600 hover:underline"
+					>
+						Gabriel Logan &copy; 2024
+					</Link>
+				</p>
+			</div>
 		</footer>
 	);
 }

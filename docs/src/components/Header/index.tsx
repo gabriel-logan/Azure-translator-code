@@ -7,64 +7,59 @@ export default async function Header() {
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<header className="flex flex-col items-center bg-gray-100 p-2 sm:p-6 md:p-10">
-			<div className="mb-2">
-				<Image
-					src="/logo.png"
-					alt="logo"
-					width={64}
-					height={64}
-					className="rounded-full"
-				/>
+		<header className="w-full bg-white shadow-sm">
+			<div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-6 sm:flex-row sm:justify-between sm:py-8">
+				<div className="flex flex-col items-center sm:flex-row sm:gap-4">
+					<Image
+						src="/logo.png"
+						alt="Logo"
+						width={64}
+						height={64}
+						className="rounded-full border border-gray-200 shadow-md"
+					/>
+					<h1 className="mt-4 text-2xl font-bold text-gray-800 sm:mt-0 sm:text-3xl">
+						{scopedT("Title")}
+					</h1>
+				</div>
+
+				<nav className="mt-6 flex flex-col items-center gap-2 sm:mt-0 sm:flex-row sm:gap-6">
+					<Link href="/" className="text-gray-700 hover:text-blue-600">
+						{scopedT("Title")}
+					</Link>
+					<Link href="/multi" className="text-gray-700 hover:text-blue-600">
+						{scopedT("Test Multingual")}
+					</Link>
+					<Link href="/live" className="text-gray-700 hover:text-blue-600">
+						{scopedT("Live Translator")}
+					</Link>
+					<Link href="/mykey" className="text-gray-700 hover:text-blue-600">
+						{scopedT("Test Your Own Key")}
+					</Link>
+				</nav>
 			</div>
-			<h1 className="mb-4 text-center text-3xl font-bold text-gray-700">
-				{scopedT("Title")}
-			</h1>
-			<p className="mb-4 text-center text-gray-600">
-				{scopedT("Read the")}{" "}
-				<Link
-					className="mb-10 text-blue-500 hover:underline"
-					href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
-					target="_blank"
-				>
-					README.md{" "}
-				</Link>
-				{scopedT("to know how to use the library in your JS/TS project")}{" "}
-			</p>
-			<p className="text-center">
-				<iframe
-					src="https://github.com/sponsors/gabriel-logan/button"
-					title="Sponsor gabriel-logan"
-					height="32"
-					width="114"
-					style={{ border: 0, borderRadius: 6 }}
-				/>
-			</p>
-			<div className="mt-4 flex w-60 flex-col items-center justify-center gap-2">
-				<Link
-					className="text-black hover:text-blue-500 hover:underline"
-					href="/"
-				>
-					{scopedT("Title")}
-				</Link>
-				<Link
-					className="text-black hover:text-blue-500 hover:underline"
-					href="/multi"
-				>
-					{scopedT("Test Multingual")}
-				</Link>
-				<Link
-					className="text-black hover:text-blue-500 hover:underline"
-					href="/live"
-				>
-					{scopedT("Live Translator")}
-				</Link>
-				<Link
-					className="text-black hover:text-blue-500 hover:underline"
-					href="/mykey"
-				>
-					{scopedT("Test Your Own Key")}
-				</Link>
+
+			<div className="mx-auto max-w-4xl px-4 text-center">
+				<p className="text-sm text-gray-600 sm:text-base">
+					{scopedT("Read the")}{" "}
+					<Link
+						href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
+						target="_blank"
+						className="text-blue-500 hover:underline"
+					>
+						README.md
+					</Link>{" "}
+					{scopedT("to know how to use the library in your JS/TS project")}
+				</p>
+
+				<div className="mt-4 flex justify-center">
+					<iframe
+						src="https://github.com/sponsors/gabriel-logan/button"
+						title="Sponsor gabriel-logan"
+						height="32"
+						width="114"
+						style={{ border: 0, borderRadius: 6 }}
+					/>
+				</div>
 			</div>
 		</header>
 	);
