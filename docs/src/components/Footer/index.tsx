@@ -7,7 +7,7 @@ export default async function Footer() {
 	const scopedT = await getScopedI18n("HomeLayout");
 
 	return (
-		<footer className="mt-20 w-full bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 shadow-inner">
+		<footer className="mt-16 w-full bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 shadow-inner">
 			<div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-10 sm:grid-cols-2">
 				<div className="space-y-2 text-center sm:text-left">
 					<p className="text-base font-semibold text-white">
