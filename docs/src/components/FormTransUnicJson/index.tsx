@@ -21,6 +21,36 @@ export default function FormTransUnicJson() {
 
 	const [state, formAction] = useFormState(makeTranslation, initialState);
 
+	const optionsLangs = [
+		{ lang: "en", name: scopedT("Langs.English") },
+		{ lang: "pt", name: scopedT("Langs.Portuguese") },
+		{ lang: "es", name: scopedT("Langs.Spanish") },
+		{ lang: "fr", name: scopedT("Langs.French") },
+		{ lang: "de", name: scopedT("Langs.German") },
+		{ lang: "it", name: scopedT("Langs.Italian") },
+		{ lang: "ja", name: scopedT("Langs.Japanese") },
+		{ lang: "ko", name: scopedT("Langs.Korean") },
+		{ lang: "ru", name: scopedT("Langs.Russian") },
+		{ lang: "zh-Hans", name: scopedT("Langs.Chinese Simplified") },
+		{ lang: "zh-Hant", name: scopedT("Langs.Chinese Traditional") },
+		{ lang: "ar", name: scopedT("Langs.Arabic") },
+		{ lang: "tr", name: scopedT("Langs.Turkish") },
+		{ lang: "vi", name: scopedT("Langs.Vietnamese") },
+		{ lang: "th", name: scopedT("Langs.Thai") },
+		{ lang: "sv", name: scopedT("Langs.Swedish") },
+		{ lang: "pl", name: scopedT("Langs.Polish") },
+		{ lang: "nl", name: scopedT("Langs.Dutch") },
+		{ lang: "da", name: scopedT("Langs.Danish") },
+		{ lang: "fi", name: scopedT("Langs.Finnish") },
+		{ lang: "no", name: scopedT("Langs.Norwegian") },
+		{ lang: "cs", name: scopedT("Langs.Czech") },
+		{ lang: "hu", name: scopedT("Langs.Hungarian") },
+		{ lang: "el", name: scopedT("Langs.Greek") },
+		{ lang: "id", name: scopedT("Langs.Indonesian") },
+		{ lang: "ms", name: scopedT("Langs.Malay") },
+		{ lang: "tlh-Latn", name: scopedT("Langs.Klingon") },
+	];
+
 	return (
 		<div className="flex flex-col justify-between lg:flex-row">
 			<form className="w-full lg:w-[48%]" action={formAction}>
@@ -37,38 +67,13 @@ export default function FormTransUnicJson() {
 								name="fromLang"
 								id="fromLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
+								defaultValue="en"
 							>
-								<option value="en">{scopedT("Langs.English")}</option>
-								<option value="pt">{scopedT("Langs.Portuguese")}</option>
-								<option value="es">{scopedT("Langs.Spanish")}</option>
-								<option value="fr">{scopedT("Langs.French")}</option>
-								<option value="de">{scopedT("Langs.German")}</option>
-								<option value="it">{scopedT("Langs.Italian")}</option>
-								<option value="ja">{scopedT("Langs.Japanese")}</option>
-								<option value="ko">{scopedT("Langs.Korean")}</option>
-								<option value="ru">{scopedT("Langs.Russian")}</option>
-								<option value="zh-Hans">
-									{scopedT("Langs.Chinese Simplified")}
-								</option>
-								<option value="zh-Hant">
-									{scopedT("Langs.Chinese Traditional")}
-								</option>
-								<option value="ar">{scopedT("Langs.Arabic")}</option>
-								<option value="tr">{scopedT("Langs.Turkish")}</option>
-								<option value="vi">{scopedT("Langs.Vietnamese")}</option>
-								<option value="th">{scopedT("Langs.Thai")}</option>
-								<option value="sv">{scopedT("Langs.Swedish")}</option>
-								<option value="pl">{scopedT("Langs.Polish")}</option>
-								<option value="nl">{scopedT("Langs.Dutch")}</option>
-								<option value="da">{scopedT("Langs.Danish")}</option>
-								<option value="fi">{scopedT("Langs.Finnish")}</option>
-								<option value="no">{scopedT("Langs.Norwegian")}</option>
-								<option value="cs">{scopedT("Langs.Czech")}</option>
-								<option value="hu">{scopedT("Langs.Hungarian")}</option>
-								<option value="el">{scopedT("Langs.Greek")}</option>
-								<option value="id">{scopedT("Langs.Indonesian")}</option>
-								<option value="ms">{scopedT("Langs.Malay")}</option>
-								<option value="tlh-Latn">{scopedT("Langs.Klingon")}</option>
+								{optionsLangs.map((option) => (
+									<option key={option.lang} value={option.lang}>
+										{option.name}
+									</option>
+								))}
 							</select>
 						</div>
 					</div>
@@ -84,38 +89,13 @@ export default function FormTransUnicJson() {
 								name="toLang"
 								id="toLang"
 								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
+								defaultValue="pt"
 							>
-								<option value="pt">{scopedT("Langs.Portuguese")}</option>
-								<option value="en">{scopedT("Langs.English")}</option>
-								<option value="es">{scopedT("Langs.Spanish")}</option>
-								<option value="fr">{scopedT("Langs.French")}</option>
-								<option value="de">{scopedT("Langs.German")}</option>
-								<option value="it">{scopedT("Langs.Italian")}</option>
-								<option value="ja">{scopedT("Langs.Japanese")}</option>
-								<option value="ko">{scopedT("Langs.Korean")}</option>
-								<option value="ru">{scopedT("Langs.Russian")}</option>
-								<option value="zh-Hans">
-									{scopedT("Langs.Chinese Simplified")}
-								</option>
-								<option value="zh-Hant">
-									{scopedT("Langs.Chinese Traditional")}
-								</option>
-								<option value="ar">{scopedT("Langs.Arabic")}</option>
-								<option value="tr">{scopedT("Langs.Turkish")}</option>
-								<option value="vi">{scopedT("Langs.Vietnamese")}</option>
-								<option value="th">{scopedT("Langs.Thai")}</option>
-								<option value="sv">{scopedT("Langs.Swedish")}</option>
-								<option value="pl">{scopedT("Langs.Polish")}</option>
-								<option value="nl">{scopedT("Langs.Dutch")}</option>
-								<option value="da">{scopedT("Langs.Danish")}</option>
-								<option value="fi">{scopedT("Langs.Finnish")}</option>
-								<option value="no">{scopedT("Langs.Norwegian")}</option>
-								<option value="cs">{scopedT("Langs.Czech")}</option>
-								<option value="hu">{scopedT("Langs.Hungarian")}</option>
-								<option value="el">{scopedT("Langs.Greek")}</option>
-								<option value="id">{scopedT("Langs.Indonesian")}</option>
-								<option value="ms">{scopedT("Langs.Malay")}</option>
-								<option value="tlh-Latn">{scopedT("Langs.Klingon")}</option>
+								{optionsLangs.map((option) => (
+									<option key={option.lang} value={option.lang}>
+										{option.name}
+									</option>
+								))}
 							</select>
 						</div>
 					</div>
