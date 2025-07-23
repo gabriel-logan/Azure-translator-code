@@ -1,7 +1,7 @@
 import type { useScopedI18n } from "@/locales/client";
 import type { LanguagesCode } from "@/types/translations";
 
-export function optionsLangs({
+export default function optionsLangs({
 	scopedT,
 }: {
 	scopedT: ReturnType<typeof useScopedI18n>;

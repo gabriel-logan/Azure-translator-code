@@ -1,6 +1,6 @@
 "use client";
 
-import { optionsLangs } from "@/lib/optionsLangs";
+import optionsLangs from "@/lib/optionsLangs";
 import { useScopedI18n } from "@/locales/client";
 
 export default function SelectOptionsLangs() {
