@@ -1,104 +1,104 @@
 {
-    "Hello World": "Merhaba Dünya",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "Geçersiz veya eksik istek gövdesi",
-            "Text must be less than 5000 characters": "Metin 5000 karakterden az olmalıdır",
-            "From lang and to Lang are required": "Lang'dan ve Lang'a gereklidir",
-            "Missing json file text": "Eksik json dosyası metni",
-            "Invalid json text passed": "Geçersiz json metni geçirildi",
-            "Translation": "Çeviri",
-            "Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin.",
-            "Text must be less than 1000 characters": "Metin 1000 karakterden az olmalıdır"
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "Çevrilecek metin yok",
-            "No languages selected": "Hiçbir dil seçilmedi",
-            "Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin.",
-            "Text must be less than 5000 characters": "Metin 5000 karakterden az olmalıdır"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Azure Translator Kodu",
-        "Description": "json dosyanızı doğrudan sayfada çevirin",
-        "Classification": "Translator",
-        "OpenGraph": {
-            "Title": "JSON Dosyalarını Azure ile Kolayca Çevirin",
-            "Description": "JSON dosyalarınızı doğrudan sayfada hızlı ve kolay bir şekilde çevirmek için Azure Translator Kodu'nu kullanın.",
-            "SiteName": "Azure Translator Kodu"
-        },
-        "Category": "Araçları",
-        "Created by": "Oluşturan"
-    },
-    "Manifest": {
-        "Name": "Azure Translator Kodu",
-        "ShortName": "Azure Translator",
-        "Description": "json dosyanızı doğrudan sayfada çevirin",
-        "lang": "tr",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - Sayfa bulunamadı",
-        "Description": "Aradığınız sayfa mevcut değil. 😩😩😩",
-        "Back": "Geri",
-        "Go to GitHub": "GitHub'a git"
-    },
-    "HomePage": {
-        "Title": "Azure Translator Kodu",
-        "Read the": "Oku",
-        "to know how to use the library in your JS/TS project": "JS/TS projenizde kütüphaneyi nasıl kullanacağınızı bilmek",
-        "Test the translator": "Çevirmeni test edin",
-        "Back": "Geri",
-        "Test Multingual": "Çok Dilli Test",
-        "Live translator": "Live Translator",
-        "Live Translator": "Live Translator"
-    },
-    "FormComponent": {
-        "From": "Kaynak",
-        "To": "Hedef",
-        "Translate": "Çevir",
-        "Langs": {
-            "Arabic": "Arapça",
-            "Chinese Simplified": "Basitleştirilmiş Çince",
-            "Chinese Traditional": "Geleneksel Çince",
-            "Czech": "Çekçe",
-            "Danish": "Danca",
-            "Dutch": "Hollanda dili",
-            "English": "İngilizce",
-            "Finnish": "Fince",
-            "French": "Fransızca",
-            "German": "Almanca",
-            "Greek": "Yunanca",
-            "Hebrew": "İbranice",
-            "Hindi": "Hintçe",
-            "Hungarian": "Macarca",
-            "Indonesian": "Endonezya dili",
-            "Italian": "İtalyanca",
-            "Japanese": "Japonca",
-            "Korean": "Kore dili",
-            "Norwegian": "Norveç dili",
-            "Polish": "Lehçe",
-            "Portuguese": "Portekizce",
-            "Romanian": "Rumence",
-            "Russian": "Rusça",
-            "Slovak": "Slovakça",
-            "Spanish": "İspanyolca",
-            "Swedish": "İsveç dili",
-            "Thai": "Tay dili",
-            "Turkish": "Türkçe",
-            "Vietnamese": "Vietnam dili",
-            "Malay": "Malay dili"
-        },
-        "Paste the json code here": "json kodunu buraya yapıştırın",
-        "Len": "Len",
-        "No result yet": "Henüz sonuç yok",
-        "Result: ": "Sonuç: ",
-        "Copied": "Kopya -lanan",
-        "Text to Translate": "Çevrilecek Metin",
-        "Select the languages you want to translate the text to:": "Metni çevirmek istediğiniz dilleri seçin:",
-        "Translations:": "Çeviri -leri:",
-        "Translation": "Çeviri",
-        "Translating": "Çevriliyor",
-        "Translating...": "Çevriliyor..."
-    }
+	"Hello World": "Merhaba Dünya",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Geçersiz veya eksik istek gövdesi",
+			"Text must be less than 5000 characters": "Metin 5000 karakterden az olmalıdır",
+			"From lang and to Lang are required": "Lang'dan ve Lang'a gereklidir",
+			"Missing json file text": "Eksik json dosyası metni",
+			"Invalid json text passed": "Geçersiz json metni geçirildi",
+			"Translation": "Çeviri",
+			"Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin.",
+			"Text must be less than 1000 characters": "Metin 1000 karakterden az olmalıdır"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "Çevrilecek metin yok",
+			"No languages selected": "Hiçbir dil seçilmedi",
+			"Error while translating the text. Please try again.": "Metin çevrilirken hata oluştu. Lütfen tekrar deneyin.",
+			"Text must be less than 5000 characters": "Metin 5000 karakterden az olmalıdır"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure Translator Kodu",
+		"Description": "json dosyanızı doğrudan sayfada çevirin",
+		"Classification": "Translator",
+		"OpenGraph": {
+			"Title": "JSON Dosyalarını Azure ile Kolayca Çevirin",
+			"Description": "JSON dosyalarınızı doğrudan sayfada hızlı ve kolay bir şekilde çevirmek için Azure Translator Kodu'nu kullanın.",
+			"SiteName": "Azure Translator Kodu"
+		},
+		"Category": "Araçları",
+		"Created by": "Oluşturan"
+	},
+	"Manifest": {
+		"Name": "Azure Translator Kodu",
+		"ShortName": "Azure Translator",
+		"Description": "json dosyanızı doğrudan sayfada çevirin",
+		"lang": "tr",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - Sayfa bulunamadı",
+		"Description": "Aradığınız sayfa mevcut değil. 😩😩😩",
+		"Back": "Geri",
+		"Go to GitHub": "GitHub'a git"
+	},
+	"HomePage": {
+		"Title": "Azure Translator Kodu",
+		"Read the": "Oku",
+		"to know how to use the library in your JS/TS project": "JS/TS projenizde kütüphaneyi nasıl kullanacağınızı bilmek",
+		"Test the translator": "Çevirmeni test edin",
+		"Back": "Geri",
+		"Test Multingual": "Çok Dilli Test",
+		"Live translator": "Live Translator",
+		"Live Translator": "Live Translator"
+	},
+	"FormComponent": {
+		"From": "Kaynak",
+		"To": "Hedef",
+		"Translate": "Çevir",
+		"Langs": {
+			"Arabic": "Arapça",
+			"Chinese Simplified": "Basitleştirilmiş Çince",
+			"Chinese Traditional": "Geleneksel Çince",
+			"Czech": "Çekçe",
+			"Danish": "Danca",
+			"Dutch": "Hollanda dili",
+			"English": "İngilizce",
+			"Finnish": "Fince",
+			"French": "Fransızca",
+			"German": "Almanca",
+			"Greek": "Yunanca",
+			"Hebrew": "İbranice",
+			"Hindi": "Hintçe",
+			"Hungarian": "Macarca",
+			"Indonesian": "Endonezya dili",
+			"Italian": "İtalyanca",
+			"Japanese": "Japonca",
+			"Korean": "Kore dili",
+			"Norwegian": "Norveç dili",
+			"Polish": "Lehçe",
+			"Portuguese": "Portekizce",
+			"Romanian": "Rumence",
+			"Russian": "Rusça",
+			"Slovak": "Slovakça",
+			"Spanish": "İspanyolca",
+			"Swedish": "İsveç dili",
+			"Thai": "Tay dili",
+			"Turkish": "Türkçe",
+			"Vietnamese": "Vietnam dili",
+			"Malay": "Malay dili"
+		},
+		"Paste the json code here": "json kodunu buraya yapıştırın",
+		"Len": "Len",
+		"No result yet": "Henüz sonuç yok",
+		"Result: ": "Sonuç: ",
+		"Copied": "Kopya -lanan",
+		"Text to Translate": "Çevrilecek Metin",
+		"Select the languages you want to translate the text to:": "Metni çevirmek istediğiniz dilleri seçin:",
+		"Translations:": "Çeviri -leri:",
+		"Translation": "Çeviri",
+		"Translating": "Çevriliyor",
+		"Translating...": "Çevriliyor..."
+	}
 }

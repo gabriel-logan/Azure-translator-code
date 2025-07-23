@@ -1,104 +1,104 @@
 {
-    "Hello World": "Hej verden",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "Ugyldigt eller manglende anmodningsorgan",
-            "Text must be less than 5000 characters": "Tekst skal være mindre end 5000 tegn",
-            "From lang and to Lang are required": "Fra lang og til lang er påkrævet",
-            "Missing json file text": "Manglende json-filtekst",
-            "Invalid json text passed": "Ugyldig json-tekst bestået",
-            "Translation": "Oversættelse",
-            "Error while translating the text. Please try again.": "Fejl under oversættelse af teksten. Prøv igen.",
-            "Text must be less than 1000 characters": "Tekst skal være mindre end 1000 tegn"
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "Ingen tekst at oversætte",
-            "No languages selected": "Ingen sprog valgt",
-            "Error while translating the text. Please try again.": "Fejl under oversættelse af teksten. Prøv igen.",
-            "Text must be less than 5000 characters": "Tekst skal være mindre end 5000 tegn"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Azure Translator-kode",
-        "Description": "Oversæt din json-fil direkte på siden",
-        "Classification": "Oversætter",
-        "OpenGraph": {
-            "Title": "Oversæt nemt JSON-filer med Azure",
-            "Description": "Brug Azure Translator Code til hurtigt og nemt at oversætte dine JSON-filer direkte på siden.",
-            "SiteName": "Azure Translator-kode"
-        },
-        "Category": "Værktøjer",
-        "Created by": "Oprettet af"
-    },
-    "Manifest": {
-        "Name": "Azure Translator-kode",
-        "ShortName": "Azure Translator",
-        "Description": "Oversæt din json-fil direkte på siden",
-        "lang": "da",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - Siden blev ikke fundet",
-        "Description": "Den side, du leder efter, findes ikke. 😩😩😩",
-        "Back": "Ryg",
-        "Go to GitHub": "Gå til GitHub"
-    },
-    "HomePage": {
-        "Title": "Azure Translator-kode",
-        "Read the": "Læs",
-        "to know how to use the library in your JS/TS project": "at vide, hvordan du bruger biblioteket i dit JS / TS-projekt",
-        "Test the translator": "Test oversætteren",
-        "Back": "Ryg",
-        "Test Multingual": "Test flersproget",
-        "Live translator": "Live oversætter",
-        "Live Translator": "Live oversætter"
-    },
-    "FormComponent": {
-        "From": "Fra",
-        "To": "Til",
-        "Translate": "Oversætte",
-        "Langs": {
-            "Arabic": "Arabisk",
-            "Chinese Simplified": "Kinesisk, forenklet",
-            "Chinese Traditional": "Kinesisk, traditionelt",
-            "Czech": "Tjekkisk",
-            "Danish": "Dansk",
-            "Dutch": "Nederlandsk",
-            "English": "Engelsk",
-            "Finnish": "Finsk",
-            "French": "Fransk",
-            "German": "Tysk",
-            "Greek": "Græsk",
-            "Hebrew": "Hebraisk",
-            "Hindi": "Hindi",
-            "Hungarian": "Ungarsk",
-            "Indonesian": "Indonesisk",
-            "Italian": "Italiensk",
-            "Japanese": "Japansk",
-            "Korean": "Koreansk",
-            "Norwegian": "Norsk",
-            "Polish": "Polsk",
-            "Portuguese": "Portugisisk",
-            "Romanian": "Rumænsk",
-            "Russian": "Russisk",
-            "Slovak": "Slovakisk",
-            "Spanish": "Spansk",
-            "Swedish": "Svensk",
-            "Thai": "Thai",
-            "Turkish": "Tyrkisk",
-            "Vietnamese": "Vietnamesisk",
-            "Malay": "Malaysisk"
-        },
-        "Paste the json code here": "Indsæt json-koden her",
-        "Len": "Len",
-        "No result yet": "Intet resultat endnu",
-        "Result: ": "Resultat: ",
-        "Copied": "Kopieres",
-        "Text to Translate": "Tekst, der skal oversættes",
-        "Select the languages you want to translate the text to:": "Vælg de sprog, du vil oversætte teksten til:",
-        "Translations:": "Oversættelser:",
-        "Translation": "Oversættelse",
-        "Translating": "Oversætte",
-        "Translating...": "Oversætte..."
-    }
+	"Hello World": "Hej verden",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Ugyldigt eller manglende anmodningsorgan",
+			"Text must be less than 5000 characters": "Tekst skal være mindre end 5000 tegn",
+			"From lang and to Lang are required": "Fra lang og til lang er påkrævet",
+			"Missing json file text": "Manglende json-filtekst",
+			"Invalid json text passed": "Ugyldig json-tekst bestået",
+			"Translation": "Oversættelse",
+			"Error while translating the text. Please try again.": "Fejl under oversættelse af teksten. Prøv igen.",
+			"Text must be less than 1000 characters": "Tekst skal være mindre end 1000 tegn"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "Ingen tekst at oversætte",
+			"No languages selected": "Ingen sprog valgt",
+			"Error while translating the text. Please try again.": "Fejl under oversættelse af teksten. Prøv igen.",
+			"Text must be less than 5000 characters": "Tekst skal være mindre end 5000 tegn"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure Translator-kode",
+		"Description": "Oversæt din json-fil direkte på siden",
+		"Classification": "Oversætter",
+		"OpenGraph": {
+			"Title": "Oversæt nemt JSON-filer med Azure",
+			"Description": "Brug Azure Translator Code til hurtigt og nemt at oversætte dine JSON-filer direkte på siden.",
+			"SiteName": "Azure Translator-kode"
+		},
+		"Category": "Værktøjer",
+		"Created by": "Oprettet af"
+	},
+	"Manifest": {
+		"Name": "Azure Translator-kode",
+		"ShortName": "Azure Translator",
+		"Description": "Oversæt din json-fil direkte på siden",
+		"lang": "da",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - Siden blev ikke fundet",
+		"Description": "Den side, du leder efter, findes ikke. 😩😩😩",
+		"Back": "Ryg",
+		"Go to GitHub": "Gå til GitHub"
+	},
+	"HomePage": {
+		"Title": "Azure Translator-kode",
+		"Read the": "Læs",
+		"to know how to use the library in your JS/TS project": "at vide, hvordan du bruger biblioteket i dit JS / TS-projekt",
+		"Test the translator": "Test oversætteren",
+		"Back": "Ryg",
+		"Test Multingual": "Test flersproget",
+		"Live translator": "Live oversætter",
+		"Live Translator": "Live oversætter"
+	},
+	"FormComponent": {
+		"From": "Fra",
+		"To": "Til",
+		"Translate": "Oversætte",
+		"Langs": {
+			"Arabic": "Arabisk",
+			"Chinese Simplified": "Kinesisk, forenklet",
+			"Chinese Traditional": "Kinesisk, traditionelt",
+			"Czech": "Tjekkisk",
+			"Danish": "Dansk",
+			"Dutch": "Nederlandsk",
+			"English": "Engelsk",
+			"Finnish": "Finsk",
+			"French": "Fransk",
+			"German": "Tysk",
+			"Greek": "Græsk",
+			"Hebrew": "Hebraisk",
+			"Hindi": "Hindi",
+			"Hungarian": "Ungarsk",
+			"Indonesian": "Indonesisk",
+			"Italian": "Italiensk",
+			"Japanese": "Japansk",
+			"Korean": "Koreansk",
+			"Norwegian": "Norsk",
+			"Polish": "Polsk",
+			"Portuguese": "Portugisisk",
+			"Romanian": "Rumænsk",
+			"Russian": "Russisk",
+			"Slovak": "Slovakisk",
+			"Spanish": "Spansk",
+			"Swedish": "Svensk",
+			"Thai": "Thai",
+			"Turkish": "Tyrkisk",
+			"Vietnamese": "Vietnamesisk",
+			"Malay": "Malaysisk"
+		},
+		"Paste the json code here": "Indsæt json-koden her",
+		"Len": "Len",
+		"No result yet": "Intet resultat endnu",
+		"Result: ": "Resultat: ",
+		"Copied": "Kopieres",
+		"Text to Translate": "Tekst, der skal oversættes",
+		"Select the languages you want to translate the text to:": "Vælg de sprog, du vil oversætte teksten til:",
+		"Translations:": "Oversættelser:",
+		"Translation": "Oversættelse",
+		"Translating": "Oversætte",
+		"Translating...": "Oversætte..."
+	}
 }

@@ -1,104 +1,104 @@
 {
-    "Hello World": "ハローワールド",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "要求本文が無効または欠落している",
-            "Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります",
-            "From lang and to Lang are required": "From lang と to lang は必須です",
-            "Missing json file text": "json ファイルのテキストがありません",
-            "Invalid json text passed": "無効な json テキストが渡されました",
-            "Translation": "翻訳",
-            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
-            "Text must be less than 1000 characters": "テキストは 1000 文字未満にする必要があります"
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "翻訳するテキストがありません",
-            "No languages selected": "言語が選択されていません",
-            "Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
-            "Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Azure Translator コード",
-        "Description": "ページ内で json ファイルを直接翻訳する",
-        "Classification": "翻訳者",
-        "OpenGraph": {
-            "Title": "Azure で JSON ファイルを簡単に変換",
-            "Description": "Azure Translator Code を使用すると、ページ上で直接 JSON ファイルをすばやく簡単に翻訳できます。",
-            "SiteName": "Azure Translator コード"
-        },
-        "Category": "ツール",
-        "Created by": "作成者"
-    },
-    "Manifest": {
-        "Name": "Azure Translator コード",
-        "ShortName": "Azure Translator",
-        "Description": "ページ内で json ファイルを直接翻訳する",
-        "lang": "ja",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - ページが見つかりません",
-        "Description": "お探しのページが存在しません。😩😩😩",
-        "Back": "戻る",
-        "Go to GitHub": "GitHub に移動"
-    },
-    "HomePage": {
-        "Title": "Azure Translator コード",
-        "Read the": "読む",
-        "to know how to use the library in your JS/TS project": "JS/TS プロジェクトでライブラリを使用する方法を知るには",
-        "Test the translator": "トランスレーターをテストする",
-        "Back": "戻る",
-        "Test Multingual": "多言語テスト",
-        "Live translator": "Live Translator",
-        "Live Translator": "Live Translator"
-    },
-    "FormComponent": {
-        "From": "差出人",
-        "To": "宛先",
-        "Translate": "翻訳",
-        "Langs": {
-            "Arabic": "アラビア語",
-            "Chinese Simplified": "簡体字中国語",
-            "Chinese Traditional": "繁体字中国語",
-            "Czech": "チェコ語",
-            "Danish": "デンマーク語",
-            "Dutch": "オランダ語",
-            "English": "英語",
-            "Finnish": "フィンランド語",
-            "French": "フランス語",
-            "German": "ドイツ語",
-            "Greek": "ギリシャ語",
-            "Hebrew": "ヘブライ語",
-            "Hindi": "ヒンディー語",
-            "Hungarian": "ハンガリー語",
-            "Indonesian": "インドネシア語",
-            "Italian": "イタリア語",
-            "Japanese": "日本語",
-            "Korean": "韓国語",
-            "Norwegian": "ノルウェー語",
-            "Polish": "ポーランド語",
-            "Portuguese": "ポルトガル語",
-            "Romanian": "ルーマニア語",
-            "Russian": "ロシア語",
-            "Slovak": "スロバキア語",
-            "Spanish": "スペイン語",
-            "Swedish": "スウェーデン語",
-            "Thai": "タイ語",
-            "Turkish": "トルコ語",
-            "Vietnamese": "ベトナム語",
-            "Malay": "マレー語"
-        },
-        "Paste the json code here": "ここにjsonコードを貼り付けます",
-        "Len": "レン",
-        "No result yet": "まだ結果が出ていません",
-        "Result: ": "結果：",
-        "Copied": "コピー",
-        "Text to Translate": "翻訳するテキスト",
-        "Select the languages you want to translate the text to:": "テキストを翻訳する言語を選択します。",
-        "Translations:": "翻訳：",
-        "Translation": "翻訳",
-        "Translating": "翻訳しています",
-        "Translating...": "翻訳しています。。。"
-    }
+	"Hello World": "ハローワールド",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "要求本文が無効または欠落している",
+			"Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります",
+			"From lang and to Lang are required": "From lang と to lang は必須です",
+			"Missing json file text": "json ファイルのテキストがありません",
+			"Invalid json text passed": "無効な json テキストが渡されました",
+			"Translation": "翻訳",
+			"Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
+			"Text must be less than 1000 characters": "テキストは 1000 文字未満にする必要があります"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "翻訳するテキストがありません",
+			"No languages selected": "言語が選択されていません",
+			"Error while translating the text. Please try again.": "テキストの翻訳中にエラーが発生しました。もう一度やり直してください。",
+			"Text must be less than 5000 characters": "テキストは 5000 文字未満にする必要があります"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure Translator コード",
+		"Description": "ページ内で json ファイルを直接翻訳する",
+		"Classification": "翻訳者",
+		"OpenGraph": {
+			"Title": "Azure で JSON ファイルを簡単に変換",
+			"Description": "Azure Translator Code を使用すると、ページ上で直接 JSON ファイルをすばやく簡単に翻訳できます。",
+			"SiteName": "Azure Translator コード"
+		},
+		"Category": "ツール",
+		"Created by": "作成者"
+	},
+	"Manifest": {
+		"Name": "Azure Translator コード",
+		"ShortName": "Azure Translator",
+		"Description": "ページ内で json ファイルを直接翻訳する",
+		"lang": "ja",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - ページが見つかりません",
+		"Description": "お探しのページが存在しません。😩😩😩",
+		"Back": "戻る",
+		"Go to GitHub": "GitHub に移動"
+	},
+	"HomePage": {
+		"Title": "Azure Translator コード",
+		"Read the": "読む",
+		"to know how to use the library in your JS/TS project": "JS/TS プロジェクトでライブラリを使用する方法を知るには",
+		"Test the translator": "トランスレーターをテストする",
+		"Back": "戻る",
+		"Test Multingual": "多言語テスト",
+		"Live translator": "Live Translator",
+		"Live Translator": "Live Translator"
+	},
+	"FormComponent": {
+		"From": "差出人",
+		"To": "宛先",
+		"Translate": "翻訳",
+		"Langs": {
+			"Arabic": "アラビア語",
+			"Chinese Simplified": "簡体字中国語",
+			"Chinese Traditional": "繁体字中国語",
+			"Czech": "チェコ語",
+			"Danish": "デンマーク語",
+			"Dutch": "オランダ語",
+			"English": "英語",
+			"Finnish": "フィンランド語",
+			"French": "フランス語",
+			"German": "ドイツ語",
+			"Greek": "ギリシャ語",
+			"Hebrew": "ヘブライ語",
+			"Hindi": "ヒンディー語",
+			"Hungarian": "ハンガリー語",
+			"Indonesian": "インドネシア語",
+			"Italian": "イタリア語",
+			"Japanese": "日本語",
+			"Korean": "韓国語",
+			"Norwegian": "ノルウェー語",
+			"Polish": "ポーランド語",
+			"Portuguese": "ポルトガル語",
+			"Romanian": "ルーマニア語",
+			"Russian": "ロシア語",
+			"Slovak": "スロバキア語",
+			"Spanish": "スペイン語",
+			"Swedish": "スウェーデン語",
+			"Thai": "タイ語",
+			"Turkish": "トルコ語",
+			"Vietnamese": "ベトナム語",
+			"Malay": "マレー語"
+		},
+		"Paste the json code here": "ここにjsonコードを貼り付けます",
+		"Len": "レン",
+		"No result yet": "まだ結果が出ていません",
+		"Result: ": "結果：",
+		"Copied": "コピー",
+		"Text to Translate": "翻訳するテキスト",
+		"Select the languages you want to translate the text to:": "テキストを翻訳する言語を選択します。",
+		"Translations:": "翻訳：",
+		"Translation": "翻訳",
+		"Translating": "翻訳しています",
+		"Translating...": "翻訳しています。。。"
+	}
 }

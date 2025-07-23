@@ -8,7 +8,9 @@ export default async function NotFound() {
 	const scopedT = await getScopedI18n("NotFoundPage");
 	return (
 		// eslint-disable-next-line prettier/prettier
-		<html> {/* nosonar */}
+		<html>
+			{" "}
+			{/* nosonar */}
 			<body>
 				<main className="min-h-screen">
 					<div className="mx-auto mt-32 max-w-md rounded bg-white p-5 text-center shadow-md">

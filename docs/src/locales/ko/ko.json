@@ -1,104 +1,104 @@
 {
-    "Hello World": "전 세계 여러분 안녕하세요",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "유효하지 않거나 누락된 요청 본문",
-            "Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다.",
-            "From lang and to Lang are required": "from lang 및 to Lang이 필요합니다.",
-            "Missing json file text": "json 파일 텍스트 누락",
-            "Invalid json text passed": "잘못된 json 텍스트가 전달되었습니다.",
-            "Translation": "번역",
-            "Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
-            "Text must be less than 1000 characters": "텍스트는 1000자 미만이어야 합니다."
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "번역할 텍스트가 없습니다.",
-            "No languages selected": "선택한 언어가 없습니다.",
-            "Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
-            "Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다."
-        }
-    },
-    "HomeLayout": {
-        "Title": "Azure Translator 코드",
-        "Description": "페이지에서 직접 json 파일 번역",
-        "Classification": "번역기",
-        "OpenGraph": {
-            "Title": "Azure를 사용하여 JSON 파일을 쉽게 번역",
-            "Description": "Azure Translator 코드를 사용하여 JSON 파일을 페이지에서 직접 빠르고 쉽게 번역할 수 있습니다.",
-            "SiteName": "Azure Translator 코드"
-        },
-        "Category": "도구",
-        "Created by": "작성자"
-    },
-    "Manifest": {
-        "Name": "Azure Translator 코드",
-        "ShortName": "Azure 번역기",
-        "Description": "페이지에서 직접 json 파일 번역",
-        "lang": "ko",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - 페이지를 찾을 수 없습니다.",
-        "Description": "찾고 있는 페이지가 존재하지 않습니다. 😩😩😩",
-        "Back": "뒤로",
-        "Go to GitHub": "GitHub로 이동"
-    },
-    "HomePage": {
-        "Title": "Azure Translator 코드",
-        "Read the": "를 읽는다.",
-        "to know how to use the library in your JS/TS project": "JS / TS 프로젝트에서 라이브러리를 사용하는 방법을 알기 위해",
-        "Test the translator": "번역기 테스트",
-        "Back": "뒤로",
-        "Test Multingual": "다국어 테스트",
-        "Live translator": "Live 번역기",
-        "Live Translator": "Live 번역기"
-    },
-    "FormComponent": {
-        "From": "보낸 사람",
-        "To": "받는 사람",
-        "Translate": "번역하기",
-        "Langs": {
-            "Arabic": "아랍어",
-            "Chinese Simplified": "중국어 간체",
-            "Chinese Traditional": "중국어 번체",
-            "Czech": "체코어",
-            "Danish": "덴마크어",
-            "Dutch": "네덜란드어",
-            "English": "영어",
-            "Finnish": "핀란드어",
-            "French": "프랑스어",
-            "German": "독일어",
-            "Greek": "그리스어",
-            "Hebrew": "히브리어",
-            "Hindi": "힌디어",
-            "Hungarian": "헝가리어",
-            "Indonesian": "인도네시아어",
-            "Italian": "이탈리아어",
-            "Japanese": "일본어",
-            "Korean": "한국어",
-            "Norwegian": "노르웨이어",
-            "Polish": "폴란드어",
-            "Portuguese": "포르투갈어",
-            "Romanian": "루마니아어",
-            "Russian": "러시아어",
-            "Slovak": "슬로바키아어",
-            "Spanish": "스페인어",
-            "Swedish": "스웨덴어",
-            "Thai": "태국어",
-            "Turkish": "터키어",
-            "Vietnamese": "베트남어",
-            "Malay": "말레이어"
-        },
-        "Paste the json code here": "여기에 json 코드를 붙여넣습니다.",
-        "Len": "렌",
-        "No result yet": "아직 결과가 없습니다.",
-        "Result: ": "결과: ",
-        "Copied": "복사",
-        "Text to Translate": "번역할 텍스트",
-        "Select the languages you want to translate the text to:": "텍스트를 번역할 언어를 선택합니다.",
-        "Translations:": "번역:",
-        "Translation": "번역",
-        "Translating": "번역 중",
-        "Translating...": "번역 중..."
-    }
+	"Hello World": "전 세계 여러분 안녕하세요",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "유효하지 않거나 누락된 요청 본문",
+			"Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다.",
+			"From lang and to Lang are required": "from lang 및 to Lang이 필요합니다.",
+			"Missing json file text": "json 파일 텍스트 누락",
+			"Invalid json text passed": "잘못된 json 텍스트가 전달되었습니다.",
+			"Translation": "번역",
+			"Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
+			"Text must be less than 1000 characters": "텍스트는 1000자 미만이어야 합니다."
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "번역할 텍스트가 없습니다.",
+			"No languages selected": "선택한 언어가 없습니다.",
+			"Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
+			"Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다."
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure Translator 코드",
+		"Description": "페이지에서 직접 json 파일 번역",
+		"Classification": "번역기",
+		"OpenGraph": {
+			"Title": "Azure를 사용하여 JSON 파일을 쉽게 번역",
+			"Description": "Azure Translator 코드를 사용하여 JSON 파일을 페이지에서 직접 빠르고 쉽게 번역할 수 있습니다.",
+			"SiteName": "Azure Translator 코드"
+		},
+		"Category": "도구",
+		"Created by": "작성자"
+	},
+	"Manifest": {
+		"Name": "Azure Translator 코드",
+		"ShortName": "Azure 번역기",
+		"Description": "페이지에서 직접 json 파일 번역",
+		"lang": "ko",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - 페이지를 찾을 수 없습니다.",
+		"Description": "찾고 있는 페이지가 존재하지 않습니다. 😩😩😩",
+		"Back": "뒤로",
+		"Go to GitHub": "GitHub로 이동"
+	},
+	"HomePage": {
+		"Title": "Azure Translator 코드",
+		"Read the": "를 읽는다.",
+		"to know how to use the library in your JS/TS project": "JS / TS 프로젝트에서 라이브러리를 사용하는 방법을 알기 위해",
+		"Test the translator": "번역기 테스트",
+		"Back": "뒤로",
+		"Test Multingual": "다국어 테스트",
+		"Live translator": "Live 번역기",
+		"Live Translator": "Live 번역기"
+	},
+	"FormComponent": {
+		"From": "보낸 사람",
+		"To": "받는 사람",
+		"Translate": "번역하기",
+		"Langs": {
+			"Arabic": "아랍어",
+			"Chinese Simplified": "중국어 간체",
+			"Chinese Traditional": "중국어 번체",
+			"Czech": "체코어",
+			"Danish": "덴마크어",
+			"Dutch": "네덜란드어",
+			"English": "영어",
+			"Finnish": "핀란드어",
+			"French": "프랑스어",
+			"German": "독일어",
+			"Greek": "그리스어",
+			"Hebrew": "히브리어",
+			"Hindi": "힌디어",
+			"Hungarian": "헝가리어",
+			"Indonesian": "인도네시아어",
+			"Italian": "이탈리아어",
+			"Japanese": "일본어",
+			"Korean": "한국어",
+			"Norwegian": "노르웨이어",
+			"Polish": "폴란드어",
+			"Portuguese": "포르투갈어",
+			"Romanian": "루마니아어",
+			"Russian": "러시아어",
+			"Slovak": "슬로바키아어",
+			"Spanish": "스페인어",
+			"Swedish": "스웨덴어",
+			"Thai": "태국어",
+			"Turkish": "터키어",
+			"Vietnamese": "베트남어",
+			"Malay": "말레이어"
+		},
+		"Paste the json code here": "여기에 json 코드를 붙여넣습니다.",
+		"Len": "렌",
+		"No result yet": "아직 결과가 없습니다.",
+		"Result: ": "결과: ",
+		"Copied": "복사",
+		"Text to Translate": "번역할 텍스트",
+		"Select the languages you want to translate the text to:": "텍스트를 번역할 언어를 선택합니다.",
+		"Translations:": "번역:",
+		"Translation": "번역",
+		"Translating": "번역 중",
+		"Translating...": "번역 중..."
+	}
 }

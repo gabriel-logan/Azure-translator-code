@@ -1,104 +1,104 @@
 {
-    "Hello World": "Halo dunia",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "Isi permintaan tidak valid atau tidak ada",
-            "Text must be less than 5000 characters": "Teks harus kurang dari 5000 karakter",
-            "From lang and to Lang are required": "Dari lang dan ke Lang diperlukan",
-            "Missing json file text": "Teks file json tidak ada",
-            "Invalid json text passed": "Teks json tidak valid diteruskan",
-            "Translation": "Terjemahan",
-            "Error while translating the text. Please try again.": "Kesalahan saat menerjemahkan teks. Silakan coba lagi.",
-            "Text must be less than 1000 characters": "Teks harus kurang dari 1000 karakter"
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "Tidak ada teks untuk diterjemahkan",
-            "No languages selected": "Tidak ada bahasa yang dipilih",
-            "Error while translating the text. Please try again.": "Kesalahan saat menerjemahkan teks. Silakan coba lagi.",
-            "Text must be less than 5000 characters": "Teks harus kurang dari 5000 karakter"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Kode Penerjemah Azure",
-        "Description": "Terjemahkan file json Anda langsung di halaman",
-        "Classification": "Penerjemah",
-        "OpenGraph": {
-            "Title": "Terjemahkan File JSON dengan Mudah dengan Azure",
-            "Description": "Gunakan Azure Translator Code untuk menerjemahkan file JSON Anda langsung di halaman dengan cepat dan mudah.",
-            "SiteName": "Kode Penerjemah Azure"
-        },
-        "Category": "Perkakas",
-        "Created by": "Dibuat oleh"
-    },
-    "Manifest": {
-        "Name": "Kode Penerjemah Azure",
-        "ShortName": "Penerjemah Azure",
-        "Description": "Terjemahkan file json Anda langsung di halaman",
-        "lang": "id",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - Halaman tidak ditemukan",
-        "Description": "Halaman yang Anda cari tidak ada. 😩😩😩",
-        "Back": "Belakang",
-        "Go to GitHub": "Buka GitHub"
-    },
-    "HomePage": {
-        "Title": "Kode Penerjemah Azure",
-        "Read the": "Baca",
-        "to know how to use the library in your JS/TS project": "untuk mengetahui cara menggunakan library di proyek JS/TS Anda",
-        "Test the translator": "Uji penerjemah",
-        "Back": "Belakang",
-        "Test Multingual": "Uji Multingual",
-        "Live translator": "Penerjemah langsung",
-        "Live Translator": "Penerjemah Langsung"
-    },
-    "FormComponent": {
-        "From": "Dari",
-        "To": "Ke",
-        "Translate": "Terjemah",
-        "Langs": {
-            "Arabic": "Arab",
-            "Chinese Simplified": "Cina Sederhana",
-            "Chinese Traditional": "Cina Tradisional",
-            "Czech": "Ceko",
-            "Danish": "Denmark",
-            "Dutch": "Belanda",
-            "English": "Inggris",
-            "Finnish": "Finlandia",
-            "French": "Prancis",
-            "German": "Jerman",
-            "Greek": "Yunani",
-            "Hebrew": "Ibrani",
-            "Hindi": "Hindi",
-            "Hungarian": "Hongaria",
-            "Indonesian": "Indonesia",
-            "Italian": "Italia",
-            "Japanese": "Jepang",
-            "Korean": "Korea",
-            "Norwegian": "Norwegia",
-            "Polish": "Polandia",
-            "Portuguese": "Portugis",
-            "Romanian": "Rumania",
-            "Russian": "Rusia",
-            "Slovak": "Slovakia",
-            "Spanish": "Spanyol",
-            "Swedish": "Swedia",
-            "Thai": "Thai",
-            "Turkish": "Turki",
-            "Vietnamese": "Vietnam",
-            "Malay": "Melayu"
-        },
-        "Paste the json code here": "Tempel kode json di sini",
-        "Len": "Len",
-        "No result yet": "Belum ada hasil",
-        "Result: ": "Hasil: ",
-        "Copied": "Disalin",
-        "Text to Translate": "Teks untuk Diterjemahkan",
-        "Select the languages you want to translate the text to:": "Pilih bahasa tujuan terjemahan teks:",
-        "Translations:": "Terjemahan:",
-        "Translation": "Terjemahan",
-        "Translating": "Menerjemahkan",
-        "Translating...": "Menerjemahkan..."
-    }
+	"Hello World": "Halo dunia",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Isi permintaan tidak valid atau tidak ada",
+			"Text must be less than 5000 characters": "Teks harus kurang dari 5000 karakter",
+			"From lang and to Lang are required": "Dari lang dan ke Lang diperlukan",
+			"Missing json file text": "Teks file json tidak ada",
+			"Invalid json text passed": "Teks json tidak valid diteruskan",
+			"Translation": "Terjemahan",
+			"Error while translating the text. Please try again.": "Kesalahan saat menerjemahkan teks. Silakan coba lagi.",
+			"Text must be less than 1000 characters": "Teks harus kurang dari 1000 karakter"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "Tidak ada teks untuk diterjemahkan",
+			"No languages selected": "Tidak ada bahasa yang dipilih",
+			"Error while translating the text. Please try again.": "Kesalahan saat menerjemahkan teks. Silakan coba lagi.",
+			"Text must be less than 5000 characters": "Teks harus kurang dari 5000 karakter"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Kode Penerjemah Azure",
+		"Description": "Terjemahkan file json Anda langsung di halaman",
+		"Classification": "Penerjemah",
+		"OpenGraph": {
+			"Title": "Terjemahkan File JSON dengan Mudah dengan Azure",
+			"Description": "Gunakan Azure Translator Code untuk menerjemahkan file JSON Anda langsung di halaman dengan cepat dan mudah.",
+			"SiteName": "Kode Penerjemah Azure"
+		},
+		"Category": "Perkakas",
+		"Created by": "Dibuat oleh"
+	},
+	"Manifest": {
+		"Name": "Kode Penerjemah Azure",
+		"ShortName": "Penerjemah Azure",
+		"Description": "Terjemahkan file json Anda langsung di halaman",
+		"lang": "id",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - Halaman tidak ditemukan",
+		"Description": "Halaman yang Anda cari tidak ada. 😩😩😩",
+		"Back": "Belakang",
+		"Go to GitHub": "Buka GitHub"
+	},
+	"HomePage": {
+		"Title": "Kode Penerjemah Azure",
+		"Read the": "Baca",
+		"to know how to use the library in your JS/TS project": "untuk mengetahui cara menggunakan library di proyek JS/TS Anda",
+		"Test the translator": "Uji penerjemah",
+		"Back": "Belakang",
+		"Test Multingual": "Uji Multingual",
+		"Live translator": "Penerjemah langsung",
+		"Live Translator": "Penerjemah Langsung"
+	},
+	"FormComponent": {
+		"From": "Dari",
+		"To": "Ke",
+		"Translate": "Terjemah",
+		"Langs": {
+			"Arabic": "Arab",
+			"Chinese Simplified": "Cina Sederhana",
+			"Chinese Traditional": "Cina Tradisional",
+			"Czech": "Ceko",
+			"Danish": "Denmark",
+			"Dutch": "Belanda",
+			"English": "Inggris",
+			"Finnish": "Finlandia",
+			"French": "Prancis",
+			"German": "Jerman",
+			"Greek": "Yunani",
+			"Hebrew": "Ibrani",
+			"Hindi": "Hindi",
+			"Hungarian": "Hongaria",
+			"Indonesian": "Indonesia",
+			"Italian": "Italia",
+			"Japanese": "Jepang",
+			"Korean": "Korea",
+			"Norwegian": "Norwegia",
+			"Polish": "Polandia",
+			"Portuguese": "Portugis",
+			"Romanian": "Rumania",
+			"Russian": "Rusia",
+			"Slovak": "Slovakia",
+			"Spanish": "Spanyol",
+			"Swedish": "Swedia",
+			"Thai": "Thai",
+			"Turkish": "Turki",
+			"Vietnamese": "Vietnam",
+			"Malay": "Melayu"
+		},
+		"Paste the json code here": "Tempel kode json di sini",
+		"Len": "Len",
+		"No result yet": "Belum ada hasil",
+		"Result: ": "Hasil: ",
+		"Copied": "Disalin",
+		"Text to Translate": "Teks untuk Diterjemahkan",
+		"Select the languages you want to translate the text to:": "Pilih bahasa tujuan terjemahan teks:",
+		"Translations:": "Terjemahan:",
+		"Translation": "Terjemahan",
+		"Translating": "Menerjemahkan",
+		"Translating...": "Menerjemahkan..."
+	}
 }

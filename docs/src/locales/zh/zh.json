@@ -1,104 +1,104 @@
 {
-    "Hello World": "世界您好",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "请求正文无效或缺失",
-            "Text must be less than 5000 characters": "文本必须少于 5000 个字符",
-            "From lang and to Lang are required": "From lang 和 to lang 是必需的",
-            "Missing json file text": "缺少 json 文件文本",
-            "Invalid json text passed": "传递的 json 文本无效",
-            "Translation": "译本",
-            "Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。",
-            "Text must be less than 1000 characters": "文本必须少于 1000 个字符"
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "没有要翻译的文本",
-            "No languages selected": "未选择语言",
-            "Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。",
-            "Text must be less than 5000 characters": "文本必须少于 5000 个字符"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Azure 翻译代码",
-        "Description": "直接在页面中翻译您的json文件",
-        "Classification": "在线翻译",
-        "OpenGraph": {
-            "Title": "使用 Azure 轻松翻译 JSON 文件",
-            "Description": "使用 Azure 翻译代码直接在页面上快速轻松地翻译 JSON 文件。",
-            "SiteName": "Azure 翻译代码"
-        },
-        "Category": "工具",
-        "Created by": "创建者"
-    },
-    "Manifest": {
-        "Name": "Azure 翻译代码",
-        "ShortName": "Azure 翻译器",
-        "Description": "直接在页面中翻译您的json文件",
-        "lang": "zh",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - 页面未找到",
-        "Description": "您要查找的页面不存在。😩😩😩",
-        "Back": "返回",
-        "Go to GitHub": "转到 GitHub"
-    },
-    "HomePage": {
-        "Title": "Azure 翻译代码",
-        "Read the": "阅读",
-        "to know how to use the library in your JS/TS project": "了解如何在 JS/TS 项目中使用该库",
-        "Test the translator": "测试翻译器",
-        "Back": "返回",
-        "Test Multingual": "测试多语",
-        "Live translator": "在线翻译",
-        "Live Translator": "在线翻译"
-    },
-    "FormComponent": {
-        "From": "从",
-        "To": "自",
-        "Translate": "翻译",
-        "Langs": {
-            "Arabic": "阿拉伯语",
-            "Chinese Simplified": "简体中文",
-            "Chinese Traditional": "繁体中文",
-            "Czech": "捷克语",
-            "Danish": "丹麦语",
-            "Dutch": "荷兰语",
-            "English": "英语",
-            "Finnish": "芬兰语",
-            "French": "法语",
-            "German": "德语",
-            "Greek": "希腊语",
-            "Hebrew": "希伯来语",
-            "Hindi": "印地语",
-            "Hungarian": "匈牙利语",
-            "Indonesian": "印度尼西亚语",
-            "Italian": "意大利语",
-            "Japanese": "日语",
-            "Korean": "朝鲜语",
-            "Norwegian": "挪威语",
-            "Polish": "波兰语",
-            "Portuguese": "葡萄牙语",
-            "Romanian": "罗马尼亚",
-            "Russian": "俄语",
-            "Slovak": "斯洛伐克语",
-            "Spanish": "西班牙语",
-            "Swedish": "瑞典语",
-            "Thai": "泰语",
-            "Turkish": "土耳其语",
-            "Vietnamese": "越南语",
-            "Malay": "马来语"
-        },
-        "Paste the json code here": "将 json 代码粘贴到此处",
-        "Len": "莱恩",
-        "No result yet": "暂无结果",
-        "Result: ": "结果：",
-        "Copied": "复制",
-        "Text to Translate": "要翻译的文本",
-        "Select the languages you want to translate the text to:": "选择要将文本翻译为的语言：",
-        "Translations:": "翻译：",
-        "Translation": "译本",
-        "Translating": "正在翻译",
-        "Translating...": "正在翻译。。。"
-    }
+	"Hello World": "世界您好",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "请求正文无效或缺失",
+			"Text must be less than 5000 characters": "文本必须少于 5000 个字符",
+			"From lang and to Lang are required": "From lang 和 to lang 是必需的",
+			"Missing json file text": "缺少 json 文件文本",
+			"Invalid json text passed": "传递的 json 文本无效",
+			"Translation": "译本",
+			"Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。",
+			"Text must be less than 1000 characters": "文本必须少于 1000 个字符"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "没有要翻译的文本",
+			"No languages selected": "未选择语言",
+			"Error while translating the text. Please try again.": "翻译文本时出错。请再试一次。",
+			"Text must be less than 5000 characters": "文本必须少于 5000 个字符"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Azure 翻译代码",
+		"Description": "直接在页面中翻译您的json文件",
+		"Classification": "在线翻译",
+		"OpenGraph": {
+			"Title": "使用 Azure 轻松翻译 JSON 文件",
+			"Description": "使用 Azure 翻译代码直接在页面上快速轻松地翻译 JSON 文件。",
+			"SiteName": "Azure 翻译代码"
+		},
+		"Category": "工具",
+		"Created by": "创建者"
+	},
+	"Manifest": {
+		"Name": "Azure 翻译代码",
+		"ShortName": "Azure 翻译器",
+		"Description": "直接在页面中翻译您的json文件",
+		"lang": "zh",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - 页面未找到",
+		"Description": "您要查找的页面不存在。😩😩😩",
+		"Back": "返回",
+		"Go to GitHub": "转到 GitHub"
+	},
+	"HomePage": {
+		"Title": "Azure 翻译代码",
+		"Read the": "阅读",
+		"to know how to use the library in your JS/TS project": "了解如何在 JS/TS 项目中使用该库",
+		"Test the translator": "测试翻译器",
+		"Back": "返回",
+		"Test Multingual": "测试多语",
+		"Live translator": "在线翻译",
+		"Live Translator": "在线翻译"
+	},
+	"FormComponent": {
+		"From": "从",
+		"To": "自",
+		"Translate": "翻译",
+		"Langs": {
+			"Arabic": "阿拉伯语",
+			"Chinese Simplified": "简体中文",
+			"Chinese Traditional": "繁体中文",
+			"Czech": "捷克语",
+			"Danish": "丹麦语",
+			"Dutch": "荷兰语",
+			"English": "英语",
+			"Finnish": "芬兰语",
+			"French": "法语",
+			"German": "德语",
+			"Greek": "希腊语",
+			"Hebrew": "希伯来语",
+			"Hindi": "印地语",
+			"Hungarian": "匈牙利语",
+			"Indonesian": "印度尼西亚语",
+			"Italian": "意大利语",
+			"Japanese": "日语",
+			"Korean": "朝鲜语",
+			"Norwegian": "挪威语",
+			"Polish": "波兰语",
+			"Portuguese": "葡萄牙语",
+			"Romanian": "罗马尼亚",
+			"Russian": "俄语",
+			"Slovak": "斯洛伐克语",
+			"Spanish": "西班牙语",
+			"Swedish": "瑞典语",
+			"Thai": "泰语",
+			"Turkish": "土耳其语",
+			"Vietnamese": "越南语",
+			"Malay": "马来语"
+		},
+		"Paste the json code here": "将 json 代码粘贴到此处",
+		"Len": "莱恩",
+		"No result yet": "暂无结果",
+		"Result: ": "结果：",
+		"Copied": "复制",
+		"Text to Translate": "要翻译的文本",
+		"Select the languages you want to translate the text to:": "选择要将文本翻译为的语言：",
+		"Translations:": "翻译：",
+		"Translation": "译本",
+		"Translating": "正在翻译",
+		"Translating...": "正在翻译。。。"
+	}
 }

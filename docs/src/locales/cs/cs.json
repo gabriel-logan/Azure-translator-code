@@ -1,104 +1,104 @@
 {
-    "Hello World": "Ahoj světe",
-    "Actions": {
-        "MakeTranslations": {
-            "Invalid or missing request body": "Neplatný nebo chybějící text požadavku",
-            "Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků",
-            "From lang and to Lang are required": "Z lang a do Lang jsou vyžadovány",
-            "Missing json file text": "Chybějící text souboru JSON",
-            "Invalid json text passed": "Předán neplatný text JSON.",
-            "Translation": "Překlad",
-            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
-            "Text must be less than 1000 characters": "Text musí být kratší než 1000 znaků."
-        },
-        "makeTranslationMultilang": {
-            "No text to translate": "Žádný text k překladu",
-            "No languages selected": "Nebyly vybrány žádné jazyky",
-            "Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
-            "Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků"
-        }
-    },
-    "HomeLayout": {
-        "Title": "Kód služby Azure Translator",
-        "Description": "Přeložte svůj soubor json přímo na stránce",
-        "Classification": "Překladatel",
-        "OpenGraph": {
-            "Title": "Snadný překlad souborů JSON s využitím Azure",
-            "Description": "Pomocí Azure Translator Code můžete rychle a snadno přeložit soubory JSON přímo na stránce.",
-            "SiteName": "Kód služby Azure Translator"
-        },
-        "Category": "Nářadí",
-        "Created by": "Vytvořil(a)"
-    },
-    "Manifest": {
-        "Name": "Kód služby Azure Translator",
-        "ShortName": "Azure Translator",
-        "Description": "Přeložte svůj soubor json přímo na stránce",
-        "lang": "cs",
-        "Dir": "ltr"
-    },
-    "NotFoundPage": {
-        "Title": "404 - Stránka nenalezena",
-        "Description": "Stránka, kterou hledáte, neexistuje. 😩😩😩",
-        "Back": "Hřbet",
-        "Go to GitHub": "Přejít na GitHub"
-    },
-    "HomePage": {
-        "Title": "Kód služby Azure Translator",
-        "Read the": "Přečtěte si",
-        "to know how to use the library in your JS/TS project": "abyste věděli, jak používat knihovnu ve vašem projektu JS/TS",
-        "Test the translator": "Otestujte překladač",
-        "Back": "Hřbet",
-        "Test Multingual": "Testovací multingual",
-        "Live translator": "Živý překladač",
-        "Live Translator": "Živý překladač"
-    },
-    "FormComponent": {
-        "From": "Od",
-        "To": "K",
-        "Translate": "Překládat",
-        "Langs": {
-            "Arabic": "Arabština",
-            "Chinese Simplified": "Zjednodušená čínština",
-            "Chinese Traditional": "Tradiční čínština",
-            "Czech": "Čeština",
-            "Danish": "Dánština",
-            "Dutch": "Holandština",
-            "English": "Angličtina",
-            "Finnish": "Finština",
-            "French": "Francouzština",
-            "German": "Němčina",
-            "Greek": "Řečtina",
-            "Hebrew": "Hebrejština",
-            "Hindi": "Hindština",
-            "Hungarian": "Maďarština",
-            "Indonesian": "Indonéština",
-            "Italian": "Italština",
-            "Japanese": "Japonština",
-            "Korean": "Korejština",
-            "Norwegian": "Norština",
-            "Polish": "Polština",
-            "Portuguese": "Portugalština",
-            "Romanian": "Rumunština",
-            "Russian": "Ruština",
-            "Slovak": "Slovenština",
-            "Spanish": "Španělština",
-            "Swedish": "Švédština",
-            "Thai": "Thajština",
-            "Turkish": "Turečtina",
-            "Vietnamese": "Vietnamština",
-            "Malay": "Malajština"
-        },
-        "Paste the json code here": "Sem vložte kód json",
-        "Len": "Len",
-        "No result yet": "Zatím žádný výsledek",
-        "Result: ": "Výsledek: ",
-        "Copied": "Zkopírovaný",
-        "Text to Translate": "Text k překladu",
-        "Select the languages you want to translate the text to:": "Vyberte jazyky, do kterých chcete text přeložit:",
-        "Translations:": "Překlady:",
-        "Translation": "Překlad",
-        "Translating": "Překládání",
-        "Translating...": "Překládání..."
-    }
+	"Hello World": "Ahoj světe",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Neplatný nebo chybějící text požadavku",
+			"Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků",
+			"From lang and to Lang are required": "Z lang a do Lang jsou vyžadovány",
+			"Missing json file text": "Chybějící text souboru JSON",
+			"Invalid json text passed": "Předán neplatný text JSON.",
+			"Translation": "Překlad",
+			"Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
+			"Text must be less than 1000 characters": "Text musí být kratší než 1000 znaků."
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "Žádný text k překladu",
+			"No languages selected": "Nebyly vybrány žádné jazyky",
+			"Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
+			"Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Kód služby Azure Translator",
+		"Description": "Přeložte svůj soubor json přímo na stránce",
+		"Classification": "Překladatel",
+		"OpenGraph": {
+			"Title": "Snadný překlad souborů JSON s využitím Azure",
+			"Description": "Pomocí Azure Translator Code můžete rychle a snadno přeložit soubory JSON přímo na stránce.",
+			"SiteName": "Kód služby Azure Translator"
+		},
+		"Category": "Nářadí",
+		"Created by": "Vytvořil(a)"
+	},
+	"Manifest": {
+		"Name": "Kód služby Azure Translator",
+		"ShortName": "Azure Translator",
+		"Description": "Přeložte svůj soubor json přímo na stránce",
+		"lang": "cs",
+		"Dir": "ltr"
+	},
+	"NotFoundPage": {
+		"Title": "404 - Stránka nenalezena",
+		"Description": "Stránka, kterou hledáte, neexistuje. 😩😩😩",
+		"Back": "Hřbet",
+		"Go to GitHub": "Přejít na GitHub"
+	},
+	"HomePage": {
+		"Title": "Kód služby Azure Translator",
+		"Read the": "Přečtěte si",
+		"to know how to use the library in your JS/TS project": "abyste věděli, jak používat knihovnu ve vašem projektu JS/TS",
+		"Test the translator": "Otestujte překladač",
+		"Back": "Hřbet",
+		"Test Multingual": "Testovací multingual",
+		"Live translator": "Živý překladač",
+		"Live Translator": "Živý překladač"
+	},
+	"FormComponent": {
+		"From": "Od",
+		"To": "K",
+		"Translate": "Překládat",
+		"Langs": {
+			"Arabic": "Arabština",
+			"Chinese Simplified": "Zjednodušená čínština",
+			"Chinese Traditional": "Tradiční čínština",
+			"Czech": "Čeština",
+			"Danish": "Dánština",
+			"Dutch": "Holandština",
+			"English": "Angličtina",
+			"Finnish": "Finština",
+			"French": "Francouzština",
+			"German": "Němčina",
+			"Greek": "Řečtina",
+			"Hebrew": "Hebrejština",
+			"Hindi": "Hindština",
+			"Hungarian": "Maďarština",
+			"Indonesian": "Indonéština",
+			"Italian": "Italština",
+			"Japanese": "Japonština",
+			"Korean": "Korejština",
+			"Norwegian": "Norština",
+			"Polish": "Polština",
+			"Portuguese": "Portugalština",
+			"Romanian": "Rumunština",
+			"Russian": "Ruština",
+			"Slovak": "Slovenština",
+			"Spanish": "Španělština",
+			"Swedish": "Švédština",
+			"Thai": "Thajština",
+			"Turkish": "Turečtina",
+			"Vietnamese": "Vietnamština",
+			"Malay": "Malajština"
+		},
+		"Paste the json code here": "Sem vložte kód json",
+		"Len": "Len",
+		"No result yet": "Zatím žádný výsledek",
+		"Result: ": "Výsledek: ",
+		"Copied": "Zkopírovaný",
+		"Text to Translate": "Text k překladu",
+		"Select the languages you want to translate the text to:": "Vyberte jazyky, do kterých chcete text přeložit:",
+		"Translations:": "Překlady:",
+		"Translation": "Překlad",
+		"Translating": "Překládání",
+		"Translating...": "Překládání..."
+	}
 }

@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .masked {
-  -webkit-text-security: disc;
-  text-security: disc;
+	-webkit-text-security: disc;
+	text-security: disc;
 }
