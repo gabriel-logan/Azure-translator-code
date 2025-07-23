@@ -19,10 +19,13 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 	} = {
 		message: scopedT("No result yet"),
 	};
+
 	const [response, action] = useFormState(
 		makeTranslationMultilang,
 		initialState,
 	);
+
+	const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
 
 	const [textToTranslate, setTextToTranslate] = useState("");
 
@@ -58,6 +61,22 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 		{ id: "ms", name: scopedT("Langs.Malay") },
 		{ id: "tlh-Latn", name: scopedT("Langs.Klingon") },
 	];
+
+	const isAllSelected = selectedLangs.length === languages.length;
+
+	const toggleSelectAll = () => {
+		if (isAllSelected) {
+			setSelectedLangs([]);
+		} else {
+			setSelectedLangs(languages.map((lang) => lang.id));
+		}
+	};
+
+	const handleLangToggle = (id: string) => {
+		setSelectedLangs((prev) =>
+			prev.includes(id) ? prev.filter((lang) => lang !== id) : [...prev, id],
+		);
+	};
 
 	return (
 		<form action={action} className="w-full rounded bg-white p-4 shadow-md">
@@ -123,22 +142,15 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 					<input
 						type="checkbox"
 						id="selectAll"
-						name="selectAll"
+						checked={isAllSelected}
+						onChange={toggleSelectAll}
 						className="mr-2"
-						onChange={(e) => {
-							const checkboxes = document.querySelectorAll(
-								'input[type="checkbox"]:not(#selectAll)',
-							);
-							checkboxes.forEach((checkbox) => {
-								(checkbox as HTMLInputElement).checked = e.target.checked;
-							});
-						}}
 					/>
 					<label
 						htmlFor="selectAll"
 						className="cursor-pointer text-sm text-gray-700 sm:text-base md:text-lg lg:text-2xl"
 					>
-						{scopedT("Select All")}
+						{isAllSelected ? scopedT("Deselect All") : scopedT("Select All")}
 					</label>
 				</div>
 			</div>
@@ -148,9 +160,10 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 					<div key={lang.id} className="flex cursor-pointer items-center">
 						<input
 							type="checkbox"
-							name={lang.id}
 							id={lang.id}
-							maxLength={10}
+							name={lang.id}
+							checked={selectedLangs.includes(lang.id)}
+							onChange={() => handleLangToggle(lang.id)}
 							className="mr-2"
 						/>
 						<label
