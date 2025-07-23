@@ -25,7 +25,7 @@ export type LocalesCodes =
 	| "el"
 	| "id"
 	| "ms"
-	| "pp"; // "pp" is used for the placeholder locale
+	| "nn"; // "nn" is used for the placeholder locale
 
 export interface Locale {
 	locale: Readonly<LocalesCodes>;

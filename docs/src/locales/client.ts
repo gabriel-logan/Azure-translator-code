@@ -31,5 +31,5 @@ export const { useI18n, useScopedI18n, I18nProviderClient } = createI18nClient({
 	vi: () => import("./vi/vi.json"),
 	zh: () => import("./zh/zh.json"),
 
-	pp: () => import("./none/none.json"),
+	nn: () => import("./none/none.json"),
 });
