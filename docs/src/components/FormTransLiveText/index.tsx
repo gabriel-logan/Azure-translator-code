@@ -27,36 +27,36 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 	const [response, action] = useFormState(makeLiveTranslation, initialState);
 
 	const languages: {
-		id: LanguagesCode;
+		lang: LanguagesCode;
 		name: string;
 	}[] = [
-		{ id: "en", name: scopedT("Langs.English") },
-		{ id: "pt", name: scopedT("Langs.Portuguese") },
-		{ id: "es", name: scopedT("Langs.Spanish") },
-		{ id: "fr", name: scopedT("Langs.French") },
-		{ id: "de", name: scopedT("Langs.German") },
-		{ id: "it", name: scopedT("Langs.Italian") },
-		{ id: "ja", name: scopedT("Langs.Japanese") },
-		{ id: "ko", name: scopedT("Langs.Korean") },
-		{ id: "ru", name: scopedT("Langs.Russian") },
-		{ id: "zh-Hans", name: scopedT("Langs.Chinese Simplified") },
-		{ id: "zh-Hant", name: scopedT("Langs.Chinese Traditional") },
-		{ id: "ar", name: scopedT("Langs.Arabic") },
-		{ id: "tr", name: scopedT("Langs.Turkish") },
-		{ id: "vi", name: scopedT("Langs.Vietnamese") },
-		{ id: "th", name: scopedT("Langs.Thai") },
-		{ id: "sv", name: scopedT("Langs.Swedish") },
-		{ id: "pl", name: scopedT("Langs.Polish") },
-		{ id: "nl", name: scopedT("Langs.Dutch") },
-		{ id: "da", name: scopedT("Langs.Danish") },
-		{ id: "fi", name: scopedT("Langs.Finnish") },
-		{ id: "no", name: scopedT("Langs.Norwegian") },
-		{ id: "cs", name: scopedT("Langs.Czech") },
-		{ id: "hu", name: scopedT("Langs.Hungarian") },
-		{ id: "el", name: scopedT("Langs.Greek") },
-		{ id: "id", name: scopedT("Langs.Indonesian") },
-		{ id: "ms", name: scopedT("Langs.Malay") },
-		{ id: "tlh-Latn", name: scopedT("Langs.Klingon") },
+		{ lang: "en", name: scopedT("Langs.English") },
+		{ lang: "pt", name: scopedT("Langs.Portuguese") },
+		{ lang: "es", name: scopedT("Langs.Spanish") },
+		{ lang: "fr", name: scopedT("Langs.French") },
+		{ lang: "de", name: scopedT("Langs.German") },
+		{ lang: "it", name: scopedT("Langs.Italian") },
+		{ lang: "ja", name: scopedT("Langs.Japanese") },
+		{ lang: "ko", name: scopedT("Langs.Korean") },
+		{ lang: "ru", name: scopedT("Langs.Russian") },
+		{ lang: "zh-Hans", name: scopedT("Langs.Chinese Simplified") },
+		{ lang: "zh-Hant", name: scopedT("Langs.Chinese Traditional") },
+		{ lang: "ar", name: scopedT("Langs.Arabic") },
+		{ lang: "tr", name: scopedT("Langs.Turkish") },
+		{ lang: "vi", name: scopedT("Langs.Vietnamese") },
+		{ lang: "th", name: scopedT("Langs.Thai") },
+		{ lang: "sv", name: scopedT("Langs.Swedish") },
+		{ lang: "pl", name: scopedT("Langs.Polish") },
+		{ lang: "nl", name: scopedT("Langs.Dutch") },
+		{ lang: "da", name: scopedT("Langs.Danish") },
+		{ lang: "fi", name: scopedT("Langs.Finnish") },
+		{ lang: "no", name: scopedT("Langs.Norwegian") },
+		{ lang: "cs", name: scopedT("Langs.Czech") },
+		{ lang: "hu", name: scopedT("Langs.Hungarian") },
+		{ lang: "el", name: scopedT("Langs.Greek") },
+		{ lang: "id", name: scopedT("Langs.Indonesian") },
+		{ lang: "ms", name: scopedT("Langs.Malay") },
+		{ lang: "tlh-Latn", name: scopedT("Langs.Klingon") },
 	];
 
 	return (
@@ -71,7 +71,7 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 					defaultValue={locale}
 				>
 					{languages.map((lang) => (
-						<option key={lang.id} value={lang.id}>
+						<option key={lang.lang} value={lang.lang}>
 							{lang.name}
 						</option>
 					))}
@@ -116,7 +116,7 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 					}}
 				>
 					{languages.map((lang) => (
-						<option key={lang.id} value={lang.id}>
+						<option key={lang.lang} value={lang.lang}>
 							{lang.name}
 						</option>
 					))}
