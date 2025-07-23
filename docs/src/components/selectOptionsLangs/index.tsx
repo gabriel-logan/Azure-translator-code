@@ -9,7 +9,7 @@ export default function SelectOptionsLangs() {
 	const optionsLangsC = optionsLangs({ scopedT });
 
 	return optionsLangsC.map((option) => (
-		<option key={option.lang} value={option.lang}>
+		<option key={option.id} value={option.id}>
 			{option.name}
 		</option>
 	));
