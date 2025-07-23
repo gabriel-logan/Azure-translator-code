@@ -34,15 +34,21 @@ export default function ResultDiv({
 					<div className="h-4 w-3/4 animate-pulse bg-gray-400" />
 				</div>
 			) : (
-				<pre className="overflow-x-auto rounded-md bg-gray-50 p-4 text-sm text-black shadow-inner">
+				<div className="overflow-x-auto rounded-md bg-gray-50 p-4 text-sm text-black shadow-inner">
 					{typeof state.message === "string" ? (
-						state.message
+						<p className="whitespace-pre-wrap break-words font-mono">
+							{state.message}
+						</p>
 					) : (
-						<SyntaxHighlighter language="json" style={oneLight}>
+						<SyntaxHighlighter
+							language="json"
+							style={oneLight}
+							customStyle={{ margin: 0 }}
+						>
 							{JSON.stringify(state.message, null, 2)}
 						</SyntaxHighlighter>
 					)}
-				</pre>
+				</div>
 			)}
 		</>
 	);
