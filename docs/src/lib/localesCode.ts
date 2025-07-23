@@ -27,6 +27,7 @@ const localesCodes: LocalesCodes[] = [
 	"el",
 	"id",
 	"ms",
+	"none",
 ];
 
 export default localesCodes;

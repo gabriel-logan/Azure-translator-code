@@ -24,7 +24,8 @@ export type LocalesCodes =
 	| "hu"
 	| "el"
 	| "id"
-	| "ms";
+	| "ms"
+	| "none";
 
 export interface Locale {
 	locale: Readonly<LocalesCodes>;
