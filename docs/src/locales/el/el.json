@@ -28,14 +28,13 @@
 			"SiteName": "Κώδικας μεταφραστή Azure"
 		},
 		"Category": "Εργαλεία",
-		"Created by": "Δημιουργήθηκε από"
-	},
-	"Manifest": {
-		"Name": "Κώδικας μεταφραστή Azure",
-		"ShortName": "Azure Translator",
-		"Description": "Μεταφράστε το αρχείο json απευθείας στη σελίδα",
-		"lang": "el",
-		"Dir": "ltr"
+		"Created by": "Δημιουργήθηκε από",
+		"All rights reserved": "Με την επιφύλαξη παντός δικαιώματος",
+		"Footer": {
+			"Description": "Έργο ανοιχτού κώδικα που υποστηρίζεται από το Azure Translator",
+			"Back to top": "Επιστροφή στην κορυφή",
+			"Built with": "Χτισμένο με Next.js, TailwindCSS και ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Η σελίδα δεν βρέθηκε",
@@ -50,8 +49,9 @@
 		"Test the translator": "Δοκιμάστε τον μεταφραστή",
 		"Back": "Πλάτη",
 		"Test Multingual": "Δοκιμή Multingual",
-		"Live translator": "Ζωντανός μεταφραστής",
-		"Live Translator": "Ζωντανός μεταφραστής"
+		"Live Translator": "Ζωντανός μεταφραστής",
+		"Test Your Own Key": "Δοκιμάστε το δικό σας κλειδί",
+		"Home": "Σπίτι"
 	},
 	"FormComponent": {
 		"From": "Από",
@@ -87,7 +87,8 @@
 			"Thai": "Ταϊλανδικά",
 			"Turkish": "Τουρκικά",
 			"Vietnamese": "Βιετναμικά",
-			"Malay": "Μαλαϊκά"
+			"Malay": "Μαλαϊκά",
+			"Klingon": "Κλίνγκον"
 		},
 		"Paste the json code here": "Επικολλήστε τον κώδικα json εδώ",
 		"Len": "Λεν",
@@ -99,6 +100,8 @@
 		"Translations:": "Μεταφράσεις:",
 		"Translation": "Μετάφραση",
 		"Translating": "Μετάφραση",
-		"Translating...": "Μετάφραση..."
+		"Translating...": "Μετάφραση...",
+		"Select All": "Επιλογή όλων",
+		"Deselect All": "Αποεπιλογή όλων"
 	}
 }

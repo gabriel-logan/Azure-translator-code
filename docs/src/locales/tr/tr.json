@@ -23,25 +23,24 @@
 		"Description": "json dosyanızı doğrudan sayfada çevirin",
 		"Classification": "Translator",
 		"OpenGraph": {
-			"Title": "JSON Dosyalarını Azure ile Kolayca Çevirin",
+			"Title": "Azure ile JSON Dosyalarını Kolayca Çevirin",
 			"Description": "JSON dosyalarınızı doğrudan sayfada hızlı ve kolay bir şekilde çevirmek için Azure Translator Kodu'nu kullanın.",
 			"SiteName": "Azure Translator Kodu"
 		},
 		"Category": "Araçları",
-		"Created by": "Oluşturan"
-	},
-	"Manifest": {
-		"Name": "Azure Translator Kodu",
-		"ShortName": "Azure Translator",
-		"Description": "json dosyanızı doğrudan sayfada çevirin",
-		"lang": "tr",
-		"Dir": "ltr"
+		"Created by": "Oluşturan",
+		"All rights reserved": "Tüm hakları saklıdır",
+		"Footer": {
+			"Description": "Azure Translator tarafından desteklenen açık kaynak projesi",
+			"Back to top": "Yukarıya geri dön",
+			"Built with": "Next.js, TailwindCSS ile oluşturulmuştur ve ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Sayfa bulunamadı",
 		"Description": "Aradığınız sayfa mevcut değil. 😩😩😩",
 		"Back": "Geri",
-		"Go to GitHub": "GitHub'a git"
+		"Go to GitHub": "GitHub'a gidin"
 	},
 	"HomePage": {
 		"Title": "Azure Translator Kodu",
@@ -50,8 +49,9 @@
 		"Test the translator": "Çevirmeni test edin",
 		"Back": "Geri",
 		"Test Multingual": "Çok Dilli Test",
-		"Live translator": "Live Translator",
-		"Live Translator": "Live Translator"
+		"Live Translator": "Live Translator",
+		"Test Your Own Key": "Kendi Anahtarınızı Test Edin",
+		"Home": "Ev"
 	},
 	"FormComponent": {
 		"From": "Kaynak",
@@ -87,7 +87,8 @@
 			"Thai": "Tay dili",
 			"Turkish": "Türkçe",
 			"Vietnamese": "Vietnam dili",
-			"Malay": "Malay dili"
+			"Malay": "Malay dili",
+			"Klingon": "Klingonca"
 		},
 		"Paste the json code here": "json kodunu buraya yapıştırın",
 		"Len": "Len",
@@ -99,6 +100,8 @@
 		"Translations:": "Çeviri -leri:",
 		"Translation": "Çeviri",
 		"Translating": "Çevriliyor",
-		"Translating...": "Çevriliyor..."
+		"Translating...": "Çevriliyor...",
+		"Select All": "Tümünü Seç",
+		"Deselect All": "Tümünün Seçimini Kaldır"
 	}
 }

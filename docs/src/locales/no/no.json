@@ -2,25 +2,25 @@
 	"Hello World": "Hallo verden",
 	"Actions": {
 		"MakeTranslations": {
-			"Invalid or missing request body": "Ugyldig eller manglende forespørselsorgan",
+			"Invalid or missing request body": "Ugyldig eller manglende forespørselstekst",
 			"Text must be less than 5000 characters": "Teksten må være mindre enn 5000 tegn",
-			"From lang and to Lang are required": "Fra lang og til Lang kreves",
+			"From lang and to Lang are required": "Fra lang og til lang kreves",
 			"Missing json file text": "Manglende json-filtekst",
 			"Invalid json text passed": "Ugyldig json-tekst sendt",
 			"Translation": "Oversettelse",
-			"Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv på nytt.",
-			"Text must be less than 1000 characters": "Teksten må bestå av mindre enn 1000 tegn"
+			"Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv igjen.",
+			"Text must be less than 1000 characters": "Tekst må være mindre enn 1000 tegn"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Ingen tekst å oversette",
 			"No languages selected": "Ingen språk valgt",
-			"Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv på nytt.",
+			"Error while translating the text. Please try again.": "Feil under oversettelse av teksten. Prøv igjen.",
 			"Text must be less than 5000 characters": "Teksten må være mindre enn 5000 tegn"
 		}
 	},
 	"HomeLayout": {
 		"Title": "Azure Translator-kode",
-		"Description": "Oversett json-filen direkte på siden",
+		"Description": "Oversett json-filen din direkte på siden",
 		"Classification": "Oversetter",
 		"OpenGraph": {
 			"Title": "Oversett JSON-filer enkelt med Azure",
@@ -28,14 +28,13 @@
 			"SiteName": "Azure Translator-kode"
 		},
 		"Category": "Redskapene",
-		"Created by": "Opprettet av"
-	},
-	"Manifest": {
-		"Name": "Azure Translator-kode",
-		"ShortName": "Azure Translator",
-		"Description": "Oversett json-filen direkte på siden",
-		"lang": "no",
-		"Dir": "ltr"
+		"Created by": "Opprettet av",
+		"All rights reserved": "Alle rettigheter forbeholdt",
+		"Footer": {
+			"Description": "Prosjekt med åpen kildekode drevet av Azure Translator",
+			"Back to top": "Tilbake til toppen",
+			"Built with": "Bygget med Next.js, TailwindCSS og ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Finner ikke siden",
@@ -45,13 +44,14 @@
 	},
 	"HomePage": {
 		"Title": "Azure Translator-kode",
-		"Read the": "Les hele artikkelen",
-		"to know how to use the library in your JS/TS project": "å vite hvordan du bruker biblioteket i ditt JS/TS-prosjekt",
+		"Read the": "Les",
+		"to know how to use the library in your JS/TS project": "for å vite hvordan du bruker biblioteket i JS/TS-prosjektet ditt",
 		"Test the translator": "Test oversetteren",
 		"Back": "Tilbake",
-		"Test Multingual": "Test Multingual",
-		"Live translator": "Live oversetter",
-		"Live Translator": "Live oversetter"
+		"Test Multingual": "Test flerngual",
+		"Live Translator": "Live oversetter",
+		"Test Your Own Key": "Test din egen nøkkel",
+		"Home": "Hjem"
 	},
 	"FormComponent": {
 		"From": "Fra",
@@ -59,8 +59,8 @@
 		"Translate": "Oversette",
 		"Langs": {
 			"Arabic": "Arabisk",
-			"Chinese Simplified": "Kinesisk (forenklet)",
-			"Chinese Traditional": "Kinesisk, tradisjonell",
+			"Chinese Simplified": "Forenklet kinesisk",
+			"Chinese Traditional": "Tradisjonell kinesisk",
 			"Czech": "Tsjekkisk",
 			"Danish": "Dansk",
 			"Dutch": "Nederlandsk",
@@ -87,11 +87,12 @@
 			"Thai": "Thai",
 			"Turkish": "Tyrkisk",
 			"Vietnamese": "Vietnamesisk",
-			"Malay": "Malayisk"
+			"Malay": "Malayisk",
+			"Klingon": "Klingonsk"
 		},
 		"Paste the json code here": "Lim inn json-koden her",
 		"Len": "Len",
-		"No result yet": "Ingen resultat ennå",
+		"No result yet": "Ikke noe resultat ennå",
 		"Result: ": "Resultat: ",
 		"Copied": "Kopiert",
 		"Text to Translate": "Tekst som skal oversettes",
@@ -99,6 +100,8 @@
 		"Translations:": "Oversettelser:",
 		"Translation": "Oversettelse",
 		"Translating": "Oversette",
-		"Translating...": "Oversette..."
+		"Translating...": "Oversette...",
+		"Select All": "Velg alle",
+		"Deselect All": "Fjern merket for alle"
 	}
 }

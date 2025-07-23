@@ -9,7 +9,29 @@ const key = process.env.KEY;
 const endpoint = "https://api.cognitive.microsofttranslator.com/";
 const location = process.env.LOCATION;
 const fromLang = "en";
-const toLangs = ["pt"];
+const toLangs = [
+	"ar",
+	"cs",
+	"da",
+	"de",
+	"el",
+	"es",
+	"fi",
+	"fr",
+	"hu",
+	"id",
+	"it",
+	"ja",
+	"ko",
+	"nl",
+	"no",
+	"pl",
+	"ro",
+	"ru",
+	"sv",
+	"tr",
+	"zh",
+];
 
 translateToMultipleFolders(
 	key,

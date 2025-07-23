@@ -2,40 +2,39 @@
 	"Hello World": "Всем привет",
 	"Actions": {
 		"MakeTranslations": {
-			"Invalid or missing request body": "Недопустимый или отсутствующий текст запроса",
-			"Text must be less than 5000 characters": "Текст должен быть не более 5000 символов",
-			"From lang and to Lang are required": "From lang и to Lang являются обязательными",
-			"Missing json file text": "Отсутствует текст json-файла",
-			"Invalid json text passed": "Передан недопустимый текст json",
+			"Invalid or missing request body": "Недопустимое или отсутствующее тело запроса",
+			"Text must be less than 5000 characters": "Текст должен быть менее 5000 символов",
+			"From lang and to Lang are required": "From lang и to lang обязательны",
+			"Missing json file text": "Отсутствует текст файла json",
+			"Invalid json text passed": "Передан неверный текст json",
 			"Translation": "Перевод",
-			"Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку.",
-			"Text must be less than 1000 characters": "Текст должен быть не более 1000 символов"
+			"Error while translating the text. Please try again.": "Ошибка при переводе текста. Пожалуйста, повторите попытку.",
+			"Text must be less than 1000 characters": "Текст должен быть менее 1000 символов"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Нет текста для перевода",
 			"No languages selected": "Языки не выбраны",
-			"Error while translating the text. Please try again.": "Ошибка при переводе текста. Повторите попытку.",
-			"Text must be less than 5000 characters": "Текст должен быть не более 5000 символов"
+			"Error while translating the text. Please try again.": "Ошибка при переводе текста. Пожалуйста, повторите попытку.",
+			"Text must be less than 5000 characters": "Текст должен быть менее 5000 символов"
 		}
 	},
 	"HomeLayout": {
 		"Title": "Код переводчика Azure",
-		"Description": "Переведите свой json-файл прямо на странице",
+		"Description": "Переводите свой json-файл прямо на странице",
 		"Classification": "Translator",
 		"OpenGraph": {
-			"Title": "Простой перевод файлов JSON с помощью Azure",
-			"Description": "Используйте код Azure Translator для быстрого и простого перевода файлов JSON непосредственно на странице.",
+			"Title": "Простой перевод JSON-файлов с помощью Azure",
+			"Description": "Используйте код переводчика Azure, чтобы быстро и легко переводить файлы JSON прямо на странице.",
 			"SiteName": "Код переводчика Azure"
 		},
 		"Category": "Инструменты",
-		"Created by": "Создание сайта"
-	},
-	"Manifest": {
-		"Name": "Код переводчика Azure",
-		"ShortName": "Azure Translator",
-		"Description": "Переведите свой json-файл прямо на странице",
-		"lang": "ru",
-		"Dir": "ltr"
+		"Created by": "Создание сайта",
+		"All rights reserved": "Все права защищены",
+		"Footer": {
+			"Description": "Проект с открытым кодом на базе Azure Translator",
+			"Back to top": "Наверх",
+			"Built with": "Создано с помощью Next.js, TailwindCSS и ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Страница не найдена",
@@ -46,12 +45,13 @@
 	"HomePage": {
 		"Title": "Код переводчика Azure",
 		"Read the": "Прочтите",
-		"to know how to use the library in your JS/TS project": "знать, как использовать библиотеку в вашем JS/TS проекте",
-		"Test the translator": "Протестировать переводчика",
+		"to know how to use the library in your JS/TS project": "чтобы узнать, как использовать библиотеку в вашем JS/TS проекте",
+		"Test the translator": "Тестирование переводчика",
 		"Back": "Назад",
-		"Test Multingual": "Тест Multingual",
-		"Live translator": "Live Translator",
-		"Live Translator": "Live Translator"
+		"Test Multingual": "Тестовый мультиногеть",
+		"Live Translator": "Live Translator",
+		"Test Your Own Key": "Проверьте свой собственный ключ",
+		"Home": "Дом"
 	},
 	"FormComponent": {
 		"From": "От",
@@ -87,9 +87,10 @@
 			"Thai": "Тайский",
 			"Turkish": "Турецкий",
 			"Vietnamese": "Вьетнамский",
-			"Malay": "Малайский"
+			"Malay": "Малайский",
+			"Klingon": "Клингонский язык"
 		},
-		"Paste the json code here": "Вставьте json-код сюда",
+		"Paste the json code here": "Вставьте код json сюда",
 		"Len": "Лен",
 		"No result yet": "Результата пока нет",
 		"Result: ": "Результат: ",
@@ -99,6 +100,8 @@
 		"Translations:": "Переводы:",
 		"Translation": "Перевод",
 		"Translating": "Выполняется перевод",
-		"Translating...": "Выполняется перевод..."
+		"Translating...": "Выполняется перевод...",
+		"Select All": "Выбрать все",
+		"Deselect All": "Отмена выбора «Все»"
 	}
 }

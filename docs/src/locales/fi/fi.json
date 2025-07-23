@@ -2,40 +2,39 @@
 	"Hello World": "Moi maailma",
 	"Actions": {
 		"MakeTranslations": {
-			"Invalid or missing request body": "Virheellinen tai puuttuva pyyntöelin",
+			"Invalid or missing request body": "Virheellinen tai puuttuva pyynnön runko",
 			"Text must be less than 5000 characters": "Tekstin on oltava alle 5000 merkkiä pitkä",
-			"From lang and to Lang are required": "Langista ja Langiin tarvitaan",
+			"From lang and to Lang are required": "Langista ja Langiin vaaditaan",
 			"Missing json file text": "JSON-tiedoston teksti puuttuu",
 			"Invalid json text passed": "Virheellinen json-teksti välitetty",
 			"Translation": "Käännös",
-			"Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen.",
+			"Error while translating the text. Please try again.": "Virhe tekstin kääntämisessä. Yritä uudelleen.",
 			"Text must be less than 1000 characters": "Tekstin on oltava alle 1000 merkkiä pitkä"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Ei käännettävää tekstiä",
-			"No languages selected": "Kieliä ei ole valittu",
-			"Error while translating the text. Please try again.": "Virhe tekstiä käännettäessä. Yritä uudelleen.",
+			"No languages selected": "Ei valittu kieliä",
+			"Error while translating the text. Please try again.": "Virhe tekstin kääntämisessä. Yritä uudelleen.",
 			"Text must be less than 5000 characters": "Tekstin on oltava alle 5000 merkkiä pitkä"
 		}
 	},
 	"HomeLayout": {
-		"Title": "Azure Translator Code",
-		"Description": "Käännä json-tiedosto suoraan sivulla",
+		"Title": "Azure Translator -koodi",
+		"Description": "Käännä json-tiedostosi suoraan sivulla",
 		"Classification": "Kääntäjä",
 		"OpenGraph": {
-			"Title": "Käännä JSON-tiedostot helposti Azuren avulla",
-			"Description": "Azure Translator Coden avulla voit kääntää JSON-tiedostosi suoraan sivulle nopeasti ja helposti.",
-			"SiteName": "Azure Translator Code"
+			"Title": "Käännä JSON-tiedostoja helposti Azuren avulla",
+			"Description": "Azure Translator Code:n avulla voit kääntää JSON-tiedostosi suoraan sivulla nopeasti ja helposti.",
+			"SiteName": "Azure Translator -koodi"
 		},
 		"Category": "Välineet",
-		"Created by": "Luonut"
-	},
-	"Manifest": {
-		"Name": "Azure Translator Code",
-		"ShortName": "Azure Translator",
-		"Description": "Käännä json-tiedosto suoraan sivulla",
-		"lang": "fi",
-		"Dir": "ltr"
+		"Created by": "Luonut",
+		"All rights reserved": "Kaikki oikeudet pidätetään",
+		"Footer": {
+			"Description": "Avoimen lähdekoodin projekti, jonka tarjoaa Azure Translator",
+			"Back to top": "Takaisin alkuun",
+			"Built with": "Rakennettu Next.js, TailwindCSS:llä ja ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Sivua ei löydy",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "Siirry GitHubiin"
 	},
 	"HomePage": {
-		"Title": "Azure Translator Code",
+		"Title": "Azure Translator -koodi",
 		"Read the": "Lue",
-		"to know how to use the library in your JS/TS project": "tietää, miten kirjastoa käytetään JS / TS-projektissasi",
-		"Test the translator": "Kääntäjän testaaminen",
+		"to know how to use the library in your JS/TS project": "tietää, miten kirjastoa käytetään JS/TS-projektissasi",
+		"Test the translator": "Testaa kääntäjää",
 		"Back": "Selkä",
 		"Test Multingual": "Testaa Multingual",
-		"Live translator": "Live-kääntäjä",
-		"Live Translator": "Live-kääntäjä"
+		"Live Translator": "Live-kääntäjä",
+		"Test Your Own Key": "Testaa omaa avaintasi",
+		"Home": "Koti"
 	},
 	"FormComponent": {
 		"From": "Alkaen",
@@ -87,7 +87,8 @@
 			"Thai": "Thai",
 			"Turkish": "Turkki",
 			"Vietnamese": "Vietnam",
-			"Malay": "Malaiji"
+			"Malay": "Malaiji",
+			"Klingon": "Klingonit"
 		},
 		"Paste the json code here": "Liitä json-koodi tähän",
 		"Len": "Len",
@@ -99,6 +100,8 @@
 		"Translations:": "Käännökset:",
 		"Translation": "Käännös",
 		"Translating": "Kääntäminen",
-		"Translating...": "Kääntäminen..."
+		"Translating...": "Kääntäminen...",
+		"Select All": "Valitse kaikki",
+		"Deselect All": "Poista kaikkien valinta"
 	}
 }

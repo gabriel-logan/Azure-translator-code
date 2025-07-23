@@ -2,9 +2,9 @@
 	"Hello World": "مرحبا بالعالم",
 	"Actions": {
 		"MakeTranslations": {
-			"Invalid or missing request body": "نص الطلب غير صالح أو مفقود",
+			"Invalid or missing request body": "نص طلب غير صالح أو مفقود",
 			"Text must be less than 5000 characters": "يجب أن يكون النص أقل من 5000 حرف",
-			"From lang and to Lang are required": "من لانغ وإلى لانغ مطلوبة",
+			"From lang and to Lang are required": "من lang و إلى Lang مطلوبة",
 			"Missing json file text": "نص ملف json مفقود",
 			"Invalid json text passed": "تم تمرير نص json غير صالح",
 			"Translation": "ترجمة",
@@ -13,7 +13,7 @@
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "لا يوجد نص للترجمة",
-			"No languages selected": "لم يتم تحديد لغات",
+			"No languages selected": "لم يتم تحديد أي لغات",
 			"Error while translating the text. Please try again.": "خطأ أثناء ترجمة النص. يرجى المحاولة مرة أخرى.",
 			"Text must be less than 5000 characters": "يجب أن يكون النص أقل من 5000 حرف"
 		}
@@ -24,36 +24,34 @@
 		"Classification": "Translator",
 		"OpenGraph": {
 			"Title": "ترجمة ملفات JSON بسهولة باستخدام Azure",
-			"Description": "استخدم التعليمات البرمجية لمترجم Azure لترجمة ملفات JSON مباشرة على الصفحة بسرعة وسهولة.",
+			"Description": "استخدم Azure Translator Code لترجمة ملفات JSON مباشرة على الصفحة بسرعة وسهولة.",
 			"SiteName": "كود مترجم Azure"
 		},
 		"Category": "ادوات",
-		"Created by": "تم الإنشاء بواسطة"
-	},
-	"Manifest": {
-		"Name": "كود مترجم Azure",
-		"ShortName": "Azure Translator",
-		"Description": "ترجمة ملف json الخاص بك مباشرة في الصفحة",
-		"lang": "ar",
-		"Dir": "rtl"
+		"Created by": "تم إنشاؤه بواسطة",
+		"All rights reserved": "جميع الحقوق محفوظة",
+		"Footer": {
+			"Description": "مشروع مفتوح المصدر مدعوم من Azure Translator",
+			"Back to top": "العودة إلى الأعلى",
+			"Built with": "تم تصميمه باستخدام Next.js و TailwindCSS و ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - لم يتم العثور على الصفحة",
 		"Description": "الصفحة التي تبحث عنها غير موجودة. 😩😩😩",
 		"Back": "ظهر",
-		"Go to GitHub": "انتقل إلى جيثب"
+		"Go to GitHub": "انتقل إلى GitHub"
 	},
 	"HomePage": {
 		"Title": "كود مترجم Azure",
-		"Read the": "اقرأ",
+		"Read the": "قراءة الرمز",
 		"to know how to use the library in your JS/TS project": "لمعرفة كيفية استخدام المكتبة في مشروع JS / TS الخاص بك",
 		"Test the translator": "اختبر المترجم",
 		"Back": "ظهر",
-		"Test Multingual": "اختبار متعدد الأضلاع",
-		"Live translator": "Live Translator",
+		"Test Multingual": "اختبار متعدد اللغات",
 		"Live Translator": "Live Translator",
 		"Test Your Own Key": "اختبر مفتاحك الخاص",
-		"Home": "الصفحة الرئيسية"
+		"Home": "وطن"
 	},
 	"FormComponent": {
 		"From": "من",
@@ -89,18 +87,21 @@
 			"Thai": "التايلندية",
 			"Turkish": "التركية",
 			"Vietnamese": "الفيتنامية",
-			"Malay": "الماليزية"
+			"Malay": "الماليزية",
+			"Klingon": "كلينغون"
 		},
-		"Paste the json code here": "الصق رمز json هنا",
+		"Paste the json code here": "الصق كود json هنا",
 		"Len": "ليون",
 		"No result yet": "لا توجد نتيجة حتى الآن",
 		"Result: ": "نتيجة: ",
 		"Copied": "نسخ",
-		"Text to Translate": "النص المراد ترجمته",
+		"Text to Translate": "نص للترجمة",
 		"Select the languages you want to translate the text to:": "حدد اللغات التي تريد ترجمة النص إليها:",
 		"Translations:": "تراجم:",
 		"Translation": "ترجمة",
 		"Translating": "تتم الآن الترجمة",
-		"Translating...": "تتم الآن الترجمة..."
+		"Translating...": "تتم الآن الترجمة...",
+		"Select All": "حدد الكل",
+		"Deselect All": "إلغاء تحديد الكل"
 	}
 }

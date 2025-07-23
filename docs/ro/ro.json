@@ -1,0 +1,107 @@
+{
+	"Hello World": "Bună oameni buni",
+	"Actions": {
+		"MakeTranslations": {
+			"Invalid or missing request body": "Corp de solicitare nevalid sau lipsă",
+			"Text must be less than 5000 characters": "Textul trebuie să aibă mai puțin de 5000 de caractere",
+			"From lang and to Lang are required": "De la lang și la lang sunt necesare",
+			"Missing json file text": "Lipsește textul fișierului json",
+			"Invalid json text passed": "Text json nevalid transmis",
+			"Translation": "Traducere",
+			"Error while translating the text. Please try again.": "Eroare la traducerea textului. Vă rugăm să încercați din nou.",
+			"Text must be less than 1000 characters": "Textul trebuie să aibă mai puțin de 1000 de caractere"
+		},
+		"makeTranslationMultilang": {
+			"No text to translate": "Fără text de tradus",
+			"No languages selected": "Nicio limbă selectată",
+			"Error while translating the text. Please try again.": "Eroare la traducerea textului. Vă rugăm să încercați din nou.",
+			"Text must be less than 5000 characters": "Textul trebuie să aibă mai puțin de 5000 de caractere"
+		}
+	},
+	"HomeLayout": {
+		"Title": "Cod traducător Azure",
+		"Description": "Traduceți fișierul json direct în pagină",
+		"Classification": "Traducător",
+		"OpenGraph": {
+			"Title": "Traduceți cu ușurință fișierele JSON cu Azure",
+			"Description": "Utilizați Azure Translator Code pentru a traduce fișierele JSON direct pe pagină rapid și ușor.",
+			"SiteName": "Cod traducător Azure"
+		},
+		"Category": "Instrumente",
+		"Created by": "Creat de",
+		"All rights reserved": "Toate drepturile rezervate",
+		"Footer": {
+			"Description": "Proiect open-source susținut de Azure Translator",
+			"Back to top": "Înapoi sus",
+			"Built with": "Construit cu Next.js, TailwindCSS și ❤️"
+		}
+	},
+	"NotFoundPage": {
+		"Title": "404 - Pagina nu a fost găsită",
+		"Description": "Pagina pe care o căutați nu există. 😩😩😩",
+		"Back": "Spate",
+		"Go to GitHub": "Accesați GitHub"
+	},
+	"HomePage": {
+		"Title": "Cod traducător Azure",
+		"Read the": "Citește",
+		"to know how to use the library in your JS/TS project": "pentru a ști cum să utilizați biblioteca în proiectul JS/TS",
+		"Test the translator": "Testați traducătorul",
+		"Back": "Spate",
+		"Test Multingual": "Test Multingual",
+		"Live Translator": "Traducător live",
+		"Test Your Own Key": "Testați-vă propria cheie",
+		"Home": "Domiciliu"
+	},
+	"FormComponent": {
+		"From": "Din",
+		"To": "Spre",
+		"Translate": "Traduce",
+		"Langs": {
+			"Arabic": "Arabă",
+			"Chinese Simplified": "Chineză simplificată",
+			"Chinese Traditional": "Chineză tradiţională",
+			"Czech": "Cehă",
+			"Danish": "Daneză",
+			"Dutch": "Olandeză",
+			"English": "Engleză",
+			"Finnish": "Finlandeză",
+			"French": "Franceză",
+			"German": "Germană",
+			"Greek": "Greacă",
+			"Hebrew": "Ebraică",
+			"Hindi": "Hindi",
+			"Hungarian": "Maghiară",
+			"Indonesian": "Indoneziană",
+			"Italian": "Italiană",
+			"Japanese": "Japoneză",
+			"Korean": "Coreeană",
+			"Norwegian": "Norvegiană",
+			"Polish": "Poloneză",
+			"Portuguese": "Portugheză",
+			"Romanian": "Română",
+			"Russian": "Rusă",
+			"Slovak": "Slovacă",
+			"Spanish": "Spaniolă",
+			"Swedish": "Suedeză",
+			"Thai": "Thai",
+			"Turkish": "Turcă",
+			"Vietnamese": "Vietnameză",
+			"Malay": "Malaieză",
+			"Klingon": "Klingonian"
+		},
+		"Paste the json code here": "Lipiți codul json aici",
+		"Len": "Len",
+		"No result yet": "Încă niciun rezultat",
+		"Result: ": "Rezultat: ",
+		"Copied": "Copiat",
+		"Text to Translate": "Text de tradus",
+		"Select the languages you want to translate the text to:": "Selectați limbile în care doriți să traduceți textul:",
+		"Translations:": "Traduceri:",
+		"Translation": "Traducere",
+		"Translating": "Traducerea",
+		"Translating...": "Traducerea...",
+		"Select All": "Selectează tot",
+		"Deselect All": "Deselectarea tuturor"
+	}
+}

@@ -5,37 +5,36 @@
 			"Invalid or missing request body": "Neplatný nebo chybějící text požadavku",
 			"Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků",
 			"From lang and to Lang are required": "Z lang a do Lang jsou vyžadovány",
-			"Missing json file text": "Chybějící text souboru JSON",
-			"Invalid json text passed": "Předán neplatný text JSON.",
+			"Missing json file text": "Chybějící text souboru json",
+			"Invalid json text passed": "Byl předán neplatný text json",
 			"Translation": "Překlad",
 			"Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
-			"Text must be less than 1000 characters": "Text musí být kratší než 1000 znaků."
+			"Text must be less than 1000 characters": "Text musí být kratší než 1000 znaků"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Žádný text k překladu",
-			"No languages selected": "Nebyly vybrány žádné jazyky",
+			"No languages selected": "Nejsou vybrány žádné jazyky",
 			"Error while translating the text. Please try again.": "Chyba při překladu textu. Zkuste to prosím znovu.",
 			"Text must be less than 5000 characters": "Text musí být kratší než 5000 znaků"
 		}
 	},
 	"HomeLayout": {
-		"Title": "Kód služby Azure Translator",
+		"Title": "Kód překladače Azure",
 		"Description": "Přeložte svůj soubor json přímo na stránce",
 		"Classification": "Překladatel",
 		"OpenGraph": {
-			"Title": "Snadný překlad souborů JSON s využitím Azure",
-			"Description": "Pomocí Azure Translator Code můžete rychle a snadno přeložit soubory JSON přímo na stránce.",
-			"SiteName": "Kód služby Azure Translator"
+			"Title": "Snadný překlad souborů JSON pomocí Azure",
+			"Description": "Pomocí Azure Translator Code můžete rychle a snadno překládat soubory JSON přímo na stránce.",
+			"SiteName": "Kód překladače Azure"
 		},
 		"Category": "Nářadí",
-		"Created by": "Vytvořil(a)"
-	},
-	"Manifest": {
-		"Name": "Kód služby Azure Translator",
-		"ShortName": "Azure Translator",
-		"Description": "Přeložte svůj soubor json přímo na stránce",
-		"lang": "cs",
-		"Dir": "ltr"
+		"Created by": "Vytvořil(a)",
+		"All rights reserved": "Všechna práva vyhrazena",
+		"Footer": {
+			"Description": "Opensourcový projekt využívající Azure Translator",
+			"Back to top": "Zpět na začátek",
+			"Built with": "Postaveno na Next.js, TailwindCSS a ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Stránka nenalezena",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "Přejít na GitHub"
 	},
 	"HomePage": {
-		"Title": "Kód služby Azure Translator",
+		"Title": "Kód překladače Azure",
 		"Read the": "Přečtěte si",
-		"to know how to use the library in your JS/TS project": "abyste věděli, jak používat knihovnu ve vašem projektu JS/TS",
+		"to know how to use the library in your JS/TS project": "vědět, jak používat knihovnu ve vašem projektu JS/TS",
 		"Test the translator": "Otestujte překladač",
 		"Back": "Hřbet",
-		"Test Multingual": "Testovací multingual",
-		"Live translator": "Živý překladač",
-		"Live Translator": "Živý překladač"
+		"Test Multingual": "Test Multingual",
+		"Live Translator": "Živý překladač",
+		"Test Your Own Key": "Otestujte svůj vlastní klíč",
+		"Home": "Domov"
 	},
 	"FormComponent": {
 		"From": "Od",
@@ -87,7 +87,8 @@
 			"Thai": "Thajština",
 			"Turkish": "Turečtina",
 			"Vietnamese": "Vietnamština",
-			"Malay": "Malajština"
+			"Malay": "Malajština",
+			"Klingon": "Klingonština"
 		},
 		"Paste the json code here": "Sem vložte kód json",
 		"Len": "Len",
@@ -99,6 +100,8 @@
 		"Translations:": "Překlady:",
 		"Translation": "Překlad",
 		"Translating": "Překládání",
-		"Translating...": "Překládání..."
+		"Translating...": "Překládání...",
+		"Select All": "Vybrat vše",
+		"Deselect All": "Odznačit vše"
 	}
 }

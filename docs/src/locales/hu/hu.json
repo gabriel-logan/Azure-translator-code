@@ -4,23 +4,23 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Érvénytelen vagy hiányzó kérelem törzse",
 			"Text must be less than 5000 characters": "A szövegnek 5000 karakternél rövidebbnek kell lennie",
-			"From lang and to Lang are required": "A lang és a Lang szükséges",
-			"Missing json file text": "Hiányzó JSON-fájl szövege",
-			"Invalid json text passed": "Érvénytelen JSON-szöveg lett átadva",
+			"From lang and to Lang are required": "Langtól és Langig kötelező",
+			"Missing json file text": "Hiányzó json-fájlszöveg",
+			"Invalid json text passed": "Érvénytelen JSON-szöveg átadása",
 			"Translation": "Fordítás",
-			"Error while translating the text. Please try again.": "Hiba történt a szöveg fordítása közben. Kérjük, próbálja újra.",
+			"Error while translating the text. Please try again.": "Hiba a szöveg fordítása közben. Kérjük, próbálja újra.",
 			"Text must be less than 1000 characters": "A szövegnek 1000 karakternél rövidebbnek kell lennie"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Nincs lefordítandó szöveg",
 			"No languages selected": "Nincs kiválasztott nyelv",
-			"Error while translating the text. Please try again.": "Hiba történt a szöveg fordítása közben. Kérjük, próbálja újra.",
+			"Error while translating the text. Please try again.": "Hiba a szöveg fordítása közben. Kérjük, próbálja újra.",
 			"Text must be less than 5000 characters": "A szövegnek 5000 karakternél rövidebbnek kell lennie"
 		}
 	},
 	"HomeLayout": {
 		"Title": "Azure Translator kód",
-		"Description": "A JSON-fájl fordítása közvetlenül az oldalon",
+		"Description": "Fordítsa le json-fájlját közvetlenül az oldalon",
 		"Classification": "Fordító",
 		"OpenGraph": {
 			"Title": "JSON-fájlok egyszerű fordítása az Azure-ral",
@@ -28,14 +28,13 @@
 			"SiteName": "Azure Translator kód"
 		},
 		"Category": "Eszközök",
-		"Created by": "Készítette"
-	},
-	"Manifest": {
-		"Name": "Azure Translator kód",
-		"ShortName": "Azure Translator",
-		"Description": "A JSON-fájl fordítása közvetlenül az oldalon",
-		"lang": "hu",
-		"Dir": "ltr"
+		"Created by": "Készítette:",
+		"All rights reserved": "Minden jog fenntartva",
+		"Footer": {
+			"Description": "Nyílt forráskódú projekt az Azure Translator által",
+			"Back to top": "Vissza az oldal tetejére",
+			"Built with": "Next.js, TailwindCSS és ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Az oldal nem található",
@@ -46,12 +45,13 @@
 	"HomePage": {
 		"Title": "Azure Translator kód",
 		"Read the": "Olvassa el a",
-		"to know how to use the library in your JS/TS project": "hogy megtudja, hogyan kell használni a könyvtárat a JS/TS projektben",
-		"Test the translator": "A fordító tesztelése",
+		"to know how to use the library in your JS/TS project": "tudni, hogyan kell használni a könyvtárat a JS/TS projektben",
+		"Test the translator": "Tesztelje a fordítót",
 		"Back": "Hát",
-		"Test Multingual": "Multingual teszt",
-		"Live translator": "Élő fordító",
-		"Live Translator": "Élő fordító"
+		"Test Multingual": "Multingual tesztelése",
+		"Live Translator": "Élő fordító",
+		"Test Your Own Key": "Tesztelje saját kulcsát",
+		"Home": "Otthon"
 	},
 	"FormComponent": {
 		"From": "Tól",
@@ -87,9 +87,10 @@
 			"Thai": "Thai",
 			"Turkish": "Török",
 			"Vietnamese": "Vietnami",
-			"Malay": "Maláj"
+			"Malay": "Maláj",
+			"Klingon": "Klingon"
 		},
-		"Paste the json code here": "Illessze be ide a JSON-kódot",
+		"Paste the json code here": "Illessze be ide a json-kódot",
 		"Len": "Len",
 		"No result yet": "Még nincs eredmény",
 		"Result: ": "Eredmény: ",
@@ -99,6 +100,8 @@
 		"Translations:": "Fordítások:",
 		"Translation": "Fordítás",
 		"Translating": "Fordítás",
-		"Translating...": "Fordítás..."
+		"Translating...": "Fordítás...",
+		"Select All": "Az összes kijelölése",
+		"Deselect All": "Az összes kijelölésének törlése"
 	}
 }

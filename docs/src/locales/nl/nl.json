@@ -2,40 +2,39 @@
 	"Hello World": "Hallo mensen",
 	"Actions": {
 		"MakeTranslations": {
-			"Invalid or missing request body": "Ongeldige of ontbrekende aanvraagtekst",
-			"Text must be less than 5000 characters": "Tekst mag niet langer zijn dan 5000 tekens",
+			"Invalid or missing request body": "Ongeldige of ontbrekende aanvraagbody",
+			"Text must be less than 5000 characters": "De tekst moet minder dan 5000 tekens lang zijn",
 			"From lang and to Lang are required": "Van lang en naar Lang zijn vereist",
 			"Missing json file text": "Ontbrekende tekst van het json-bestand",
 			"Invalid json text passed": "Ongeldige json-tekst doorgegeven",
 			"Translation": "Vertaling",
 			"Error while translating the text. Please try again.": "Fout bij het vertalen van de tekst. Probeer het opnieuw.",
-			"Text must be less than 1000 characters": "Tekst mag niet langer zijn dan 1000 tekens"
+			"Text must be less than 1000 characters": "De tekst moet minder dan 1000 tekens lang zijn"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Geen tekst om te vertalen",
 			"No languages selected": "Geen talen geselecteerd",
 			"Error while translating the text. Please try again.": "Fout bij het vertalen van de tekst. Probeer het opnieuw.",
-			"Text must be less than 5000 characters": "Tekst mag niet langer zijn dan 5000 tekens"
+			"Text must be less than 5000 characters": "De tekst moet minder dan 5000 tekens lang zijn"
 		}
 	},
 	"HomeLayout": {
-		"Title": "Azure Translator-code",
-		"Description": "Vertaal uw json-bestand rechtstreeks op de pagina",
+		"Title": "Azure Translator Code",
+		"Description": "Vertaal uw json-bestand rechtstreeks naar de pagina",
 		"Classification": "Translator",
 		"OpenGraph": {
-			"Title": "JSON-bestanden eenvoudig vertalen met Azure",
+			"Title": "Vertaal eenvoudig JSON-bestanden met Azure",
 			"Description": "Gebruik Azure Translator Code om uw JSON-bestanden snel en eenvoudig rechtstreeks op de pagina te vertalen.",
-			"SiteName": "Azure Translator-code"
+			"SiteName": "Azure Translator Code"
 		},
 		"Category": "Gereedschap",
-		"Created by": "Gemaakt door"
-	},
-	"Manifest": {
-		"Name": "Azure Translator-code",
-		"ShortName": "Azure Translator",
-		"Description": "Vertaal uw json-bestand rechtstreeks op de pagina",
-		"lang": "nl",
-		"Dir": "ltr"
+		"Created by": "Gemaakt door",
+		"All rights reserved": "Alle rechten voorbehouden",
+		"Footer": {
+			"Description": "Opensource-project mogelijk gemaakt door Azure Translator",
+			"Back to top": "Terug naar boven",
+			"Built with": "Gebouwd met Next.js, TailwindCSS en ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Pagina niet gevonden",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "Ga naar GitHub"
 	},
 	"HomePage": {
-		"Title": "Azure Translator-code",
+		"Title": "Azure Translator Code",
 		"Read the": "Lees de",
-		"to know how to use the library in your JS/TS project": "om te weten hoe u de bibliotheek in uw JS/TS-project kunt gebruiken",
+		"to know how to use the library in your JS/TS project": "weten hoe u de bibliotheek kunt gebruiken in uw JS/TS-project",
 		"Test the translator": "Test de vertaler",
 		"Back": "Terug",
-		"Test Multingual": "Test meertalig",
-		"Live translator": "Live Translator",
-		"Live Translator": "Live Translator"
+		"Test Multingual": "Proef Multingual",
+		"Live Translator": "Live Translator",
+		"Test Your Own Key": "Test uw eigen sleutel",
+		"Home": "Thuis"
 	},
 	"FormComponent": {
 		"From": "Van",
@@ -87,18 +87,21 @@
 			"Thai": "Thais",
 			"Turkish": "Turks",
 			"Vietnamese": "Vietnamees",
-			"Malay": "Maleis"
+			"Malay": "Maleis",
+			"Klingon": "Klingon"
 		},
 		"Paste the json code here": "Plak hier de json-code",
 		"Len": "Len",
 		"No result yet": "Nog geen resultaat",
 		"Result: ": "Resultaat: ",
 		"Copied": "Gekopieerd",
-		"Text to Translate": "Tekst om te vertalen",
+		"Text to Translate": "Te vertalen tekst",
 		"Select the languages you want to translate the text to:": "Selecteer de talen waarnaar u de tekst wilt vertalen:",
 		"Translations:": "Translations:",
 		"Translation": "Vertaling",
 		"Translating": "Vertalen",
-		"Translating...": "Vertalen..."
+		"Translating...": "Vertalen...",
+		"Select All": "Alles selecteren",
+		"Deselect All": "Alles deselecteren"
 	}
 }

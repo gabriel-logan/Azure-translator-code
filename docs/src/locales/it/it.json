@@ -4,17 +4,17 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Corpo della richiesta non valido o mancante",
 			"Text must be less than 5000 characters": "Il testo deve essere inferiore a 5000 caratteri",
-			"From lang and to Lang are required": "Da lang e a Lang sono richiesti",
-			"Missing json file text": "Testo del file json mancante",
+			"From lang and to Lang are required": "Da Lang e a Lang sono necessari",
+			"Missing json file text": "Testo del file JSON mancante",
 			"Invalid json text passed": "Testo json non valido passato",
 			"Translation": "Traduzione",
-			"Error while translating the text. Please try again.": "Errore durante la traduzione del testo. Si prega di riprovare.",
+			"Error while translating the text. Please try again.": "Errore durante la traduzione del testo. Riprova.",
 			"Text must be less than 1000 characters": "Il testo deve essere inferiore a 1000 caratteri"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Nessun testo da tradurre",
 			"No languages selected": "Nessuna lingua selezionata",
-			"Error while translating the text. Please try again.": "Errore durante la traduzione del testo. Si prega di riprovare.",
+			"Error while translating the text. Please try again.": "Errore durante la traduzione del testo. Riprova.",
 			"Text must be less than 5000 characters": "Il testo deve essere inferiore a 5000 caratteri"
 		}
 	},
@@ -24,18 +24,17 @@
 		"Classification": "Translator",
 		"OpenGraph": {
 			"Title": "Traduci facilmente i file JSON con Azure",
-			"Description": "Usare Azure Translator Code per tradurre i file JSON direttamente nella pagina in modo rapido e semplice.",
+			"Description": "Usa il codice di Azure Translator per tradurre i file JSON direttamente nella pagina in modo rapido e semplice.",
 			"SiteName": "Codice di Azure Translator"
 		},
 		"Category": "Utensileria",
-		"Created by": "Creato da"
-	},
-	"Manifest": {
-		"Name": "Codice di Azure Translator",
-		"ShortName": "Azure Translator",
-		"Description": "Traduci il tuo file json direttamente nella pagina",
-		"lang": "it",
-		"Dir": "ltr"
+		"Created by": "Creato da",
+		"All rights reserved": "Tutti i diritti riservati",
+		"Footer": {
+			"Description": "Progetto open source basato su Azure Translator",
+			"Back to top": "Torna all'inizio",
+			"Built with": "Costruito con Next.js, TailwindCSS e ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Pagina non trovata",
@@ -45,13 +44,14 @@
 	},
 	"HomePage": {
 		"Title": "Codice di Azure Translator",
-		"Read the": "Leggi l'",
+		"Read the": "Leggi il",
 		"to know how to use the library in your JS/TS project": "per sapere come utilizzare la libreria nel tuo progetto JS/TS",
-		"Test the translator": "Testare il traduttore",
+		"Test the translator": "Metti alla prova il traduttore",
 		"Back": "Indietro",
-		"Test Multingual": "Multingual di prova",
-		"Live translator": "Live Translator",
-		"Live Translator": "Live Translator"
+		"Test Multingual": "Test Multingual",
+		"Live Translator": "Live Translator",
+		"Test Your Own Key": "Metti alla prova la tua chiave",
+		"Home": "Casa"
 	},
 	"FormComponent": {
 		"From": "Da",
@@ -87,11 +87,12 @@
 			"Thai": "Tailandese",
 			"Turkish": "Turco",
 			"Vietnamese": "Vietnamita",
-			"Malay": "Malese"
+			"Malay": "Malese",
+			"Klingon": "Klingon"
 		},
 		"Paste the json code here": "Incolla qui il codice json",
 		"Len": "Len",
-		"No result yet": "Ancora nessun risultato",
+		"No result yet": "Nessun risultato",
 		"Result: ": "Risultato: ",
 		"Copied": "Copiato",
 		"Text to Translate": "Testo da tradurre",
@@ -99,6 +100,8 @@
 		"Translations:": "Traduzioni:",
 		"Translation": "Traduzione",
 		"Translating": "Traduzione in corso",
-		"Translating...": "Traduzione in corso..."
+		"Translating...": "Traduzione in corso...",
+		"Select All": "Seleziona tutto",
+		"Deselect All": "Deseleziona tutto"
 	}
 }

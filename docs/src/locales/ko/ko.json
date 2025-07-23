@@ -4,7 +4,7 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "유효하지 않거나 누락된 요청 본문",
 			"Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다.",
-			"From lang and to Lang are required": "from lang 및 to Lang이 필요합니다.",
+			"From lang and to Lang are required": "Lang에서 Lang으로 필요합니다.",
 			"Missing json file text": "json 파일 텍스트 누락",
 			"Invalid json text passed": "잘못된 json 텍스트가 전달되었습니다.",
 			"Translation": "번역",
@@ -13,29 +13,28 @@
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "번역할 텍스트가 없습니다.",
-			"No languages selected": "선택한 언어가 없습니다.",
+			"No languages selected": "선택한 언어 없음",
 			"Error while translating the text. Please try again.": "텍스트를 번역하는 동안 오류가 발생했습니다. 다시 시도하십시오.",
 			"Text must be less than 5000 characters": "텍스트는 5000자 미만이어야 합니다."
 		}
 	},
 	"HomeLayout": {
-		"Title": "Azure Translator 코드",
+		"Title": "Azure 번역기 코드",
 		"Description": "페이지에서 직접 json 파일 번역",
 		"Classification": "번역기",
 		"OpenGraph": {
 			"Title": "Azure를 사용하여 JSON 파일을 쉽게 번역",
-			"Description": "Azure Translator 코드를 사용하여 JSON 파일을 페이지에서 직접 빠르고 쉽게 번역할 수 있습니다.",
-			"SiteName": "Azure Translator 코드"
+			"Description": "Azure Translator 코드를 사용하여 페이지에서 직접 JSON 파일을 빠르고 쉽게 번역할 수 있습니다.",
+			"SiteName": "Azure 번역기 코드"
 		},
 		"Category": "도구",
-		"Created by": "작성자"
-	},
-	"Manifest": {
-		"Name": "Azure Translator 코드",
-		"ShortName": "Azure 번역기",
-		"Description": "페이지에서 직접 json 파일 번역",
-		"lang": "ko",
-		"Dir": "ltr"
+		"Created by": "만든 사람",
+		"All rights reserved": "판권 소유",
+		"Footer": {
+			"Description": "Azure Translator에서 제공하는 오픈 소스 프로젝트",
+			"Back to top": "맨 위로",
+			"Built with": "Next.js, TailwindCSS 및 ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - 페이지를 찾을 수 없습니다.",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "GitHub로 이동"
 	},
 	"HomePage": {
-		"Title": "Azure Translator 코드",
-		"Read the": "를 읽는다.",
-		"to know how to use the library in your JS/TS project": "JS / TS 프로젝트에서 라이브러리를 사용하는 방법을 알기 위해",
+		"Title": "Azure 번역기 코드",
+		"Read the": "읽기",
+		"to know how to use the library in your JS/TS project": "JS/TS 프로젝트에서 라이브러리를 사용하는 방법을 알아 봅니다.",
 		"Test the translator": "번역기 테스트",
 		"Back": "뒤로",
 		"Test Multingual": "다국어 테스트",
-		"Live translator": "Live 번역기",
-		"Live Translator": "Live 번역기"
+		"Live Translator": "Live 번역기",
+		"Test Your Own Key": "자신의 키 테스트",
+		"Home": "집"
 	},
 	"FormComponent": {
 		"From": "보낸 사람",
@@ -87,11 +87,12 @@
 			"Thai": "태국어",
 			"Turkish": "터키어",
 			"Vietnamese": "베트남어",
-			"Malay": "말레이어"
+			"Malay": "말레이어",
+			"Klingon": "클링온어"
 		},
 		"Paste the json code here": "여기에 json 코드를 붙여넣습니다.",
 		"Len": "렌",
-		"No result yet": "아직 결과가 없습니다.",
+		"No result yet": "아직 결과 없음",
 		"Result: ": "결과: ",
 		"Copied": "복사",
 		"Text to Translate": "번역할 텍스트",
@@ -99,6 +100,8 @@
 		"Translations:": "번역:",
 		"Translation": "번역",
 		"Translating": "번역 중",
-		"Translating...": "번역 중..."
+		"Translating...": "번역 중...",
+		"Select All": "모두 선택",
+		"Deselect All": "모두 선택 취소"
 	}
 }

@@ -4,17 +4,17 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Cuerpo de solicitud no válido o faltante",
 			"Text must be less than 5000 characters": "El texto debe tener menos de 5000 caracteres",
-			"From lang and to Lang are required": "De lang y a Lang son necesarios",
-			"Missing json file text": "Falta el texto del archivo json",
-			"Invalid json text passed": "Se ha pasado texto json no válido",
+			"From lang and to Lang are required": "De lang y a Lang son obligatorios",
+			"Missing json file text": "Falta texto de archivo json",
+			"Invalid json text passed": "Texto JSON no válido pasado",
 			"Translation": "Traducción",
-			"Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtelo de nuevo.",
+			"Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtalo de nuevo.",
 			"Text must be less than 1000 characters": "El texto debe tener menos de 1000 caracteres"
 		},
 		"makeTranslationMultilang": {
-			"No text to translate": "No hay texto que traducir",
+			"No text to translate": "No hay texto para traducir",
 			"No languages selected": "No hay idiomas seleccionados",
-			"Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtelo de nuevo.",
+			"Error while translating the text. Please try again.": "Error al traducir el texto. Por favor, inténtalo de nuevo.",
 			"Text must be less than 5000 characters": "El texto debe tener menos de 5000 caracteres"
 		}
 	},
@@ -28,32 +28,30 @@
 			"SiteName": "Código de Azure Translator"
 		},
 		"Category": "Herramientas",
-		"Created by": "Creado por"
-	},
-	"Manifest": {
-		"Name": "Código de Azure Translator",
-		"ShortName": "Azure Translator",
-		"Description": "Traduzca su archivo json directamente en la página",
-		"lang": "es",
-		"Dir": "ltr"
+		"Created by": "Creado por",
+		"All rights reserved": "Todos los derechos reservados",
+		"Footer": {
+			"Description": "Proyecto de código abierto con tecnología de Azure Translator",
+			"Back to top": "Volver al principio",
+			"Built with": "Construido con Next.js, TailwindCSS y ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Página no encontrada",
-		"Description": "La página que buscas no existe. 😩😩😩",
+		"Description": "La página que está buscando no existe. 😩😩😩",
 		"Back": "Atrás",
 		"Go to GitHub": "Ir a GitHub"
 	},
 	"HomePage": {
 		"Title": "Código de Azure Translator",
 		"Read the": "Lea el",
-		"to know how to use the library in your JS/TS project": "para saber cómo usar la biblioteca en su proyecto JS/TS",
+		"to know how to use the library in your JS/TS project": "para saber cómo utilizar la biblioteca en su proyecto JS/TS",
 		"Test the translator": "Pruebe el traductor",
 		"Back": "Atrás",
 		"Test Multingual": "Prueba Multingual",
-		"Live translator": "Live Translator",
 		"Live Translator": "Live Translator",
 		"Test Your Own Key": "Pruebe su propia clave",
-		"Home": "Inicio"
+		"Home": "Hogar"
 	},
 	"FormComponent": {
 		"From": "De",
@@ -89,18 +87,21 @@
 			"Thai": "Tailandés",
 			"Turkish": "Turco",
 			"Vietnamese": "Vietnamita",
-			"Malay": "Malayo"
+			"Malay": "Malayo",
+			"Klingon": "Klingon"
 		},
 		"Paste the json code here": "Pegue el código json aquí",
 		"Len": "Len",
 		"No result yet": "Aún no hay resultado",
 		"Result: ": "Resultado: ",
 		"Copied": "Copiado",
-		"Text to Translate": "Texto a traducir",
+		"Text to Translate": "Texto para traducir",
 		"Select the languages you want to translate the text to:": "Seleccione los idiomas a los que desea traducir el texto:",
 		"Translations:": "Traducciones:",
 		"Translation": "Traducción",
 		"Translating": "Traducción en curso",
-		"Translating...": "Traducción en curso..."
+		"Translating...": "Traducción en curso...",
+		"Select All": "Seleccionar todo",
+		"Deselect All": "Anular la selección de todo"
 	}
 }

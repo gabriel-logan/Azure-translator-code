@@ -4,7 +4,7 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Ogiltig eller saknad begärandetext",
 			"Text must be less than 5000 characters": "Texten måste vara mindre än 5000 tecken",
-			"From lang and to Lang are required": "Från lang och till lang krävs",
+			"From lang and to Lang are required": "Från lang och till Lang krävs",
 			"Missing json file text": "Texten i json-filen saknas",
 			"Invalid json text passed": "Ogiltig json-text har skickats",
 			"Translation": "Översättning",
@@ -19,23 +19,22 @@
 		}
 	},
 	"HomeLayout": {
-		"Title": "Kod för Azure Translator",
+		"Title": "Kod för Azure-översättare",
 		"Description": "Översätt din json-fil direkt på sidan",
 		"Classification": "Översättare",
 		"OpenGraph": {
 			"Title": "Översätt enkelt JSON-filer med Azure",
 			"Description": "Använd Azure Translator Code för att snabbt och enkelt översätta dina JSON-filer direkt på sidan.",
-			"SiteName": "Kod för Azure Translator"
+			"SiteName": "Kod för Azure-översättare"
 		},
 		"Category": "Arbetsredskap",
-		"Created by": "Skapad av"
-	},
-	"Manifest": {
-		"Name": "Kod för Azure Translator",
-		"ShortName": "Azure Translator",
-		"Description": "Översätt din json-fil direkt på sidan",
-		"lang": "sv",
-		"Dir": "ltr"
+		"Created by": "Skapad av",
+		"All rights reserved": "Alla rättigheter förbehållna",
+		"Footer": {
+			"Description": "Projekt med öppen källkod som drivs av Azure Translator",
+			"Back to top": "Tillbaka till toppen",
+			"Built with": "Byggd med Next.js, TailwindCSS och ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Sidan hittades inte",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "Gå till GitHub"
 	},
 	"HomePage": {
-		"Title": "Kod för Azure Translator",
+		"Title": "Kod för Azure-översättare",
 		"Read the": "Läs",
 		"to know how to use the library in your JS/TS project": "för att veta hur du använder biblioteket i ditt JS/TS-projekt",
 		"Test the translator": "Testa översättaren",
 		"Back": "Tillbaka",
-		"Test Multingual": "Testa flerspråkighet",
-		"Live translator": "Översättare i realtid",
-		"Live Translator": "Översättare i realtid"
+		"Test Multingual": "Test Flerspråkigt",
+		"Live Translator": "Live Översättare",
+		"Test Your Own Key": "Testa din egen nyckel",
+		"Home": "Hem"
 	},
 	"FormComponent": {
 		"From": "Från",
@@ -87,7 +87,8 @@
 			"Thai": "Thai",
 			"Turkish": "Turkiska",
 			"Vietnamese": "Vietnamesiska",
-			"Malay": "Malajiska"
+			"Malay": "Malajiska",
+			"Klingon": "Klingonska"
 		},
 		"Paste the json code here": "Klistra in json-koden här",
 		"Len": "Len",
@@ -99,6 +100,8 @@
 		"Translations:": "Översättningar:",
 		"Translation": "Översättning",
 		"Translating": "Översätta",
-		"Translating...": "Översätta..."
+		"Translating...": "Översätta...",
+		"Select All": "Välj alla",
+		"Deselect All": "Avmarkera alla"
 	}
 }

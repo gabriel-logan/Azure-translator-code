@@ -4,9 +4,9 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Corps de la demande non valide ou manquant",
 			"Text must be less than 5000 characters": "Le texte doit comporter moins de 5000 caractères",
-			"From lang and to Lang are required": "De lang et à Lang sont requis",
+			"From lang and to Lang are required": "From lang et to Lang sont obligatoires",
 			"Missing json file text": "Texte de fichier json manquant",
-			"Invalid json text passed": "Texte JSON non valide transmis",
+			"Invalid json text passed": "Texte json non valide passé",
 			"Translation": "Traduction",
 			"Error while translating the text. Please try again.": "Erreur lors de la traduction du texte. Veuillez réessayer.",
 			"Text must be less than 1000 characters": "Le texte doit comporter moins de 1000 caractères"
@@ -23,35 +23,35 @@
 		"Description": "Traduisez votre fichier json directement dans la page",
 		"Classification": "Translator",
 		"OpenGraph": {
-			"Title": "Traduire facilement des fichiers JSON avec Azure",
-			"Description": "Utilisez Azure Translator Code pour traduire vos fichiers JSON directement sur la page rapidement et facilement.",
+			"Title": "Traduisez facilement des fichiers JSON avec Azure",
+			"Description": "Utilisez Azure Translator Code pour traduire rapidement et facilement vos fichiers JSON directement sur la page.",
 			"SiteName": "Code du traducteur Azure"
 		},
 		"Category": "Outils",
-		"Created by": "Créé par"
-	},
-	"Manifest": {
-		"Name": "Code du traducteur Azure",
-		"ShortName": "Azure Translator",
-		"Description": "Traduisez votre fichier json directement dans la page",
-		"lang": "fr",
-		"Dir": "ltr"
+		"Created by": "Créé par",
+		"All rights reserved": "Tous droits réservés",
+		"Footer": {
+			"Description": "Projet open source optimisé par Azure Translator",
+			"Back to top": "Retour en haut de la page",
+			"Built with": "Construit avec Next.js, TailwindCSS et ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Page introuvable",
 		"Description": "La page que vous recherchez n’existe pas. 😩😩😩",
 		"Back": "Précédent",
-		"Go to GitHub": "Accéder à GitHub"
+		"Go to GitHub": "Aller à GitHub"
 	},
 	"HomePage": {
 		"Title": "Code du traducteur Azure",
 		"Read the": "Lire le",
-		"to know how to use the library in your JS/TS project": "pour savoir comment utiliser la librairie dans votre projet JS/TS",
+		"to know how to use the library in your JS/TS project": "de savoir comment utiliser la librairie dans votre projet JS/TS",
 		"Test the translator": "Tester le traducteur",
 		"Back": "Précédent",
-		"Test Multingual": "Tester plusieurs",
-		"Live translator": "Live Translator",
-		"Live Translator": "Live Translator"
+		"Test Multingual": "Tester Multingual",
+		"Live Translator": "Live Translator",
+		"Test Your Own Key": "Testez votre propre clé",
+		"Home": "Domicile"
 	},
 	"FormComponent": {
 		"From": "De",
@@ -87,7 +87,8 @@
 			"Thai": "Thaï",
 			"Turkish": "Turc",
 			"Vietnamese": "Vietnamien",
-			"Malay": "Malaisien"
+			"Malay": "Malaisien",
+			"Klingon": "Klingon"
 		},
 		"Paste the json code here": "Collez le code json ici",
 		"Len": "Len",
@@ -99,6 +100,8 @@
 		"Translations:": "Traductions:",
 		"Translation": "Traduction",
 		"Translating": "Traduction en cours",
-		"Translating...": "Traduction en cours..."
+		"Translating...": "Traduction en cours...",
+		"Select All": "Tout sélectionner",
+		"Deselect All": "Désélectionner tout"
 	}
 }
