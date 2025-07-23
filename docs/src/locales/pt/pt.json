@@ -1,77 +1,66 @@
 {
-	"Hello World": "Olá Mundo",
-
+	"Hello World": "Olá, mundo",
 	"Actions": {
 		"MakeTranslations": {
 			"Invalid or missing request body": "Corpo da solicitação inválido ou ausente",
 			"Text must be less than 5000 characters": "O texto deve ter menos de 5000 caracteres",
-			"From lang and to Lang are required": "Os idiomas de origem e destino são necessários",
-			"Missing json file text": "Faltando texto do arquivo json",
+			"From lang and to Lang are required": "From lang e to Lang são obrigatórios",
+			"Missing json file text": "Texto do arquivo json ausente",
 			"Invalid json text passed": "Texto json inválido passado",
 			"Translation": "Tradução",
-			"Error while translating the text. Please try again.": "Erro ao traduzir o texto. Tente novamente.",
+			"Error while translating the text. Please try again.": "Erro ao traduzir o texto. Por favor, tente novamente.",
 			"Text must be less than 1000 characters": "O texto deve ter menos de 1000 caracteres"
 		},
 		"makeTranslationMultilang": {
-			"No text to translate": "Nenhum texto para traduzir",
+			"No text to translate": "Sem texto para traduzir",
 			"No languages selected": "Nenhum idioma selecionado",
-			"Error while translating the text. Please try again.": "Erro ao traduzir o texto. Tente novamente.",
+			"Error while translating the text. Please try again.": "Erro ao traduzir o texto. Por favor, tente novamente.",
 			"Text must be less than 5000 characters": "O texto deve ter menos de 5000 caracteres"
 		}
 	},
-
 	"HomeLayout": {
-		"Title": "Código do Tradutor Azure",
+		"Title": "Código do Tradutor do Azure",
 		"Description": "Traduza seu arquivo json diretamente na página",
 		"Classification": "Tradutor",
-
 		"OpenGraph": {
-			"Title": "Traduza Arquivos JSON com Facilidade usando Azure",
-			"Description": "Use o Código do Tradutor Azure para traduzir seus arquivos JSON diretamente na página de forma rápida e fácil.",
-			"SiteName": "Código do Tradutor Azure"
+			"Title": "Traduza facilmente arquivos JSON com o Azure",
+			"Description": "Use o Azure Translator Code para traduzir seus arquivos JSON diretamente na página de forma rápida e fácil.",
+			"SiteName": "Código do Tradutor do Azure"
 		},
-
 		"Category": "Ferramentas",
-
 		"Created by": "Criado por",
-		"Test Your Own Key": "Teste sua própria chave"
+		"All rights reserved": "Todos os direitos reservados",
+		"Footer": {
+			"Description": "Projeto de software livre da plataforma Azure Translator",
+			"Back to top": "Voltar ao topo",
+			"Built with": "Construído com Next.js, TailwindCSS e ❤️"
+		}
 	},
-
-	"Manifest": {
-		"Name": "Azure Translator Code",
-		"ShortName": "Azure Translator",
-		"Description": "Traduza seu arquivo json diretamente na página",
-		"lang": "pt",
-		"Dir": "ltr"
-	},
-
 	"NotFoundPage": {
 		"Title": "404 - Página não encontrada",
 		"Description": "A página que você está procurando não existe. 😩😩😩",
 		"Back": "Voltar",
-		"Go to GitHub": "Ir para o GitHub"
+		"Go to GitHub": "Acesse o GitHub"
 	},
-
 	"HomePage": {
-		"Title": "Código do Tradutor Azure",
+		"Title": "Código do Tradutor do Azure",
 		"Read the": "Leia o",
-		"to know how to use the library in your JS/TS project": "para saber como usar a biblioteca em seu projeto JS/TS",
+		"to know how to use the library in your JS/TS project": "saber como usar a biblioteca em seu projeto JS/TS",
 		"Test the translator": "Teste o tradutor",
 		"Back": "Voltar",
-		"Test Multingual": "Teste Multingual",
-		"Live Translator": "Tradutor ao vivo",
+		"Test Multingual": "Teste multingual",
+		"Live Translator": "Live Translator",
 		"Test Your Own Key": "Teste sua própria chave",
 		"Home": "Início"
 	},
-
 	"FormComponent": {
 		"From": "De",
 		"To": "Para",
 		"Translate": "Traduzir",
 		"Langs": {
 			"Arabic": "Árabe",
-			"Chinese Simplified": "Chinês Simplificado",
-			"Chinese Traditional": "Chinês Tradicional",
+			"Chinese Simplified": "Chinês simplificado",
+			"Chinese Traditional": "Chinês tradicional",
 			"Czech": "Tcheco",
 			"Danish": "Dinamarquês",
 			"Dutch": "Holandês",
@@ -102,15 +91,17 @@
 			"Klingon": "Klingon"
 		},
 		"Paste the json code here": "Cole o código json aqui",
-		"Len": "Caract",
-		"No result yet": "Nenhum resultado ainda",
+		"Len": "Len",
+		"No result yet": "Ainda não há resultado",
 		"Result: ": "Resultado: ",
 		"Copied": "Copiado",
-		"Text to Translate": "Texto a traduzir",
+		"Text to Translate": "Texto para traduzir",
 		"Select the languages you want to translate the text to:": "Selecione os idiomas para os quais deseja traduzir o texto:",
 		"Translations:": "Traduções:",
 		"Translation": "Tradução",
-		"Translating": "Trdaduzindo",
-		"Translating...": "Trdaduzindo..."
+		"Translating": "Tradução em andamento",
+		"Translating...": "Tradução em andamento...",
+		"Select All": "Selecionar tudo",
+		"Deselect All": "Desmarcar tudo"
 	}
 }
