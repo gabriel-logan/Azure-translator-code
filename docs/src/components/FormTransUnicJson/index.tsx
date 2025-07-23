@@ -4,6 +4,7 @@ import { useFormState } from "react-dom";
 
 import { makeTranslation } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
+import type { LanguagesCode } from "@/types/translations";
 
 import ResultDiv from "./ResultDiv";
 import Textarea from "./Textarea";
@@ -21,7 +22,10 @@ export default function FormTransUnicJson() {
 
 	const [state, formAction] = useFormState(makeTranslation, initialState);
 
-	const optionsLangs = [
+	const optionsLangs: {
+		lang: LanguagesCode;
+		name: string;
+	}[] = [
 		{ lang: "en", name: scopedT("Langs.English") },
 		{ lang: "pt", name: scopedT("Langs.Portuguese") },
 		{ lang: "es", name: scopedT("Langs.Spanish") },
