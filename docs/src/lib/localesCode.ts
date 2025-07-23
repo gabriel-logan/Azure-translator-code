@@ -27,7 +27,7 @@ const localesCodes: LocalesCodes[] = [
 	"el",
 	"id",
 	"ms",
-	"none",
+	"pp", // "pp" is used for the placeholder locale
 ];
 
 export default localesCodes;

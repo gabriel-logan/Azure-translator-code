@@ -30,5 +30,5 @@ export const { getI18n, getScopedI18n, getStaticParams } = createI18nServer({
 	vi: () => import("./vi/vi.json"),
 	zh: () => import("./zh/zh.json"),
 
-	none: () => import("./none/none.json"),
+	pp: () => import("./none/none.json"),
 });
