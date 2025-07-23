@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaHome, FaLanguage, FaRobot, FaKey } from "react-icons/fa";
+import { FaHome, FaLanguage, FaRobot, FaKey, FaReadme } from "react-icons/fa";
 
 import { getScopedI18n } from "@/locales/server";
 
@@ -65,7 +65,7 @@ export default async function Header() {
 						target="_blank"
 						className="font-medium text-blue-600 hover:underline"
 					>
-						README.md
+						<FaReadme className="inline-block" size={16} /> README.md
 					</Link>{" "}
 					{scopedT("to know how to use the library in your JS/TS project")}
 				</p>
