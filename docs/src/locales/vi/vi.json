@@ -4,38 +4,37 @@
 		"MakeTranslations": {
 			"Invalid or missing request body": "Nội dung yêu cầu không hợp lệ hoặc thiếu",
 			"Text must be less than 5000 characters": "Văn bản phải nhỏ hơn 5000 ký tự",
-			"From lang and to Lang are required": "Từ lang và đến Lang là bắt buộc",
+			"From lang and to Lang are required": "Từ lang và đến lang là bắt buộc",
 			"Missing json file text": "Thiếu văn bản tệp json",
-			"Invalid json text passed": "Văn bản json không hợp lệ được thông qua",
+			"Invalid json text passed": "Văn bản json không hợp lệ được chuyển",
 			"Translation": "Dịch",
 			"Error while translating the text. Please try again.": "Lỗi trong khi dịch văn bản. Vui lòng thử lại.",
 			"Text must be less than 1000 characters": "Văn bản phải nhỏ hơn 1000 ký tự"
 		},
 		"makeTranslationMultilang": {
 			"No text to translate": "Không có văn bản để dịch",
-			"No languages selected": "Không có ngôn ngữ nào được chọn",
+			"No languages selected": "Không chọn ngôn ngữ nào",
 			"Error while translating the text. Please try again.": "Lỗi trong khi dịch văn bản. Vui lòng thử lại.",
 			"Text must be less than 5000 characters": "Văn bản phải nhỏ hơn 5000 ký tự"
 		}
 	},
 	"HomeLayout": {
-		"Title": "Azure Translator Code",
+		"Title": "Mã dịch Azure",
 		"Description": "Dịch tệp json của bạn trực tiếp trong trang",
 		"Classification": "Thông dịch viên",
 		"OpenGraph": {
-			"Title": "Dễ dàng dịch các tệp JSON với Azure",
-			"Description": "Sử dụng Mã Azure Translator để dịch các tệp JSON của bạn trực tiếp trên trang một cách nhanh chóng và dễ dàng.",
-			"SiteName": "Azure Translator Code"
+			"Title": "Dễ dàng dịch tệp JSON với Azure",
+			"Description": "Sử dụng Azure Translator Code để dịch các tệp JSON của bạn trực tiếp trên trang một cách nhanh chóng và dễ dàng.",
+			"SiteName": "Mã dịch Azure"
 		},
 		"Category": "Công cụ",
-		"Created by": "Tạo bởi"
-	},
-	"Manifest": {
-		"Name": "Azure Translator Code",
-		"ShortName": "Azure Translator",
-		"Description": "Dịch tệp json của bạn trực tiếp trong trang",
-		"lang": "vi",
-		"Dir": "ltr"
+		"Created by": "Tạo bởi",
+		"All rights reserved": "Đã đăng ký Bản quyền",
+		"Footer": {
+			"Description": "Dự án mã nguồn mở được cung cấp bởi Azure Translator",
+			"Back to top": "Trở lại đầu trang",
+			"Built with": "Được xây dựng với Next.js, TailwindCSS và ❤️"
+		}
 	},
 	"NotFoundPage": {
 		"Title": "404 - Không tìm thấy trang",
@@ -44,14 +43,15 @@
 		"Go to GitHub": "Truy cập GitHub"
 	},
 	"HomePage": {
-		"Title": "Azure Translator Code",
+		"Title": "Mã dịch Azure",
 		"Read the": "Đọc",
-		"to know how to use the library in your JS/TS project": "để biết cách sử dụng thư viện trong dự án JS / TS của bạn",
-		"Test the translator": "Kiểm tra người dịch",
+		"to know how to use the library in your JS/TS project": "để biết cách sử dụng thư viện trong dự án JS/TS của bạn",
+		"Test the translator": "Kiểm tra trình dịch",
 		"Back": "Lưng",
 		"Test Multingual": "Kiểm tra đa ngôn ngữ",
-		"Live translator": "Phiên dịch trực tiếp",
-		"Live Translator": "Phiên dịch trực tiếp"
+		"Live Translator": "Dịch giả trực tiếp",
+		"Test Your Own Key": "Kiểm tra khóa của riêng bạn",
+		"Home": "Nhà"
 	},
 	"FormComponent": {
 		"From": "Từ",
@@ -60,7 +60,7 @@
 		"Langs": {
 			"Arabic": "Tiếng A-rập",
 			"Chinese Simplified": "Tiếng Trung giản thể",
-			"Chinese Traditional": "Trung Quốc truyền thống",
+			"Chinese Traditional": "Tiếng Trung Phồn thể",
 			"Czech": "Séc",
 			"Danish": "Tiếng Đan-mạch",
 			"Dutch": "Tiếng Hà-Lan",
@@ -87,18 +87,21 @@
 			"Thai": "Thái",
 			"Turkish": "Tiếng Thổ Nhĩ Kỳ",
 			"Vietnamese": "Tiếng Việt",
-			"Malay": "Tiếng Mã lai"
+			"Malay": "Tiếng Mã lai",
+			"Klingon": "Tiếng Klingon"
 		},
 		"Paste the json code here": "Dán mã json vào đây",
 		"Len": "Len",
 		"No result yet": "Chưa có kết quả",
 		"Result: ": "Kết quả: ",
 		"Copied": "Sao chép",
-		"Text to Translate": "Văn bản cần dịch",
+		"Text to Translate": "Văn bản để dịch",
 		"Select the languages you want to translate the text to:": "Chọn ngôn ngữ bạn muốn dịch văn bản sang:",
 		"Translations:": "Bản dịch:",
 		"Translation": "Dịch",
 		"Translating": "Dịch",
-		"Translating...": "Dịch..."
+		"Translating...": "Dịch...",
+		"Select All": "Chọn tất cả",
+		"Deselect All": "Bỏ chọn tất cả"
 	}
 }

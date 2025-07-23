@@ -3,6 +3,8 @@ const { translateToMultipleFolders } = require("azure-translator-code");
 
 loadEnvConfig(process.cwd());
 
+// ar cs  da  de  el  en  es  fi  fr  hu  id  it  ja  ko  ms  nl  no  pl  pt  ro  ru sv  th  tr  vi  zh
+
 const jsonFile = require("./src/locales/en/en.json");
 
 const key = process.env.KEY;
@@ -15,6 +17,7 @@ const toLangs = [
 	"da",
 	"de",
 	"el",
+	"en",
 	"es",
 	"fi",
 	"fr",
@@ -23,13 +26,17 @@ const toLangs = [
 	"it",
 	"ja",
 	"ko",
+	"ms",
 	"nl",
 	"no",
 	"pl",
+	"pt",
 	"ro",
 	"ru",
 	"sv",
+	"th",
 	"tr",
+	"vi",
 	"zh",
 ];
 
