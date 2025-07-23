@@ -57,18 +57,20 @@ export default async function Header() {
 				</nav>
 			</div>
 
-			<div className="mx-auto max-w-4xl px-4 pb-6 text-center">
-				<p className="text-sm text-gray-600 sm:text-base">
-					{scopedT("Read the")}{" "}
+			<div className="mx-auto max-w-3xl px-4 pb-6 text-center">
+				<div className="rounded-md border border-blue-300 bg-blue-50 p-4 text-sm text-blue-900 shadow-sm sm:text-base">
+					📘 {scopedT("Read the")}{" "}
 					<Link
 						href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
 						target="_blank"
-						className="font-medium text-blue-600 hover:underline"
+						className="inline-flex items-center font-semibold text-blue-700 hover:underline"
 					>
-						<FaReadme className="inline-block" size={16} /> README.md
+						<FaReadme className="mr-1" size={16} />
+						README.md
 					</Link>{" "}
 					{scopedT("to know how to use the library in your JS/TS project")}
-				</p>
+				</div>
+
 				<div className="mt-4 flex justify-center">
 					<iframe
 						src="https://github.com/sponsors/gabriel-logan/button"
