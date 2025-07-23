@@ -19,7 +19,9 @@ export default function ResultDiv({
 
 	return (
 		<>
-			<p className="font-medium text-gray-700">{scopedT("Result: ")}</p>
+			<p className="mb-2 text-sm font-semibold text-gray-600">
+				{scopedT("Result: ")}
+			</p>
 
 			{pending ? (
 				<div className="animate-pulse overflow-x-auto rounded bg-gray-100 p-2">
@@ -32,7 +34,7 @@ export default function ResultDiv({
 					<div className="h-4 w-3/4 animate-pulse bg-gray-400" />
 				</div>
 			) : (
-				<pre className="overflow-x-auto text-black">
+				<pre className="overflow-x-auto rounded-md bg-gray-50 p-4 text-sm text-black shadow-inner">
 					{typeof state.message === "string" ? (
 						state.message
 					) : (

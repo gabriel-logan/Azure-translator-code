@@ -56,62 +56,66 @@ export default function FormTransUnicJson() {
 	];
 
 	return (
-		<div className="flex flex-col justify-between lg:flex-row">
-			<form className="w-full lg:w-[48%]" action={formAction}>
-				<div className="flex flex-col rounded bg-gray-800 p-5 text-white sm:flex-row">
-					<div className="w-full">
-						<div className="sm:ml-10">
-							<label
-								htmlFor="fromLang"
-								className="block text-sm font-medium text-gray-400"
-							>
-								{scopedT("From")}
-							</label>
-							<select
-								name="fromLang"
-								id="fromLang"
-								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-								defaultValue="en"
-							>
-								{optionsLangs.map((option) => (
-									<option key={option.lang} value={option.lang}>
-										{option.name}
-									</option>
-								))}
-							</select>
-						</div>
+		<div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+			<form
+				action={formAction}
+				className="w-full space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm lg:w-1/2"
+			>
+				<div className="flex flex-col gap-4 rounded bg-gray-800 p-5 text-white sm:flex-row sm:justify-between">
+					<div className="flex w-full flex-col sm:w-2/5">
+						<label
+							htmlFor="fromLang"
+							className="mb-1 text-sm font-medium text-gray-300"
+						>
+							{scopedT("From")}
+						</label>
+						<select
+							name="fromLang"
+							id="fromLang"
+							className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-sm text-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
+							defaultValue="en"
+						>
+							{optionsLangs.map((option) => (
+								<option key={option.lang} value={option.lang}>
+									{option.name}
+								</option>
+							))}
+						</select>
 					</div>
-					<div className="mb-4 mt-5 w-full sm:mb-0 sm:mt-0">
-						<div className="flex flex-col sm:mr-10 sm:items-end">
-							<label
-								htmlFor="toLang"
-								className="block text-sm font-medium text-gray-400"
-							>
-								{scopedT("To")}
-							</label>
-							<select
-								name="toLang"
-								id="toLang"
-								className="w-full cursor-pointer rounded bg-gray-700 p-2 text-white sm:w-40"
-								defaultValue="pt"
-							>
-								{optionsLangs.map((option) => (
-									<option key={option.lang} value={option.lang}>
-										{option.name}
-									</option>
-								))}
-							</select>
-						</div>
+
+					<div className="flex w-full flex-col sm:w-2/5">
+						<label
+							htmlFor="toLang"
+							className="mb-1 text-sm font-medium text-gray-300"
+						>
+							{scopedT("To")}
+						</label>
+						<select
+							name="toLang"
+							id="toLang"
+							className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-sm text-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
+							defaultValue="pt"
+						>
+							{optionsLangs.map((option) => (
+								<option key={option.lang} value={option.lang}>
+									{option.name}
+								</option>
+							))}
+						</select>
 					</div>
 				</div>
 
 				<Textarea />
 
-				<ButtonSubmit />
+				<div className="pt-2">
+					<ButtonSubmit />
+				</div>
 			</form>
-			<div className="mt-5 w-full rounded border p-3 lg:mt-0 lg:w-[46%]">
-				<ButtonCopy state={state} />
 
+			<div className="w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm lg:w-1/2">
+				<div className="mb-4 flex justify-end">
+					<ButtonCopy state={state} />
+				</div>
 				<ResultDiv state={state} />
 			</div>
 		</div>
