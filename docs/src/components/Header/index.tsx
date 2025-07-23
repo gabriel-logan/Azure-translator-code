@@ -1,16 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaHome, FaLanguage, FaRobot, FaKey } from "react-icons/fa";
 
 import { getScopedI18n } from "@/locales/server";
+
+import NavItems from "./NavItems";
 
 export default async function Header() {
 	const scopedT = await getScopedI18n("HomePage");
 
 	const navItems = [
-		{ href: "/", label: scopedT("Home") },
-		{ href: "/multi", label: scopedT("Test Multingual") },
-		{ href: "/live", label: scopedT("Live Translator") },
-		{ href: "/mykey", label: scopedT("Test Your Own Key") },
+		{ href: "/", label: scopedT("Home"), icon: <FaHome size={16} /> },
+		{
+			href: "/multi",
+			label: scopedT("Test Multingual"),
+			icon: <FaLanguage size={16} />,
+		},
+		{
+			href: "/live",
+			label: scopedT("Live Translator"),
+			icon: <FaRobot size={16} />,
+		},
+		{
+			href: "/mykey",
+			label: scopedT("Test Your Own Key"),
+			icon: <FaKey size={16} />,
+		},
 	];
 
 	return (
@@ -36,17 +51,9 @@ export default async function Header() {
 
 				<nav
 					aria-label="Main navigation"
-					className="mt-6 flex flex-col items-center gap-3 sm:mt-0 sm:flex-row sm:gap-4"
+					className="mt-6 flex flex-col items-center justify-center gap-2 sm:mt-0 sm:flex-row sm:flex-wrap sm:gap-4"
 				>
-					{navItems.map(({ href, label }) => (
-						<Link
-							key={href}
-							href={href}
-							className="rounded-lg bg-white/70 px-4 py-2 text-center font-medium text-gray-800 shadow-sm transition-colors hover:bg-blue-500 hover:text-white"
-						>
-							{label}
-						</Link>
-					))}
+					<NavItems navItems={navItems} />
 				</nav>
 			</div>
 
