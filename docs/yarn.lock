@@ -335,6 +335,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:^15.4.3":
+  version: 15.4.3
+  resolution: "@next/env@npm:15.4.3"
+  checksum: 10c0/3f189da5eb1d70bad1dab21740f912b5931509111de4ac9782de3fa5641e4025ed515634370df2f9e1aec44780443fb07ec5b0c893d2879a589d7dfbecdc58e2
+  languageName: node
+  linkType: hard
+
 "@next/eslint-plugin-next@npm:14.2.3":
   version: 14.2.3
   resolution: "@next/eslint-plugin-next@npm:14.2.3"
@@ -1133,6 +1140,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "azure-translator-code@workspace:."
   dependencies:
+    "@next/env": "npm:^15.4.3"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"

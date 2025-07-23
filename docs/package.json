@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/env": "^15.4.3",
     "@vercel/analytics": "^1.5.0",
     "ace-builds": "^1.34.2",
     "axios": "^1.10.0",
