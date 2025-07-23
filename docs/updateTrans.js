@@ -1,5 +1,5 @@
 const { loadEnvConfig } = require("@next/env");
-const { translateToMultipleFolders } = require("azure-translator-code");
+const { updateTranslationsMulti } = require("azure-translator-code");
 
 loadEnvConfig(process.cwd());
 
@@ -40,7 +40,7 @@ const toLangs = [
 	"zh",
 ];
 
-translateToMultipleFolders(
+updateTranslationsMulti(
 	key,
 	endpoint,
 	location,
