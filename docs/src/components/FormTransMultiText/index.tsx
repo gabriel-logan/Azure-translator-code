@@ -118,6 +118,31 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 				{scopedT("Select the languages you want to translate the text to:")}
 			</p>
 
+			<div className="mb-4 flex items-center justify-between">
+				<div className="flex items-center">
+					<input
+						type="checkbox"
+						id="selectAll"
+						name="selectAll"
+						className="mr-2"
+						onChange={(e) => {
+							const checkboxes = document.querySelectorAll(
+								'input[type="checkbox"]:not(#selectAll)',
+							);
+							checkboxes.forEach((checkbox) => {
+								(checkbox as HTMLInputElement).checked = e.target.checked;
+							});
+						}}
+					/>
+					<label
+						htmlFor="selectAll"
+						className="cursor-pointer text-sm text-gray-700 sm:text-base md:text-lg lg:text-2xl"
+					>
+						{scopedT("Select All")}
+					</label>
+				</div>
+			</div>
+
 			<div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-4 lg:grid-cols-4 xl:lg:grid-cols-5 xl:mt-2">
 				{languages.map((lang) => (
 					<div key={lang.id} className="flex cursor-pointer items-center">

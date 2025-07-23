@@ -108,6 +108,8 @@
 		"Translations:": "Translations:",
 		"Translation": "Translation",
 		"Translating": "Translating",
-		"Translating...": "Translating..."
+		"Translating...": "Translating...",
+		"Select All": "Select All",
+		"Deselect All": "Deselect All"
 	}
 }
