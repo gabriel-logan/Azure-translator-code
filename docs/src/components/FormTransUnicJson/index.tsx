@@ -4,12 +4,12 @@ import { useFormState } from "react-dom";
 
 import { makeTranslation } from "@/actions";
 import { useScopedI18n } from "@/locales/client";
-import type { LanguagesCode } from "@/types/translations";
 
 import ResultDiv from "./ResultDiv";
 import Textarea from "./Textarea";
 import ButtonCopy from "../ButtonCopy";
 import ButtonSubmit from "../ButtonSubmit";
+import SelectOptionsLangs from "../selectOptionsLangs";
 
 export default function FormTransUnicJson() {
 	const scopedT = useScopedI18n("FormComponent");
@@ -21,39 +21,6 @@ export default function FormTransUnicJson() {
 	};
 
 	const [state, formAction] = useFormState(makeTranslation, initialState);
-
-	const optionsLangs: {
-		lang: LanguagesCode;
-		name: string;
-	}[] = [
-		{ lang: "en", name: scopedT("Langs.English") },
-		{ lang: "pt", name: scopedT("Langs.Portuguese") },
-		{ lang: "es", name: scopedT("Langs.Spanish") },
-		{ lang: "fr", name: scopedT("Langs.French") },
-		{ lang: "de", name: scopedT("Langs.German") },
-		{ lang: "it", name: scopedT("Langs.Italian") },
-		{ lang: "ja", name: scopedT("Langs.Japanese") },
-		{ lang: "ko", name: scopedT("Langs.Korean") },
-		{ lang: "ru", name: scopedT("Langs.Russian") },
-		{ lang: "zh-Hans", name: scopedT("Langs.Chinese Simplified") },
-		{ lang: "zh-Hant", name: scopedT("Langs.Chinese Traditional") },
-		{ lang: "ar", name: scopedT("Langs.Arabic") },
-		{ lang: "tr", name: scopedT("Langs.Turkish") },
-		{ lang: "vi", name: scopedT("Langs.Vietnamese") },
-		{ lang: "th", name: scopedT("Langs.Thai") },
-		{ lang: "sv", name: scopedT("Langs.Swedish") },
-		{ lang: "pl", name: scopedT("Langs.Polish") },
-		{ lang: "nl", name: scopedT("Langs.Dutch") },
-		{ lang: "da", name: scopedT("Langs.Danish") },
-		{ lang: "fi", name: scopedT("Langs.Finnish") },
-		{ lang: "no", name: scopedT("Langs.Norwegian") },
-		{ lang: "cs", name: scopedT("Langs.Czech") },
-		{ lang: "hu", name: scopedT("Langs.Hungarian") },
-		{ lang: "el", name: scopedT("Langs.Greek") },
-		{ lang: "id", name: scopedT("Langs.Indonesian") },
-		{ lang: "ms", name: scopedT("Langs.Malay") },
-		{ lang: "tlh-Latn", name: scopedT("Langs.Klingon") },
-	];
 
 	return (
 		<div className="flex flex-col gap-6 lg:flex-row lg:items-start">
@@ -75,11 +42,7 @@ export default function FormTransUnicJson() {
 							className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-sm text-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
 							defaultValue="en"
 						>
-							{optionsLangs.map((option) => (
-								<option key={option.lang} value={option.lang}>
-									{option.name}
-								</option>
-							))}
+							<SelectOptionsLangs />
 						</select>
 					</div>
 
@@ -96,11 +59,7 @@ export default function FormTransUnicJson() {
 							className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-sm text-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500"
 							defaultValue="pt"
 						>
-							{optionsLangs.map((option) => (
-								<option key={option.lang} value={option.lang}>
-									{option.name}
-								</option>
-							))}
+							<SelectOptionsLangs />
 						</select>
 					</div>
 				</div>
