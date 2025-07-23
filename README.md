@@ -1,9 +1,10 @@
 # Azure Translator Code
 
 <p align="center">
-  <img src="https://badge.fury.io/js/azure-translator-code.svg" alt="npm version" />
+  <a href="https://www.npmjs.com/package/azure-translator-code"><img src="https://badge.fury.io/js/azure-translator-code.svg" alt="npm version" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
   <img src="https://img.shields.io/npm/dm/azure-translator-code.svg?style=flat-square" alt="npm downloads" />
+  <img src="https://deploy-badge.vercel.app/vercel/azuretranslatorcode" alt="Vercel Deploy"></img>
 </p>
 
 **Azure Translator Code** is a powerful library for translating JSON files into multiple languages using the Azure Cognitive Translator service. This library supports translating JSON files located in multiple folders or within a single folder, depending on your needs.
