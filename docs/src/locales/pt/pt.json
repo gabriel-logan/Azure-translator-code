@@ -31,7 +31,7 @@
 		"Created by": "Criado por",
 		"All rights reserved": "Todos os direitos reservados",
 		"Footer": {
-			"Description": "Projeto de software livre da plataforma Azure Translator",
+			"Description": "Open-source project powered by Azure Translator",
 			"Back to top": "Voltar ao topo",
 			"Built with": "Construído com Next.js, TailwindCSS e ❤️"
 		}
@@ -45,7 +45,7 @@
 	"HomePage": {
 		"Title": "Código do Tradutor do Azure",
 		"Read the": "Leia o",
-		"to know how to use the library in your JS/TS project": "saber como usar a biblioteca em seu projeto JS/TS",
+		"to know how to use the library in your JS/TS project": "para saber como usar a biblioteca em seu projeto JS/TS",
 		"Test the translator": "Teste o tradutor",
 		"Back": "Voltar",
 		"Test Multingual": "Teste multingual",
