@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+import SelectOptionsLangs from "@/components/selectOptionsLangs";
+
 const initialState = { message: "", error: null };
 
 export default function MyKeyForm({
@@ -92,12 +94,7 @@ export default function MyKeyForm({
 						defaultValue="en"
 						className="mt-1 w-full rounded-md border border-gray-300 p-3 text-gray-700 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
 					>
-						<option value="en">English</option>
-						<option value="pt">Portuguese</option>
-						<option value="fr">French</option>
-						<option value="de">German</option>
-						<option value="it">Italian</option>
-						<option value="es">Spanish</option>
+						<SelectOptionsLangs />
 					</select>
 				</div>
 				<div>
@@ -113,12 +110,7 @@ export default function MyKeyForm({
 						defaultValue="pt"
 						className="mt-1 w-full rounded-md border border-gray-300 p-3 text-gray-700 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
 					>
-						<option value="en">English</option>
-						<option value="pt">Portuguese</option>
-						<option value="fr">French</option>
-						<option value="de">German</option>
-						<option value="it">Italian</option>
-						<option value="es">Spanish</option>
+						<SelectOptionsLangs />
 					</select>
 				</div>
 			</div>
