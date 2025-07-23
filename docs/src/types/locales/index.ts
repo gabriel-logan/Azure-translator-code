@@ -7,6 +7,7 @@ export type LocalesCodes =
 	| "it"
 	| "ja"
 	| "ko"
+	| "ro"
 	| "ru"
 	| "zh"
 	| "ar"

@@ -23,6 +23,7 @@ export const { useI18n, useScopedI18n, I18nProviderClient } = createI18nClient({
 	nl: () => import("./nl/nl.json"),
 	no: () => import("./no/no.json"),
 	pl: () => import("./pl/pl.json"),
+	ro: () => import("./ro/ro.json"),
 	ru: () => import("./ru/ru.json"),
 	sv: () => import("./sv/sv.json"),
 	th: () => import("./th/th.json"),
