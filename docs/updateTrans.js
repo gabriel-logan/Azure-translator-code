@@ -17,7 +17,6 @@ const toLangs = [
 	"da",
 	"de",
 	"el",
-	"en",
 	"es",
 	"fi",
 	"fr",
@@ -49,3 +48,6 @@ updateTranslationsMulti(
 	jsonFile,
 	"src/locales/",
 );
+
+// Command:
+// node ./updateTrans.js && yarn format
