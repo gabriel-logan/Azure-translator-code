@@ -12,10 +12,10 @@ export default function ButtonSubmit() {
 		<button
 			type="submit"
 			disabled={pending}
-			className="mt-5 w-28 rounded bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
+			className="btn-primary min-w-[120px]"
 		>
 			{pending ? (
-				<div className="mx-auto h-5 w-5 animate-spin rounded-full border-b-2 border-white" />
+				<div className="mx-auto h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
 			) : (
 				scopedT("Translate")
 			)}

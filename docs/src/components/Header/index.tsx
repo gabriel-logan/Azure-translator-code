@@ -29,56 +29,67 @@ export default async function Header() {
 	];
 
 	return (
-		<header className="mb-4 w-full bg-gradient-to-r from-blue-50 via-white to-purple-50 shadow-md">
-			<div className="mx-auto max-w-7xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:py-8">
-				<div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+		<header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-lg">
+			<div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+				<div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
 					<Link
 						href="/"
-						className="mb-2 flex flex-col items-center gap-3 sm:flex-row"
+						className="group flex items-center gap-3 transition-transform duration-200 hover:scale-[1.02]"
 					>
-						<Image
-							src="/logo.png"
-							alt="Gabriel Logan Translator Logo"
-							width={56}
-							height={56}
-							className="rounded-full border border-gray-200 shadow"
-						/>
-						<h1 className="text-center text-2xl font-bold text-gray-800 sm:text-3xl">
+						<div className="relative">
+							<div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 opacity-20 blur-sm transition-opacity group-hover:opacity-40" />
+							<Image
+								src="/logo.png"
+								alt="Gabriel Logan Translator Logo"
+								width={48}
+								height={48}
+								className="relative rounded-full border-2 border-white shadow-soft"
+							/>
+						</div>
+						<h1 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
 							{scopedT("Title")}
 						</h1>
 					</Link>
-				</div>
 
-				<nav
-					aria-label="Main navigation"
-					className="mt-6 flex flex-col items-center justify-center gap-2 sm:mt-0 sm:flex-row sm:flex-wrap sm:gap-4"
-				>
-					<NavItems navItems={navItems} />
-				</nav>
+					<nav
+						aria-label="Main navigation"
+						className="flex flex-wrap items-center justify-center gap-2"
+					>
+						<NavItems navItems={navItems} />
+					</nav>
+				</div>
 			</div>
 
-			<div className="mx-auto max-w-3xl px-4 pb-6 text-center">
-				<div className="rounded-md border border-blue-300 bg-blue-50 p-4 text-sm text-blue-900 shadow-sm sm:text-base">
-					📘 {scopedT("Read the")}{" "}
-					<Link
-						href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
-						target="_blank"
-						className="inline-flex items-center font-semibold text-blue-700 hover:underline"
-					>
-						<FaReadme className="mr-1" size={16} />
-						README.md
-					</Link>{" "}
-					{scopedT("to know how to use the library in your JS/TS project")}
-				</div>
+			<div className="border-t border-slate-100 bg-gradient-to-r from-blue-50/50 to-violet-50/50">
+				<div className="mx-auto max-w-4xl px-4 py-4 sm:px-6">
+					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+						<div className="flex items-center gap-2 rounded-lg border border-blue-200/80 bg-blue-50/80 px-4 py-2.5 text-sm text-blue-800 shadow-sm">
+							<span className="text-lg">📘</span>
+							<span>{scopedT("Read the")}</span>
+							<Link
+								href="https://github.com/gabriel-logan/Azure-translator-code/blob/main/README.md"
+								target="_blank"
+								className="inline-flex items-center gap-1 font-semibold text-blue-700 underline-offset-2 transition-colors hover:text-blue-900 hover:underline"
+							>
+								<FaReadme size={14} />
+								README.md
+							</Link>
+							<span className="hidden sm:inline">
+								{scopedT(
+									"to know how to use the library in your JS/TS project",
+								)}
+							</span>
+						</div>
 
-				<div className="mt-4 flex justify-center">
-					<iframe
-						src="https://github.com/sponsors/gabriel-logan/button"
-						title="Sponsor gabriel-logan"
-						height="32"
-						width="114"
-						style={{ border: 0, borderRadius: 6 }}
-					/>
+						<iframe
+							src="https://github.com/sponsors/gabriel-logan/button"
+							title="Sponsor gabriel-logan"
+							height="32"
+							width="114"
+							className="rounded-md"
+							style={{ border: 0 }}
+						/>
+					</div>
 				</div>
 			</div>
 		</header>

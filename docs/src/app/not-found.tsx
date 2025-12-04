@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaHome, FaGithub } from "react-icons/fa";
 
 import { getScopedI18n } from "@/locales/server";
 
@@ -11,39 +12,47 @@ export default async function NotFound() {
 		<html>
 			{" "}
 			{/* nosonar */}
-			<body>
-				<main className="min-h-screen">
-					<div className="mx-auto mt-32 max-w-md rounded bg-white p-5 text-center shadow-md">
-						<h1 className="text-3xl text-red-500">{scopedT("Title")}</h1>
-						<p className="mt-5 text-lg text-black">{scopedT("Description")}</p>
-						<div className="mt-5">
-							<Link
-								className="mx-2 inline-block rounded bg-blue-500 px-5 py-2 text-white transition-colors duration-300 hover:bg-blue-700"
-								href="/"
-							>
-								{scopedT("Back")}
-							</Link>
-							<Link
-								className="mx-2 inline-block rounded bg-blue-500 px-5 py-2 text-white transition-colors duration-300 hover:bg-blue-700"
-								href="/"
-							>
-								{scopedT("Go to GitHub")}
-							</Link>
+			<body className="bg-gradient-to-b from-slate-50 to-white">
+				<main className="flex min-h-screen items-center justify-center px-4 py-12">
+					<div className="w-full max-w-md text-center">
+						<div className="card p-8">
+							<div className="mb-6 text-6xl">😔</div>
+							<h1 className="gradient-text text-4xl font-bold">
+								{scopedT("Title")}
+							</h1>
+							<p className="mt-4 text-slate-600">{scopedT("Description")}</p>
+							<div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+								<Link
+									className="btn-primary inline-flex items-center gap-2"
+									href="/"
+								>
+									<FaHome className="h-4 w-4" />
+									{scopedT("Back")}
+								</Link>
+								<Link
+									className="btn-secondary inline-flex items-center gap-2"
+									href="https://github.com/gabriel-logan/Azure-translator-code"
+									target="_blank"
+								>
+									<FaGithub className="h-4 w-4" />
+									{scopedT("Go to GitHub")}
+								</Link>
+							</div>
 						</div>
-					</div>
-					<div className="mt-4">
-						<iframe
-							src="https://github.com/sponsors/gabriel-logan/card"
-							title="Sponsor gabriel-logan"
-							height="225"
-							width="600"
-							style={{
-								border: 0,
-								borderRadius: 4,
-								alignSelf: "center",
-								margin: "auto",
-							}}
-						/>
+
+						<div className="mt-8">
+							<iframe
+								src="https://github.com/sponsors/gabriel-logan/card"
+								title="Sponsor gabriel-logan"
+								height="225"
+								width="100%"
+								className="max-w-[400px] rounded-lg"
+								style={{
+									border: 0,
+									margin: "auto",
+								}}
+							/>
+						</div>
 					</div>
 				</main>
 			</body>

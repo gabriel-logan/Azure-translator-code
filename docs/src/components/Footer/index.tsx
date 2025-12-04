@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaHeart } from "react-icons/fa";
 
 import { getScopedI18n } from "@/locales/server";
 
@@ -7,33 +7,39 @@ export default async function Footer() {
 	const scopedT = await getScopedI18n("HomeLayout");
 
 	return (
-		<footer className="mt-16 w-full bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300 shadow-inner">
-			<div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-10 sm:grid-cols-2">
-				<div className="space-y-2 text-center sm:text-left">
-					<p className="text-base font-semibold text-white">
-						{scopedT("Created by")} Gabriel Logan
-					</p>
-					<p className="text-sm text-gray-400">
-						&copy; 2024 – {scopedT("All rights reserved")}
-					</p>
-					<p className="text-xs text-gray-500">
-						{scopedT("Footer.Description")}
-					</p>
-				</div>
+		<footer className="mt-auto border-t border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100">
+			<div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+				<div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+					<div className="text-center sm:text-left">
+						<p className="flex items-center justify-center gap-1.5 text-base font-semibold text-slate-900 sm:justify-start">
+							{scopedT("Created by")}
+							<span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+								Gabriel Logan
+							</span>
+							<FaHeart className="h-3.5 w-3.5 text-red-500" />
+						</p>
+						<p className="mt-1.5 text-sm text-slate-500">
+							&copy; 2024 – {scopedT("All rights reserved")}
+						</p>
+						<p className="mt-2 max-w-md text-xs text-slate-400">
+							{scopedT("Footer.Description")}
+						</p>
+					</div>
 
-				<div className="flex items-center justify-center sm:justify-end">
-					<Link
-						href="https://github.com/gabriel-logan"
-						target="_blank"
-						className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-600"
-					>
-						<FaGithub className="h-4 w-4" />
-						GitHub
-					</Link>
+					<div className="flex items-center gap-4">
+						<Link
+							href="https://github.com/gabriel-logan/Azure-translator-code"
+							target="_blank"
+							className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 hover:shadow-md"
+						>
+							<FaGithub className="h-4 w-4" />
+							View on GitHub
+						</Link>
+					</div>
 				</div>
 			</div>
 
-			<div className="border-t border-gray-700 px-6 py-4 text-center text-xs text-gray-500">
+			<div className="border-t border-slate-200 bg-white/50 px-4 py-4 text-center text-xs text-slate-500">
 				{scopedT("Footer.Built with")}
 			</div>
 		</footer>
