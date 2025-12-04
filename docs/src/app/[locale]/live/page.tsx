@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 import FormTransLiveText from "@/components/FormTransLiveText";
 import { getScopedI18n } from "@/locales/server";
@@ -10,20 +11,23 @@ export default async function LiveTranslator({
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<main className="flex min-h-screen flex-col bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 py-6 sm:px-6 lg:px-12">
-			<h2 className="mb-6 text-center text-3xl font-bold text-gray-800">
-				{scopedT("Live Translator")}
-			</h2>
-
-			<div className="flex-1">
-				<FormTransLiveText locale={locale} />
-				<div className="mt-8 text-center">
-					<Link
-						href="/"
-						className="inline-block rounded-lg bg-white px-4 py-2 font-medium text-blue-600 shadow-sm transition-colors hover:bg-blue-500 hover:text-white"
-					>
+		<main className="min-h-screen bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+			<div className="mx-auto max-w-7xl">
+				<div className="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+					<Link href="/" className="btn-secondary order-2 sm:order-1">
+						<FaArrowLeft className="mr-2 h-3.5 w-3.5" />
 						{scopedT("Back")}
 					</Link>
+
+					<h2 className="section-title gradient-text order-1 text-center sm:order-2">
+						{scopedT("Live Translator")}
+					</h2>
+
+					<div className="order-3 hidden w-[100px] sm:block" />
+				</div>
+
+				<div className="animate-fade-in">
+					<FormTransLiveText locale={locale} />
 				</div>
 			</div>
 		</main>

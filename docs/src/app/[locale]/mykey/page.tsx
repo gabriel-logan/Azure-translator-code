@@ -1,5 +1,6 @@
 import { translateText, TranslationType } from "azure-translator-code";
 import Link from "next/link";
+import { FaGithub, FaArrowLeft } from "react-icons/fa";
 
 import MyKeyForm from "./Form";
 
@@ -71,27 +72,42 @@ export default async function MyKeyPage() {
 	}
 
 	return (
-		<main className="mx-auto w-full bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 py-12">
-			<div className="m-auto max-w-7xl rounded-xl bg-white p-6 shadow-lg sm:p-10">
-				<h1 className="mb-4 text-center text-3xl font-bold text-gray-800">
-					Test Your Azure Translator Key
-				</h1>
-				<p className="mb-4 text-center text-gray-600">
-					Enter your Azure credentials and translation text below. This is a
-					test environment — we do <strong>not</strong> store any of your data.
-				</p>
-				<p className="mb-6 text-center text-sm text-gray-500">
-					View the source on{" "}
-					<Link
-						href="https://github.com/gabriel-logan/Azure-translator-code/tree/main/docs/src/app/%5Blocale%5D/mykey"
-						target="_blank"
-						className="font-medium text-blue-600 hover:underline"
-					>
-						GitHub
+		<main className="min-h-screen bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+			<div className="mx-auto max-w-4xl">
+				<div className="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+					<Link href="/" className="btn-secondary order-2 sm:order-1">
+						<FaArrowLeft className="mr-2 h-3.5 w-3.5" />
+						Back
 					</Link>
-				</p>
 
-				<MyKeyForm translateLocal={translateLocal} />
+					<h1 className="section-title gradient-text order-1 text-center sm:order-2">
+						Test Your Azure Key
+					</h1>
+
+					<div className="order-3 hidden w-[100px] sm:block" />
+				</div>
+
+				<div className="animate-fade-in">
+					<div className="card p-6 sm:p-8">
+						<div className="mb-6 rounded-lg border border-blue-100 bg-blue-50/50 p-4 text-center">
+							<p className="text-sm text-slate-600">
+								Enter your Azure credentials below. We do{" "}
+								<strong className="text-slate-800">not</strong> store any of
+								your data.
+							</p>
+							<Link
+								href="https://github.com/gabriel-logan/Azure-translator-code/tree/main/docs/src/app/%5Blocale%5D/mykey"
+								target="_blank"
+								className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline"
+							>
+								<FaGithub className="h-4 w-4" />
+								View source code
+							</Link>
+						</div>
+
+						<MyKeyForm translateLocal={translateLocal} />
+					</div>
+				</div>
 			</div>
 		</main>
 	);

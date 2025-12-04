@@ -48,19 +48,19 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 	};
 
 	return (
-		<form action={action} className="w-full rounded bg-white p-4 shadow-md">
-			<div className="mb-4">
+		<form action={action} className="card space-y-6 p-6">
+			<div className="grid gap-5 sm:grid-cols-2">
 				<div>
 					<label
 						htmlFor="fromLang"
-						className="block text-sm font-medium text-gray-400"
+						className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500"
 					>
 						{scopedT("From")}
 					</label>
 					<select
 						name="fromLang"
 						id="fromLang"
-						className="w-full cursor-pointer rounded bg-gray-700 p-3 text-white"
+						className="select-field"
 						defaultValue={locale}
 					>
 						{languages.map((lang) => {
@@ -72,106 +72,113 @@ export default function FormTransMultiText({ locale }: Readonly<Locale>) {
 						})}
 					</select>
 				</div>
-				<label
-					htmlFor="toTranslate"
-					className="mb-2 mt-4 block font-medium text-gray-700"
-				>
-					{scopedT("Text to Translate")}
-				</label>
-				<input
-					type="text"
-					id="toTranslate"
-					name="toTranslate"
-					placeholder="Type the text you want to translate"
-					value={textToTranslate}
-					onChange={(e) => {
-						setTextToTranslate(e.target.value);
-					}}
-					className="w-full rounded border border-gray-300 p-3 text-black"
-				/>
-				<p className="float-right text-black">
-					{scopedT("Len")}:{" "}
-					<span
-						className={`${textToTranslate.length > 4999 && "text-red-500"}`}
-					>
-						{textToTranslate.length}
-					</span>{" "}
-					/ 5000
-				</p>
-			</div>
 
-			<ButtonSubmit />
-
-			<p className="mt-4 text-base text-black sm:text-lg">
-				{scopedT("Select the languages you want to translate the text to:")}
-			</p>
-
-			<div className="mb-4 flex items-center justify-between">
-				<div className="flex items-center">
-					<input
-						type="checkbox"
-						id="selectAll"
-						checked={isAllSelected}
-						onChange={toggleSelectAll}
-						className="mr-2"
-					/>
+				<div>
 					<label
-						htmlFor="selectAll"
-						className="cursor-pointer text-sm text-gray-700 sm:text-base md:text-lg lg:text-2xl"
+						htmlFor="toTranslate"
+						className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500"
 					>
-						{isAllSelected ? scopedT("Deselect All") : scopedT("Select All")}
+						{scopedT("Text to Translate")}
 					</label>
+					<input
+						type="text"
+						id="toTranslate"
+						name="toTranslate"
+						placeholder="Type the text you want to translate"
+						value={textToTranslate}
+						onChange={(e) => {
+							setTextToTranslate(e.target.value);
+						}}
+						className="input-field"
+					/>
+					<p className="mt-1.5 text-right text-xs text-slate-500">
+						<span
+							className={`font-medium ${textToTranslate.length > 4999 ? "text-red-500" : "text-slate-700"}`}
+						>
+							{textToTranslate.length}
+						</span>
+						<span className="text-slate-400"> / 5000</span>
+					</p>
 				</div>
 			</div>
 
-			<div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-4 lg:grid-cols-4 xl:lg:grid-cols-5 xl:mt-2">
+			<div className="flex items-center justify-between border-t border-slate-100 pt-5">
+				<p className="text-sm font-medium text-slate-700 sm:text-base">
+					{scopedT("Select the languages you want to translate the text to:")}
+				</p>
+				<ButtonSubmit />
+			</div>
+
+			<div className="flex items-center gap-3 rounded-lg bg-slate-50 px-4 py-3">
+				<input
+					type="checkbox"
+					id="selectAll"
+					checked={isAllSelected}
+					onChange={toggleSelectAll}
+					className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+				/>
+				<label
+					htmlFor="selectAll"
+					className="cursor-pointer text-sm font-medium text-slate-700"
+				>
+					{isAllSelected ? scopedT("Deselect All") : scopedT("Select All")}
+				</label>
+				<span className="ml-auto text-xs text-slate-500">
+					{selectedLangs.length} / {languages.length} selected
+				</span>
+			</div>
+
+			<div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 				{languages.map((lang) => (
-					<div key={lang.id} className="flex cursor-pointer items-center">
+					<label
+						key={lang.id}
+						className={`flex cursor-pointer items-center gap-2.5 rounded-lg border px-3 py-2.5 transition-all duration-150 ${
+							selectedLangs.includes(lang.id)
+								? "border-blue-200 bg-blue-50 text-blue-700"
+								: "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+						}`}
+					>
 						<input
 							type="checkbox"
 							id={lang.id}
 							name={lang.id}
 							checked={selectedLangs.includes(lang.id)}
 							onChange={() => handleLangToggle(lang.id)}
-							className="mr-2"
+							className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
 						/>
-						<label
-							htmlFor={lang.id}
-							className="cursor-pointer text-sm text-gray-700 sm:text-base md:text-lg lg:text-2xl"
-						>
-							{lang.name}
-						</label>
-					</div>
+						<span className="text-sm font-medium">{lang.name}</span>
+					</label>
 				))}
 			</div>
-			<div className="mt-3 rounded-lg bg-white p-3 shadow">
-				<h3 className="mb-4 text-xl font-bold text-black">
-					{scopedT("Translations:")}{" "}
+
+			<div className="rounded-xl border border-slate-200 bg-white p-5">
+				<h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
+					{scopedT("Translations:")}
 				</h3>
 				{Array.isArray(response.message) ? (
-					<>
+					<div className="grid gap-3 sm:grid-cols-2">
 						{response.message.map((msg: any, index: any) => {
 							const language = languages.find((lang) => lang.id === msg.to);
 							return (
 								<div
 									key={language?.id ?? index}
-									className="relative mb-3 rounded border p-1"
+									className="group relative rounded-lg border border-slate-100 bg-slate-50 p-3 transition-colors hover:border-slate-200"
 								>
-									<p className="text-lg text-black">
-										<span className="font-bold">
+									<div className="mb-1 flex items-center justify-between">
+										<span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
 											{language ? language.name : msg.to}
 										</span>
-										: <span className="break-words">{msg.text}</span>
-										<div className="absolute right-1 top-1">
-											<ButtonCopyUnicText text={msg.text} />
-										</div>
+										<ButtonCopyUnicText text={msg.text} />
+									</div>
+									<p className="break-words text-sm text-slate-700">
+										{msg.text}
 									</p>
 								</div>
 							);
 						})}
-					</>
+					</div>
 				) : (
-					<p className="text-lg text-black">
+					<p className="text-sm text-slate-500">
 						{typeof response.message === "string"
 							? response.message
 							: scopedT("No result yet")}

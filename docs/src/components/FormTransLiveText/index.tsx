@@ -29,19 +29,22 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 	return (
 		<form
 			action={action}
-			className="mx-auto flex w-full max-w-7xl flex-col gap-4 rounded-xl border bg-white p-4 shadow-md sm:p-6 md:flex-row"
+			className="card mx-auto flex w-full max-w-6xl flex-col gap-5 p-5 sm:p-6 md:flex-row"
 		>
 			<div className="flex w-full flex-col md:w-1/2">
+				<label className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+					{scopedT("From")}
+				</label>
 				<select
 					name="fromLang"
-					className="mb-2 h-12 w-full rounded-md bg-gray-800 px-3 text-sm text-white"
+					className="mb-4 h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-700 shadow-sm transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
 					defaultValue={locale}
 				>
 					<SelectOptionsLangs />
 				</select>
 
 				<textarea
-					className="h-[250px] w-full resize-none rounded-md border px-3 py-2 text-sm text-gray-800 focus:outline-none"
+					className="h-[280px] w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm transition-all placeholder:text-slate-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
 					placeholder="Type here..."
 					value={textToTranslate}
 					name="textToTranslate"
@@ -59,18 +62,39 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 					}}
 					maxLength={1000}
 				/>
-				<p className="mt-1 text-right text-xs text-gray-500">
-					<span className={textToTranslate.length > 999 ? "text-red-500" : ""}>
+				<p className="mt-2 text-right text-xs text-slate-500">
+					<span
+						className={`font-medium ${textToTranslate.length > 999 ? "text-red-500" : "text-slate-700"}`}
+					>
 						{textToTranslate.length}
-					</span>{" "}
-					/ 1000
+					</span>
+					<span className="text-slate-400"> / 1000</span>
 				</p>
 			</div>
 
+			<div className="hidden items-center justify-center text-slate-300 md:flex">
+				<svg
+					className="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M17 8l4 4m0 0l-4 4m4-4H3"
+					/>
+				</svg>
+			</div>
+
 			<div className="flex w-full flex-col md:w-1/2">
+				<label className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+					{scopedT("To")}
+				</label>
 				<select
 					name="toLang"
-					className="mb-2 h-12 w-full rounded-md bg-gray-800 px-3 text-sm text-white"
+					className="mb-4 h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-700 shadow-sm transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
 					defaultValue={locale === "en" ? "pt" : "en"}
 					onChange={(e) => {
 						e.preventDefault();
@@ -81,7 +105,7 @@ export default function FormTransLiveText({ locale }: Readonly<Locale>) {
 					<SelectOptionsLangs />
 				</select>
 
-				<div className="h-[250px] w-full overflow-y-auto rounded-md border bg-gray-50 px-3 py-2 text-sm text-gray-800">
+				<div className="h-[280px] w-full overflow-y-auto rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800">
 					<InputResult typing={typing} response={response} />
 				</div>
 			</div>

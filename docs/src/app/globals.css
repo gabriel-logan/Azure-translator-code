@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	:root {
+		--primary: 59 130 246;
+		--primary-dark: 37 99 235;
+		--secondary: 139 92 246;
+		--accent: 16 185 129;
+		--background: 248 250 252;
+		--foreground: 15 23 42;
+		--card: 255 255 255;
+		--card-border: 226 232 240;
+		--muted: 100 116 139;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-slate-50 text-slate-900 antialiased;
+	}
+}
+
+@layer components {
+	.card {
+		@apply rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md;
+	}
+
+	.btn-primary {
+		@apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+	}
+
+	.btn-secondary {
+		@apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+	}
+
+	.input-field {
+		@apply w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 shadow-sm transition-all duration-200 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20;
+	}
+
+	.select-field {
+		@apply w-full cursor-pointer rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 shadow-sm transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20;
+	}
+
+	.gradient-bg {
+		@apply bg-gradient-to-br from-blue-50 via-white to-violet-50;
+	}
+
+	.gradient-text {
+		@apply bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent;
+	}
+
+	.section-title {
+		@apply text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl;
+	}
+}
+
 .masked {
 	-webkit-text-security: disc;
 	text-security: disc;
