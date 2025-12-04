@@ -16,24 +16,23 @@ export default function Textarea() {
 
 	return (
 		<>
-			<div className="flex items-center justify-between">
-				<label
-					className="text-sm font-semibold text-slate-700"
-					htmlFor="jsonfile"
-				>
-					{scopedT("Paste the json code here")}
-				</label>
-				<span className="text-xs text-slate-500">
+			<label
+				className="mb-2 mt-1 block text-sm font-semibold text-gray-600"
+				htmlFor="jsonfile"
+			>
+				{scopedT("Paste the json code here")}
+				<span className="float-right text-xs font-normal text-gray-500">
+					{scopedT("Len")}:{" "}
 					<span
-						className={`font-medium ${jsonFileText.length > 5000 ? "text-red-500" : "text-slate-700"}`}
+						className={`${jsonFileText.length > 5000 ? "text-red-500" : "text-gray-800"}`}
 					>
 						{jsonFileText.length}
-					</span>
-					<span className="text-slate-400"> / 5000</span>
+					</span>{" "}
+					/ 5000
 				</span>
-			</div>
+			</label>
 
-			<div className="mt-2 overflow-hidden rounded-xl border border-slate-200 shadow-sm transition-shadow focus-within:border-blue-300 focus-within:ring-2 focus-within:ring-blue-100">
+			<div className="overflow-hidden rounded-md border border-gray-300 shadow-sm">
 				<AceEditor
 					placeholder={`{
   "key": "value"
@@ -42,8 +41,8 @@ export default function Textarea() {
 					theme="tomorrow"
 					name="jsonfileAce"
 					fontSize={14}
-					lineHeight={20}
-					showPrintMargin={false}
+					lineHeight={19}
+					showPrintMargin
 					showGutter
 					width="100%"
 					highlightActiveLine
