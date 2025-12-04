@@ -11,7 +11,7 @@ export default async function MultiLangPage({
 	const scopedT = await getScopedI18n("HomePage");
 
 	return (
-		<main className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+		<main className="min-h-screen bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<div className="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
 					<Link href="/" className="btn-secondary order-2 sm:order-1">
