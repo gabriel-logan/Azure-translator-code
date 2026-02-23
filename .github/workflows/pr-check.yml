@@ -24,6 +24,7 @@ jobs:
           node-version: 20
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm format:check
       - run: pnpm build
       - name: Check if dist and types directories exist
         run: |
