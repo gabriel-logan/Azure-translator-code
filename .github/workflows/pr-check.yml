@@ -3,9 +3,9 @@ name: PR Check
 on:
   # Runs on pushes targeting the default branch
   pull_request:
-    branches: ['main']
+    branches: ["main"]
   push:
-    branches: ['main']
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn build
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm build
       - name: Check if dist and types directories exist
         run: |
           if [ ! -d "dist" ]; then
@@ -32,4 +32,4 @@ jobs:
             exit 1
           fi
       - name: Run tests
-        run: yarn test
+        run: pnpm test

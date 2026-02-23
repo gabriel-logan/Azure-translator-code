@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: yarn install
-      - run: yarn test
+      - run: pnpm install
+      - run: pnpm test
         env:
           KEY: ${{secrets.KEY}}
           LOCATION: ${{secrets.LOCATION}}
@@ -34,8 +34,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: yarn install
-      - run: yarn build
+      - run: pnpm install
+      - run: pnpm build
       - name: Check if dist and types directories exist
         run: |
           if [ ! -d "dist" ]; then
