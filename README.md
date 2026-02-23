@@ -132,19 +132,26 @@ const jsonFile = {
 };
 
 // Translate to multiple folders
-translateToMultipleFolders(key, endpoint, location, fromLang, toLangs, jsonFile); 
+translateToMultipleFolders(
+	key,
+	endpoint,
+	location,
+	fromLang,
+	toLangs,
+	jsonFile,
+);
 // This will create a folder called multiFolderGeneratedTranslations
 
 // Translate to a single folder
-translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile); 
+translateToUnicFolder(key, endpoint, location, fromLang, toLangs, jsonFile);
 // This will create a folder called unicFolderGeneratedTranslations
 
 // Update translations in multiple folders
-updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile); 
+updateTranslationsMulti(key, endpoint, location, fromLang, toLangs, jsonFile);
 // Only new keys will be translated in the multiFolderGeneratedTranslations folder
 
 // Update translations in a single folder
-updateTranslationsUnic(key, endpoint, location, fromLang, toLangs, jsonFile); 
+updateTranslationsUnic(key, endpoint, location, fromLang, toLangs, jsonFile);
 // Only new keys will be translated in the unicFolderGeneratedTranslations folder
 ```
 
@@ -201,7 +208,7 @@ You can also log the translation results to the console for verification.
 ```javascript
 const { translate, translateText } = require("azure-translator-code");
 
-const key = "YOUR_AZURE_KEY"; 
+const key = "YOUR_AZURE_KEY";
 const endpoint = "https://api.cognitive.microsofttranslator.com/";
 const location = "eastus";
 const fromLang = "en";

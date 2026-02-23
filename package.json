@@ -21,7 +21,9 @@
 		"test:silent": "jest --watchAll --silent --noStackTrace",
 		"build:dist": "tsc",
 		"build:types": "tsc -p tsconfig.types.json",
-		"build": "yarn build:types && yarn build:dist"
+		"build": "yarn build:types && yarn build:dist",
+		"format": "prettier --write **/*.{ts,js,json,md} !docs/**",
+		"format:check": "prettier --check **/*.{ts,js,json,md} !docs/**"
 	},
 	"repository": {
 		"type": "git",

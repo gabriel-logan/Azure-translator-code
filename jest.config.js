@@ -5,4 +5,3 @@ module.exports = {
 	modulePathIgnorePatterns: ["<rootDir>/docs/", "<rootDir>/dist/"],
 	setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
 };
-

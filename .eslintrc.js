@@ -9,9 +9,9 @@ module.exports = {
 		"geraTraducoes.js",
 		"setupTests.js",
 	],
-	parser: '@typescript-eslint/parser',
+	parser: "@typescript-eslint/parser",
 	parserOptions: {
-		project: './tsconfig.json',
+		project: "./tsconfig.json",
 		tsconfigRootDir: __dirname,
 	},
 	rules: {
